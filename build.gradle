@@ -16,8 +16,8 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	//아래는 스프링시큐리티 사용을 위한 디펜던시
-	implementation 'org.springframwork.boot:spring-boot-starter-security'
-	implementation 'org.thymeleaf.extras:thymeleafextras-springsecurity5'
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+	implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity5'
 }
 
 test {
