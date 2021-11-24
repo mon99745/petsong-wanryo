@@ -2,15 +2,9 @@
   margin: 0; /* 마진 리셋 */
   padding: 0; /* 패딩 리셋 */
 }
-html,
-body {
-  width: 100%;
-  height: 100%;
-}
 
 body {
-  margin-left: 10px;
-  margin-right: 10px;
+  margin: 0 50px;
 }
 ul {
   list-style: none;
@@ -23,43 +17,43 @@ li {
 
 header {
   width: 100%;
-  height: 40%;
+  height: 300px;
 }
 
 #top {
   width: 100%;
-  height: 10%;
+  height: 30px;
   background-color: pink;
 }
 
 #logo {
   width: 100%;
-  height: 55%;
+  height: 160px;
   background-color: green;
 }
 
 #bottom {
   width: 100%;
-  height: 13%;
+  height: 30px;
   background-color: blue;
 }
 
 #menu-bar {
   width: 100%;
-  height: 22%;
+  height: 80px;
   background-color: aquamarine;
 }
 /* --------------middle --------*/
 
 main {
   width: 100%;
-  height: 300%;
+  height: 1000px;
   background-color: brown;
 }
 
 /* --------------footer ------------*/
 footer {
   width: 100%;
-  height: 30%;
+  height: 200px;
   background-color: yellow;
 }
