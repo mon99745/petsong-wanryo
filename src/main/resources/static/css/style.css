@@ -1,0 +1,65 @@
+* {
+  margin: 0; /* 마진 리셋 */
+  padding: 0; /* 패딩 리셋 */
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+ul {
+  list-style: none;
+}
+
+li {
+  display: inline-block;
+}
+/* ------------header--------------*/
+
+header {
+  width: 100%;
+  height: 40%;
+}
+
+#top {
+  width: 100%;
+  height: 10%;
+  background-color: pink;
+}
+
+#logo {
+  width: 100%;
+  height: 55%;
+  background-color: green;
+}
+
+#bottom {
+  width: 100%;
+  height: 13%;
+  background-color: blue;
+}
+
+#menu-bar {
+  width: 100%;
+  height: 22%;
+  background-color: aquamarine;
+}
+/* --------------middle --------*/
+
+main {
+  width: 100%;
+  height: 300%;
+  background-color: brown;
+}
+
+/* --------------footer ------------*/
+footer {
+  width: 100%;
+  height: 30%;
+  background-color: yellow;
+}
