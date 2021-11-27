@@ -4,14 +4,16 @@
 }
 
 body {
+  display: block;
   margin: 0 50px;
 }
+
+
 ul {
   list-style: none;
 }
 
 li {
-  padding: 10px 5px;
   display: inline-block;
 }
 /* ------------header--------------*/
@@ -19,6 +21,10 @@ li {
 header {
   width: 100%;
   height: 300px;
+}
+header li{
+  padding: 10px 5px;
+
 }
 
 #top {
@@ -100,7 +106,8 @@ header {
   background-color: aquamarine;
 }
 /* 메뉴에 대한 속성 */
-.menu-bar  li{ 
+.menu-bar  p{ 
+ display: inline-block;
   margin-left: 30px;
   margin-right: 30px;
   padding-left: 20px;
@@ -112,11 +119,85 @@ header {
   text-decoration: underline;
 }
 /* 메뉴바 아이콘에 대한 위치와 속성 */
-.menu-bar  i{ 
+.fas fa-bars fa-3x{ 
     float: left;
     margin-left: 20px;
     margin-top: 8px;
 }
+/* ---------------------------네비게이션 속성------------------------------------- */
+ /* 글씨 위에 커서 올리면 변환 but 기능 구현 안됨 */
+ p {
+  display: inline-block;
+  padding: 0 12px;
+  cursor: pointer;
+}
+ p:hover {
+  opacity: .8;
+}
+
+/* 글씨 옆 아이콘 속성 */
+ p i {
+  margin-left: 2px;
+  font-size: .9em;
+}
+/* 네비 박스 형태 속성 */
+.dropdown {
+  display: hidden;
+  opacity: 0;
+  visibility: hidden;
+  margin-top: -20px;
+  position: absolute;
+  background: white;
+  width: 150px;
+  z-index: 4;
+  border-radius: 4px;
+  /* 드롭박스 위치 설정 */
+  left: calc(20%);
+  -webkit-box-shadow: 0px 3px 15px -1px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 3px 15px -1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 3px 15px -1px rgba(0, 0, 0, 0.2);
+}
+.dropdown::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: calc(50% - 5px);
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid white;
+  z-index: 3;
+}
+.dropdown.show {
+  display: block;
+  visibility: visible;
+  opacity: 1;
+  margin-top: 0;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -ms-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+.dropdown p {
+  color: black;
+  display: block;
+  text-align: left;
+  padding: 0 18px;
+  margin: -4px 0;
+}
+.dropdown p:hover {
+  opacity: .8;
+}
+.dropdown p:nth-child(1) {
+  padding-top: 4px;
+}
+.dropdown p:nth-child(5) {
+  padding-bottom: 4px;
+}
+
+
 
 /* --------------middle --------*/
 
