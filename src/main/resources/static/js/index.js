@@ -1,3 +1,4 @@
-$(" #DOG ").click(function () {
+
+$(" #click ").click(function () {
 	$(" #s-d ").toggleClass('show');
 })
