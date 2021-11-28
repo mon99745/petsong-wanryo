@@ -1,73 +1,99 @@
 <!--주석 필수-->
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  
     <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
-        <title>Title</title>
-<!--    <link rel="stylesheet" href="/static/css/index.css">-->
-<link rel="stylesheet" href="/src/main/resources/static/css/style.css ">
-<!-- 폰트어썸 이미지 불러오기 링크 -->
-<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <title>Title</title>
+    <!--    <link rel="stylesheet" href="/static/css/index.css">-->
+    <link rel="stylesheet" href="/src/main/resources/static/css/style.css">
+    <link rel="stylesheet" href="/src/main/resources/static/css/navi.scss">
+    <!-- 네비게이션 관련 js 링크 -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+    <script src="https://use.typekit.net/hoy3lrg.js"></script>
+    <script>try { Typekit.load({ async: true }); } catch (e) { }</script>
+
+    <!-- 폰트어썸 이미지 불러오기 링크 -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
 </head>
+
 <body>
-   <header>
-            <div id="top">
-                <ul class="top-bar">
-                    <li>Login</li>
-                    <li>Join</li>
-                    <li>Wish</li>
-                    <li>Cart</li>
-                    <li>Orderlist</li>
-                    <li>Mypage</li>
-                </ul>
+    
+    <header>
+        <div id="top">
+            <ul class="top-bar">
+                <li>Login</li>
+                <li>Join</li>
+                <li>Wish</li>`
+                <li>Cart</li>
+                <li>Orderlist</li>
+                <li>Mypage</li>
+            </ul>
 
-                <div id="search">
-                    <input type="text" class="search-text" >
-                    <button class="search-btn"><i class="fas fa-search"></i></button>
+            <div id="search">
+                <input type="text" class="search-text">
+                <button class="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+
+
+
+
+        </div>
+        <div id="logo">
+        </div>
+
+        <div id="bottom">
+            <!-- 페이스북 인스타 로고 넣기 -->
+            <i class="fab fa-facebook fa-2x"></i>
+            <i class="fab fa-instagram fa-2x"></i>
+            <!-- notice Q&A 넣기 -->
+            <ul class="bottom-bar">
+                <li>Q&A</li>
+                <li>Notice</li>
+
+        </div>
+        <div id="menu">
+
+            <ul class="menu-bar">
+                <!-- 메뉴바 로고 넣기 -->
+                <i class="fas fa-bars fa-3x"></i>
+                <!-- 메뉴 종류 넣기 -->
+            
+                <p id="DOG">DOG <i class="fa fa-caret-down" aria-hidden="true"></i></p>
+                <div id="s-d" class="dropdown">
+                    <li>S/W</li>
+                    <li>User Experience</li>
+                    <li>Web Development</li>
+                    <li>User Research</li>
+                    <li>Support</li>
                 </div>
+                <p>CAT</p>
+                <p>LIVING</p>
+                <p>FOOD</p>
+                <p>COMMUNITY</p>
+                
+            </ul>
 
+        <nav>
+            
+        </nav>
+        </div>
+    </header>
 
-          
+    <main>
 
-            </div>
-            <div id="logo">
-            </div>
+    </main>
 
-            <div id="bottom">
-                <!-- 페이스북 인스타 로고 넣기 -->
-                <i class="fab fa-facebook fa-2x"></i>
-                <i class="fab fa-instagram fa-2x"></i>
-                <!-- notice Q&A 넣기 -->
-                <ul class="bottom-bar">
-                    <li>Q&A</li>
-                    <li>Notice</li>
-                   
-            </div>
-            <div id="menu">
+    <footer>
 
-                <ul class="menu-bar">
-                    <!-- 메뉴바 로고 넣기 -->
-                    <i class="fas fa-bars fa-3x"></i>
-                    <!-- 메뉴 종류 넣기 -->
-                    <li>DOG</li>
-                    <li>CAT</li>
-                    <li>LIVING</li>
-                    <li>FOOD</li>
-                    <li>COMMUNITY</li>
-                   
-                </ul>
-            </div>
-        </header>
+    </footer>
+    <!-- js 링크 -->
+    <script src="/src/main/resources/static/js/index.js"></script>
 
-<main>
-
-</main>
-
-<footer>
-
-</footer>
 </body>
+
 </html>
