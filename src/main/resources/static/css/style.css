@@ -110,6 +110,14 @@ header li{
    margin-left: 5px;
    margin-right: 5px;
 }
+/* 마우스 터치효과  */
+.bottom-bar li, .menu-bar p{
+  cursor: pointer;
+  transition: transform 300ms ease;
+}
+.bottom-bar li:hover , .menu-bar p:hover{
+  transform: scale(1.1);
+}
 
 /* 메뉴에 대한 위치 */
 .menu-bar {
@@ -122,14 +130,16 @@ header li{
 .menu-bar  p{ 
   display: inline-block;
   line-height: 60px;
-  margin-left: 60px;
-  margin-right: 50px;
+  margin-left: 50px;
+  margin-right: 30px;
   padding-left: 30px;
   padding-right: 30px;
   font-size: 30px;
   font-weight: bold;
   text-decoration: underline;
 }
+
+
 /* 메뉴바 아이콘에 대한 위치와 속성 */
 .fas fa-bars fa-2x{ 
     line-height: 60px;
@@ -142,7 +152,7 @@ header li{
   padding: 0 12px;
   cursor: pointer;
 }
- p:hover {
+p:hover {
   opacity: .8;
 }
 
@@ -157,16 +167,47 @@ header li{
   opacity: 0;
   visibility: hidden;
   margin-top: -20px;
-  margin-left: 90px;
   position: absolute;
   background: white;
-  width: 150px;
+  width: 210px;
+  height: 150px;
   z-index: 4;
   border-radius: 4px;
   -webkit-box-shadow: 0px 3px 15px -1px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0px 3px 15px -1px rgba(0, 0, 0, 0.2);
   box-shadow: 0px 3px 15px -1px rgba(0, 0, 0, 0.2);
 }
+
+/* 드롭다운 메뉴에 대한 속성 */
+.menu-bar li{
+  display: block;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bolder;
+  text-shadow: 2px 2px 2px #cacaca;
+}
+/* 드롭다운 위치 설정 */
+#drop1{
+  left: calc(0% + 60px);
+}
+#drop2{
+  left: calc(20% + 5px);
+}
+#drop3{
+  left: calc(35% + 30px);
+}
+#drop4{
+   right: calc(30% + 20px);
+}
+#drop5{
+   right: calc(10% + 10px);
+}
+/* 드롭다운 여백 설정 */
+#drop1 li, #drop2 li,#drop4 li, #drop5 li{
+  margin-top: 15px;
+}
+
+
 .dropdown::before {
   content: '';
   position: absolute;
@@ -207,8 +248,6 @@ header li{
   padding-bottom: 4px;
 }
 
-
-
 /* --------------middle --------*/
 
 main {
@@ -223,3 +262,7 @@ footer {
   height: 200px;
   background-color: yellow;
 }
+
+
+
+
