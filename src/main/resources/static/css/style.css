@@ -10,7 +10,7 @@ body {
 /* !!!! 화면 비율 일정하게 조절 !!!!
 ex> 화면 줄어들면 그에 맞는 비율로 줄고, 늘면 그에 맞는 비율로 늠
 가까이 확대되면 스크롤 이용 */
-.container{
+.container {
   width: 100%;
   padding-right: var(1rem);
   padding-left: var(1rem);
@@ -19,7 +19,6 @@ ex> 화면 줄어들면 그에 맞는 비율로 줄고, 늘면 그에 맞는 비
   position: relative;
   max-width: 1480px;
 }
-
 
 ul {
   list-style: none;
@@ -34,18 +33,19 @@ header {
   width: 100%;
   height: 300px;
 }
-header li{
-  padding: 10px 5px;
-
-}
 
 #top {
   width: 100%;
   height: 40px;
-  background-color: pink;
+  border-bottom: 1px solid black;
 }
 .top-bar {
   float: left;
+}
+.top-bar li {
+  margin: 0 10px;
+  padding: 10px 5px;
+  display: inline-block;
 }
 #search {
   float: right;
@@ -82,9 +82,14 @@ header li{
 #logo {
   width: 100%;
   height: 160px;
-  background-color: green;
+  text-align: center;
 }
 
+.logo-img {
+  margin-top: 5px;
+  width: 150px;
+  height: 150px;
+}
 #bottom {
   width: 100%;
   height: 40px;
@@ -92,30 +97,32 @@ header li{
   border-bottom: solid 3px;
 }
 /* 페이스북, 인스타 마크에 대한 위치  */
-#bottom i{ 
-    margin-top: 5px;
-    margin-left: 10px;
+#bottom i {
+  margin-top: 5px;
+  margin-left: 10px;
 }
 /* notice, Q&A 오른쪽 정렬 */
-.bottom-bar{
-  float: right;  
+.bottom-bar {
+  float: right;
 }
 /* notice, Q&A에 대한 위치와 속성 */
-.bottom-bar li{
+.bottom-bar li {
   float: right;
   font-weight: bold;
   font-size: 13px;
-   border: solid 1px;
-   border-radius: 0.5em;
-   margin-left: 5px;
-   margin-right: 5px;
+  border: solid 1px;
+  border-radius: 0.5em;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 /* 마우스 터치효과  */
-.bottom-bar li, .menu-bar p{
+.bottom-bar li,
+.menu-bar p {
   cursor: pointer;
   transition: transform 300ms ease;
 }
-.bottom-bar li:hover , .menu-bar p:hover{
+.bottom-bar li:hover,
+.menu-bar p:hover {
   transform: scale(1.1);
 }
 
@@ -124,10 +131,9 @@ header li{
   width: 100%;
   height: 80px;
   background-color: white;
-
 }
 /* 메뉴에 대한 속성 */
-.menu-bar  p{ 
+.menu-bar p {
   display: inline-block;
   line-height: 60px;
   margin-left: 50px;
@@ -139,27 +145,26 @@ header li{
   text-decoration: underline;
 }
 
-
 /* 메뉴바 아이콘에 대한 위치와 속성 */
-.fas fa-bars fa-2x{ 
-    line-height: 60px;
-    margin: 10px 10px;
+.fas fa-bars fa-2x {
+  line-height: 60px;
+  margin: 10px 10px;
 }
 /* ---------------------------네비게이션 속성------------------------------------- */
- /* 글씨 위에 커서 올리면 변환 but 기능 구현 안됨 */
- p {
+/* 글씨 위에 커서 올리면 변환 but 기능 구현 안됨 */
+p {
   display: inline-block;
   padding: 0 12px;
   cursor: pointer;
 }
 p:hover {
-  opacity: .8;
+  opacity: 0.8;
 }
 
 /* 글씨 옆 아이콘 속성 */
- p i {
+p i {
   margin-left: 2px;
-  font-size: .9em;
+  font-size: 0.9em;
 }
 /* 네비 박스 형태 속성 */
 .dropdown {
@@ -179,7 +184,7 @@ p:hover {
 }
 
 /* 드롭다운 메뉴에 대한 속성 */
-.menu-bar li{
+.menu-bar li {
   display: block;
   text-align: center;
   font-size: 20px;
@@ -187,29 +192,31 @@ p:hover {
   text-shadow: 2px 2px 2px #cacaca;
 }
 /* 드롭다운 위치 설정 */
-#drop1{
+#drop1 {
   left: calc(0% + 60px);
 }
-#drop2{
+#drop2 {
   left: calc(20% + 5px);
 }
-#drop3{
+#drop3 {
   left: calc(35% + 30px);
 }
-#drop4{
-   right: calc(30% + 20px);
+#drop4 {
+  right: calc(30% + 20px);
 }
-#drop5{
-   right: calc(10% + 10px);
+#drop5 {
+  right: calc(10% + 10px);
 }
 /* 드롭다운 여백 설정 */
-#drop1 li, #drop2 li,#drop4 li, #drop5 li{
+#drop1 li,
+#drop2 li,
+#drop4 li,
+#drop5 li {
   margin-top: 15px;
 }
 
-
 .dropdown::before {
-  content: '';
+  content: "";
   position: absolute;
   top: -6px;
   left: calc(50% - 5px);
@@ -239,7 +246,7 @@ p:hover {
   margin: -4px 0;
 }
 .dropdown p:hover {
-  opacity: .8;
+  opacity: 0.8;
 }
 .dropdown p:nth-child(1) {
   padding-top: 4px;
@@ -262,7 +269,3 @@ footer {
   height: 200px;
   background-color: yellow;
 }
-
-
-
-
