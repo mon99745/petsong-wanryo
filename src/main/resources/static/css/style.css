@@ -109,15 +109,15 @@ header {
 .bottom-bar li {
   float: right;
   font-weight: bold;
-  font-size: 13px;
-  border: solid 1px;
-  border-radius: 0.5em;
-  margin-left: 5px;
-  margin-right: 5px;
+  font-size: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
-/* 마우스 터치효과  */
+
+
+/* 메뉴와 노티스, 큐앤애이 마우스 터치효과  */
 .bottom-bar li,
-.menu-bar p {
+.menu-bar p{
   cursor: pointer;
   transition: transform 300ms ease;
 }
@@ -212,9 +212,16 @@ p i {
 #drop2 li,
 #drop4 li,
 #drop5 li {
+  margin-top: 30px;
+}
+#drop3 li {
   margin-top: 15px;
 }
-
+/* 메뉴와 노티스, 큐앤애이 마우스 터치효과  */
+.dropdown li {
+  cursor: pointer;
+  transition: transform 300ms ease;
+}
 .dropdown::before {
   content: "";
   position: absolute;
