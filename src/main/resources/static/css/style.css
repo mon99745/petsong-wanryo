@@ -22,6 +22,8 @@ ex> 화면 줄어들면 그에 맞는 비율로 줄고, 늘면 그에 맞는 비
 
 /* 링크 걸린거 색깔 없애기 */
 a:visited { color: black; text-decoration: none;}
+a { color: black; text-decoration: none;}
+
 
 ul {
   list-style: none;
@@ -271,7 +273,35 @@ main {
 
 /* --------------footer ------------*/
 footer {
+  border-top: solid 3px;
   width: 100%;
   height: 200px;
-  background-color: yellow;
+  background-color: white;
 }
+
+.Topleft{
+  display: inline-block;
+
+}
+.Topright{
+    display: inline-block;
+    float: right;
+
+}
+
+.MainName{
+  text-align: center;
+  font-size: 25px;
+}
+.left{
+  display: inline-block;
+}
+
+.right {
+  float: right;
+  margin-top:40px;
+}
+.center{
+    display: inline-block;
+    margin-left: 520px ;
+  }

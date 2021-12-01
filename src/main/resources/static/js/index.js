@@ -3,10 +3,17 @@ $(" #DOG ").mouseover(function () {
 	$(" #drop1 ").addClass('show1');
 })
 
-$("#drop1 ").mouseleave(function () {
+$("#drop1").mouseleave(function () {
 	
-	$(" #drop1 ").removeClass('show1');
+	
+	
+		$(" #drop1").removeClass('show1');
+
+	
+	
 })
+
+
 
 $(" #CAT ").mouseover(function () {
 	$(" #drop2 ").addClass('show2');
