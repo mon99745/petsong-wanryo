@@ -20,6 +20,9 @@ ex> 화면 줄어들면 그에 맞는 비율로 줄고, 늘면 그에 맞는 비
   max-width: 1480px;
 }
 
+/* 링크 걸린거 색깔 없애기 */
+a:visited { color: black; text-decoration: none;}
+
 ul {
   list-style: none;
 }
@@ -80,6 +83,7 @@ header {
   border: 1px solid rgb(167, 164, 164);
 }
 #logo {
+  
   width: 100%;
   height: 160px;
   text-align: center;
@@ -151,15 +155,6 @@ header {
   margin: 10px 10px;
 }
 /* ---------------------------네비게이션 속성------------------------------------- */
-/* 글씨 위에 커서 올리면 변환 but 기능 구현 안됨 */
-p {
-  display: inline-block;
-  padding: 0 12px;
-  cursor: pointer;
-}
-p:hover {
-  opacity: 0.8;
-}
 
 /* 글씨 옆 아이콘 속성 */
 p i {
@@ -234,7 +229,11 @@ p i {
   border-bottom: 10px solid white;
   z-index: 3;
 }
-.dropdown.show {
+.dropdown.show1,
+.dropdown.show2,
+.dropdown.show3,
+.dropdown.show4,
+.dropdown.show5 {
   display: block;
   visibility: visible;
   opacity: 1;

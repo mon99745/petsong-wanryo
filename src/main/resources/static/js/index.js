@@ -1,32 +1,42 @@
 
-$(" #DOG ").click(function () {
-	$(" #drop1 ").toggleClass('show');
-})
-$(" #DOG ").mouseleave(function () {
-	$(" #drop1 ").toggleClass('show');
+$(" #DOG ").mouseover(function () {
+	$(" #drop1 ").addClass('show1');
 })
 
-$(" #CAT ").click(function () {
-	$(" #drop2 ").toggleClass('show');
+$("#drop1 ").mouseleave(function () {
+	
+	$(" #drop1 ").removeClass('show1');
 })
-$(" #CAT ").mouseleave(function () {
-	$(" #drop2 ").toggleClass('show');
+
+$(" #CAT ").mouseover(function () {
+	$(" #drop2 ").addClass('show2');
 })
-$(" #LIVING ").click(function () {
-	$(" #drop3 ").toggleClass('show');
+
+$("#drop2 ").mouseleave(function () {
+	
+	$(" #drop2 ").removeClass('show2');
 })
-$(" #LIVING ").mouseleave(function () {
-	$(" #drop3 ").toggleClass('show');
+$(" #LIVING ").mouseover(function () {
+	$(" #drop3 ").addClass('show3');
 })
-$(" #FOOD ").clicks(function () {
-	$(" #drop4 ").toggleClass('show');
+
+$("#drop3 ").mouseleave(function () {
+	
+	$(" #drop3 ").removeClass('show3');
 })
-$(" #FOOD ").mouseleave(function () {
-	$(" #drop4 ").toggleClass('show');
+$(" #FOOD ").mouseover(function () {
+	$(" #drop4 ").addClass('show4');
 })
-$(" #COMMUNITY ").click(function () {
-	$(" #drop5 ").toggleClass('show');
+
+$("#drop4 ").mouseleave(function () {
+	
+	$(" #drop4 ").removeClass('show4');
 })
-$(" #COMMUNITY ").mouseleave(function () {
-	$(" #drop5 ").toggleClass('show');
+$(" #COMMUNITY ").mouseover(function () {
+	$(" #drop5 ").addClass('show5');
+})
+
+$("#drop5 ").mouseleave(function () {
+	
+	$(" #drop5 ").removeClass('show5');
 })
