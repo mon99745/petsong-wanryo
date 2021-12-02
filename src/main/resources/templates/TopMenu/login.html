@@ -1,0 +1,168 @@
+<!--주석 필수-->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  
+    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+    <title>펫송완료</title>
+    <!--    <link rel="stylesheet" href="/static/css/index.css">-->
+    <link rel="stylesheet" href="/src/main/resources/static/css/login.css">
+    <link rel="stylesheet" href="/src/main/resources/static/css/navi.scss">
+    <!-- 네비게이션 관련 js 링크 -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+    <script src="https://use.typekit.net/hoy3lrg.js"></script>
+    <script>try { Typekit.load({ async: true }); } catch (e) { }</script>
+
+    <!-- 폰트어썸 이미지 불러오기 링크 -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+</head>
+
+    <div class="container">
+        <div id="top">
+           <!-- 좌측 상단 네비게이션-->
+           <ul class="top-bar">
+            <a href="TopMenu/login.html"><li>LOGIN</li></a>
+            <a href="TopMenu/joinus.html"><li>JOIN US</li></a>
+            <a href="TopMenu/wish.html"><li>WISH</li></a>
+            <a href="TopMenu/cart.html"><li>CART</li></a>
+            <a href="TopMenu/orderlist.html"><li>ORDER LIST</li></a>
+            <a href="TopMenu/mypage.html"><li>MY PAGE</li></a>
+        </ul>
+     <!-- 우측 상단 검색창 -->
+     <div id="search">
+        <input type="text" class="search-text" >
+        <button class="search-btn"><i class="fas fa-search"></i></button>
+    </div>
+        </div>
+
+        
+        <div id="logo">
+            <a href="/bin/main/templates/index.html">
+            <img class="logo-img" src="/src/main/resources/static/image/logo.png" alt="My Image">
+            </a>
+        </div>
+        <div id="bottom">
+            <!-- 페이스북 인스타 로고 넣기 -->
+            <i class="fab fa-facebook fa-2x"></i>
+            <i class="fab fa-instagram fa-2x"></i>
+            <!-- notice Q&A 넣기 -->
+            <ul class="bottom-bar">
+                <a href="QandA.html"><li>Q&A</li></a>
+                <a href="Notice.html"><li>Notice</li></a>
+
+        </div>
+        <div id="menu">
+
+            <ul class="menu-bar">
+                <!-- 메뉴바 로고 넣기 -->
+                <i class="fas fa-bars fa-2x" ></i>
+                <!-- 메뉴 종류 넣기 -->
+                <a href="MainMenu/DOG/Dog_main.html"><p id="DOG">DOG <i class="fa fa-caret-down" aria-hidden="true"></i></p></a>
+                <div id="drop1" class="dropdown">
+                    <a href="MainMenu/DOG/Dog_FW.html"><li>S/W</li></a>
+                    <a href="MainMenu/DOG/Dog_SS.html"><li>F/W</li></a>
+                </div>
+                <a href="MainMenu/CAT/Cat_main.html"><p id="CAT">CAT <i class="fa fa-caret-down" aria-hidden="true"></i></p></a>
+                <div id="drop2" class="dropdown">
+                    <a href="MainMenu/CAT/Cat_SS.html"><li>S/W</li></a>
+                    <a href="MainMenu/CAT/Cat_FW.html"><li>F/W</li></a>
+                 </div>
+
+                <a href="MainMenu/LIVING/Living_main.html"><p id="LIVING">LIVING <i class="fa fa-caret-down" aria-hidden="true"></i></p></a>
+                <div id="drop3" class="dropdown">
+                    <a href="MainMenu/LIVING/Toy.html"><li>Toy</li></a>
+                    <a href="MainMenu/LIVING/Bag.html"><li>Bag</li></a>
+                    <a href="MainMenu/LIVING/House.html"></a><li>House</li></a>
+                </div>
+
+                <a href="MainMenu/FOOD/Food_main.html"><p id="FOOD">FOOD <i class="fa fa-caret-down" aria-hidden="true"></i></p></a>
+                <div id="drop4" class="dropdown">
+                    <a href="MainMenu/FOOD/Dog_Feed.html"><li>DogFeed</li></a>
+                    <a href="MainMenu/FOOD/Cat_Feed.html"><li>CatFeed</li></a>
+                 </div>
+
+                <p id="COMMUNITY">COMMUNITY <i class="fa fa-caret-down" aria-hidden="true"></i></p>
+                <div id="drop5" class="dropdown">
+                    <li>유기견게시판</li>
+                    <li>자유게시판</li>
+                </div>
+
+               
+            </ul>
+
+        <nav>
+            
+        </nav>
+        </div>
+
+    <main>
+       <div id="Login">
+           <h1>Member Login</h1>
+           <form method="post" id="authForm" action="#">
+            <div id="Login-top">
+              <label for="loginId"></label>
+              <input type="text" id="loginId" name="loginId" placeholder="ID" >
+              <label for="loginPw"></label>
+              <input type="password" id="loginPw" name="password" placeholder="Password" >
+            </div>
+            
+            <button id="Login-Btn" type="submit"  disabled="disabled">로그인</button>
+            <button class="naver-Btn" type="submit"  disabled="disabled">네이버 로그인</button>
+            <button class="kakao-Btn" type="submit"  disabled="disabled">카카오 로그인</button>
+          
+            
+            <ul>
+                <li><a href="#">아이디찾기</a></li>
+                <li><a href="#">비밀번호찾기</a></li>
+            </ul>
+            <button id="Login-Btn" type="button"  onclick="location.href='joinus.html'">회원가입</button>
+
+
+          </form>
+       </div>
+    </main>
+
+    <footer>
+        <div class="Topleft">
+            <li>펫송완료</li><br>
+            <li>COPYRIGHT @펫티쉬 ALL RIGHTS RESERVED</li>
+            <br>
+            <li>COPYRIGHT @29cm ALL RIGHTS RESERVED</li>
+
+            
+        </div>
+        <div class="Topright">
+            <li>(Return / Exchange)</li><br>
+            <li>충청남도 서산시 해미면 대곡2길 312-10</li>
+        
+        </div>
+        
+        <div class="MainName">
+            <p>Petsong Wanryo</p>
+        </div>
+        <div class="right">
+            <li>Made by HanseoProject</li>
+        </div>
+       
+        <div class="left">
+          <ul>
+            <li>TEL:010-xxx-xxx</li><br>
+            <li>평일 am 11:00 ~ pm 8:00</li><br>
+            <li>토,일 / 공휴일 휴무</li>
+          </ul>
+        </div>
+         <div class="center">
+        <i class="fab fa-facebook fa-2x"></i>
+        <i class="fab fa-instagram fa-2x"></i>
+        </div>
+    </footer>
+
+    <!-- js 링크 -->
+    <script src="/src/main/resources/static/js/index.js"></script>
+</body>
+
+</html>
