@@ -5,6 +5,7 @@
 
 body {
   display: block;
+  
 }
 
 /**/
@@ -285,7 +286,7 @@ main {
 }
 #left img {
   width: 100%;
-  height: 720px;
+  height: 725px;
   margin: 0;
 }
 
@@ -301,8 +302,7 @@ main {
 }
 /*-----------------베스트 아이템 전체 구역------------------*/
 .best-item {
-  margin-top: 50px;
-  padding: 20px;
+  padding: 10px;
 }
 .best-item h3{
   font-size: 30px;
@@ -348,8 +348,14 @@ main {
 #right h3{
   font-size: 30px;
 }
+#right .best-item1{
+  margin-top: 30px;
+}
+#right .best-item2{
+  padding-top: 50px;
+}
 .instagram{
-  margin-top: 120px;
+  margin-top: 190px;
   padding-top: 60px;
   padding-bottom: 20px;
   border-top: 1px solid gray;
@@ -372,18 +378,12 @@ main {
   text-align: center;
 }
 
-/* ------------------------------------------bottom-------------------------------------------- */
 .mainbottom{
   width: 100%;
-  height: 1000px;
+  height: 800px;
 }
 .bottomleft{
   float: left;
-  width: 50%;
-  height: 100%;
-}
-.bottomright{
-  float: right;
   width: 50%;
   height: 100%;
 }
@@ -391,8 +391,23 @@ main {
 .youtube{
   margin-top: 20px;
   width: 95%;
-  height: 50%;
+  height: 63%;
 }
+.bottomright{
+  float: right;
+  width: 50%;
+  height: 100%;
+}
+
+#mainImage{
+  margin-top: 20px;
+  margin-left: 8x;
+}
+
+.n2, .n3, .n4, .n5{
+  visibility: hidden;
+}
+
 
 /* ---------------------------------------------footer -------------------------------------*/
 footer {
