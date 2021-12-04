@@ -4,11 +4,10 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-
     <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
     <title>펫송완료</title>
     <!--    <link rel="stylesheet" href="/static/css/index.css">-->
-    <link rel="stylesheet" href="/src/main/resources/static/css/login.css">
+    <link rel="stylesheet" href="/src/main/resources/static/css/Dog_main.css">
     <link rel="stylesheet" href="/src/main/resources/static/css/navi.scss">
     <!-- 네비게이션 관련 js 링크 -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
@@ -19,168 +18,375 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
+
+
 </head>
 
-<div class="container">
-    <div id="top">
-        <!-- 좌측 상단 네비게이션-->
-        <ul class="top-bar">
-            <a href="TopMenu/login.html">
-                <li>LOGIN</li>
-            </a>
-            <a href="TopMenu/joinus.html">
-                <li>JOIN US</li>
-            </a>
-            <a href="TopMenu/wish.html">
-                <li>WISH</li>
-            </a>
-            <a href="TopMenu/cart.html">
-                <li>CART</li>
-            </a>
-            <a href="TopMenu/orderlist.html">
-                <li>ORDER LIST</li>
-            </a>
-            <a href="TopMenu/mypage.html">
-                <li>MY PAGE</li>
-            </a>
-        </ul>
-        <!-- 우측 상단 검색창 -->
-        <div id="search">
-            <input type="text" class="search-text">
-            <button class="search-btn"><i class="fas fa-search"></i></button>
-        </div>
-    </div>
+<body>
+    <div class="container">
 
-
-    <div id="logo">
-        <a href="/bin/main/templates/index.html">
-            <img class="logo-img" src="/src/main/resources/static/image/logo.png" alt="My Image">
-        </a>
-    </div>
-    <div id="bottom">
-        <!-- 페이스북 인스타 로고 넣기 -->
-        <i class="fab fa-facebook fa-2x"></i>
-        <i class="fab fa-instagram fa-2x"></i>
-        <!-- notice Q&A 넣기 -->
-        <ul class="bottom-bar">
-            <a href="QandA.html">
-                <li>Q&A</li>
-            </a>
-            <a href="Notice.html">
-                <li>Notice</li>
-            </a>
-
-    </div>
-    <div id="menu">
-
-        <ul class="menu-bar">
-            <!-- 메뉴바 로고 넣기 -->
-            <i class="fas fa-bars fa-2x"></i>
-            <!-- 메뉴 종류 넣기 -->
-            <a href="MainMenu/DOG/Dog_main.html">
-                <p id="DOG">DOG <i class="fa fa-caret-down" aria-hidden="true"></i></p>
-            </a>
-            <div id="drop1" class="dropdown">
-                <a href="MainMenu/DOG/Dog_FW.html">
-                    <li>S/W</li>
+        <!-- -----------------------------------------------------최고 상단 메뉴 바 + 검색창---------------------------------------------------------------------       -->
+        <div id="top">
+            <!-- 좌측 상단 네비게이션-->
+            <ul class="top-bar">
+                <a href="TopMenu/login.html">
+                    <li>LOGIN</li>
                 </a>
-                <a href="MainMenu/DOG/Dog_SS.html">
-                    <li>F/W</li>
+                <a href="TopMenu/joinus.html">
+                    <li>JOIN US</li>
                 </a>
-            </div>
-            <a href="MainMenu/CAT/Cat_main.html">
-                <p id="CAT">CAT <i class="fa fa-caret-down" aria-hidden="true"></i></p>
-            </a>
-            <div id="drop2" class="dropdown">
-                <a href="MainMenu/CAT/Cat_SS.html">
-                    <li>S/W</li>
+                <a href="TopMenu/wish.html">
+                    <li>WISH</li>
                 </a>
-                <a href="MainMenu/CAT/Cat_FW.html">
-                    <li>F/W</li>
+                <a href="TopMenu/cart.html">
+                    <li>CART</li>
                 </a>
-            </div>
-
-            <a href="MainMenu/LIVING/Living_main.html">
-                <p id="LIVING">LIVING <i class="fa fa-caret-down" aria-hidden="true"></i></p>
-            </a>
-            <div id="drop3" class="dropdown">
-                <a href="MainMenu/LIVING/Toy.html">
-                    <li>Toy</li>
+                <a href="TopMenu/orderlist.html">
+                    <li>ORDER LIST</li>
                 </a>
-                <a href="MainMenu/LIVING/Bag.html">
-                    <li>Bag</li>
+                <a href="TopMenu/mypage.html">
+                    <li>MY PAGE</li>
                 </a>
-                <a href="MainMenu/LIVING/House.html"></a>
-                <li>House</li></a>
-            </div>
-
-            <a href="MainMenu/FOOD/Food_main.html">
-                <p id="FOOD">FOOD <i class="fa fa-caret-down" aria-hidden="true"></i></p>
-            </a>
-            <div id="drop4" class="dropdown">
-                <a href="MainMenu/FOOD/Dog_Feed.html">
-                    <li>DogFeed</li>
-                </a>
-                <a href="MainMenu/FOOD/Cat_Feed.html">
-                    <li>CatFeed</li>
-                </a>
-            </div>
-
-            <p id="COMMUNITY">COMMUNITY <i class="fa fa-caret-down" aria-hidden="true"></i></p>
-            <div id="drop5" class="dropdown">
-                <li>유기견게시판</li>
-                <li>자유게시판</li>
-            </div>
-
-
-        </ul>
-
-        <nav>
-
-        </nav>
-    </div>
-
-    <main>
-
-    </main>
-
-    <footer>
-        <div class="Topleft">
-            <li>펫송완료</li><br>
-            <li>COPYRIGHT @펫티쉬 ALL RIGHTS RESERVED</li>
-            <br>
-            <li>COPYRIGHT @29cm ALL RIGHTS RESERVED</li>
-
-
-        </div>
-        <div class="Topright">
-            <li>(Return / Exchange)</li><br>
-            <li>충청남도 서산시 해미면 대곡2길 312-10</li>
-
-        </div>
-
-        <div class="MainName">
-            <p>Petsong Wanryo</p>
-        </div>
-        <div class="right">
-            <li>Made by HanseoProject</li>
-        </div>
-
-        <div class="left">
-            <ul>
-                <li>TEL:010-xxx-xxx</li><br>
-                <li>평일 am 11:00 ~ pm 8:00</li><br>
-                <li>토,일 / 공휴일 휴무</li>
             </ul>
+            <!-- 우측 상단 검색창 -->
+            <div id="search">
+                <input type="text" class="search-text">
+                <button class="search-btn"><i class="fas fa-search"></i></button>
+            </div>
         </div>
-        <div class="center">
+        <!-- --------------------------------------------------------------   로고 -------------------------------------------------------------------------------------- -->
+        <div id="logo">
+            <a href="index.html">
+                <img class="logo-img" src="/src/main/resources/static/image/logo.png" alt="My Image">
+            </a>
+        </div>
+
+        <!-- ------------------------------------------------------------------바텀바------------------------------------------------------------------------------------ -->
+        <div id="bottom">
+            <!-- 페이스북 인스타 트위터 로고 넣기 -->
             <i class="fab fa-facebook fa-2x"></i>
             <i class="fab fa-instagram fa-2x"></i>
-        </div>
-    </footer>
+            <i class="fab fa-twitter-square fa-2x"></i>
+            <!-- notice Q&A 넣기 -->
+            <ul class="bottom-bar">
+                <a href="QandA.html">
+                    <li>Q&A</li>
+                </a>
+                <a href="Notice.html">
+                    <li>Notice</li>
+                </a>
 
+        </div>
+        <!-- ----------------------------------------------------------------------- 메뉴 네비게이션 바------------------------------------------------------------------------>
+        <div id="menu">
+
+            <ul class="menu-bar">
+                <!-- 메뉴바 로고 넣기 -->
+                <i class="fas fa-bars fa-2x"></i>
+                <!-- 메뉴 종류 넣기 -->
+                <a href="MainMenu/DOG/Dog_main.html">
+                    <p id="DOG">DOG </p>
+                </a>
+                <div id="drop1" class="dropdown">
+                    <a href="MainMenu/DOG/Dog_FW.html">
+                        <li>S/W</li>
+                    </a>
+                    <a href="MainMenu/DOG/Dog_SS.html">
+                        <li>F/W</li>
+                    </a>
+                </div>
+                <a href="MainMenu/CAT/Cat_main.html">
+                    <p id="CAT">CAT </p>
+                </a>
+                <div id="drop2" class="dropdown">
+                    <a href="MainMenu/CAT/Cat_SS.html">
+                        <li>S/W</li>
+                    </a>
+                    <a href="MainMenu/CAT/Cat_FW.html">
+                        <li>F/W</li>
+                    </a>
+                </div>
+
+                <a href="MainMenu/LIVING/Living_main.html">
+                    <p id="LIVING">LIVING </p>
+                </a>
+                <div id="drop3" class="dropdown">
+                    <a href="MainMenu/LIVING/Toy.html">
+                        <li>Toy</li>
+                    </a>
+                    <a href="MainMenu/LIVING/Bag.html">
+                        <li>Bag</li>
+                    </a>
+                    <a href="MainMenu/LIVING/House.html"></a>
+                    <li>House</li></a>
+                </div>
+
+                <a href="MainMenu/FOOD/Food_main.html">
+                    <p id="FOOD">FOOD</p>
+                </a>
+                <div id="drop4" class="dropdown">
+                    <a href="MainMenu/FOOD/Dog_Feed.html">
+                        <li>DogFeed</li>
+                    </a>
+                    <a href="MainMenu/FOOD/Cat_Feed.html">
+                        <li>CatFeed</li>
+                    </a>
+                </div>
+
+                <p id="COMMUNITY">COMMUNITY </p>
+                <div id="drop5" class="dropdown">
+                    <li>유기견게시판</li>
+                    <li>자유게시판</li>
+                </div>
+
+
+            </ul>
+
+            <nav>
+
+            </nav>
+        </div>
+
+
+        <!-- --------------------------------------------------------------------------메인 왼쪽 ------------------------------------------------------------------------ -->
+<!-- ------------------------------------------------메인-------------------------------------    -->
+<main>
+    <!-- -------------------------------------------메인 상단--------------------------------------- -->
+    <div id="top-main">
+        <!-- ---------------------------------------메인 상단 왼쪽-------------------------------- -->
+        <div id="top-left">
+            <div class="left-content">
+                <h1>DOG's Dress</h1>
+                <h4>우리 아이의 모든 계절을 책임지는 드레스들이 <br>준비되어있습니다.</h4>
+                <br>
+                <h2>New S/S Collection</h2>
+                <img src="/src/main/resources/static/image/product4.jpeg">
+
+                <div class="left-bottom">
+                    <h2>Bargain Sale <i class="fal fa-arrow-alt-right"></i></h2>
+
+                    <h4>10월21일 ~ 11월 1일 30%할인</h4>
+                </div>
+            </div>
+        </div>
+        <!-- ---------------------------------------메인 상단 오른쪽-------------------------------- -->
+
+        <div id="top-right">
+            <div id="right-content">
+
+                <h2>New F/W Collection</h2>
+                <img src="/src/main/resources/static/image/product3.jpeg">
+                <br>
+                <img src="/src/main/resources/static/image/product2.jpeg">
+            </div>
+        </div>
+    </div>
+    <!-- ---------------------------------------메인 하단 -------------------------------- -->
+
+    <div id="bottom-main">
+        <!-- ---------------------------------------메뉴 및 검색창 및 total-------------------------------- -->
+
+        <div id="bottom-main-top">
+            <div id="top1">
+                <ul>
+                    <li>ALL</li>
+                    <li>신상품</li>
+                    <li>가격</li>
+                    <li>인기상품</li>
+                    <li>좋아요</li>
+                </ul>
+                <div id="search">
+                    <input type="text" class="search-text">
+                    <button class="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+
+            <div id="top2">
+                <li>Total 18</li>
+            </div>
+        </div>
+
+        <!-- ---------------------------------------강아지 상품-------------------------------- -->
+
+        <div id="bottom-main-middle">
+
+
+            <ul class="cloth">
+                <li>
+                    <img class="dog-photo" src="/src/main/resources/static/image/instagram1.jpg">
+                    <h2>야옹이의찰칵</h2>
+                    <div id="price">
+                        <span>10000원</span>
+                        <div>
+                            <i class="fas fa-shopping-cart"></i>
+                            <i class="far fa-heart"></i>
+                        </div>
+
+                    </div>
+                </li>
+                <li>
+                    <img class="dog-photo" src="/src/main/resources/static/image/instagram2.jpg">
+                    <h2>야옹이의찰칵</h2>
+                    <div id="price">
+                        <span>10000원</span>
+                        <div>
+                            <i class="fas fa-shopping-cart"></i>
+                            <i class="far fa-heart"></i>
+                        </div>
+
+                    </div>
+                </li>
+                <li>
+                    <img class="dog-photo" src="/src/main/resources/static/image/instagram3.jpg">
+                    <h2>야옹이의찰칵</h2>
+                    <div id="price">
+                        <span>10000원</span>
+                        <div>
+                            <i class="fas fa-shopping-cart"></i>
+                            <i class="far fa-heart"></i>
+                        </div>
+
+                    </div>
+                </li>
+                <li>
+                    <img class="dog-photo" src="/src/main/resources/static/image/instagram4.jpg">
+                    <h2>야옹이의찰칵</h2>
+                    <div id="price">
+                        <span>10000원</span>
+                        <div>
+                            <i class="fas fa-shopping-cart"></i>
+                            <i class="far fa-heart"></i>
+                        </div>
+
+                    </div>
+                </li>
+                <li>
+                    <img class="dog-photo" src="/src/main/resources/static/image/instagram5.jpg">
+                    <h2>야옹이의찰칵</h2>
+                    <div id="price">
+                        <span>10000원</span>
+                        <div>
+                            <i class="fas fa-shopping-cart"></i>
+                            <i class="far fa-heart"></i>
+                        </div>
+
+                    </div>
+                </li>
+                <li>
+                    <img class="dog-photo" src="/src/main/resources/static/image/instagram6.jpg">
+                    <h2>야옹이의찰칵</h2>
+                    <div id="price">
+                        <span>10000원</span>
+                        <div>
+                            <i class="fas fa-shopping-cart"></i>
+                            <i class="far fa-heart"></i>
+                        </div>
+
+                    </div>
+                </li>
+                <li>
+                    <img class="dog-photo" src="/src/main/resources/static/image/instagram7.jpg">
+                    <h2>야옹이의찰칵</h2>
+                    <div id="price">
+                        <span>10000원</span>
+                        <div>
+                            <i class="fas fa-shopping-cart"></i>
+                            <i class="far fa-heart"></i>
+                        </div>
+
+                    </div>
+                </li>
+                <li>
+                    <img class="dog-photo" src="/src/main/resources/static/image/instagram8.jpg">
+                    <h2>야옹이의찰칵</h2>
+                    <div id="price">
+                        <span>10000원</span>
+                        <div>
+                            <i class="fas fa-shopping-cart"></i>
+                            <i class="far fa-heart"></i>
+                        </div>
+
+                    </div>
+                </li>
+                <li>
+                    <img class="dog-photo" src="/src/main/resources/static/image/instagram9.jpg">
+                    <h2>야옹이의찰칵</h2>
+                    <div id="price">
+                        <span>10000원</span>
+                        <div>
+                            <i class="fas fa-shopping-cart"></i>
+                            <i class="far fa-heart"></i>
+                        </div>
+
+                    </div>
+                </li>
+
+
+
+
+
+
+            </ul>
+
+        </div>
+
+        <!-- ---------------------------------------페이지 표시 버튼------------------------------- -->
+
+        <div id="bottom-main-bottom">
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+</main>
+ 
+        <!-- ------------------------------------------------------------------------------------푸터------------------------------------------------------------------------------ -->
+        <footer>
+            <div class="Topleft">
+                <li>펫송완료</li><br>
+                <li>COPYRIGHT @펫티쉬 ALL RIGHTS RESERVED</li>
+                <br>
+                <li>COPYRIGHT @29cm ALL RIGHTS RESERVED</li>
+
+
+            </div>
+            <div class="Topright">
+                <li>(Return / Exchange)</li><br>
+                <li>충청남도 서산시 해미면 대곡2길 312-10</li>
+
+            </div>
+
+            <div class="MainName">
+                <p>Petsong Wanryo</p>
+            </div>
+            <div class="right">
+                <li>Made by HanseoProject</li>
+            </div>
+
+            <div class="left">
+                <ul>
+                    <li>TEL:010-xxx-xxx</li><br>
+                    <li>평일 am 11:00 ~ pm 8:00</li><br>
+                    <li>토,일 / 공휴일 휴무</li>
+                </ul>
+            </div>
+            <div class="center">
+                <i class="fab fa-facebook fa-2x"></i>
+                <i class="fab fa-instagram fa-2x"></i>
+                <i class="fab fa-twitter-square fa-2x"></i>
+
+            </div>
+        </footer>
+
+    </div>
     <!-- js 링크 -->
     <script src="/src/main/resources/static/js/index.js"></script>
-    </body>
+
+</body>
 
 </html>
