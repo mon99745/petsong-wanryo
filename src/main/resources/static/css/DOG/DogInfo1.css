@@ -5,12 +5,13 @@
 
 body {
   display: block;
+  
 }
 
 /**/
 /* !!!! 화면 비율 일정하게 조절 !!!!
-  ex> 화면 줄어들면 그에 맞는 비율로 줄고, 늘면 그에 맞는 비율로 늠
-  가까이 확대되면 스크롤 이용 */
+ex> 화면 줄어들면 그에 맞는 비율로 줄고, 늘면 그에 맞는 비율로 늠
+가까이 확대되면 스크롤 이용 */
 .container {
   width: 100%;
   padding-right: var(1rem);
@@ -150,9 +151,9 @@ li {
   display: inline-block;
   line-height: 60px;
   margin-left: 50px;
-  margin-right: 30px;
-  padding-left: 30px;
-  padding-right: 30px;
+  margin-right: 40px;
+  padding-left: 40px;
+  padding-right: 40px;
   font-size: 30px;
   font-weight: bold;
 }
@@ -243,7 +244,7 @@ p i {
 .dropdown.show5 {
   display: block;
   visibility: visible;
-  opacity:0.9;
+  opacity: 0.9;
   margin-top: 0;
   -webkit-transition: all 0.2s linear;
   -moz-transition: all 0.2s linear;
@@ -268,216 +269,144 @@ p i {
   padding-bottom: 4px;
 }
 
-/* --------------middle --------*/
+/* ------------------------------------main -------------------------------*/
 
-main {
-  width: 100%;
-  background-color: white;
-  text-align: center;
+main{
+    width: 100%;
+    height: 4000px;
 }
 
-/* ------------------------------------메인 상단---------------------------- */
-#top-main{
-  width: 100%;
-  height: 950px;
+#main-top{
+    width: 100%;
+    height: 20%;
 }
-
+/* ----------------------------상품이미지--------------------------- */
 #top-left{
-  float: left;
-  width: 50%;
-  height: 100%;
+    width: 50%;
+    height:100% ;
+    float: left;   
+    display: flex;
+    align-items: center;
+    justify-content: right;
 }
-.left-content{
-  width: 60%;
-  float: right;
-  margin-top: 50px;
-  margin-left: 50px;
+#top-left img{
+    width: 70%;
+    height: 100%;
+    float: right;
+    margin-right: 50px;
+    margin-top: 250px;
+/* ----------------------------------상품 주문 칸--------------------- */
 }
-.left-content h1,h2,h4{
-  margin-bottom: 10px;
-  text-align: left;
-}
-
-
-.left-content img{
-  float: left;
-  width: 90%;
-  height: 70%;
-}
-
-.left-bottom{
-  float: right;
-  margin-top: 70px;
-  width: 55%;
-}
-
 #top-right{
-  float: right;
-  width: 50%;
-  height: 100%;
+    width: 40%;
+    height:100% ;   
+    float: left;
+}
+/* --------------------------상품명------------------------ */
+.box1{
+    margin-top: 150px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid gray;
+}
+/* -------------------------------가격-------------------- */
+.box2{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid gray;
+
+}
+/* ------------------------- 사이즈-------------------------- */
+.box3{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-top: 50px;
+    padding-bottom: 55px;
+    border-bottom: 1px solid gray;
+    display: flex;
+    align-items: center;
 }
 
-#right-content{
-  width: 60%;
-  float: left;
-  margin-top: 50px;
-  margin-left: 30px;
+.size-box{
+    width: 40px;
+    height: 40px;
+    border: 1px solid gray;
+    border-radius: 0.5em;
+    text-align: center;
+    padding-top: 5px;
+    margin-left: 40px ;
+    font-size: 20px;
+    font-weight: bold;
 }
-#right-content h2{
-  margin-bottom: 10px;
-  text-align: left;
-}
-
-#right-content img{
-  float: left;
-  width: 90%;
-  height: 70%;
-  margin-bottom: 30px;
-}
-
-
-/* -------------------------------------메인 하단------------------------------- */
-
-
-#bottom-main{
-  width: 100%;
-  height: 2200px;
-}
-/* ---------------------------------------메뉴 와 검색창 부분------------------------------------ */
-#bottom-main-top{
-  width: 100%;
-  height: 8%;
-}
-/* -------------------------------------------메뉴------------------------------------ */
-#top1{
-  height: 60%;
+/* ----------------------상품 목록--------------------- */
+.box4{
+  height: 300px;
   border-bottom: 1px solid gray;
 }
-#top1 ul{
-  float: left;
-  margin-top: 50px;  
-}
 
-#top1 li{
-  font-size: 30px;
-  font-weight: bold;
+/* ---------------------------버튼---------------------- */
+
+.btn{
+  margin-top: 20px;
   margin-left: 10px;
-  margin-right: 10px;
-  padding-right: 20px;
-  padding-left: 20px;
-  
 }
-
-
-/* -------------------------------------검색창--------------------------------------- */
-#search {
-  float: right;
-  margin-top: 50px;
-  margin-right: 10px;
-  width: 250px;
-  height: 30px;
-  border: 1px solid #cacaca;
+/* ---------------------------버튼 효과----------------- */
+.draw-border {
+  box-shadow: inset 0 0 0 4px rgb(100, 87, 87);
+  color: rgb(100, 87, 87);
+  transition: color 0.25s 0.0833333333s;
+  position: relative;
 }
-
-.search-text {
-  font-size: 20px;
-  width: 140px;
-  padding-left: 10px;
-  height: 26px;
-  border: 0px;
-  outline: none;
+.draw-border::before, .draw-border::after {
+  border: 0 solid transparent;
+  box-sizing: border-box;
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  width: 0;
+  height: 0;
+  bottom: 0;
+  right: 0;
+}
+.draw-border::before {
+  border-bottom-width: 4px;
+  border-left-width: 4px;
+}
+.draw-border::after {
+  border-top-width: 4px;
+  border-right-width: 4px;
+}
+.draw-border:hover {
   color: black;
 }
-
-.search-btn {
-  float: right;
-  width: 30px;
+.draw-border:hover::before, .draw-border:hover::after {
+  border-color: black;
+  transition: border-color 0s, width 0.25s, height 0.25s;
+  width: 100%;
   height: 100%;
-  border: 0px;
-  outline: none;
-  background-color: #fff;
-  color: #cacaca;
+}
+.draw-border:hover::before {
+  transition-delay: 0s, 0s, 0.25s;
+}
+.draw-border:hover::after {
+  transition-delay: 0s, 0.25s, 0s;
 }
 
-#search:hover {
-  border: 1px solid rgb(167, 164, 164);
+.btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  line-height: 1.5;
+  font: 700 1.2rem "Roboto Slab", sans-serif;
+  padding: 1em 2em;
+  letter-spacing: 0.05rem;
 }
-/* -----------------------------------------------total 표시------------------------------------- */
-
-#top2 li{
-  float: left;
-  margin-top: 10px;
-  margin-left: 10px;
-  font-size: 30px;
-  font-weight: bold;
-
+.btn:focus {
+  outline: 2px dotted black;
 }
-/* -----------------------------------------메인 중간---------------------------------- */
-#bottom-main-middle{
-  width: 100%;
-  height: 80%;
-}
-
-
-
-#dog-clothes h2{
-  margin-top: 10px;
-}
-
-.dog-photo{
-  width: 400px;
-  height:400px;
-}
-.cloth li{
-  margin: 30px 30px;
-  padding: 10px 10px;
-}
-.cloth h2{
-  margin-top: 10px;
-}
-
-#price{
-  height: 20%;
-  border-top: 2px solid gray;
-
-}
-#price span{
-  margin-top: 5px;
-  float: left;
-  font-size: 22px;
-}
-.fa-shopping-cart, .fa-heart{
-  margin-top: 5px;
-  margin-left: 5px;
-  margin-right: 5px;
-  float: right;
-  font-size: 25px;
-}
-
-
-
-
-
-
-
-
-
-
-#bottom-main-bottom{
-  width: 100%;
-  height: 10%;
-  background-color: blue;
-}
-
-
-
-
-
-
-
-
-
-/* --------------footer ------------*/
+/* ---------------------------------------------footer -------------------------------------*/
 footer {
   border-top: solid 3px;
   width: 100%;
@@ -507,6 +436,5 @@ footer {
 }
 .center {
   display: inline-block;
-  margin-left: 520px;
+  margin-left: 500px;
 }
- 
