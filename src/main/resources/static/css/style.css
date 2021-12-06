@@ -379,6 +379,13 @@ main {
 .photozone p{
   text-align: center;
 }
+.photozone li {
+  cursor: pointer;
+  transition: transform 300ms ease;
+}
+.photozone li:hover {
+  transform: scale(1.1);
+}
 /* -----------------------------------메인 바텀------------------------------- */
 .mainbottom{
   width: 100%;
