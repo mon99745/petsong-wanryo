@@ -9,8 +9,8 @@ body {
 
 /**/
 /* !!!! 화면 비율 일정하게 조절 !!!!
-ex> 화면 줄어들면 그에 맞는 비율로 줄고, 늘면 그에 맞는 비율로 늠
-가까이 확대되면 스크롤 이용 */
+    ex> 화면 줄어들면 그에 맞는 비율로 줄고, 늘면 그에 맞는 비율로 늠
+    가까이 확대되면 스크롤 이용 */
 .container {
   width: 100%;
   padding-right: var(1rem);
@@ -56,7 +56,6 @@ li {
   padding: 10px 5px;
   display: inline-block;
 }
-
 .top-bar a:hover {
   color: #cacaca;
 }
@@ -271,152 +270,139 @@ p i {
 .dropdown p:nth-child(5) {
   padding-bottom: 4px;
 }
-
-/* ------------------------------------main -------------------------------*/
+/* --------------middle --------*/
 
 main {
   width: 100%;
-  height: 2950px;
+  height: 1000px;
   margin-top: 50px;
   background-color: white;
 }
 
-/*------------------------------------------left------------------------------*/
-#left {
-  float: left;
-  width: 40%;
-  height: 100%;
+.join_form h2 {
+  margin-left: 100px;
+  text-align: center;
+  margin-bottom: 50px;
 }
-#left img {
-  width: 100%;
-  height: 725px;
-  margin: 0;
+.sign-up {
+  width: 50%;
+  height: 90%;
+  margin: 0 auto;
+  box-shadow: 1px 1px 3px 1px #dadce0;
+}
+/*----------*/
+.join_form {
+  margin-top: 30px;
+  float: left;
+}
+.red_txt {
+  color: #ee7272;
 }
 
-/*-----------------------------------------middle------------------------*/
-#middle {
-  float: left;
-  width: 30%;
-  height: 100%;
-}
-.dog5-img {
-  margin-left: 10px;
-  margin-right: 20px;
-}
-/*-----------------베스트 아이템 전체 구역------------------*/
-.best-item {
+.join_form table input {
+  border: 1px solid #ececec;
+  font-size: 14px;
+  color: #4c4c4c;
+  height: 35px;
   padding: 10px;
-}
-.best-item h3 {
-  font-size: 30px;
-}
-.best-item p {
-  font-size: 17px;
-}
-.best-item h2 {
-  margin-top: 20px;
-}
-/*-----------------베스트 아이템 큰 사진------------------*/
-.best-img {
-  margin-top: 30px;
-  width: 100%;
-}
-
-/*-----------------작은 베스트 아이템 구역------------------*/
-.small-best-item {
-  margin-top: 25px;
-  border-top: 1px solid gray;
-}
-
-/*-----------------작은 베스트 아이템 상품이름 ------------------*/
-.small-best-item h4 {
-  margin-top: 25px;
-}
-
-.small-product {
+  width: 80%;
   float: left;
-  margin-top: 20px;
-  margin-right: 20px;
-  width: 52px;
-  height: 52px;
+}
+.join_form table input.email {
+  width: 150px;
+  display: inline-block;
+}
+.join_form table input.email2 {
+  width: 200px;
 }
 
-/*--------------------------------right-------------------------------------*/
-#right {
+.join_form table input.phone {
+  width: 80px;
+  display: inline-block;
+}
+.join_form table input.phone2 {
+  width: 100px;
+}
+
+.mar10 {
+  margin: 20px 5px 0 10px;
+  display: inline-block;
+  padding: 0;
   float: left;
-  width: 30%;
-  height: 100%;
 }
-#right h3 {
-  font-size: 30px;
+.join_form table input.send_number {
+  width: 383px;
 }
-#right .best-item1 {
+.join_form table th span {
+  color: #404040;
+  font-size: 14px;
+  display: inline-block;
+  padding: 0 10px 0 0;
+  text-indent: 20px;
+}
+.join_form table th {
+  text-align: left;
+}
+.join_form table td {
+  padding: 6px 0;
+}
+.join_form table th span:after {
+  content: "*";
+  font-size: 13px;
+  color: #f95427;
+  top: 0;
+  right: 0px;
+}
+
+.join_form table td a.btn_confirm {
+  display: inline-block;
+  float: left;
+  width: 100px;
+  height: 48px;
+  margin-top: 5px;
+  margin-left: 10px;
+  background: #000;
+  color: #fff;
+  text-align: center;
+  vertical-align: top;
+  line-height: 50px;
+}
+
+.exform_txt {
+  float: right;
   margin-top: 30px;
-}
-#right .best-item2 {
-  padding-top: 50px;
-}
-
-/* ----------------------------------인스타그램---------------------------- */
-.instagram {
-  margin-top: 190px;
-  padding-top: 60px;
-  padding-bottom: 20px;
-  border-top: 1px solid gray;
+  margin-right: 25px;
+  text-align: right;
+  color: #4c4c4c;
 }
 
-.instagram h2 {
-  margin-top: 10px;
+.exform_txt span:after {
+  content: "*";
+  font-size: 13px;
+  color: #f95427;
+  top: 0;
 }
 
-.instagram-photo {
-  width: 140px;
-  height: 140px;
-}
-.photozone li {
-  margin-top: 10px;
-  border: 1px solid gray;
-}
-.photozone p {
+.signbtn {
   text-align: center;
 }
-/* -----------------------------------메인 바텀------------------------------- */
-.mainbottom {
-  width: 100%;
-  height: 800px;
-}
-/* ----------------------------------------메인 바텀 왼쪽-------------------- */
-.bottomleft {
-  float: left;
-  width: 50%;
-  height: 100%;
-}
-/* -------------------------------------유튜브--------------------------------- */
-.youtube {
-  margin-top: 20px;
-  width: 95%;
-  height: 63%;
-}
-/* ----------------------------------메인 바텀 오른쪽--------------------------- */
-.bottomright {
-  float: right;
-  width: 50%;
-  height: 100%;
-}
-/* --------------------------------------뉴스-------------------------------- */
-#mainImage {
-  margin-top: 20px;
-  margin-left: 8x;
+#signup-Btn {
+  margin-top: 30px;
+  width: 60%;
+  height: 50px;
+  border-radius: 5rem;
+  border: 0;
+  outline: 0;
+  background-color: rgb(34, 34, 34);
+  color: #fff;
 }
 
-.n2,
-.n3,
-.n4,
-.n5 {
-  visibility: hidden;
+#signup-Btn:hover {
+  background-color: #fff;
+  border: 1px solid #000;
+  color: #000;
 }
-
-/* ---------------------------------------------footer -------------------------------------*/
+/* --------------footer ------------*/
 footer {
   border-top: solid 3px;
   width: 100%;
@@ -446,5 +432,5 @@ footer {
 }
 .center {
   display: inline-block;
-  margin-left: 500px;
+  margin-left: 520px;
 }
