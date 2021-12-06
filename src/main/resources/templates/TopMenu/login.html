@@ -25,12 +25,12 @@
         <div id="top">
            <!-- 좌측 상단 네비게이션-->
            <ul class="top-bar">
-            <a href="TopMenu/login.html"><li>LOGIN</li></a>
-            <a href="TopMenu/joinus.html"><li>JOIN US</li></a>
-            <a href="TopMenu/wish.html"><li>WISH</li></a>
-            <a href="TopMenu/cart.html"><li>CART</li></a>
-            <a href="TopMenu/orderlist.html"><li>ORDER LIST</li></a>
-            <a href="TopMenu/mypage.html"><li>MY PAGE</li></a>
+            <a href="login.html"><li>LOGIN</li></a>
+            <a href="joinus.html"><li>JOIN US</li></a>
+            <a href="wish.html"><li>WISH</li></a>
+            <a href="cart.html"><li>CART</li></a>
+            <a href="orderlist.html"><li>ORDER LIST</li></a>
+            <a href="mypage.html"><li>MY PAGE</li></a>
         </ul>
      <!-- 우측 상단 검색창 -->
      <div id="search">
@@ -49,64 +49,91 @@
             <!-- 페이스북 인스타 로고 넣기 -->
             <i class="fab fa-facebook fa-2x"></i>
             <i class="fab fa-instagram fa-2x"></i>
+            <i class="fab fa-twitter-square fa-2x"></i>
+
             <!-- notice Q&A 넣기 -->
             <ul class="bottom-bar">
                 <a href="QandA.html"><li>Q&A</li></a>
                 <a href="Notice.html"><li>Notice</li></a>
 
         </div>
-        <div id="menu">
+       <!-- ----------------------------------------------------------------------- 메뉴 네비게이션 바------------------------------------------------------------------------>
+       <div id="menu">
 
-            <ul class="menu-bar">
-                <!-- 메뉴바 로고 넣기 -->
-                <i class="fas fa-bars fa-2x" ></i>
-                <!-- 메뉴 종류 넣기 -->
-                <a href="MainMenu/DOG/Dog_main.html"><p id="DOG">DOG <i class="fa fa-caret-down" aria-hidden="true"></i></p></a>
-                <div id="drop1" class="dropdown">
-                    <a href="MainMenu/DOG/Dog_FW.html"><li>S/W</li></a>
-                    <a href="MainMenu/DOG/Dog_SS.html"><li>F/W</li></a>
-                </div>
-                <a href="MainMenu/CAT/Cat_main.html"><p id="CAT">CAT <i class="fa fa-caret-down" aria-hidden="true"></i></p></a>
-                <div id="drop2" class="dropdown">
-                    <a href="MainMenu/CAT/Cat_SS.html"><li>S/W</li></a>
-                    <a href="MainMenu/CAT/Cat_FW.html"><li>F/W</li></a>
-                 </div>
+        <ul class="menu-bar">
+            <!-- 메뉴바 로고 넣기 -->
+            <i class="fas fa-bars fa-2x"></i>
+            <!-- 메뉴 종류 넣기 -->
+            <a href="MainMenu/DOG/Dog_main.html">
+                <p id="DOG">DOG </p>
+            </a>
+            <div id="drop1" class="dropdown">
+                <a href="MainMenu/DOG/Dog_FW.html">
+                    <li>S/W</li>
+                </a>
+                <a href="MainMenu/DOG/Dog_SS.html">
+                    <li>F/W</li>
+                </a>
+            </div>
+            <a href="MainMenu/CAT/Cat_main.html">
+                <p id="CAT">CAT </p>
+            </a>
+            <div id="drop2" class="dropdown">
+                <a href="MainMenu/CAT/Cat_SS.html">
+                    <li>S/W</li>
+                </a>
+                <a href="MainMenu/CAT/Cat_FW.html">
+                    <li>F/W</li>
+                </a>
+            </div>
 
-                <a href="MainMenu/LIVING/Living_main.html"><p id="LIVING">LIVING <i class="fa fa-caret-down" aria-hidden="true"></i></p></a>
-                <div id="drop3" class="dropdown">
-                    <a href="MainMenu/LIVING/Toy.html"><li>Toy</li></a>
-                    <a href="MainMenu/LIVING/Bag.html"><li>Bag</li></a>
-                    <a href="MainMenu/LIVING/House.html"></a><li>House</li></a>
-                </div>
+            <a href="MainMenu/LIVING/Living_main.html">
+                <p id="LIVING">LIVING </p>
+            </a>
+            <div id="drop3" class="dropdown">
+                <a href="MainMenu/LIVING/Toy.html">
+                    <li>Toy</li>
+                </a>
+                <a href="MainMenu/LIVING/Bag.html">
+                    <li>Bag</li>
+                </a>
+                <a href="MainMenu/LIVING/House.html"></a>
+                <li>House</li></a>
+            </div>
 
-                <a href="MainMenu/FOOD/Food_main.html"><p id="FOOD">FOOD <i class="fa fa-caret-down" aria-hidden="true"></i></p></a>
-                <div id="drop4" class="dropdown">
-                    <a href="MainMenu/FOOD/Dog_Feed.html"><li>DogFeed</li></a>
-                    <a href="MainMenu/FOOD/Cat_Feed.html"><li>CatFeed</li></a>
-                 </div>
+            <a href="MainMenu/FOOD/Food_main.html">
+                <p id="FOOD">FOOD</p>
+            </a>
+            <div id="drop4" class="dropdown">
+                <a href="MainMenu/FOOD/Dog_Feed.html">
+                    <li>DogFeed</li>
+                </a>
+                <a href="MainMenu/FOOD/Cat_Feed.html">
+                    <li>CatFeed</li>
+                </a>
+            </div>
 
-                <p id="COMMUNITY">COMMUNITY <i class="fa fa-caret-down" aria-hidden="true"></i></p>
-                <div id="drop5" class="dropdown">
-                    <li>유기견게시판</li>
-                    <li>자유게시판</li>
-                </div>
+            <p id="COMMUNITY">COMMUNITY </p>
+            <div id="drop5" class="dropdown">
+                <li>유기견게시판</li>
+                <li>자유게시판</li>
+            </div>
 
-               
-            </ul>
+
+        </ul>
 
         <nav>
-            
+
         </nav>
-        </div>
+    </div>
+
 
     <main>
        <div id="Login">
            <h1>Member Login</h1>
            <form method="post" id="authForm" action="#">
             <div id="Login-top">
-              <label for="loginId"></label>
               <input type="text" id="loginId" name="loginId" placeholder="ID" >
-              <label for="loginPw"></label>
               <input type="password" id="loginPw" name="password" placeholder="Password" >
             </div>
             
@@ -163,6 +190,5 @@
 
     <!-- js 링크 -->
     <script src="/src/main/resources/static/js/index.js"></script>
-</body>
-
+</div>
 </html>
