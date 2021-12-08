@@ -278,19 +278,20 @@ main{
 
 #main-top{
     width: 100%;
-    height: 20%;
+    height: 25%;
+    border-bottom: 1px solid gray;
 }
 /* ----------------------------상품이미지--------------------------- */
 #top-left{
     width: 50%;
-    height:100% ;
+    height: 80% ;
     float: left;   
     display: flex;
     align-items: center;
     justify-content: right;
 }
 #top-left img{
-    width: 70%;
+    width: 80%;
     height: 100%;
     float: right;
     margin-right: 50px;

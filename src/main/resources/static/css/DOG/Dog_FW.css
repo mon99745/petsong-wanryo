@@ -279,7 +279,7 @@ main {
 /* ------------------------------------메인 상단---------------------------- */
 #top-main{
   width: 100%;
-  height: 950px;
+  height: 1000px;
 }
 
 #top-left{
@@ -288,7 +288,7 @@ main {
   height: 100%;
 }
 .left-content{
-  width: 60%;
+  width: 90%;
   float: right;
   margin-top: 50px;
   margin-left: 50px;
@@ -297,19 +297,22 @@ main {
   margin-bottom: 10px;
   text-align: left;
 }
-
-
-.left-content img{
-  float: left;
-  width: 90%;
-  height: 70%;
+.left-content h4{
+  padding-bottom: 20px;
+  border-bottom: 1px solid gray;
 }
 
-.left-bottom{
-  float: right;
-  margin-top: 70px;
-  width: 55%;
+
+#mainImage{
+  margin-top: 20px;
+  margin-left: 8x;
 }
+
+.n2, .n3, .n4, .n5{
+  visibility: hidden;
+}
+
+
 
 #top-right{
   float: right;
@@ -321,7 +324,7 @@ main {
   width: 60%;
   float: left;
   margin-top: 50px;
-  margin-left: 30px;
+  margin-left: 120px;
 }
 #right-content h2{
   margin-bottom: 10px;
@@ -331,7 +334,7 @@ main {
 #right-content img{
   float: left;
   width: 90%;
-  height: 70%;
+  height: 350px;
   margin-bottom: 30px;
 }
 
