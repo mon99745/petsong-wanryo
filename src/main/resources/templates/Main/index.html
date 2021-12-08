@@ -7,8 +7,8 @@
     <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
     <title>펫송완료</title>
     <!--    <link rel="stylesheet" href="/static/css/index.css">-->
-    <link rel="stylesheet" href="/src/main/resources/static/css/style.css">
-    <link rel="stylesheet" href="/src/main/resources/static/css/navi.scss">
+    <link rel="stylesheet" href="/src/main/resources/static/css/Main/index.css">
+    <link rel="stylesheet" href="/src/main/resources/staticcss//Main/header.scss">
     <!-- 네비게이션 관련 js 링크 -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
     <script src="https://use.typekit.net/hoy3lrg.js"></script>
@@ -18,7 +18,13 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
-
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#headers").load("/src/main/resources/templates/Header_Footer/header.html");
+            $("#footers").load("/src/main/resources/templates/Header_Footer/footer.html");
+        }
+        );
+    </script>
 
 </head>
 
@@ -26,127 +32,8 @@
     <div class="container">
 
         <!-- -----------------------------------------------------최고 상단 메뉴 바 + 검색창---------------------------------------------------------------------       -->
-        <div id="top">
-            <!-- 좌측 상단 네비게이션-->
-            <ul class="top-bar">
-                <a href="TopMenu/login.html">
-                    <li>LOGIN</li>
-                </a>
-                <a href="TopMenu/joinus.html">
-                    <li>JOIN US</li>
-                </a>
-                <a href="TopMenu/wish.html">
-                    <li>WISH</li>
-                </a>
-                <a href="TopMenu/cart.html">
-                    <li>CART</li>
-                </a>
-                <a href="TopMenu/orderlist.html">
-                    <li>ORDER LIST</li>
-                </a>
-                <a href="TopMenu/mypage.html">
-                    <li>MY PAGE</li>
-                </a>
-            </ul>
-            <!-- 우측 상단 검색창 -->
-            <div id="search">
-                <input type="text" class="search-text">
-                <button class="search-btn"><i class="fas fa-search"></i></button>
-            </div>
-        </div>
-        <!-- --------------------------------------------------------------   로고 -------------------------------------------------------------------------------------- -->
-        <div id="logo">
-            <a href="index.html">
-                <img class="logo-img" src="/src/main/resources/static/image/logo.png" alt="My Image">
-            </a>
-        </div>
 
-        <!-- ------------------------------------------------------------------바텀바------------------------------------------------------------------------------------ -->
-        <div id="bottom">
-            <!-- 페이스북 인스타 트위터 로고 넣기 -->
-            <i class="fab fa-facebook fa-2x"></i>
-            <i class="fab fa-instagram fa-2x"></i>
-            <i class="fab fa-twitter-square fa-2x"></i>
-            <!-- notice Q&A 넣기 -->
-            <ul class="bottom-bar">
-                <a href="QandA.html">
-                    <li>Q&A</li>
-                </a>
-                <a href="Notice.html">
-                    <li>Notice</li>
-                </a>
-
-        </div>
-        <!-- ----------------------------------------------------------------------- 메뉴 네비게이션 바------------------------------------------------------------------------>
-        <div id="menu">
-
-            <ul class="menu-bar">
-                <!-- 메뉴바 로고 넣기 -->
-                <i class="fas fa-bars fa-2x"></i>
-                <!-- 메뉴 종류 넣기 -->
-                <a href="MainMenu/DOG/Dog_main.html">
-                    <p id="DOG">DOG </p>
-                </a>
-                <div id="drop1" class="dropdown">
-                    <a href="MainMenu/DOG/Dog_FW.html">
-                        <li>S/W</li>
-                    </a>
-                    <a href="MainMenu/DOG/Dog_SS.html">
-                        <li>F/W</li>
-                    </a>
-                </div>
-                <a href="MainMenu/CAT/Cat_main.html">
-                    <p id="CAT">CAT </p>
-                </a>
-                <div id="drop2" class="dropdown">
-                    <a href="MainMenu/CAT/Cat_SS.html">
-                        <li>S/W</li>
-                    </a>
-                    <a href="MainMenu/CAT/Cat_FW.html">
-                        <li>F/W</li>
-                    </a>
-                </div>
-
-                <a href="MainMenu/LIVING/Living_main.html">
-                    <p id="LIVING">LIVING </p>
-                </a>
-                <div id="drop3" class="dropdown">
-                    <a href="MainMenu/LIVING/Toy.html">
-                        <li>Toy</li>
-                    </a>
-                    <a href="MainMenu/LIVING/Bag.html">
-                        <li>Bag</li>
-                    </a>
-                    <a href="MainMenu/LIVING/House.html"></a>
-                    <li>House</li></a>
-                </div>
-
-                <a href="MainMenu/FOOD/Food_main.html">
-                    <p id="FOOD">FOOD</p>
-                </a>
-                <div id="drop4" class="dropdown">
-                    <a href="MainMenu/FOOD/Dog_Feed.html">
-                        <li>DogFeed</li>
-                    </a>
-                    <a href="MainMenu/FOOD/Cat_Feed.html">
-                        <li>CatFeed</li>
-                    </a>
-                </div>
-
-                <p id="COMMUNITY">COMMUNITY </p>
-                <div id="drop5" class="dropdown">
-                    <li>유기견게시판</li>
-                    <li>자유게시판</li>
-                </div>
-
-
-            </ul>
-
-            <nav>
-
-            </nav>
-        </div>
-
+        <div id="headers"></div>
 
         <!-- --------------------------------------------------------------------------메인 왼쪽 ------------------------------------------------------------------------ -->
 
@@ -156,26 +43,25 @@
                 <img class="dog4-img" src="/src/main/resources/static/image/dog4.jpeg" alt="My Image">
                 <img class="dog1-img" src="/src/main/resources/static/image/dog1.jpeg" alt="My Image">
                 <img class="dog2-img" src="/src/main/resources/static/image/dog2.jpeg" alt="My Image">
-
-
-
+        
+        
+        
             </div>
             <!-- ------------------------------------------------------------------------------메인 중간-------------------------------------------------------------------------- -->
             <div id="middle">
-                <img class="dog5-img" src="/src/main/resources/static/image/dog5.jpeg" alt="My Image" width="95%"
-                    >
+                <img class="dog5-img" src="/src/main/resources/static/image/dog5.jpeg" alt="My Image" width="95%">
                 <!--메인 중간구역 베스트 상품 목록-->
                 <div class="best-item">
                     <h3>BEST</h3>
                     <hr align="left" style="border: solid 3px black; width: 40%; background-color: black">
-                    <a href="#"><img class="best-img" src="/src/main/resources/static/image/product1.jpeg"
-                            alt="몽블랑패딩(mint)"> </a>
+                    <a href="#"><img class="best-img" src="/src/main/resources/static/image/product1.jpeg" alt="몽블랑패딩(mint)">
+                    </a>
                     <h2>갑자기 온 한파! 겨울 산책 필수 아이템!</h2>
                     <br>
                     <p>우리 댕댕이의 감기가 걱정된다면?</p>
                     <p>다양한 스타일의 패딩을 추천합니다!</p>
                     <br>
-
+        
                     <!--큰 베스트 상품목록 밑에 달리는 작은 베스트 상품목록-->
                     <div class="small-best-item">
                         <a href="#"><img class="small-product" src="/src/main/resources/static/image/product2.jpeg"
@@ -183,7 +69,7 @@
                         <h4> 몽블랑리버시블패딩(Pink)</h4>
                         <p>54,000원</p>
                     </div>
-
+        
                     <div class="small-best-item">
                         <a href="#"><img class="small-product" src="/src/main/resources/static/image/product3.jpeg"
                                 alt="몽블랑패딩(ivory)"> </a>
@@ -197,7 +83,7 @@
                         <p>54,000원</p>
                     </div>
                 </div>
-
+        
                 <div class="best-item">
                     <hr align="left">
                     <a href="#"><img class="best-img" src="/src/main/resources/static/image/product4.jpeg"
@@ -210,34 +96,34 @@
                     <p><del>105,000</del>원</p>
                     <p>73,500원</p>
                     <!--큰 베스트 상품목록 밑에 달리는 작은 베스트 상품목록-->
-
+        
                 </div>
                 <div class="best-item">
                     <hr align="left">
-                    <a href="#"><img class="best-img" src="/src/main/resources/static/image/product5.jpg"
-                            alt="별밤잠옷SET(사람+강아지)"> </a>
+                    <a href="#"><img class="best-img" src="/src/main/resources/static/image/product5.jpg" alt="별밤잠옷SET(사람+강아지)">
+                    </a>
                     <h2>깨땡카라티</h2>
                     <br>
                     <p>땡땡이는 늘 인기만점이죠? 스판이라 신축이 좋은 아이템!</p>
                     <br>
                     <h4> 깨땡카라티(Ivory)</h4>
                     <p>89,000원</p>
-
+        
                     <!--큰 베스트 상품목록 밑에 달리는 작은 베스트 상품목록-->
-
+        
                 </div>
-
-
-
-
-
-
+        
+        
+        
+        
+        
+        
             </div>
             <!-- -------------------------------------------------------------------------------------메인 오른쪽---------------------------------------------------------------------- -->
             <div id="right">
                 <img class="dog6-img" src="/src/main/resources/static/image/dog6.jpeg" alt="My Image" width="100%"
                     height="544px">
-
+        
                 <div class="best-item1">
                     <h3>EVENT</h3>
                     <hr align="left" style="border: solid 3px black; width: 40%; background-color: black;">
@@ -248,8 +134,8 @@
                     <br>
                     <p>신규 회원 가입하신 고객님께 15% 쿠폰을 드립니다.</p>
                 </div>
-
-
+        
+        
                 <div class="best-item2">
                     <hr align="left">
                     <a href="#"><img class="best-img" src="/src/main/resources/static/image/coupon2.jpeg" alt="10%쿠폰">
@@ -263,7 +149,7 @@
                     <h3>INSTAGRAM</h3>
                     <hr align="left" style="border: solid 3px black; width: 40%; background-color: black;">
                     <h2>펫친구들과 추억을 쌓고 자랑해보세요.</h2>
-
+        
                     <ul class="photozone">
                         <li>
                             <img class="instagram-photo" src="/src/main/resources/static/image/instagram1.jpg">
@@ -302,20 +188,19 @@
                             <p>뭘쳐다보냥</p>
                         </li>
                     </ul>
-
-
-
+        
+        
+        
                     <br>
                     <h3>#펫송완료 #petsongwanryo </h3>
                     <h4>#강지스타그램 #냥냥스타그램 #펫스타그램 #집사스타그램<br> #반려견모임 #반려묘모임</h4>
-
+        
                 </div>
         </main>
         <!-- --------------------------------------------bottom---------------------------------- -->
-
         <div class="mainbottom">
-
-
+        
+        
             <div class="bottomleft">
                 <h1>10월의 PETVIDEO</h1>
                 <hr align="left" style="border: solid 3px black; width: 40%; background-color: black;">
@@ -327,13 +212,13 @@
                 <h3>1등은 펫송완료 모바일 상품권 5만원 증정!</h3>
                 <h3>모집기간: 10월19일 ~ 10월 28일 (Notice 참조)</h3>
             </div>
-
-
-
+        
+        
+        
             <div class="bottomright">
                 <h1>DailyPetNews</h1>
                 <hr align="left" style="border: solid 3px black; width: 40%; background-color: black;">
-
+        
                 <img src="/src/main/resources/static/image/News2.png" id=mainImage class="n1" alt="YsjImage"
                     style="width:750px;height:500px;">
                 <img src="/src/main/resources/static/image/News3.png" id=mainImage class="n2" alt="YsjImage"
@@ -344,53 +229,20 @@
                     style="width:800px;height:500px;">
                 <img src="/src/main/resources/static/image/News1.png" id=mainImage class="n5" alt="YsjImage"
                     style="width:800px;height:500px;">
-
+        
             </div>
-
-
+        
+        
         </div>
-        </bottom>
+        <!-- --------------------------------------------메인 bottom---------------------------------- -->
+
         <!-- ------------------------------------------------------------------------------------푸터------------------------------------------------------------------------------ -->
-        <footer>
-            <div class="Topleft">
-                <li>펫송완료</li><br>
-                <li>COPYRIGHT @펫티쉬 ALL RIGHTS RESERVED</li>
-                <br>
-                <li>COPYRIGHT @29cm ALL RIGHTS RESERVED</li>
+        <div id="footers"></div>
 
-
-            </div>
-            <div class="Topright">
-                <li>(Return / Exchange)</li><br>
-                <li>충청남도 서산시 해미면 대곡2길 312-10</li>
-
-            </div>
-
-            <div class="MainName">
-                <p>Petsong Wanryo</p>
-            </div>
-            <div class="right">
-                <li>Made by HanseoProject</li>
-            </div>
-
-            <div class="left">
-                <ul>
-                    <li>TEL:010-xxx-xxx</li><br>
-                    <li>평일 am 11:00 ~ pm 8:00</li><br>
-                    <li>토,일 / 공휴일 휴무</li>
-                </ul>
-            </div>
-            <div class="center">
-                <i class="fab fa-facebook fa-2x"></i>
-                <i class="fab fa-instagram fa-2x"></i>
-                <i class="fab fa-twitter-square fa-2x"></i>
-
-            </div>
-        </footer>
 
     </div>
     <!-- js 링크 -->
-        <script src="/src/main/resources/static/js/index.js"></script>
+    <script src="/src/main/resources/static/js/index.js"></script>
 
 </body>
 
