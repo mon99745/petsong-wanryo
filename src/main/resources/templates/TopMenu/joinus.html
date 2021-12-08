@@ -4,12 +4,11 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  
     <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
     <title>펫송완료</title>
     <!--    <link rel="stylesheet" href="/static/css/index.css">-->
-    <link rel="stylesheet" href="/src/main/resources/static/css/joinus.css">
-    <link rel="stylesheet" href="/src/main/resources/static/css/navi.scss">
+    <link rel="stylesheet" href="/src/main/resources/static/css/TopMenu/joinus.css">
+    <link rel="stylesheet" href="/src/main/resources/staticcss//Main/header.scss">
     <!-- 네비게이션 관련 js 링크 -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
     <script src="https://use.typekit.net/hoy3lrg.js"></script>
@@ -19,203 +18,84 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#headers").load("/src/main/resources/templates/Header_Footer/header.html");
+            $("#footers").load("/src/main/resources/templates/Header_Footer/footer.html");
+        }
+        );
+    </script>
+
 </head>
 
+<body>
     <div class="container">
-        <div id="top">
-           <!-- 좌측 상단 네비게이션-->
-           <ul class="top-bar">
-            <a href="login.html"><li>LOGIN</li></a>
-            <a href="joinus.html"><li>JOIN US</li></a>
-            <a href="wish.html"><li>WISH</li></a>
-            <a href="cart.html"><li>CART</li></a>
-            <a href="orderlist.html"><li>ORDER LIST</li></a>
-            <a href="mypage.html"><li>MY PAGE</li></a>
-        </ul>
-     <!-- 우측 상단 검색창 -->
-     <div id="search">
-        <input type="text" class="search-text" >
-        <button class="search-btn"><i class="fas fa-search"></i></button>
-    </div>
-        </div>
+
+
+        <div id="headers"></div>
 
         
-        <div id="logo">
-            <a href="/bin/main/templates/index.html">
-            <img class="logo-img" src="/src/main/resources/static/image/logo.png" alt="My Image">
-            </a>
-        </div>
-        <div id="bottom">
-            <!-- 페이스북 인스타 로고 넣기 -->
-            <i class="fab fa-facebook fa-2x"></i>
-            <i class="fab fa-instagram fa-2x"></i>
-            <i class="fab fa-twitter-square fa-2x"></i>
-
-            <!-- notice Q&A 넣기 -->
-            <ul class="bottom-bar">
-                <a href="QandA.html"><li>Q&A</li></a>
-                <a href="Notice.html"><li>Notice</li></a>
-
-        </div>
-       <!-- ----------------------------------------------------------------------- 메뉴 네비게이션 바------------------------------------------------------------------------>
-       <div id="menu">
-
-        <ul class="menu-bar">
-            <!-- 메뉴바 로고 넣기 -->
-            <i class="fas fa-bars fa-2x"></i>
-            <!-- 메뉴 종류 넣기 -->
-            <a href="MainMenu/DOG/Dog_main.html">
-                <p id="DOG">DOG </p>
-            </a>
-            <div id="drop1" class="dropdown">
-                <a href="MainMenu/DOG/Dog_FW.html">
-                    <li>S/W</li>
-                </a>
-                <a href="MainMenu/DOG/Dog_SS.html">
-                    <li>F/W</li>
-                </a>
-            </div>
-            <a href="MainMenu/CAT/Cat_main.html">
-                <p id="CAT">CAT </p>
-            </a>
-            <div id="drop2" class="dropdown">
-                <a href="MainMenu/CAT/Cat_SS.html">
-                    <li>S/W</li>
-                </a>
-                <a href="MainMenu/CAT/Cat_FW.html">
-                    <li>F/W</li>
-                </a>
-            </div>
-
-            <a href="MainMenu/LIVING/Living_main.html">
-                <p id="LIVING">LIVING </p>
-            </a>
-            <div id="drop3" class="dropdown">
-                <a href="MainMenu/LIVING/Toy.html">
-                    <li>Toy</li>
-                </a>
-                <a href="MainMenu/LIVING/Bag.html">
-                    <li>Bag</li>
-                </a>
-                <a href="MainMenu/LIVING/House.html"></a>
-                <li>House</li></a>
-            </div>
-
-            <a href="MainMenu/FOOD/Food_main.html">
-                <p id="FOOD">FOOD</p>
-            </a>
-            <div id="drop4" class="dropdown">
-                <a href="MainMenu/FOOD/Dog_Feed.html">
-                    <li>DogFeed</li>
-                </a>
-                <a href="MainMenu/FOOD/Cat_Feed.html">
-                    <li>CatFeed</li>
-                </a>
-            </div>
-
-            <p id="COMMUNITY">COMMUNITY </p>
-            <div id="drop5" class="dropdown">
-                <li>유기견게시판</li>
-                <li>자유게시판</li>
-            </div>
-
-
-        </ul>
-
-        <nav>
-
-        </nav>
-    </div>
     <main>
-<div class="sign-up">
-<div class="join_form">
-    <h2>회원가입</h2>
-    <table>
-        <colgroup>
-          <col width="30%"/>
-          <col width="auto"/>
-        </colgroup>
-        <tbody>
-          <tr>
-            <th><span>아이디</span></th>
-            <td><input type="text" placeholder="ID 를 입력하세요."></td>
-          </tr>
-          <tr>
-            <th><span>이름</span></th>
-            <td><input type="text" placeholder=""></td>
-          </tr>
-          <tr>
-            <th><span>비밀번호</span></th>
-            <td><input type="text" placeholder="비밀번호를 입력해주세요."></td>
-          </tr>
-          <tr>
-            <th><span>비밀번호 확인</span></th>
-            <td><input type="text" placeholder="비밀번호를 확인하세요"></td>
-          </tr>
-          <tr>
-            <th><span>닉네임</span></th>
-            <td><input type="text" placeholder=""></td>
-          </tr>
-          <tr class="email">
-            <th><span>이메일</span></th>
-            <td>
-              <input type="text"  class="email" placeholder=""><span class="mar10">@</span>
-              <input type="text"  class="email email2" placeholder="">
-            </td>
-          </tr>
-        
-          <tr>
-            <th><span>휴대폰 번호</span></th>
-            <td> <input type="text"  class="phone" placeholder=""><span class="mar10">-</span>
-                <input type="text"  class="phone2" placeholder=""><span class="mar10">-</span>
-                <input type="text"  class="phone2" placeholder=""></td>
-          </tr>
-            </tbody>
-    </table>
-</div>
-
-<div class="exform_txt"><span></span> 표시는 필수적으로 입력해주셔야 가입이 가능합니다.</div>
-<div class="signbtn"><button id="signup-Btn" type="button">회원가입</button></div>
-</div>
+        <div class="sign-up">
+            <div class="join_form">
+                <h2>회원가입</h2>
+                <table>
+                    <colgroup>
+                        <col width="30%" />
+                        <col width="auto" />
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th><span>아이디</span></th>
+                            <td><input type="text" placeholder="ID 를 입력하세요."></td>
+                        </tr>
+                        <tr>
+                            <th><span>이름</span></th>
+                            <td><input type="text" placeholder=""></td>
+                        </tr>
+                        <tr>
+                            <th><span>비밀번호</span></th>
+                            <td><input type="text" placeholder="비밀번호를 입력해주세요."></td>
+                        </tr>
+                        <tr>
+                            <th><span>비밀번호 확인</span></th>
+                            <td><input type="text" placeholder="비밀번호를 확인하세요"></td>
+                        </tr>
+                        <tr>
+                            <th><span>닉네임</span></th>
+                            <td><input type="text" placeholder=""></td>
+                        </tr>
+                        <tr class="email">
+                            <th><span>이메일</span></th>
+                            <td>
+                                <input type="text" class="email" placeholder=""><span class="mar10">@</span>
+                                <input type="text" class="email email2" placeholder="">
+                            </td>
+                        </tr>
+    
+                        <tr>
+                            <th><span>휴대폰 번호</span></th>
+                            <td> <input type="text" class="phone" placeholder=""><span class="mar10">-</span>
+                                <input type="text" class="phone2" placeholder=""><span class="mar10">-</span>
+                                <input type="text" class="phone2" placeholder="">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+    
+            <div class="exform_txt"><span></span> 표시는 필수적으로 입력해주셔야 가입이 가능합니다.</div>
+            <div class="signbtn"><button id="signup-Btn" type="button">회원가입</button></div>
+        </div>
     </main>
-      
 
-    <footer>
-        <div class="Topleft">
-            <li>펫송완료</li><br>
-            <li>COPYRIGHT @펫티쉬 ALL RIGHTS RESERVED</li>
-            <br>
-            <li>COPYRIGHT @29cm ALL RIGHTS RESERVED</li>
+        <div id="footers"></div>
 
-            
-        </div>
-        <div class="Topright">
-            <li>(Return / Exchange)</li><br>
-            <li>충청남도 서산시 해미면 대곡2길 312-10</li>
-        
-        </div>
-        
-        <div class="MainName">
-            <p>Petsong Wanryo</p>
-        </div>
-        <div class="right">
-            <li>Made by HanseoProject</li>
-        </div>
-       
-        <div class="left">
-          <ul>
-            <li>TEL:010-xxx-xxx</li><br>
-            <li>평일 am 11:00 ~ pm 8:00</li><br>
-            <li>토,일 / 공휴일 휴무</li>
-          </ul>
-        </div>
-         <div class="center">
-        <i class="fab fa-facebook fa-2x"></i>
-        <i class="fab fa-instagram fa-2x"></i>
-        </div>
-    </footer>
 
+    </div>
     <!-- js 링크 -->
-    <script src="/src/main/resources/static/js/index.js"></script>
-</div>
+    <script src="/src/main/resources/static/js/Dog_SS.js"></script>
+
+</body>
+
 </html>

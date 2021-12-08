@@ -1,0 +1,194 @@
+/* --------------------------------css 기본틀--------------------------------------------- */
+* {
+  margin: 0; /* 마진 리셋 */
+  padding: 0; /* 패딩 리셋 */
+  
+}
+
+body {
+  display: block;
+}
+
+/**/
+/* !!!! 화면 비율 일정하게 조절 !!!!
+  ex> 화면 줄어들면 그에 맞는 비율로 줄고, 늘면 그에 맞는 비율로 늠
+  가까이 확대되면 스크롤 이용 */
+.container {
+  width: 100%;
+  padding-right: var(1rem);
+  padding-left: var(1rem);
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 40px;
+  position: relative;
+  max-width: 1480px;
+}
+
+/* 링크 걸린거 색깔 없애기 */
+a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  display: inline-block;
+}
+/* -------------------------------------------------변경되는 메인-------------------------------- */
+main {
+  width: 100%;
+  background-color: white;
+  text-align: center;
+  height: 3000px;
+}
+
+/*------------------------------------------left------------------------------*/
+#left {
+  float: left;
+  width: 40%;
+  height: 100%;
+}
+#left img {
+  width: 100%;
+  height: 725px;
+  margin: 0;
+}
+
+/*-----------------------------------------middle------------------------*/
+#middle {
+  float: left;
+  width: 30%;
+  height: 100%;
+}
+.dog5-img {
+  margin-left: 10px;
+  margin-right: 20px;
+}
+/*-----------------베스트 아이템 전체 구역------------------*/
+.best-item {
+  padding: 10px;
+}
+.best-item h3 {
+  font-size: 30px;
+}
+.best-item p {
+  font-size: 17px;
+}
+.best-item h2 {
+  margin-top: 20px;
+}
+/*-----------------베스트 아이템 큰 사진------------------*/
+.best-img {
+  margin-top: 30px;
+  width: 100%;
+}
+
+/*-----------------작은 베스트 아이템 구역------------------*/
+.small-best-item {
+  margin-top: 25px;
+  border-top: 1px solid gray;
+}
+
+/*-----------------작은 베스트 아이템 상품이름 ------------------*/
+.small-best-item h4 {
+  margin-top: 25px;
+}
+
+.small-product {
+  float: left;
+  margin-top: 20px;
+  margin-right: 20px;
+  width: 52px;
+  height: 52px;
+}
+
+/*--------------------------------right-------------------------------------*/
+#right {
+  float: left;
+  width: 30%;
+  height: 100%;
+}
+#right h3 {
+  font-size: 30px;
+}
+#right .best-item1 {
+  margin-top: 30px;
+}
+#right .best-item2 {
+  padding-top: 50px;
+}
+
+/* ----------------------------------인스타그램---------------------------- */
+.instagram {
+  margin-top: 190px;
+  padding-top: 60px;
+  padding-bottom: 20px;
+  border-top: 1px solid gray;
+}
+
+.instagram h2 {
+  margin-top: 10px;
+}
+
+.instagram-photo {
+  width: 140px;
+  height: 140px;
+}
+.photozone li {
+  margin-top: 10px;
+  border: 1px solid gray;
+}
+.photozone p {
+  text-align: center;
+}
+.photozone li {
+  cursor: pointer;
+  transition: transform 300ms ease;
+}
+.photozone li:hover {
+  transform: scale(1.1);
+}
+/* -----------------------------------메인 바텀------------------------------- */
+.mainbottom {
+  width: 100%;
+  height: 800px;
+}
+/* ----------------------------------------메인 바텀 왼쪽-------------------- */
+.bottomleft {
+  float: left;
+  width: 50%;
+  height: 100%;
+}
+/* -------------------------------------유튜브--------------------------------- */
+.youtube {
+  margin-top: 20px;
+  width: 95%;
+  height: 63%;
+}
+/* ----------------------------------메인 바텀 오른쪽--------------------------- */
+.bottomright {
+  float: right;
+  width: 50%;
+  height: 100%;
+}
+/* --------------------------------------뉴스-------------------------------- */
+#mainImage {
+  margin-top: 20px;
+  margin-left: 8x;
+}
+
+.n2,
+.n3,
+.n4,
+.n5 {
+  visibility: hidden;
+}
+
+/* ---------------------------------------------footer -------------------------------------*/

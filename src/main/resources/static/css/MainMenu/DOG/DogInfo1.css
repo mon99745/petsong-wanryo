@@ -1,0 +1,181 @@
+/* --------------------------------css 기본틀--------------------------------------------- */
+* {
+  margin: 0; /* 마진 리셋 */
+  padding: 0; /* 패딩 리셋 */
+  
+}
+
+body {
+  display: block;
+}
+
+/**/
+/* !!!! 화면 비율 일정하게 조절 !!!!
+  ex> 화면 줄어들면 그에 맞는 비율로 줄고, 늘면 그에 맞는 비율로 늠
+  가까이 확대되면 스크롤 이용 */
+.container {
+  width: 100%;
+  padding-right: var(1rem);
+  padding-left: var(1rem);
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 40px;
+  position: relative;
+  max-width: 1480px;
+}
+
+/* 링크 걸린거 색깔 없애기 */
+a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  display: inline-block;
+}
+/* -------------------------------------------------변경되는 메인-------------------------------- */
+
+main{
+    width: 100%;
+    height: 4000px;
+}
+
+#main-top{
+    width: 100%;
+    height: 25%;
+    border-bottom: 1px solid gray;
+}
+/* ----------------------------상품이미지--------------------------- */
+#top-left{
+    width: 50%;
+    height: 80% ;
+    float: left;   
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+#top-left img{
+    width: 80%;
+    height: 100%;
+    float: right;
+    margin-right: 50px;
+    margin-top: 250px;
+/* ----------------------------------상품 주문 칸--------------------- */
+}
+#top-right{
+    width: 40%;
+    height:100% ;   
+    float: left;
+}
+/* --------------------------상품명------------------------ */
+.box1{
+    margin-top: 150px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid gray;
+}
+/* -------------------------------가격-------------------- */
+.box2{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid gray;
+
+}
+/* ------------------------- 사이즈-------------------------- */
+.box3{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-top: 50px;
+    padding-bottom: 55px;
+    border-bottom: 1px solid gray;
+    display: flex;
+    align-items: center;
+}
+
+.size-box{
+    width: 40px;
+    height: 40px;
+    border: 1px solid gray;
+    border-radius: 0.5em;
+    text-align: center;
+    padding-top: 5px;
+    margin-left: 40px ;
+    font-size: 20px;
+    font-weight: bold;
+}
+/* ----------------------상품 목록--------------------- */
+.box4{
+  height: 300px;
+  border-bottom: 1px solid gray;
+}
+
+/* ---------------------------버튼---------------------- */
+
+.btn{
+  margin-top: 20px;
+  margin-left: 10px;
+}
+/* ---------------------------버튼 효과----------------- */
+.draw-border {
+  box-shadow: inset 0 0 0 4px rgb(100, 87, 87);
+  color: rgb(100, 87, 87);
+  transition: color 0.25s 0.0833333333s;
+  position: relative;
+}
+.draw-border::before, .draw-border::after {
+  border: 0 solid transparent;
+  box-sizing: border-box;
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  width: 0;
+  height: 0;
+  bottom: 0;
+  right: 0;
+}
+.draw-border::before {
+  border-bottom-width: 4px;
+  border-left-width: 4px;
+}
+.draw-border::after {
+  border-top-width: 4px;
+  border-right-width: 4px;
+}
+.draw-border:hover {
+  color: black;
+}
+.draw-border:hover::before, .draw-border:hover::after {
+  border-color: black;
+  transition: border-color 0s, width 0.25s, height 0.25s;
+  width: 100%;
+  height: 100%;
+}
+.draw-border:hover::before {
+  transition-delay: 0s, 0s, 0.25s;
+}
+.draw-border:hover::after {
+  transition-delay: 0s, 0.25s, 0s;
+}
+
+.btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  line-height: 1.5;
+  font: 700 1.2rem "Roboto Slab", sans-serif;
+  padding: 1em 2em;
+  letter-spacing: 0.05rem;
+}
+.btn:focus {
+  outline: 2px dotted black;
+}
