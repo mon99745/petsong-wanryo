@@ -13,6 +13,10 @@
     <!-- 네비게이션 관련 js 링크 -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
     <script src="https://use.typekit.net/hoy3lrg.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <!-- 주소찾기 -->
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+
     <script>try { Typekit.load({ async: true }); } catch (e) { }</script>
 
     <!-- 폰트어썸 이미지 불러오기 링크 -->
@@ -64,51 +68,51 @@
             <!-- 메뉴바 로고 넣기 -->
             <i class="fas fa-bars fa-2x"></i>
             <!-- 메뉴 종류 넣기 -->
-            <a href="MainMenu/DOG/Dog_main.html">
+            <a href="/src/main/resources/templates/MainMenu/DOG/Dog_main.html">
                 <p id="DOG">DOG </p>
             </a>
             <div id="drop1" class="dropdown">
-                <a href="MainMenu/DOG/Dog_FW.html">
-                    <li>S/W</li>
+                <a href="/src/main/resources/templates/MainMenu/DOG/Dog_SS.html">
+                    <li>S/S</li>
                 </a>
-                <a href="MainMenu/DOG/Dog_SS.html">
+                <a href="/src/main/resources/templates/MainMenu/DOG/Dog_FW.html">
                     <li>F/W</li>
                 </a>
             </div>
-            <a href="MainMenu/CAT/Cat_main.html">
+            <a href="/src/main/resources/templates/MainMenu/CAT/Cat_main.html">
                 <p id="CAT">CAT </p>
             </a>
             <div id="drop2" class="dropdown">
-                <a href="MainMenu/CAT/Cat_SS.html">
-                    <li>S/W</li>
+                <a href="/src/main/resources/templates/MainMenu/CAT/Cat_SS.html">
+                    <li>S/S</li>
                 </a>
-                <a href="MainMenu/CAT/Cat_FW.html">
+                <a href="/src/main/resources/templates/MainMenu/CAT/Cat_FW.html">
                     <li>F/W</li>
                 </a>
             </div>
 
-            <a href="MainMenu/LIVING/Living_main.html">
+            <a href="/src/main/resources/templates/MainMenu/LIVING/Living_main.html">
                 <p id="LIVING">LIVING </p>
             </a>
             <div id="drop3" class="dropdown">
-                <a href="MainMenu/LIVING/Toy.html">
+                <a href="/src/main/resources/templates/MainMenu/LIVING/Toy.html">
                     <li>Toy</li>
                 </a>
-                <a href="MainMenu/LIVING/Bag.html">
+                <a href="/src/main/resources/templates/MainMenu/LIVING/Bag.html">
                     <li>Bag</li>
                 </a>
-                <a href="MainMenu/LIVING/House.html"></a>
+                <a href="/src/main/resources/templates/MainMenu/LIVING/House.html"></a>
                 <li>House</li></a>
             </div>
 
-            <a href="MainMenu/FOOD/Food_main.html">
+            <a href="/src/main/resources/templates/MainMenu/FOOD/Food_main.html">
                 <p id="FOOD">FOOD</p>
             </a>
             <div id="drop4" class="dropdown">
-                <a href="MainMenu/FOOD/Dog_Feed.html">
+                <a href="/src/main/resources/templates/MainMenu/FOOD/Dog_Feed.html">
                     <li>DogFeed</li>
                 </a>
-                <a href="MainMenu/FOOD/Cat_Feed.html">
+                <a href="/src/main/resources/templates/MainMenu/FOOD/Cat_Feed.html">
                     <li>CatFeed</li>
                 </a>
             </div>
@@ -127,9 +131,9 @@
         </nav>
     </div>
     <main>
-<div class="sign-up">
+ <form name=join_form method="post">
 <div class="join_form">
-    <h2>회원가입</h2>
+<div class="joinus"><h2>회원가입</h2></div>
     <table>
         <colgroup>
           <col width="30%"/>
@@ -138,45 +142,68 @@
         <tbody>
           <tr>
             <th><span>아이디</span></th>
-            <td><input type="text" placeholder="ID 를 입력하세요."></td>
+            <td><input type="text" id="uid" placeholder="ID 를 입력하세요."></td>
           </tr>
           <tr>
             <th><span>이름</span></th>
-            <td><input type="text" placeholder=""></td>
+            <td><input type="text" id="uname" placeholder=""></td>
           </tr>
           <tr>
             <th><span>비밀번호</span></th>
-            <td><input type="text" placeholder="비밀번호를 입력해주세요."></td>
+            <td><input type="password" id="pwd" placeholder="영문자+숫자+특수문자 조합"></td>
           </tr>
           <tr>
             <th><span>비밀번호 확인</span></th>
-            <td><input type="text" placeholder="비밀번호를 확인하세요"></td>
+            <td><input type="password" id="repwd" placeholder="비밀번호를 확인하세요"></td>
           </tr>
           <tr>
             <th><span>닉네임</span></th>
-            <td><input type="text" placeholder=""></td>
+            <td><input type="text" id="unickname" placeholder=""></td>
+          </tr>
+          <tr>
+            <th><span>생년월일</span></th>
+            <td><input type='date' id="ubirth"/></td>
+            
           </tr>
           <tr class="email">
             <th><span>이메일</span></th>
             <td>
-              <input type="text"  class="email" placeholder=""><span class="mar10">@</span>
-              <input type="text"  class="email email2" placeholder="">
+              <input type="text" id="email_id" name="email_id" class="email" ><span class="mar10">@</span>
+              <input type="text" name="email_add" id="email_add" class="email2">
+              <select name="email_sel" id="email_sel" onchange="change_email();">
+
+                <option value="">직접입력</option>
+                <option value="naver.com">naver</option>
+                <option value="daum.net">daum</option>
+                <option value="gmail.com">gmail</option>
+                <option value="nate.com">nate</option>
             </td>
           </tr>
-        
+        <tr>
+            <th class="address"><span>주소</span></th>
+            <td>
+
+    <input type="text" id="sample4_postcode" placeholder="우편번호">
+    <input type="button" id="sample4_Btn" onclick="sample4_execDaumPostcode()" value="우편번호 찾기"><br>
+    <input type="text" id="sample4_roadAddress" placeholder="도로명주소">
+    <input type="text" id="sample4_jibunAddress" placeholder="지번주소">
+    <span id="guide" style="color:#999;display:none"></span>
+    <input type="text" id="sample4_detailAddress" placeholder="상세주소">
+</td>
+        </tr>
           <tr>
             <th><span>휴대폰 번호</span></th>
-            <td> <input type="text"  class="phone" placeholder=""><span class="mar10">-</span>
-                <input type="text"  class="phone2" placeholder=""><span class="mar10">-</span>
-                <input type="text"  class="phone2" placeholder=""></td>
+            <td> <input type="text" id="uphone" class="phone" placeholder=""><span class="mar10">-</span>
+                <input type="text"  id="uphone" class="phone2" placeholder=""><span class="mar10">-</span>
+                <input type="text"  id="uphone" class="phone2" placeholder=""></td>
           </tr>
             </tbody>
     </table>
-</div>
 
 <div class="exform_txt"><span></span> 표시는 필수적으로 입력해주셔야 가입이 가능합니다.</div>
-<div class="signbtn"><button id="signup-Btn" type="button">회원가입</button></div>
+<div class="signbtn"><button id="signup-Btn" onclick="joinform_check()" type="button">회원가입</button></div>
 </div>
+</form>
     </main>
       
 
@@ -217,5 +244,8 @@
 
     <!-- js 링크 -->
     <script src="/src/main/resources/static/js/index.js"></script>
+    <script src="/src/main/resources/static/js/address.js"></script>
+    <script src="/src/main/resources/static/js/joinform.js"></script>
+
 </div>
 </html>

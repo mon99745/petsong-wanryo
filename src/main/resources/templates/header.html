@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+    <title>펫송완료</title>
+    <!--    <link rel="stylesheet" href="/static/css/index.css">-->
+    <link rel="stylesheet" href="/src/main/resources/static/css/style.css">
+    <link rel="stylesheet" href="/src/main/resources/static/css/navi.scss">
+    <!-- 네비게이션 관련 js 링크 -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+    <script src="https://use.typekit.net/hoy3lrg.js"></script>
+    <script>try { Typekit.load({ async: true }); } catch (e) { }</script>
+    <script src="includeHTML.js"></script> 
+    <!-- 폰트어썸 이미지 불러오기 링크 -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+
+
+</head>
+ <div id="top">
+        <!-- 좌측 상단 네비게이션-->
+        <ul class="top-bar">
+            <a href="TopMenu/login.html">
+                <li>LOGIN</li>
+            </a>
+            <a href="TopMenu/joinus.html">
+                <li>JOIN US</li>
+            </a>
+            <a href="TopMenu/wish.html">
+                <li>WISH</li>
+            </a>
+            <a href="TopMenu/cart.html">
+                <li>CART</li>
+            </a>
+            <a href="TopMenu/orderlist.html">
+                <li>ORDER LIST</li>
+            </a>
+            <a href="TopMenu/mypage.html">
+                <li>MY PAGE</li>
+            </a>
+        </ul>
+        <!-- 우측 상단 검색창 -->
+        <div id="search">
+            <input type="text" class="search-text">
+            <button class="search-btn"><i class="fas fa-search"></i></button>
+        </div>
+    </div>
+    <!-- --------------------------------------------------------------   로고 -------------------------------------------------------------------------------------- -->
+    <div id="logo">
+        <a href="index.html">
+            <img class="logo-img" src="/src/main/resources/static/image/logo.png" alt="My Image">
+        </a>
+    </div>
+
+    <!-- ------------------------------------------------------------------바텀바------------------------------------------------------------------------------------ -->
+    <div id="bottom">
+        <!-- 페이스북 인스타 트위터 로고 넣기 -->
+        <i class="fab fa-facebook fa-2x"></i>
+        <i class="fab fa-instagram fa-2x"></i>
+        <i class="fab fa-twitter-square fa-2x"></i>
+        <!-- notice Q&A 넣기 -->
+        <ul class="bottom-bar">
+            <a href="QandA.html">
+                <li>Q&A</li>
+            </a>
+            <a href="Notice.html">
+                <li>Notice</li>
+            </a>
+
+    </div>
+    <!-- ----------------------------------------------------------------------- 메뉴 네비게이션 바------------------------------------------------------------------------>
+
+
+    <div id="menu">
+
+        <ul class="menu-bar">
+            <!-- 메뉴바 로고 넣기 -->
+            <i class="fas fa-bars fa-2x"></i>
+            <!-- 메뉴 종류 넣기 -->
+            <a href="MainMenu/DOG/Dog_main.html">
+                <p id="DOG">DOG </p>
+            </a>
+            <div id="drop1" class="dropdown">
+                <a href="MainMenu/DOG/Dog_FW.html">
+                    <li>S/S</li>
+                </a>
+                <a href="MainMenu/DOG/Dog_SS.html">
+                    <li>F/W</li>
+                </a>
+            </div>
+            <a href="MainMenu/CAT/Cat_main.html">
+                <p id="CAT">CAT </p>
+            </a>
+            <div id="drop2" class="dropdown">
+                <a href="MainMenu/CAT/Cat_SS.html">
+                    <li>S/W</li>
+                </a>
+                <a href="MainMenu/CAT/Cat_FW.html">
+                    <li>F/W</li>
+                </a>
+            </div>
+
+            <a href="MainMenu/LIVING/Living_main.html">
+                <p id="LIVING">LIVING </p>
+            </a>
+            <div id="drop3" class="dropdown">
+                <a href="MainMenu/LIVING/Toy.html">
+                    <li>Toy</li>
+                </a>
+                <a href="MainMenu/LIVING/Bag.html">
+                    <li>Bag</li>
+                </a>
+                <a href="MainMenu/LIVING/House.html"></a>
+                <li>House</li></a>
+            </div>
+
+            <a href="MainMenu/FOOD/Food_main.html">
+                <p id="FOOD">FOOD</p>
+            </a>
+            <div id="drop4" class="dropdown">
+                <a href="MainMenu/FOOD/Dog_Feed.html">
+                    <li>DogFeed</li>
+                </a>
+                <a href="MainMenu/FOOD/Cat_Feed.html">
+                    <li>CatFeed</li>
+                </a>
+            </div>
+
+            <p id="COMMUNITY">COMMUNITY </p>
+            <div id="drop5" class="dropdown">
+                <li>유기견게시판</li>
+                <li>자유게시판</li>
+            </div>
+
+
+        </ul>
+
+    </div>
+
+    <script src="/src/main/resources/static/js/index.js"></script>
+    </html>
