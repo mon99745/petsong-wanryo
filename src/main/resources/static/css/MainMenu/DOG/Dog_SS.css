@@ -114,7 +114,6 @@ main {
 
 /* -------------------------------------메인 하단------------------------------- */
 
-
 #bottom-main{
   width: 100%;
   height: 2200px;
@@ -129,7 +128,7 @@ main {
   height: 60%;
   border-bottom: 1px solid gray;
 }
-#top1 ul{
+#top1 li{
   float: left;
   margin-top: 50px;  
 }
@@ -143,10 +142,14 @@ main {
   padding-left: 20px;
   
 }
+#top1 li.active a {
+  border-bottom: 3px solid #2b210e;
+  color: #2b210e;
+}
 
 
 /* -------------------------------------검색창--------------------------------------- */
-#search {
+#search-menu{
   float: right;
   margin-top: 50px;
   margin-right: 10px;
@@ -200,17 +203,21 @@ main {
   margin-top: 10px;
 }
 
+
+
 .dog-photo{
   width: 400px;
   height:400px;
 }
 .cloth li{
-  margin: 30px 30px;
+  margin: 10px 10px;
   padding: 10px 10px;
 }
 .cloth h2{
   margin-top: 10px;
 }
+
+
 
 #price{
   height: 20%;
@@ -218,18 +225,23 @@ main {
 
 }
 #price span{
-  margin-top: 5px;
+  margin-top: 10px;
   float: left;
   font-size: 22px;
 }
-.fa-shopping-cart, .fa-heart{
-  margin-top: 5px;
-  margin-left: 5px;
-  margin-right: 5px;
-  float: right;
-  font-size: 25px;
-}
 
+
+.empty-heart, .red-heart{
+  width: 50px;
+  height: 50px;
+  float: right;
+}
+.empty-cart, .full-cart{
+  margin-top: 13px;
+  width: 25px;
+  height: 25px;
+  float: right;
+}
 /* ---------------------------페이지 순서 버튼----------------------- */
 #bottom-main-bottom{
   width: 100%;
@@ -260,260 +272,3 @@ main {
 }
 
 
-
-}
-
-body {
-  display: block;
-}
-
-/**/
-/* !!!! 화면 비율 일정하게 조절 !!!!
-  ex> 화면 줄어들면 그에 맞는 비율로 줄고, 늘면 그에 맞는 비율로 늠
-  가까이 확대되면 스크롤 이용 */
-.container {
-  width: 100%;
-  padding-right: var(1rem);
-  padding-left: var(1rem);
-  margin-right: auto;
-  margin-left: auto;
-  position: relative;
-  max-width: 1480px;
-}
-
-/* 링크 걸린거 색깔 없애기 */
-a:visited {
-  color: inherit;
-  text-decoration: none;
-}
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-ul {
-  list-style: none;
-}
-
-li {
-  display: inline-block;
-}
-
-
-/* --------------middle --------*/
-
-main {
-  width: 100%;
-  background-color: white;
-  text-align: center;
-}
-
-/* ------------------------------------메인 상단---------------------------- */
-#top-main{
-  width: 100%;
-  height: 1000px;
-}
-
-#top-left{
-  float: left;
-  width: 50%;
-  height: 100%;
-}
-.left-content{
-  width: 90%;
-  float: right;
-  margin-top: 50px;
-  margin-left: 50px;
-}
-.left-content h1,h2,h4{
-  margin-bottom: 10px;
-  text-align: left;
-}
-.left-content h4{
-  padding-bottom: 20px;
-  border-bottom: 1px solid gray;
-}
-
-
-#mainImage{
-  margin-top: 20px;
-  margin-left: 8x;
-}
-
-.n2, .n3, .n4, .n5{
-  visibility: hidden;
-}
-
-
-
-#top-right{
-  float: right;
-  width: 50%;
-  height: 100%;
-}
-
-#right-content{
-  width: 60%;
-  float: left;
-  margin-top: 50px;
-  margin-left: 120px;
-}
-#right-content h2{
-  margin-bottom: 10px;
-  text-align: left;
-}
-
-#right-content img{
-  float: left;
-  width: 90%;
-  height: 350px;
-  margin-bottom: 30px;
-}
-
-
-/* -------------------------------------메인 하단------------------------------- */
-
-
-#bottom-main{
-  width: 100%;
-  height: 2200px;
-}
-/* ---------------------------------------메뉴 와 검색창 부분------------------------------------ */
-#bottom-main-top{
-  width: 100%;
-  height: 8%;
-}
-/* -------------------------------------------메뉴------------------------------------ */
-#top1{
-  height: 60%;
-  border-bottom: 1px solid gray;
-}
-#top1 ul{
-  float: left;
-  margin-top: 50px;  
-}
-
-#top1 li{
-  font-size: 30px;
-  font-weight: bold;
-  margin-left: 10px;
-  margin-right: 10px;
-  padding-right: 20px;
-  padding-left: 20px;
-  
-}
-
-
-/* -------------------------------------검색창--------------------------------------- */
-#search {
-  float: right;
-  margin-top: 50px;
-  margin-right: 10px;
-  width: 250px;
-  height: 30px;
-  border: 1px solid #cacaca;
-}
-
-.search-text {
-  font-size: 20px;
-  width: 140px;
-  padding-left: 10px;
-  height: 26px;
-  border: 0px;
-  outline: none;
-  color: black;
-}
-
-.search-btn {
-  float: right;
-  width: 30px;
-  height: 100%;
-  border: 0px;
-  outline: none;
-  background-color: #fff;
-  color: #cacaca;
-}
-
-#search:hover {
-  border: 1px solid rgb(167, 164, 164);
-}
-/* -----------------------------------------------total 표시------------------------------------- */
-
-#top2 li{
-  float: left;
-  margin-top: 10px;
-  margin-left: 10px;
-  font-size: 30px;
-  font-weight: bold;
-
-}
-/* -----------------------------------------메인 중간---------------------------------- */
-#bottom-main-middle{
-  width: 100%;
-  height: 80%;
-}
-
-
-
-#dog-clothes h2{
-  margin-top: 10px;
-}
-
-.dog-photo{
-  width: 400px;
-  height:400px;
-}
-.cloth li{
-  margin: 30px 30px;
-  padding: 10px 10px;
-}
-.cloth h2{
-  margin-top: 10px;
-}
-
-#price{
-  height: 20%;
-  border-top: 2px solid gray;
-
-}
-#price span{
-  margin-top: 5px;
-  float: left;
-  font-size: 22px;
-}
-.fa-shopping-cart, .fa-heart{
-  margin-top: 5px;
-  margin-left: 5px;
-  margin-right: 5px;
-  float: right;
-  font-size: 25px;
-}
-
-/* ---------------------------페이지 순서 버튼----------------------- */
-#bottom-main-bottom{
-  width: 100%;
-  height: 6%;
-    
-  /* 중요 */
-  display: flex;
-  align-items: center; 
-  justify-content: center;
-}
-
-.buttons li{
-  width: 40px;
-  height: 40px;
-  text-align: center;
-  font-size: 25px;
-  font-weight: bold;
-  border: 1px solid black;
-  padding-top: 3px;
-}
-
-.buttons li {
-  cursor: pointer;
-  transition: transform 300ms ease;
-}
-.buttons li:hover {
-  transform: scale(1.1);
-}

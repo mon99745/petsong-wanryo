@@ -84,13 +84,13 @@
                 <div id="bottom-main-top">
                     <div id="top1">
                         <ul>
-                            <li>ALL</li>
-                            <li>신상품</li>
-                            <li>가격</li>
-                            <li>인기상품</li>
-                            <li>좋아요</li>
+                            <li class="active"><a href="#">ALL</a></li>
+                            <li><a href="#">신상품</a></li>
+                            <li><a href="#">인기상품</a></li>
+                            <li><a href="#">좋아요</a></li>
                         </ul>
-                        <div id="search">
+
+                        <div id="search-menu">
                             <input type="text" class="search-text">
                             <button class="search-btn"><i class="fas fa-search"></i></button>
                         </div>
@@ -105,124 +105,529 @@
 
                 <div id="bottom-main-middle">
 
+                    <div>
+                        <ul class="cloth">
+                            <li>
+                                <a href="/src/main/resources/templates/MainMenu/DOG/DogInfo1.html"><img class="dog-photo" src="/src/main/resources/static/image/instagram1.jpg"></a>
+                                <a href="/src/main/resources/templates/MainMenu/DOG/DogInfo1.html"><h2>ALL에 관한 창</h2></a>
+                                <div id="price">
+                                    <span>10000원</span>
+                                    <div>
+                                        <img class="empty-heart" src="/src/main/resources/static/image/empty-heart.png">
+                                        <img class="red-heart" src="/src/main/resources/static/image/red-heart.png">
+                                        <img class="empty-cart" src="/src/main/resources/static/image/empty-cart.png">
+                                        <img class="full-cart" src="/src/main/resources/static/image/full-cart.png">
+                                    </div>
 
-                    <ul class="cloth">
-                        <li>
-                            <img class="dog-photo" src="/src/main/resources/static/image/instagram1.jpg">
-                            <h2>야옹이의찰칵</h2>
-                            <div id="price">
-                                <span>10000원</span>
-                                <div>
-                                    <i class="fas fa-shopping-cart"></i>
-                                    <i class="far fa-heart"></i>
                                 </div>
+                            </li>
+                            <li>
+                                <img class="dog-photo" src="/src/main/resources/static/image/instagram1.jpg">
+                                <h2>ALL에 관한 창</h2>
+                                <div id="price">
+                                    <span>10000원</span>
+                                    <div>
+                                        <img class="empty-heart" src="image/empty-heart.png">
+                                        <img class="red-heart" src="image/red-heart.png">
+                                        <img class="empty-cart" src="image/empty-cart.png">
+                                        <img class="full-cart" src="image/full-cart.png">
+                                    </div>
 
-                            </div>
-                        </li>
-                        <li>
-                            <img class="dog-photo" src="/src/main/resources/static/image/instagram2.jpg">
-                            <h2>야옹이의찰칵</h2>
-                            <div id="price">
-                                <span>10000원</span>
-                                <div>
-                                    <i class="fas fa-shopping-cart"></i>
-                                    <i class="far fa-heart"></i>
                                 </div>
+                            </li>
+                            <li>
+                                <img class="dog-photo" src="/src/main/resources/static/image/instagram1.jpg">
+                                <h2>ALL에 관한 창</h2>
+                                <div id="price">
+                                    <span>10000원</span>
+                                    <div>
+                                        <img class="empty-heart" src="image/empty-heart.png">
+                                        <img class="red-heart" src="image/red-heart.png">
+                                        <img class="empty-cart" src="image/empty-cart.png">
+                                        <img class="full-cart" src="image/full-cart.png">
+                                    </div>
 
-                            </div>
-                        </li>
-                        <li>
-                            <img class="dog-photo" src="/src/main/resources/static/image/instagram3.jpg">
-                            <h2>야옹이의찰칵</h2>
-                            <div id="price">
-                                <span>10000원</span>
-                                <div>
-                                    <i class="fas fa-shopping-cart"></i>
-                                    <i class="far fa-heart"></i>
                                 </div>
+                            </li>
+                            <li>
+                                <img class="dog-photo" src="/src/main/resources/static/image/instagram1.jpg">
+                                <h2>ALL에 관한 창</h2>
+                                <div id="price">
+                                    <span>10000원</span>
+                                    <div>
+                                        <img class="empty-heart" src="image/empty-heart.png">
+                                        <img class="red-heart" src="image/red-heart.png">
+                                        <img class="empty-cart" src="image/empty-cart.png">
+                                        <img class="full-cart" src="image/full-cart.png">
+                                    </div>
 
-                            </div>
-                        </li>
-                        <li>
-                            <img class="dog-photo" src="/src/main/resources/static/image/instagram4.jpg">
-                            <h2>야옹이의찰칵</h2>
-                            <div id="price">
-                                <span>10000원</span>
-                                <div>
-                                    <i class="fas fa-shopping-cart"></i>
-                                    <i class="far fa-heart"></i>
                                 </div>
+                            </li>
+                            <li>
+                                <img class="dog-photo" src="/src/main/resources/static/image/instagram1.jpg">
+                                <h2>ALL에 관한 창</h2>
+                                <div id="price">
+                                    <span>10000원</span>
+                                    <div>
+                                        <img class="empty-heart" src="image/empty-heart.png">
+                                        <img class="red-heart" src="image/red-heart.png">
+                                        <img class="empty-cart" src="image/empty-cart.png">
+                                        <img class="full-cart" src="image/full-cart.png">
+                                    </div>
 
-                            </div>
-                        </li>
-                        <li>
-                            <img class="dog-photo" src="/src/main/resources/static/image/instagram5.jpg">
-                            <h2>야옹이의찰칵</h2>
-                            <div id="price">
-                                <span>10000원</span>
-                                <div>
-                                    <i class="fas fa-shopping-cart"></i>
-                                    <i class="far fa-heart"></i>
                                 </div>
+                            </li>
+                            <li>
+                                <img class="dog-photo" src="/src/main/resources/static/image/instagram1.jpg">
+                                <h2>ALL에 관한 창</h2>
+                                <div id="price">
+                                    <span>10000원</span>
+                                    <div>
+                                        <img class="empty-heart" src="image/empty-heart.png">
+                                        <img class="red-heart" src="image/red-heart.png">
+                                        <img class="empty-cart" src="image/empty-cart.png">
+                                        <img class="full-cart" src="image/full-cart.png">
+                                    </div>
 
-                            </div>
-                        </li>
-                        <li>
-                            <img class="dog-photo" src="/src/main/resources/static/image/instagram6.jpg">
-                            <h2>야옹이의찰칵</h2>
-                            <div id="price">
-                                <span>10000원</span>
-                                <div>
-                                    <i class="fas fa-shopping-cart"></i>
-                                    <i class="far fa-heart"></i>
                                 </div>
+                            </li>
+                            <li>
+                                <img class="dog-photo" src="/src/main/resources/static/image/instagram1.jpg">
+                                <h2>ALL에 관한 창</h2>
+                                <div id="price">
+                                    <span>10000원</span>
+                                    <div>
+                                        <img class="empty-heart" src="image/empty-heart.png">
+                                        <img class="red-heart" src="image/red-heart.png">
+                                        <img class="empty-cart" src="image/empty-cart.png">
+                                        <img class="full-cart" src="image/full-cart.png">
+                                    </div>
 
-                            </div>
-                        </li>
-                        <li>
-                            <img class="dog-photo" src="/src/main/resources/static/image/instagram7.jpg">
-                            <h2>야옹이의찰칵</h2>
-                            <div id="price">
-                                <span>10000원</span>
-                                <div>
-                                    <i class="fas fa-shopping-cart"></i>
-                                    <i class="far fa-heart"></i>
                                 </div>
+                            </li>
+                            <li>
+                                <img class="dog-photo" src="/src/main/resources/static/image/instagram1.jpg">
+                                <h2>ALL에 관한 창</h2>
+                                <div id="price">
+                                    <span>10000원</span>
+                                    <div>
+                                        <img class="empty-heart" src="image/empty-heart.png">
+                                        <img class="red-heart" src="image/red-heart.png">
+                                        <img class="empty-cart" src="image/empty-cart.png">
+                                        <img class="full-cart" src="image/full-cart.png">
+                                    </div>
 
-                            </div>
-                        </li>
-                        <li>
-                            <img class="dog-photo" src="/src/main/resources/static/image/instagram8.jpg">
-                            <h2>야옹이의찰칵</h2>
-                            <div id="price">
-                                <span>10000원</span>
-                                <div>
-                                    <i class="fas fa-shopping-cart"></i>
-                                    <i class="far fa-heart"></i>
                                 </div>
+                            </li>
+                            <li>
+                                <img class="dog-photo" src="/src/main/resources/static/image/instagram1.jpg">
+                                <h2>ALL에 관한 창</h2>
+                                <div id="price">
+                                    <span>10000원</span>
+                                    <div>
+                                        <img class="empty-heart" src="image/empty-heart.png">
+                                        <img class="red-heart" src="image/red-heart.png">
+                                        <img class="empty-cart" src="image/empty-cart.png">
+                                        <img class="full-cart" src="image/full-cart.png">
+                                    </div>
 
-                            </div>
-                        </li>
-                        <li>
-                            <img class="dog-photo" src="/src/main/resources/static/image/instagram9.jpg">
-                            <h2>야옹이의찰칵</h2>
-                            <div id="price">
-                                <span>10000원</span>
-                                <div>
-                                    <i class="fas fa-shopping-cart"></i>
-                                    <i class="far fa-heart"></i>
                                 </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- -------------------------------------------------------------------------------------------------------------------- -->
+                    <div>
+                        <ul class="cloth">
+                            <li>
+                                <img class="dog-photo" src="/src/main/resources/static/image/instagram1.jpg">
+                                <h2>신상품</h2>
+                                <div id="price">
+                                    <span>10000원</span>
+                                    <div>
+                                        <img class="empty-heart" src="image/empty-heart.png">
+                                        <img class="red-heart" src="image/red-heart.png">
+                                        <img class="empty-cart" src="image/empty-cart.png">
+                                        <img class="full-cart" src="image/full-cart.png">
+                                    </div>
 
-                            </div>
-                        </li>
+                                </div>
+                            </li>
+                            <li>
+                                <img class="dog-photo" src="/src/main/resources/static/image/instagram1.jpg">
+                                <h2>ALL에 관한 창</h2>
+                                <div id="price">
+                                    <span>10000원</span>
+                                    <div>
+                                        <img class="empty-heart" src="image/empty-heart.png">
+                                        <img class="red-heart" src="image/red-heart.png">
+                                        <img class="empty-cart" src="image/empty-cart.png">
+                                        <img class="full-cart" src="image/full-cart.png">
+                                    </div>
 
+                                </div>
+                            </li>
+                            <li>
+                                <img class="dog-photo" src="/src/main/resources/static/image/instagram1.jpg">
+                                <h2>ALL에 관한 창</h2>
+                                <div id="price">
+                                    <span>10000원</span>
+                                    <div>
+                                        <img class="empty-heart" src="image/empty-heart.png">
+                                        <img class="red-heart" src="image/red-heart.png">
+                                        <img class="empty-cart" src="image/empty-cart.png">
+                                        <img class="full-cart" src="image/full-cart.png">
+                                    </div>
 
+                                </div>
+                            </li>
+                            <li>
+                                <img class="dog-photo" src="/src/main/resources/static/image/instagram1.jpg">
+                                <h2>ALL에 관한 창</h2>
+                                <div id="price">
+                                    <span>10000원</span>
+                                    <div>
+                                        <img class="empty-heart" src="image/empty-heart.png">
+                                        <img class="red-heart" src="image/red-heart.png">
+                                        <img class="empty-cart" src="image/empty-cart.png">
+                                        <img class="full-cart" src="image/full-cart.png">
+                                    </div>
 
+                                </div>
+                            </li>
+                            <li>
+                                <img class="dog-photo" src="/src/main/resources/static/image/instagram1.jpg">
+                                <h2>ALL에 관한 창</h2>
+                                <div id="price">
+                                    <span>10000원</span>
+                                    <div>
+                                        <img class="empty-heart" src="image/empty-heart.png">
+                                        <img class="red-heart" src="image/red-heart.png">
+                                        <img class="empty-cart" src="image/empty-cart.png">
+                                        <img class="full-cart" src="image/full-cart.png">
+                                    </div>
 
+                                </div>
+                            </li>
+                            <li>
+                                <img class="dog-photo" src="/src/main/resources/static/image/instagram1.jpg">
+                                <h2>ALL에 관한 창</h2>
+                                <div id="price">
+                                    <span>10000원</span>
+                                    <div>
+                                        <img class="empty-heart" src="image/empty-heart.png">
+                                        <img class="red-heart" src="image/red-heart.png">
+                                        <img class="empty-cart" src="image/empty-cart.png">
+                                        <img class="full-cart" src="image/full-cart.png">
+                                    </div>
 
+                                </div>
+                            </li>
+                            <li>
+                                <img class="dog-photo" src="/src/main/resources/static/image/instagram1.jpg">
+                                <h2>ALL에 관한 창</h2>
+                                <div id="price">
+                                    <span>10000원</span>
+                                    <div>
+                                        <img class="empty-heart" src="image/empty-heart.png">
+                                        <img class="red-heart" src="image/red-heart.png">
+                                        <img class="empty-cart" src="image/empty-cart.png">
+                                        <img class="full-cart" src="image/full-cart.png">
+                                    </div>
 
-                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <img class="dog-photo" src="/src/main/resources/static/image/instagram1.jpg">
+                                <h2>ALL에 관한 창</h2>
+                                <div id="price">
+                                    <span>10000원</span>
+                                    <div>
+                                        <img class="empty-heart" src="image/empty-heart.png">
+                                        <img class="red-heart" src="image/red-heart.png">
+                                        <img class="empty-cart" src="image/empty-cart.png">
+                                        <img class="full-cart" src="image/full-cart.png">
+                                    </div>
 
+                                </div>
+                            </li>
+                            <li>
+                                <img class="dog-photo" src="/src/main/resources/static/image/instagram1.jpg">
+                                <h2>ALL에 관한 창</h2>
+                                <div id="price">
+                                    <span>10000원</span>
+                                    <div>
+                                        <img class="empty-heart" src="image/empty-heart.png">
+                                        <img class="red-heart" src="image/red-heart.png">
+                                        <img class="empty-cart" src="image/empty-cart.png">
+                                        <img class="full-cart" src="image/full-cart.png">
+                                    </div>
+
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!---- ------------------------------------------------------------------------------------------------------------------ -->
+                    <div>
+                        <ul class="cloth">
+                            <li>
+                                <img class="dog-photo" src="/src/main/resources/static/image/instagram1.jpg">
+                                <h2>인기상품</h2>
+                                <div id="price">
+                                    <span>10000원</span>
+                                    <div>
+                                        <img class="empty-heart" src="image/empty-heart.png">
+                                        <img class="red-heart" src="image/red-heart.png">
+                                        <img class="empty-cart" src="image/empty-cart.png">
+                                        <img class="full-cart" src="image/full-cart.png">
+                                    </div>
+
+                                </div>
+                            </li>
+                            <li>
+                                <img class="dog-photo" src="/src/main/resources/static/image/instagram1.jpg">
+                                <h2>ALL에 관한 창</h2>
+                                <div id="price">
+                                    <span>10000원</span>
+                                    <div>
+                                        <img class="empty-heart" src="image/empty-heart.png">
+                                        <img class="red-heart" src="image/red-heart.png">
+                                        <img class="empty-cart" src="image/empty-cart.png">
+                                        <img class="full-cart" src="image/full-cart.png">
+                                    </div>
+
+                                </div>
+                            </li>
+                            <li>
+                                <img class="dog-photo" src="/src/main/resources/static/image/instagram1.jpg">
+                                <h2>ALL에 관한 창</h2>
+                                <div id="price">
+                                    <span>10000원</span>
+                                    <div>
+                                        <img class="empty-heart" src="image/empty-heart.png">
+                                        <img class="red-heart" src="image/red-heart.png">
+                                        <img class="empty-cart" src="image/empty-cart.png">
+                                        <img class="full-cart" src="image/full-cart.png">
+                                    </div>
+
+                                </div>
+                            </li>
+                            <li>
+                                <img class="dog-photo" src="/src/main/resources/static/image/instagram1.jpg">
+                                <h2>ALL에 관한 창</h2>
+                                <div id="price">
+                                    <span>10000원</span>
+                                    <div>
+                                        <img class="empty-heart" src="image/empty-heart.png">
+                                        <img class="red-heart" src="image/red-heart.png">
+                                        <img class="empty-cart" src="image/empty-cart.png">
+                                        <img class="full-cart" src="image/full-cart.png">
+                                    </div>
+
+                                </div>
+                            </li>
+                            <li>
+                                <img class="dog-photo" src="/src/main/resources/static/image/instagram1.jpg">
+                                <h2>ALL에 관한 창</h2>
+                                <div id="price">
+                                    <span>10000원</span>
+                                    <div>
+                                        <img class="empty-heart" src="image/empty-heart.png">
+                                        <img class="red-heart" src="image/red-heart.png">
+                                        <img class="empty-cart" src="image/empty-cart.png">
+                                        <img class="full-cart" src="image/full-cart.png">
+                                    </div>
+
+                                </div>
+                            </li>
+                            <li>
+                                <img class="dog-photo" src="/src/main/resources/static/image/instagram1.jpg">
+                                <h2>ALL에 관한 창</h2>
+                                <div id="price">
+                                    <span>10000원</span>
+                                    <div>
+                                        <img class="empty-heart" src="image/empty-heart.png">
+                                        <img class="red-heart" src="image/red-heart.png">
+                                        <img class="empty-cart" src="image/empty-cart.png">
+                                        <img class="full-cart" src="image/full-cart.png">
+                                    </div>
+
+                                </div>
+                            </li>
+                            <li>
+                                <img class="dog-photo" src="/src/main/resources/static/image/instagram1.jpg">
+                                <h2>ALL에 관한 창</h2>
+                                <div id="price">
+                                    <span>10000원</span>
+                                    <div>
+                                        <img class="empty-heart" src="image/empty-heart.png">
+                                        <img class="red-heart" src="image/red-heart.png">
+                                        <img class="empty-cart" src="image/empty-cart.png">
+                                        <img class="full-cart" src="image/full-cart.png">
+                                    </div>
+
+                                </div>
+                            </li>
+                            <li>
+                                <img class="dog-photo" src="/src/main/resources/static/image/instagram1.jpg">
+                                <h2>ALL에 관한 창</h2>
+                                <div id="price">
+                                    <span>10000원</span>
+                                    <div>
+                                        <img class="empty-heart" src="image/empty-heart.png">
+                                        <img class="red-heart" src="image/red-heart.png">
+                                        <img class="empty-cart" src="image/empty-cart.png">
+                                        <img class="full-cart" src="image/full-cart.png">
+                                    </div>
+
+                                </div>
+                            </li>
+                            <li>
+                                <img class="dog-photo" src="/src/main/resources/static/image/instagram1.jpg">
+                                <h2>ALL에 관한 창</h2>
+                                <div id="price">
+                                    <span>10000원</span>
+                                    <div>
+                                        <img class="empty-heart" src="image/empty-heart.png">
+                                        <img class="red-heart" src="image/red-heart.png">
+                                        <img class="empty-cart" src="image/empty-cart.png">
+                                        <img class="full-cart" src="image/full-cart.png">
+                                    </div>
+
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- ----------------------------------------------------------------------------------------------------- -->
+                    <div>
+                        <ul class="cloth">
+                            <li>
+                                <img class="dog-photo" src="/src/main/resources/static/image/instagram1.jpg">
+                                <h2>좋아요</h2>
+                                <div id="price">
+                                    <span>10000원</span>
+                                    <div>
+                                        <img class="empty-heart" src="image/empty-heart.png">
+                                        <img class="red-heart" src="image/red-heart.png">
+                                        <img class="empty-cart" src="image/empty-cart.png">
+                                        <img class="full-cart" src="image/full-cart.png">
+                                    </div>
+
+                                </div>
+                            </li>
+                            <li>
+                                <img class="dog-photo" src="/src/main/resources/static/image/instagram1.jpg">
+                                <h2>ALL에 관한 창</h2>
+                                <div id="price">
+                                    <span>10000원</span>
+                                    <div>
+                                        <img class="empty-heart" src="image/empty-heart.png">
+                                        <img class="red-heart" src="image/red-heart.png">
+                                        <img class="empty-cart" src="image/empty-cart.png">
+                                        <img class="full-cart" src="image/full-cart.png">
+                                    </div>
+
+                                </div>
+                            </li>
+                            <li>
+                                <img class="dog-photo" src="/src/main/resources/static/image/instagram1.jpg">
+                                <h2>ALL에 관한 창</h2>
+                                <div id="price">
+                                    <span>10000원</span>
+                                    <div>
+                                        <img class="empty-heart" src="image/empty-heart.png">
+                                        <img class="red-heart" src="image/red-heart.png">
+                                        <img class="empty-cart" src="image/empty-cart.png">
+                                        <img class="full-cart" src="image/full-cart.png">
+                                    </div>
+
+                                </div>
+                            </li>
+                            <li>
+                                <img class="dog-photo" src="/src/main/resources/static/image/instagram1.jpg">
+                                <h2>ALL에 관한 창</h2>
+                                <div id="price">
+                                    <span>10000원</span>
+                                    <div>
+                                        <img class="empty-heart" src="image/empty-heart.png">
+                                        <img class="red-heart" src="image/red-heart.png">
+                                        <img class="empty-cart" src="image/empty-cart.png">
+                                        <img class="full-cart" src="image/full-cart.png">
+                                    </div>
+
+                                </div>
+                            </li>
+                            <li>
+                                <img class="dog-photo" src="/src/main/resources/static/image/instagram1.jpg">
+                                <h2>ALL에 관한 창</h2>
+                                <div id="price">
+                                    <span>10000원</span>
+                                    <div>
+                                        <img class="empty-heart" src="image/empty-heart.png">
+                                        <img class="red-heart" src="image/red-heart.png">
+                                        <img class="empty-cart" src="image/empty-cart.png">
+                                        <img class="full-cart" src="image/full-cart.png">
+                                    </div>
+
+                                </div>
+                            </li>
+                            <li>
+                                <img class="dog-photo" src="/src/main/resources/static/image/instagram1.jpg">
+                                <h2>ALL에 관한 창</h2>
+                                <div id="price">
+                                    <span>10000원</span>
+                                    <div>
+                                        <img class="empty-heart" src="image/empty-heart.png">
+                                        <img class="red-heart" src="image/red-heart.png">
+                                        <img class="empty-cart" src="image/empty-cart.png">
+                                        <img class="full-cart" src="image/full-cart.png">
+                                    </div>
+
+                                </div>
+                            </li>
+                            <li>
+                                <img class="dog-photo" src="/src/main/resources/static/image/instagram1.jpg">
+                                <h2>ALL에 관한 창</h2>
+                                <div id="price">
+                                    <span>10000원</span>
+                                    <div>
+                                        <img class="empty-heart" src="image/empty-heart.png">
+                                        <img class="red-heart" src="image/red-heart.png">
+                                        <img class="empty-cart" src="image/empty-cart.png">
+                                        <img class="full-cart" src="image/full-cart.png">
+                                    </div>
+
+                                </div>
+                            </li>
+                            <li>
+                                <img class="dog-photo" src="/src/main/resources/static/image/instagram1.jpg">
+                                <h2>ALL에 관한 창</h2>
+                                <div id="price">
+                                    <span>10000원</span>
+                                    <div>
+                                        <img class="empty-heart" src="image/empty-heart.png">
+                                        <img class="red-heart" src="image/red-heart.png">
+                                        <img class="empty-cart" src="image/empty-cart.png">
+                                        <img class="full-cart" src="image/full-cart.png">
+                                    </div>
+
+                                </div>
+                            </li>
+                            <li>
+                                <img class="dog-photo" src="/src/main/resources/static/image/instagram1.jpg">
+                                <h2>ALL에 관한 창</h2>
+                                <div id="price">
+                                    <span>10000원</span>
+                                    <div>
+                                        <img class="empty-heart" src="/">
+                                        <img class="red-heart" src="image/red-heart.png">
+                                        <img class="empty-cart" src="image/empty-cart.png">
+                                        <img class="full-cart" src="image/full-cart.png">
+                                    </div>
+
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
 
                 <!-- ---------------------------------------페이지 표시 버튼------------------------------- -->
@@ -258,7 +663,7 @@
 
     </div>
     <!-- js 링크 -->
-    <script src="/src/main/resources/static/js/Dog_SS.js"></script>
+    <script src="/src/main/resources/static/js/Dog_SS_FW.js"></script>
 
 </body>
 
