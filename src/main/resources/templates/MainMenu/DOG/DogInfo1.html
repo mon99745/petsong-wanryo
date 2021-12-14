@@ -40,57 +40,213 @@
         <main>
         
             <div id="main-top">
+
                 <div id="top-left">
                     <img src="/src/main/resources/static/image/product1.jpeg">
                 </div>
+
+
                 <div id="top-right">
+
                     <div class="box1">
                         <h1>메이플 체크 원피스</h1>
                     </div>
+
                     <div class="box2">
                         <h2>판매가 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;24,500원</h2>
                     </div>
+
                     <div class="box3">
         
                         <h2>SIZE</h2>
-                        <div class="size-box">XS</div>
-                        <div class="size-box">S</div>
-                        <div class="size-box">M</div>
-                        <div class="size-box">L</div>
-                        <div class="size-box">XL</div>
-        
+                        <button onclick="row1()" class="size-box">XS</button>
+                        <button onclick="row2()" class="size-box">S</button>
+                        <button onclick="row3()" class="size-box">M</button>
+                        <button onclick="row4()" class="size-box">L</button>
+                        <button onclick="row5()" class="size-box">XL</button>
+                        
+                        
                     </div>
+
+
+<!-- ----------------------------------------------상품 목록-------------------------------------                   -->
                     <div class="box4">
-                        <table border="1">
-                            <caption>상품목록</caption>
-                            <colgroup>
-                                <col style="width:320px">
-                                <col style="width:320px">
-                                <col style="width:320px">
-                            </colgroup>
+                        
+                        <table>
                             <thead>
-                                <tr>
-                                    <th scope="col">상품명</th>
-                                    <th scope="col">상품수</th>
-                                    <th scope="col">가격</th>
-                                </tr>
+                                <th class="t1">상품사이즈</th>
+                                <th class="t2">상품수</th>
+                                <th class="t3">상품가격</th>
+                              
                             </thead>
-                            <tbody class="displaynone"></tbody>
-                            <tbody class="option_products"></tbody>
-        
+                            <tbody id="my-tbody"></tbody>
                         </table>
-        
+
+                        <span id="quantity">\
+                        <li id="spinbox" style=" border: 1px solid gray; margin-top: 10px; width: 30px; height: 20px; text-align: center; color: transparent; text-shadow: 0 0 0 black;">1</li>\
+                        <input type='button' onclick='count1("plus"); count2("plus");' value='+' style="width: 20px; height: 20px;"/>\
+                        <input type='button' onclick='count1("minus"); count2("minus");'value='-' style="width: 20px; height: 20px;"/>\
+                        </span>
+
+                        <div id="total">
+                            <li id="wonpos">원</li>
+                            <li id="pricepos">0</li>
+                            <li id="totalpos">Total:</li>
+                               
+
+                        </div>
+
+
                     </div>
+<!-- --------------------------------------------------- 구매 장바구니 관심상품------------------------------------------ -->
                     <div class="box5">
                         <button class="btn draw-border">바로구매</button>
                         <button class="btn draw-border">장바구니</button>
                         <button class="btn draw-border">관심상품</button>
-        
+                        
+
+
+                        
                     </div>
                 </div>
+
+            </div>
+
+
                 <div id="main-middle">
-        
+                    <div class="guide-menu">
+                        <li class="g1">Size info.</li>
+                        <li class="g2">Detail info.</li>
+                        <li class="g3">Review</li>
+                        <a href="/src/main/resources/templates/Main/QandA.html"><li class="g4">Q&A</li></a>
+
+                    </div>
+
+
+
+<!-- -----------------------------------------------이미지------------------------------------------------- -->
+                     <div id="main-image">
+                        <img src="/src/main/resources/static/image/product1.jpeg">
+                     </div>
+<!-- ------------------------------------------------------사이즈표------------------------------ -->
+                     <div id="size-info">
+
+                        <div class="head">
+                            <li class="head1">Size info.</li>
+                            <li class="head2">권장사이즈</li>  
+                        </div>
+                        <div id="cm">
+                            <li>단위: cm</li>
+                        </div>
+                        <table id="table1">
+                            <th>SIZE</th>
+                            <th>XS</th>
+                            <th>S</th>
+                            <th>M</th>
+                            <th>L</th>
+                            <th>XL</th>
+                            <tr>
+                                <td>목둘레</td>
+                                <td>20</td>
+                                <td>23</td>
+                                <td>26</td>
+                                <td>30</td>
+                                <td>34</td>
+                            </tr>
+                            <tr>
+                                <td>가슴둘레</td>
+                                <td>27</td>
+                                <td>30</td>
+                                <td>37</td>
+                                <td>42</td>
+                                <td>47</td>
+                            </tr>
+                            <tr>
+                                <td>등길이</td>
+                                <td>18</td>
+                                <td>24</td>
+                                <td>27</td>
+                                <td>30</td>
+                                <td>34</td>
+                            </tr>
+                            <tr>
+                                <td>몸무게</td>
+                                <td>~1.5kg</td>
+                                <td>2~3kg</td>
+                                <td>3~5kg</td>
+                                <td>4.5~7kg</td>
+                                <td>6~9kg</td> 
+                            </tr>
+                        </table>
+                     </div>
+<!-- -------------------------------------------------------디테일표--------------------------------------- -->
+                     <div id="detail">
+                        <div class="head">
+                            <li class="head1">Detail Check.</li>
+                            <li class="head2">제품에 관한 실제 착용감 및 원단 안내</li>
+                        </div>
+                       
+                        <table id="table2">
+                            <tr>
+                                <td class="t1">사이즈</td>
+                                <td><i class="far fa-circle" style="margin-left: 50px; margin-right: 10px;"></i>작게나옴</td>
+                                <td><i class="fas fa-circle" style="margin-left: 50px; margin-right: 10px;"></i>정사이즈</td>
+                                <td><i class="far fa-circle" style="margin-left: 50px;margin-right: 10px;"></i>크게나옴</td>
+                                
+                            </tr>
+                            <tr>
+                                <td class="t1">신축성</td>
+                                <td><i class="fas fa-circle" style="margin-left: 50px; margin-right: 10px;"></i>신축성 좋아요</td>
+                                <td><i class="far fa-circle" style="margin-left: 50px; margin-right: 10px;"></i>약간 있어요</td>
+                                <td><i class="far fa-circle" style="margin-left: 50px; margin-right: 10px;"></i>신축성 없어요</td>
+                            </tr>
+                            <tr>
+                                <td class="t1">비침</td>
+                                <td><i class="fas fa-circle" style="margin-left: 50px; margin-right: 10px;"></i>두꺼워요</td>
+                                <td><i class="far fa-circle" style="margin-left: 50px; margin-right: 10px;"></i>적당해요</td>
+                                <td><i class="far fa-circle" style="margin-left: 50px; margin-right: 10px;"></i>얇아요</td>
+                            
+                            </tr>
+                            <tr>
+                                <td class="t1">두께감</td>
+                                <td><i class="far fa-circle" style="margin-left: 50px; margin-right: 10px;"></i>두꺼워요</td>
+                                <td><i class="fas fa-circle" style="margin-left: 50px; margin-right: 10px;"></i>적당해요</td>
+                                <td><i class="far fa-circle" style="margin-left: 50px; margin-right: 10px;"></i>얇아요</td>
+                              
+                            </tr>
+                            <tr>
+                                <td class="t1">촉감</td>
+                                <td><i class="far fa-circle" style="margin-left: 50px; margin-right: 10px;"></i>부드러워요</td>
+                                <td><i class="fas fa-circle" style="margin-left: 50px; margin-right: 10px;"></i>적당해요</td>
+                                <td><i class="far fa-circle" style="margin-left: 50px; margin-right: 10px;"></i>까슬해요</td>
+                               
+                            </tr>
+                            <tr>
+                                <td class="t1">계절감</td>
+                                <td><i class="fas fa-circle" style="margin-left: 50px; margin-right: 10px;"></i>봄/가을</td>
+                                <td><i class="far fa-circle" style="margin-left: 50px; margin-right: 10px;"></i>여름</td>
+                                <td><i class="fas fa-circle" style="margin-left: 50px; margin-right: 10px;"></i>초겨울</td>
+                            
+                            </tr>
+                        </table>
+                     </div>
+
+
+
+
+
+
+
                 </div>
+
+
+
+
+
+
+
+
+
         </main>
         <!-- --------------------------------------------메인 bottom---------------------------------- -->
 
@@ -100,7 +256,7 @@
 
     </div>
     <!-- js 링크 -->
-    <script src="/src/main/resources/static/js/Dog_SS.js"></script>
+    <script src="/src/main/resources/static/js/Dog_info1.js"></script>
 
 </body>
 
