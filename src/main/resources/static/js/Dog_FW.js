@@ -75,11 +75,9 @@ $("#drop5").mouseleave(function () {
 
 // -----------------------------------뉴스 슬라이드 쇼----------------------------------------
      var myImage = document.getElementById("mainImage");
-            var imageArray = ["/src/main/resources/static/image/News1.png",
-                "/src/main/resources/static/image/News2.png",
-                "/src/main/resources/static/image/News3.png",
-                "/src/main/resources/static/image/News4.png",
-                "/src/main/resources/static/image/News5.png"
+            var imageArray = ["/src/main/resources/static/image/Dog_FW1.jpg",
+                "/src/main/resources/static/image/Dog_FW2.jpg",
+                "/src/main/resources/static/image/Dog_FW3.jpg",
 
             ];
             var imageIndex = 0;
@@ -156,8 +154,15 @@ $(document).ready(function(){
  
             /*img1을 클릭했을 때 img2를 보여줌*/
             $(".empty-heart").click(function(){
+              
                  $(".red-heart").show();
                  $(".empty-heart").hide();
+                  if(confirm("장바구니으로 이동하시겠습니까")==true){
+                   location.href = "/src/main/resources/templates/TopMenu/wish.html";
+                 }
+                 else{
+                   return false;
+                 }
             });
  
             /*img2를 클릭했을 때 img1을 보여줌*/
@@ -170,13 +175,20 @@ $(document).ready(function(){
 
 $(document).ready(function(){
             /*웹페이지 열었을 때*/
-            $(".empty-cart").show();
+           $(".empty-cart").show();
             $(".full-cart").hide();
  
             /*img1을 클릭했을 때 img2를 보여줌*/
             $(".empty-cart").click(function(){
+                    
                  $(".full-cart").show();
                  $(".empty-cart").hide();
+                  if(confirm("관심상품으로 이동하시겠습니까")==true){
+                   location.href = "/src/main/resources/templates/TopMenu/wish.html";
+                 }
+                 else{
+                   return false;
+                 }
             });
  
             /*img2를 클릭했을 때 img1을 보여줌*/

@@ -19,69 +19,51 @@
     } 
    
     cell1.innerHTML = '<span style="margin-left:80px">XS</span>';
-    cell2.innerHTML = '  <span id="quantity"><li id="spinbox" style=" border: 1px solid gray; margin-top: 10px; width: 30px; height: 20px; text-align: center; color: transparent; text-shadow: 0 0 0 black;">1</li>\
-                        <button onclick="count1("plus") count2("plus")"  style="width: 20px; height: 20px;">+</button>\
-                        <button onclick="count1("minus") count2("minus")"  style="width: 20px; height: 20px;">-</button>\
-                        </span>';
-    cell3.innerHTML = '<span style="margin-left:80px">Price</span> <button onclick="delete_row()">행 삭제하기</button>';
+    cell2.innerHTML = '<span id="quantity" style="margin-left: 50px;">\
+                        <li id="spinbox" style=" border: 1px solid gray; margin-top: 10px;\
+                        width: 30px; height: 20px; text-align: center; color: transparent; text-shadow: 0 0 0 black;">1</li>\
+                        <div type="button"; onclick="incrementClick1(); incrementClick2();"; style="width: 20px; height: 20px; display:inline-block;\
+                        border: 1px solid gray; border-radius: 1em; padding-bottom: 3px;  text-align:center; cursor: context-menu;">+</div>\
+                        <div type="button"; onclick="decrementClick1(); decrementClick2();"; style="width: 20px; height: 20px; display:inline-block;\
+                         border: 1px solid gray; border-radius: 1em; padding-bottom: 3px;  text-align:center; cursor: context-menu;">-</div>\
+                        </span>  ';
+    cell3.innerHTML = '<span id="price"; style="margin-left:80px">Price</span> <button onclick="delete_row()">행 삭제하기</button>';
 
- 
+  
   }
-  
-function count1(type)  {
-  // 결과를 표시할 element
-  const priceposElement = document.getElementById('pricepos');
 
-  
-  // 현재 화면에 표시된 값
-  let number1 = priceposElement.innerText;
-
-  
-  // 더하기/빼기
-  if(type === 'plus') {
-    number1 = parseInt(number1) + 1000;
-
-  }else if(type === 'minus')  {
-    number1 = parseInt(number1) - 1000;
-
-    if(number1<0){
-        return;
-    }
-  }
   
  
   
-  // 결과 출력
-  priceposElement.innerText = number1;
+var counterVal1 = 0;
+
+function incrementClick1() {
+  if(counterVal1<=6)  
+  updateDisplay1(++counterVal1);
 }
-function count2(type)  {
-  // 결과를 표시할 element
-  const spinboxElement = document.getElementById('spinbox');
-
-  
-  // 현재 화면에 표시된 값
-  let number1 = spinboxElement.innerText;
-
-  
-  // 더하기/빼기
-  if(type === 'plus') {
-    number1 = parseInt(number1) + 1;
-
-  }else if(type === 'minus')  {
-    number1 = parseInt(number1) - 1;
-
-    if(number1<0){
-        return;
-    }
-  }
-  
- 
-  
-  // 결과 출력
-  spinboxElement.innerText = number1;
+function decrementClick1() {
+  if(counterVal1>=1)
+    updateDisplay1(--counterVal1);
+}
+function updateDisplay1(val) {
+    document.getElementById("spinbox").innerHTML = val;
 }
 
 
+    
+var counterVa2 = 0;
+
+function incrementClick2() {
+  if(counterVal2<=6)  
+  updateDisplay2(counterVal2+1000);
+}
+function decrementClick2() {
+  if(counterVal2>=1)
+    updateDisplay2(--counterVal2-10000);
+}
+function updateDisplay2(val) {
+    document.getElementById("totalpos").innerHTML = val;
+}
     
 // ----------------------------------------S-----------------------------------------
 
@@ -178,7 +160,8 @@ function row5() {
     else{
         alert("한 상품마다 주문 최대 개수는 7개입니다. ")
     } 
-   
+
+
     cell1.innerHTML = '<span style="margin-left:80px">XL</span>';
     cell2.innerHTML = '  <span id="quantity">\
                         <li id="spinbox" style=" border: 1px solid gray; margin-top: 10px; width: 30px; height: 20px; text-align: center; color: transparent; text-shadow: 0 0 0 black;">1</li>\
