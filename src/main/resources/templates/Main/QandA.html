@@ -18,6 +18,10 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
+    
+
+
+
     <script type="text/javascript">
         $(document).ready(function () {
             $("#headers").load("/src/main/resources/templates/Header_Footer/header.html");
@@ -36,7 +40,162 @@
         <div id="headers"></div>
 
         <!-- --------------------------------------------------------------------------메인 왼쪽 ------------------------------------------------------------------------ -->
+        <main>
+            <div id="main-top">
+                <div id="QandA">Q&A</div> 
+            </div>
 
+            <div id="main-middle">
+                <div id="main-middle top">
+                    <li class="t1">배송관련</li>
+                    <li class="t2">상품관련</li>
+
+
+                    <li class="page-wrapper t3" id="write">
+                        <a class="btn trigger" href="#">
+                        글쓰기
+                        </a>
+                    </li> 
+
+
+                        <div class="modal-wrapper">
+
+                            <div id="modal-top">
+                                <span> 글쓰기</span>
+                                <a class="btn-close trigger" href="#">
+                                <i class="fas fa-window-close fa-2x"></i>
+                                </a>
+                            </div>
+
+                            <div id="modal-middle">
+                                <div id="m1">
+                                    <label for="title-name">제목</label>
+                                    <input type="text" id="title" value="제목을 입력해주세요." style="color: gray;">
+                                    <select id="modal-drop">
+                                        <option value="">문의관련</option>
+                                        <option value="week">배송관련</option>
+                                        <option value="one-month">물품관련</option>
+                                        
+                                    </select>
+                                </div>
+                                <div id="m2">
+                                    <label for="title-name">작성자</label>
+                                    <input type="text" id="modal-writer" value="미입력시 등록 아이디이 저장됩니다." style="color: gray;">
+                                    <input type="checkbox" style="width: 15px; height: 15px;">
+                                    <label for="hidden-name" style="font-size:15px;">익명</label>
+                                </div>
+                                <div id="m3">
+                                    <input type="text" id="modal-text" value="문의 내용을 적어주세요. (200글자)" style="color: gray; text-align: left; ">
+                                
+                                </div>
+                                <div id="m4">
+                                   <button>등록하기</button>
+                                </div>
+
+                               
+                            </div>
+                           
+                        </div>
+
+
+
+
+
+
+
+                </div>
+                <div id="main-middle-center">
+                    <table id="quiz-table" border="0">
+                        <tr>
+                        <th class="th1"> 번호</th>
+                        <th id="th2"> 제목</th>
+                        <th id="th3"> 작성자</th>
+                        <th> 작성일</th>
+                        <th> 조회</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>강아지 사이즈</td>
+                            <td>문XX</td>
+                            <td>2021.12.14</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>반품 관련 질문</td>
+                            <td>임XX</td>
+                            <td>2021.12.14</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>강아지 사이즈</td>
+                            <td>박XX</td>
+                            <td>2021.12.14</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>강아지 사이즈</td>
+                            <td>이XX</td>
+                            <td>2021.12.14</td>
+                            <td>3</td>
+                        </tr>
+
+                    </table>
+
+
+                </div>
+
+            </div>
+
+            <div id="main-bottom">
+                
+                    <div id="search-bar">
+                     
+                        
+                            <select id="day-search">
+                            <option value="">직접입력</option>
+                            <option value="week">1주일</option>
+                            <option value="one-month">한달</option>
+                            <option value="three-month">세달</option>
+                            <option value="All-day">전체</option>
+                            </select>
+                        
+                            <select id="topic-search">
+                                <option value="">직접입력</option>
+                                <option value="title">제목</option>
+                                <option value="writer">글쓴이</option>
+                                <option value="ID">아이디</option>
+                                <option value="nickname">별명</option>
+                                <option value="product">상품정보</option>
+
+                            </select>
+                        
+                            <div id="search-menu">
+                                <input type="text" class="search-text">
+                                <button class="search-btn"><i class="fas fa-search"></i></button>
+                            </div>
+                    </div>
+
+                    <div id="bottom-number">
+               
+                            <div class="buttons">
+                                        <ul>
+                                            <li><i class="fas fa-angle-double-left"></i></li>
+                                            <li><i class="fas fa-angle-left"></i></li>
+                                            <li>1</li>
+                                            <li>2</li>
+                                            <li><i class="fas fa-angle-right"></i></li>
+                                            <li><i class="fas fa-angle-double-right"></i></li>
+                                
+                                        </ul>
+                            </div>
+                   </div>
+            </div>
+
+
+        </main>
 
         <!-- --------------------------------------------메인 bottom---------------------------------- -->
 
@@ -46,7 +205,7 @@
 
     </div>
     <!-- js 링크 -->
-    <script src="/src/main/resources/static/js/Dog_SS.js"></script>
+    <script src="/src/main/resources/static/js/QandA.js"></script>
 
 </body>
 
