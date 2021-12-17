@@ -42,3 +42,147 @@ li {
   display: inline-block;
 }
 /* -------------------------------------------------변경되는 메인-------------------------------- */
+
+main{
+  width: 100%;
+  height: 3000px;
+}
+
+#main-top{
+  width: 100%;
+  height: 20%;
+}
+#main-top-top{
+  width: 100%;
+  height: 40%;
+  display: flex;
+  align-items: flex-end;
+  border-bottom: 3px solid gray;
+}
+#main-top-top h1{
+  margin-left: 30px;
+  margin-bottom: 20px;
+}
+
+#main-top-middle{
+  width: 90%;
+  height: 40%;
+  margin: 0 auto;
+}
+
+.fa-user-circle {
+  margin-top: 50px;
+  margin-left: 100px;
+}
+#main-top-middle-2{
+  width: 100%;
+  height: 50px;
+  margin-top: 20px;
+  border-bottom: 3px solid gray;
+}
+#i1{
+  font-size: 30px;
+  font-weight: bold;
+  margin-left: 95px;
+}
+#i2{
+  font-size: 20px;
+  margin-left: 20px;
+  color: gold;
+}
+#i3{
+  font-size: 15px;
+  color: blue;
+  border-bottom: 1px solid blue;
+}
+#i4, #i5{
+  font-size: 25px;
+  font-weight: bold;
+  float: right;
+  margin-right: 20px;
+  margin-top: 10px;
+}
+
+#main-top-bottom{
+  
+  width: 90%;
+  height: 20%;
+  margin: 0 auto;
+}
+
+#main-top-bottom li{
+  font-size: 25px;
+  font-weight: bold;
+  border-right: 1px solid gray;
+  margin-right: 5px;
+  padding: 0 20px;
+  text-align: center;
+
+}
+
+#main-middle{
+  width: 90%;
+  height: 1850px;
+  margin: 0 auto;
+}
+
+#info1{
+  width: 100%;
+  height: 20%;
+  border: 4px solid gray;
+  margin-bottom: 30px;
+}
+#info1-top1{
+  width: 90%;
+  height: 30%;
+  margin: 0 auto;
+  border-bottom: 2px solid gray;
+}
+#info1-top1 li{
+  border-radius: 0.5em;
+  background-color: rgb(61, 59, 59);
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+  padding: 10px 20px;
+  margin-left: 20px;
+  margin-top: 50px;
+}
+
+#info1-top2{
+  width: 90%;
+  height: 70%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: cente;
+}
+#info1-top2 li{
+  font-size: 35px;
+  text-align: center;
+  font-weight: bold;
+  margin: 0 30px;
+}
+
+
+
+
+
+#info2{
+  width: 100%;
+  height: 30%;
+
+}
+
+#info3{
+  
+width: 100%;
+  height: 30%;
+}
+
+#info4{
+  width: 100%;
+  height: 30%;
+
+}

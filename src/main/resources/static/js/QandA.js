@@ -10,3 +10,6 @@ $( document ).ready(function() {
      handle: "#modal-top" });
 
 
+$(function() {
+		$( "#modal-wrapper" ).draggable();
+	});
