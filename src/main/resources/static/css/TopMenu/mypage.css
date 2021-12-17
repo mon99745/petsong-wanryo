@@ -1,4 +1,5 @@
-/* --------------------------------css 기본틀--------------------------------------------- */
+
+  /* --------------------------------css 기본틀--------------------------------------------- */
 * {
   margin: 0; /* 마진 리셋 */
   padding: 0; /* 패딩 리셋 */
@@ -45,7 +46,7 @@ li {
 
 main{
   width: 100%;
-  height: 3000px;
+  height: 3500px;
 }
 
 #main-top{
@@ -146,7 +147,7 @@ main{
   font-weight: bold;
   padding: 10px 20px;
   margin-left: 20px;
-  margin-top: 50px;
+  margin-top: 40px;
 }
 
 #info1-top2{
@@ -165,24 +166,178 @@ main{
   margin: 0 30px;
 }
 
-
-
-
-
 #info2{
   width: 100%;
-  height: 30%;
+  height: 35%;
+  border: 4px solid gray;
+}
+
+#info2-top1{
+  width: 90%;
+  height: 20%;
+  border-bottom: 2px solid gray ;
+  margin: 0 auto;
+}
+#info2-top1 li{
+   border-radius: 0.5em;
+  background-color: rgb(61, 59, 59);
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+  padding: 10px 20px;
+  margin-left: 20px;
+  margin-top: 50px;
+}
+
+
+#info2-top2{
+  width: 90%;
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+#info2-top2 table{
+  width: 90%;
+  border-collapse:collapse;
+font-size: 25px;
 
 }
+#info2-top2 td{
+  height: 130px;
+  text-align: center;
+  border-bottom: 1px solid gray;
+}
+#info2-top2 img{
+  margin-right: 20px;
+}
+#info2-top2 span{
+  margin-bottom: 20px;
+}
+#info2-top3{
+  display: flex;
+  justify-content: center;
+}
+#info2-top3 li{
+  border: 1px solid gray;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0 20px;
+  padding: 5px 20px;
+  cursor: pointer;
+  background-color: rgb(61, 59, 59);
+  color: white;
+}
+
+
+
 
 #info3{
-  
-width: 100%;
-  height: 30%;
+  width: 100%;
+  height: 35%;
+  border: 4px solid gray;
+  margin-top: 20px;
 }
+
+#info3-top1{
+  width: 90%;
+  height: 20%;
+  border-bottom: 2px solid gray ;
+  margin: 0 auto;
+}
+#info3-top1 li{
+   border-radius: 0.5em;
+  background-color: rgb(61, 59, 59);
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+  padding: 10px 20px;
+  margin-left: 40px;
+  margin-top: 50px;
+}
+
+
+#info3-top2{
+  width: 90%;
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+#info3-top2 table{
+  width: 90%;
+  border-collapse:collapse;
+font-size: 20px;
+
+}
+#info3-top2 td{
+  height: 120px;
+  text-align: center;
+  border-bottom: 1px solid gray;
+}
+#info3-top2 img{
+  margin-right: 20px;
+}
+#info3-top2 span{
+  margin-bottom: 20px;
+}
+
+
 
 #info4{
   width: 100%;
   height: 30%;
 
+}
+
+.order-head2{
+  font-size: 25px;
+  font-weight: bold;
+}
+
+#info3-top3{
+  display: flex;
+  justify-content: center;
+}
+
+#info3-top3 li{
+  border: 1px solid gray;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0 20px;
+  padding: 5px 20px;
+  cursor: pointer;
+  background-color: rgb(61, 59, 59);
+  color: white;
+}
+
+
+#info4{
+   width: 100%;
+  height: 35%;
+  border: 4px solid gray;
+  margin-top: 20px;
+}
+
+#info4-top1{
+  width: 90%;
+  height: 20%;
+  border-bottom: 2px solid gray ;
+  margin: 0 auto;
+}
+#info4-top1 li{
+   border-radius: 0.5em;
+  background-color: rgb(61, 59, 59);
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+  padding: 10px 20px;
+  margin-left: 20px;
+  margin-top: 50px;
 }
