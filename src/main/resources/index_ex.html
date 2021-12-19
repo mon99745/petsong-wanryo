@@ -1,0 +1,75 @@
+<!--이 페이지에서 작업 XXX-->
+<!--필요한 데이터들을 찾는 페이지 -->
+<!--최대한 여기서 데이터 활용하고 필요한 데이터들이 있으면 카톡으로 남겨둬-->
+
+<!doctype html>
+<!--      thymeleaf 라이브러리 -->
+<html lang="en" class="h-100"
+      xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+
+<title>공지사항</title>
+
+<head>
+<!--    경로 수정 금지-->
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{../bootstrapCss/bootstrap.min.css}"/>
+    <link rel="stylesheet" th:href="@{../css/sticky-footer-navbar.css}" />
+    <link rel="stylesheet" th:href="@{../css/style.css}" />
+    <!--header section 분리-->
+    <header th:replace="layout/header :: header"></header>
+</head>
+
+<body class="d-flex flex-column h-100">
+
+
+
+<!-- 검색기능 -->
+<div class="d-flex" style="position: absolute; left: 20px; top: 70px;"><h2 style="margin-right: 40px;">총 건수:</h2><h2 th:text="${boards.totalElements}"></h2></div>
+<form class="d-flex" style="position: relative; top: 40px;" method="get" th:action="@{/}">
+    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
+           id="search" name="search" th:value="${param.search}">
+    <button class="btn btn-outline-success" type="submit">Search</button>
+</form>
+
+<!-- 페이지 내용 -->
+<main class="flex-shrink-0">
+    <div class="container">
+        <div class="p-2"></div>
+        <div th:each="board : ${boards}" class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+                <a th:href="@{/board/{id}(id=${board.id})}" class="a-title">
+                    <h3 class="mb-0 title" style="padding-bottom: 10px;" th:text="${board.title}"></h3>
+                </a>
+                <div class="card-text mb-auto" th:text="${board.content}">
+                </div>
+                <div class="mb-1 text-muted" style="padding-top: 15px;" th:text="${#temporals.format(board.createdDate, 'yyyy-MM-dd')}"></div>
+            </div>
+        </div>
+    </div>
+</main>
+<!-- 페이징 처리 -->
+<nav aria-label="Page navigation example">
+    <ul class="pagination">
+        <li class="page-item" th:classappend="${1 == boards.pageable.pageNumber + 1} ? 'disabled' : '' ">
+            <a class="page-link" th:href="@{/(page=${boards.pageable.pageNumber - 1}, search=${param.search})}">Previous</a>
+        </li>
+        <li class="page-item" th:classappend="${i == boards.pageable.pageNumber + 1} ? 'active' : '' " th:each="i : ${#numbers.sequence(startPage, endPage)}">
+            <a class="page-link" th:href="@{/(page=${i - 1}, search=${param.search})}" th:text="${i}">1</a>
+        </li>
+        <li class="page-item" th:classappend="${boards.totalPages == boards.pageable.pageNumber + 1} ? 'disabled' : '' ">
+            <a class="page-link" th:href="@{/(page=${boards.pageable.pageNumber + 1}, search=${param.search})}">Next</a>
+        </li>
+    </ul>
+</nav>
+
+<!--footer section 분리-->
+<footer th:replace="layout/footer :: footer"></footer>
+
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<!--Ajax 선언과 Bootstrap 선언 -->
+<!-- Ajax 선언은 데이터를 따로 비동기식으로 넘기기 위해 -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="../static/bootstrapJs/bootstrap.min.js"></script>
+</body>
+
+</html>
