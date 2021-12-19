@@ -18,23 +18,10 @@ public class IndexController {
 
     private final BoardService boardService;
 
-//    @GetMapping("/")
-//    public String index(Model model,
-//                        @PageableDefault(size = 5, sort = "id", direction = Sort.Direction.DESC) Pageable pageable,
-//                        @RequestParam(required = false, defaultValue = "") String search) {
-//        Page<Board> boards = boardService.findByTitleContainingOrContentContaining(search, search, pageable);
-//
-//        int startPage = Math.max(1, boards.getPageable().getPageNumber() - 4);
-//        int endPage = Math.min(boards.getTotalPages(), boards.getPageable().getPageNumber() + 4);
-//        model.addAttribute("startPage", startPage);
-//        model.addAttribute("endPage", endPage);
-//        model.addAttribute("boards", boards);
-//        return "index";
-//    }
 @GetMapping("/")
 // @PageableDefault를 설정하면 페이지의 size, 정렬순을 정할 수 있다.
 // 한 페이지당 5 Size, 최신글을 제일 맨위로 볼 수 있게 해둠.
-public String index(Model model,
+public String index_ex(Model model,
                     @PageableDefault(size = 5, sort = "id", direction = Sort.Direction.DESC) Pageable pageable,
                     @RequestParam(required = false, defaultValue = "") String search) {
     Page<Board> boards = boardService.findByTitleContainingOrContentContaining(search, search, pageable);
@@ -46,6 +33,6 @@ public String index(Model model,
     model.addAttribute("startPage", startPage);
     model.addAttribute("endPage", endPage);
     model.addAttribute("boards", boards);
-    return "index";
+    return "index_ex";
 }
 }
