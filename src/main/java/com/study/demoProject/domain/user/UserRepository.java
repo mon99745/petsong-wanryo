@@ -1,4 +1,4 @@
-package com.exam.demoExample.domain.user;
+package com.study.demoProject.domain.user;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.query.Param;

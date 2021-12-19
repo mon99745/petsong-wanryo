@@ -1,7 +1,7 @@
-package com.exam.demoExample.dto.user;
+package com.study.demoProject.dto.user;
 
-import com.exam.demoExample.domain.user.Role;
-import com.exam.demoExample.domain.user.User;
+import com.study.demoProject.domain.user.Role;
+import com.study.demoProject.domain.user.User;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;

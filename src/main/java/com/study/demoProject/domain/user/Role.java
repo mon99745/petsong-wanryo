@@ -1,4 +1,4 @@
-package com.exam.demoExample.domain.user;
+package com.study.demoProject.domain.user;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;

@@ -1,8 +1,8 @@
-package com.exam.demoExample.domain.reply;
+package com.study.demoProject.domain.reply;
 
-import com.exam.demoExample.domain.user.User;
-import com.exam.demoExample.domain.BaseTimeEntity;
-import com.exam.demoExample.domain.board.Board;
+import com.study.demoProject.domain.user.User;
+import com.study.demoProject.domain.BaseTimeEntity;
+import com.study.demoProject.domain.board.Board;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;

@@ -1,8 +1,8 @@
-package com.exam.demoExample.service;
+package com.study.demoProject.service;
 
-import com.exam.demoExample.config.auth.PrincipalDetail;
-import com.exam.demoExample.domain.user.User;
-import com.exam.demoExample.domain.user.UserRepository;
+import com.study.demoProject.config.auth.PrincipalDetail;
+import com.study.demoProject.domain.user.User;
+import com.study.demoProject.domain.user.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;

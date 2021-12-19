@@ -1,7 +1,7 @@
-package com.exam.demoExample.controller;
+package com.study.demoProject.controller;
 
-import com.exam.demoExample.domain.board.Board;
-import com.exam.demoExample.service.BoardService;
+import com.study.demoProject.domain.board.Board;
+import com.study.demoProject.service.BoardService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

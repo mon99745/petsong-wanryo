@@ -1,8 +1,8 @@
-package com.exam.demoExample.domain.board;
+package com.study.demoProject.domain.board;
 
-import com.exam.demoExample.domain.BaseTimeEntity;
-import com.exam.demoExample.domain.reply.Reply;
-import com.exam.demoExample.domain.user.User;
+import com.study.demoProject.domain.BaseTimeEntity;
+import com.study.demoProject.domain.reply.Reply;
+import com.study.demoProject.domain.user.User;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

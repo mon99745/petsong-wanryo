@@ -1,7 +1,7 @@
-package com.exam.demoExample.controller;
+package com.study.demoProject.controller;
 
-import com.exam.demoExample.domain.board.BoardRepository;
-import com.exam.demoExample.service.BoardService;
+import com.study.demoProject.domain.board.BoardRepository;
+import com.study.demoProject.service.BoardService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

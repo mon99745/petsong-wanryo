@@ -1,6 +1,6 @@
-package com.exam.demoExample.domain.user;
+package com.study.demoProject.domain.user;
 
-import com.exam.demoExample.domain.BaseTimeEntity;
+import com.study.demoProject.domain.BaseTimeEntity;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;

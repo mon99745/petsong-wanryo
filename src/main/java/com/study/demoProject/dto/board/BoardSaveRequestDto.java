@@ -1,7 +1,7 @@
-package com.exam.demoExample.dto.board;
+package com.study.demoProject.dto.board;
 
-import com.exam.demoExample.domain.user.User;
-import com.exam.demoExample.domain.board.Board;
+import com.study.demoProject.domain.user.User;
+import com.study.demoProject.domain.board.Board;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;

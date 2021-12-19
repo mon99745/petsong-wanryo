@@ -1,6 +1,6 @@
-package com.exam.demoExample.domain.board;
+package com.study.demoProject.domain.board;
 
-import com.exam.demoExample.domain.user.User;
+import com.study.demoProject.domain.user.User;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;

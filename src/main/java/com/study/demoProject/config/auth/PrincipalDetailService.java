@@ -1,7 +1,7 @@
-package com.exam.demoExample.config.auth;
+package com.study.demoProject.config.auth;
 
-import com.exam.demoExample.domain.user.User;
-import com.exam.demoExample.domain.user.UserRepository;
+import com.study.demoProject.domain.user.User;
+import com.study.demoProject.domain.user.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

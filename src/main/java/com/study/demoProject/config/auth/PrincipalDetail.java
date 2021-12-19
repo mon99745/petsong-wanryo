@@ -1,7 +1,7 @@
-package com.exam.demoExample.config.auth;
+package com.study.demoProject.config.auth;
 
 
-import com.exam.demoExample.domain.user.User;
+import com.study.demoProject.domain.user.User;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;

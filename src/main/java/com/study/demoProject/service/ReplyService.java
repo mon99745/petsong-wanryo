@@ -1,10 +1,10 @@
-package com.exam.demoExample.service;
+package com.study.demoProject.service;
 
-import com.exam.demoExample.domain.user.User;
-import com.exam.demoExample.domain.board.Board;
-import com.exam.demoExample.domain.board.BoardRepository;
-import com.exam.demoExample.domain.reply.Reply;
-import com.exam.demoExample.domain.reply.ReplyRepository;
+import com.study.demoProject.domain.user.User;
+import com.study.demoProject.domain.board.Board;
+import com.study.demoProject.domain.board.BoardRepository;
+import com.study.demoProject.domain.reply.Reply;
+import com.study.demoProject.domain.reply.ReplyRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

@@ -1,9 +1,9 @@
-package com.exam.demoExample.controller.api;
+package com.study.demoProject.controller.api;
 
-import com.exam.demoExample.config.auth.PrincipalDetail;
-import com.exam.demoExample.dto.board.BoardSaveRequestDto;
-import com.exam.demoExample.dto.board.BoardUpdateRequestDto;
-import com.exam.demoExample.service.BoardService;
+import com.study.demoProject.config.auth.PrincipalDetail;
+import com.study.demoProject.dto.board.BoardSaveRequestDto;
+import com.study.demoProject.dto.board.BoardUpdateRequestDto;
+import com.study.demoProject.service.BoardService;
 import lombok.RequiredArgsConstructor;
 import org.hibernate.annotations.DynamicUpdate;
 import org.springframework.beans.factory.annotation.Autowired;

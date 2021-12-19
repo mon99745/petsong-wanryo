@@ -1,8 +1,8 @@
-package com.exam.demoExample.controller.api;
+package com.study.demoProject.controller.api;
 
-import com.exam.demoExample.config.auth.PrincipalDetail;
-import com.exam.demoExample.domain.reply.Reply;
-import com.exam.demoExample.service.ReplyService;
+import com.study.demoProject.config.auth.PrincipalDetail;
+import com.study.demoProject.domain.reply.Reply;
+import com.study.demoProject.service.ReplyService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;

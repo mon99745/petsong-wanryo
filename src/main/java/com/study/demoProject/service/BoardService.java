@@ -1,10 +1,10 @@
-package com.exam.demoExample.service;
+package com.study.demoProject.service;
 
-import com.exam.demoExample.domain.board.Board;
-import com.exam.demoExample.domain.user.User;
-import com.exam.demoExample.domain.board.BoardRepository;
-import com.exam.demoExample.dto.board.BoardSaveRequestDto;
-import com.exam.demoExample.dto.board.BoardUpdateRequestDto;
+import com.study.demoProject.domain.board.Board;
+import com.study.demoProject.domain.user.User;
+import com.study.demoProject.domain.board.BoardRepository;
+import com.study.demoProject.dto.board.BoardSaveRequestDto;
+import com.study.demoProject.dto.board.BoardUpdateRequestDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

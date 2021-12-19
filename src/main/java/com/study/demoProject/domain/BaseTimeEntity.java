@@ -1,4 +1,4 @@
-package com.exam.demoExample.domain;
+package com.study.demoProject.domain;
 
 import lombok.Getter;
 import org.springframework.data.annotation.CreatedDate;

@@ -1,6 +1,6 @@
-package com.exam.demoExample.config;
+package com.study.demoProject.config;
 
-import com.exam.demoExample.config.auth.PrincipalDetailService;
+import com.study.demoProject.config.auth.PrincipalDetailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
