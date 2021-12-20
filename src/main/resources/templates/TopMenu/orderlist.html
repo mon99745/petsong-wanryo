@@ -43,20 +43,78 @@
             
             <div id="main-bottom">
                 <div id="main-bottom-top">
-                    <li>
+                    <li class="li1">
                         <select id="day-search">
-                            <option value="">직접입력</option>
                             <option value="week">1주일</option>
                             <option value="one-month">한달</option>
                             <option value="three-month">세달</option>
                             <option value="All-day">전체</option>
                         </select>
                     </li>
+                    <li class="li2">
+                        <input id="calendar" type="date" min="2020-12-31" max="2021-12-31" st>
+
+                    </li>
+                    <li class="li3">
+                        <select id="option">
+                            <option value="">전체상태</option>
+                            <option value="">배송중</option>
+                            <option value="">배송완료/픽업완료</option>
+                            <option value="">구매확정</option>
+                            <option value="">교환</option>
+                            <option value="">환불</option>
+                            <option value="">환불완료</option>
+
+                        </select>
+                    </li>
                 </div>
+
+
+
                  <div id="main-bottom-bottom">
-                     
+                        <table border="0">
+                            <tr class="order-head">
+                                <td style="width: 70px;"></td>
+                                <td style="width: 70px;"></td>
+                                <td>상품정보</td>
+                                <td>주문일자</td>
+                                <td>주문번호</td>
+                                <td>주문금액</td>
+                                <td>주문상태</td>
+
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" style="width: 20px; height: 20px;"></td>
+                                <td><img src="/src/main/resources/static/image/dog1.jpeg" style="width: 80px; height: 80px;"></td>
+                                <td>누빌패딩강아지(Red)-S</td>
+                                <td>2021.12.20</td>
+                                <td>xxxxxxx-xxxxxx</td>
+                                <td>31,200원</td>
+                                <td>배송완료</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" style="width: 20px; height: 20px;"></td>
+                                <td><img src="/src/main/resources/static/image/dog1.jpeg" style="width: 80px; height: 80px;"></td>
+                                <td>누빌패딩강아지(Navy)-M</td>
+                                <td>2021.12.20</td>
+                                <td>xxxxxxx-xxxxxx</td>
+                                <td>31,200원</td>
+                                <td>배송완료</td>
+                            </tr>
+                        
+                        </table>
                  </div>
 
+                 <div id="bottom-search">
+                     <li type="button">주문취소</li>
+                     <li type="button">반품</li>
+                     <li type="button">교환</li>
+                    <div id="search-menu">
+                        <input type="text" class="search-text">
+                        <button class="search-btn"><i class="fas fa-search"></i></button>
+                    </div>
+
+                 </div>
             </div>
 
         </main>

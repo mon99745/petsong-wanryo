@@ -1,0 +1,135 @@
+<!--주석 필수-->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+    <title>펫송완료</title>
+    <!--    <link rel="stylesheet" href="/static/css/index.css">-->
+    <link rel="stylesheet" href="/src/main/resources/static/css/MainMenu/PAY/pay.css">
+    <link rel="stylesheet" href="/src/main/resources/staticcss//Main/header.scss">
+    <!-- 네비게이션 관련 js 링크 -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+    <script src="https://use.typekit.net/hoy3lrg.js"></script>
+    <script>try { Typekit.load({ async: true }); } catch (e) { }</script>
+
+    <!-- 폰트어썸 이미지 불러오기 링크 -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#headers").load("/src/main/resources/templates/Header_Footer/header.html");
+            $("#footers").load("/src/main/resources/templates/Header_Footer/footer.html");
+        }
+        );
+    </script>
+
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- -----------------------------------------------------최고 상단 메뉴 바 + 검색창---------------------------------------------------------------------       -->
+
+        <div id="headers"></div>
+
+        <!-- --------------------------------------------------------------------------메인 왼쪽 ------------------------------------------------------------------------ -->
+<main>
+    
+    <div id="main-top">
+        <li>배송정보</li>
+    </div>
+
+
+    <div id="main-middle">
+        <table class="info" border="0">
+            <tr>
+                <td class="t1">베송지</td>
+                <td><input type="radio" style="margin-left: 25px;">회원정보와 동일<input type="radio" style="margin-left: 25px;">새로운배송지</td>
+            </tr>
+            <tr>
+                <td class="t1">받으시는분</td>
+                <td><input type="text" class="input"></td>
+            </tr>
+            <td class="t1">주소</td>
+            <td style="height: 180px;">
+                <input type="text" id="sample4_postcode" placeholder="우편번호">
+                <input type="button" id="sample4_Btn" onclick="sample4_execDaumPostcode()" value="우편번호 찾기"><br>
+                <input type="text" id="sample4_roadAddress" placeholder="도로명주소"><br>
+                <input type="text" id="sample4_jibunAddress" placeholder="지번주소"><br>
+                <span id="guide" style="color:#999;display:none"></span>
+                <input type="text" id="sample4_detailAddress" placeholder="상세주소">
+            </td>
+            <tr>
+                <td class="t1">휴대전화</td>
+                <td><select style="width: 70px; height:30px; margin-left: 25px;"><option>010</option><option>014</option><option>017</option></select>
+                    -<input type="text" class="input2">-<input type="text" class="input2"></td>
+            </tr>
+            <tr>
+                <td class="t1">이메일</td>
+                <td>
+                    <input type="text" id="email_id" name="email_id" class="email"><span class="mar10">@</span>
+                    <input type="text" name="email_add" id="email_add" class="email2">
+                    <select name="email_sel" id="email_sel" onchange="change_email();">
+                    
+                        <option value="">직접입력</option>
+                        <option value="naver.com">naver</option>
+                        <option value="daum.net">daum</option>
+                        <option value="gmail.com">gmail</option>
+                        <option value="nate.com">nate</option>
+                        <br>
+                        이메일을 통해 주문처리과정을 보내드립니다.
+                        이메일주소란에는 반드시 수신가능한 이메일을 입력
+                </td>
+            </tr>
+            <tr>
+                <td class="t1">배송메시지</td>
+                <td><input type="text" class="input3"></td>
+            </tr>
+        </table>
+        
+     </div>
+
+
+     <div id="main-bottom" style="width: 100pxm;">
+        <table class="pay-table" border="0">
+            <tr>
+                <td class="p1">
+                    <input type="radio" style="  margin-left: 5px;"><li class="l1">무통장입금</li>
+                    <input type="radio"><li class="l2"><i class="far fa-credit-card" style="margin-right:5px;"></i>카드결제</li>
+                    <input type="radio"><li class="l3"><i class="far fa-clock" style="margin-right:5px;"></i>실시간 계좌이체</li>
+                    <input type="radio"><li class="l4"><i class="fas fa-mobile-alt" style="margin-right:5px;"></i>휴대전화</li>
+                    <input type="radio"><li class="l5"><i class="fas fa-money-check-alt" style="margin-right:5px;"></i>가상계좌</li>
+
+
+
+
+                </td>
+                <td class="p2"rowspan="2">2</td>
+            </tr>
+           
+            <tr>
+            <td class="p3">3</td>
+            </tr>
+        </table>
+    </div>
+</main>
+
+
+        <!-- --------------------------------------------메인 bottom---------------------------------- -->
+
+        <!-- ------------------------------------------------------------------------------------푸터------------------------------------------------------------------------------ -->
+        <div id="footers"></div>
+
+
+    </div>
+    <!-- js 링크 -->
+    <script src="/src/main/resources/static/js/pay.js"></script>
+    <script src="/src/main/resources/static/js/address.js"></script>
+
+
+</body>
+
+</html>
