@@ -70,7 +70,7 @@
             <tr>
                 <td class="t1">이메일</td>
                 <td>
-                    <input type="text" id="email_id" name="email_id" class="email"><span class="mar10">@</span>
+                    <input type="text" id="email_id" name="email_id" class="email"><span class="mar10">&nbsp @</span>
                     <input type="text" name="email_add" id="email_add" class="email2">
                     <select name="email_sel" id="email_sel" onchange="change_email();">
                     
@@ -92,6 +92,61 @@
         
      </div>
 
+    
+    
+    <div id="order-list">주문내역</div>
+    
+    
+    <div id="order-info">
+    
+        <table border="0">
+            <tr class="order-head">
+                <td style="width: 70px;"></td>
+                <td style="width: 70px;"></td>
+                <td>상품정보</td>
+                <td>판매가</td>
+                <td>수량</td>
+                <td>배송구분</td>
+                <td>배송비</td>
+    
+    
+            </tr>
+            <tr>
+                <td><input type="checkbox" style="width: 20px; height: 20px;"></td>
+                <td><img src="/src/main/resources/static/image/dog1.jpeg" style="width: 80px; height: 80px;"></td>
+                <td>누빌패딩강아지(Red)-S</td>
+                <td>52,000원</td>
+                <td>1</td>
+                <td>기본배송</td>
+                <td>2,500원</td>
+            </tr>
+    
+        </table>
+    
+    
+    </div>
+
+    <div id="order-pay">결제예정금액</div>
+    
+    
+    <div id="order-paylist">
+    
+        <table border="0">
+            <tr class="order-head">
+                <td>총 주문 금액</td>
+                <td>총 할인 + 부가결제금액</td>
+                <td>총 결제예정 금액</td>
+            </tr>
+            <tr>
+                <td>54,500원</td>
+                <td>- 0원</td>
+                <td>= 54,500원</td>
+            </tr>
+    
+        </table>
+    
+    
+    </div>
 
      <div id="main-bottom" style="width: 100pxm;">
         <table class="pay-table" border="0">
@@ -107,11 +162,35 @@
 
 
                 </td>
-                <td class="p2"rowspan="2">2</td>
+                <td class="p2"rowspan="2">
+                    <div class="p2-1">무통장 입금 최종결제 금액</div>
+                    <div class="p2-2">54,500원</div>
+                    <div class="p2-3"><input type="checkbox">결제정보를 확인하였으며,</br> 구매진행에 동의합니다.</div>
+                    <div class="p2-4"><li><i class="far fa-check-square" style="margin-right: 10px;"></i>결제하기</li></div>
+
+
+                </td>
             </tr>
            
             <tr>
-            <td class="p3">3</td>
+            <td class="p3">
+                <table border="1">
+                    <tr class="tr-1">
+                        <td class="td-1"><li>입금자명</li></td>
+                        <td><input type="text" style="width: 150px; height: 20px; margin-left: 15px;"</td>
+
+                    </tr>
+                    <tr>
+                        <td class="td-1"><li>입금은행</li></td>
+                        <td>
+                            <select style="width: 180px; height: 20px; margin-left: 15px;">
+                            <option value="">::: 선택해주세요 ::: </option>
+                            <option value="naver.com">국민 홍길동 123123123123123123</option>
+                        </td>
+
+                    </tr>
+                </table>
+            </td>
             </tr>
         </table>
     </div>
