@@ -1,0 +1,157 @@
+/* --------------------------------css 기본틀--------------------------------------------- */
+* {
+  margin: 0; /* 마진 리셋 */
+  padding: 0; /* 패딩 리셋 */
+  
+}
+
+body {
+  display: block;
+}
+
+/**/
+/* !!!! 화면 비율 일정하게 조절 !!!!
+  ex> 화면 줄어들면 그에 맞는 비율로 줄고, 늘면 그에 맞는 비율로 늠
+  가까이 확대되면 스크롤 이용 */
+.container {
+  width: 100%;
+  padding-right: var(1rem);
+  padding-left: var(1rem);
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 40px;
+  position: relative;
+  max-width: 1480px;
+}
+
+/* 링크 걸린거 색깔 없애기 */
+a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  display: inline-block;
+}
+/* -------------------------------------------------변경되는 메인-------------------------------- */
+
+main{
+  width: 100%;
+  height: 1600px;
+  
+}
+
+#empty-top{
+    width: 100%;
+    height: 10%;
+
+}
+
+.fa-user-circle{
+    margin-left: 100px;
+}
+
+#main-top-2{
+  width: 100%;
+  height: 50px;
+  margin-top: 20px;
+  border-bottom: 3px solid gray;
+}
+#i1{
+  font-size: 30px;
+  font-weight: bold;
+  margin-left: 95px;
+}
+#i2{
+  font-size: 20px;
+  margin-left: 20px;
+  color: gold;
+}
+
+
+#main-middle{
+    width: 90%;
+    height: 65%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    border-collapse: collapse;
+}
+
+.info{
+    width: 95%;
+    border: 1px solid gray;
+    height: 1000px;
+
+}
+
+.info tr td{
+    border-bottom: 1px solid gray;
+
+}
+.t1{
+    border-right: 1px solid gray;
+    box-shadow: 1px 1px 1px 1px gray;
+    background-color: rgb(231, 241, 247);
+    width: 200px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+
+}
+
+.input{
+    width: 200px;
+    height: 30px;
+    margin-left: 20px;
+}
+
+
+#sample4_postcode {
+  width: 150px;
+  height: 30px;
+  margin-left: 20px;
+
+}
+#sample4_Btn {
+  margin-top: 10px;
+  margin-left: 5px;
+  height: 30px;
+  width: 100px;
+}
+
+#sample4_roadAddress,
+#sample4_jibunAddress,
+#sample4_detailAddress{
+    margin-left: 20px;
+  margin-top: 8px;
+   width: 500px;
+    height: 30px;
+}
+
+#main-bottom{
+    width: 90%;
+    height: 5%;
+    margin: 0 auto;
+}
+
+#main-bottom-1 li{
+    height: 50%;
+    border: 1px solid gray;
+    border-radius: 0.3em;
+    color: white;
+    background-color: gray;
+    padding:5px 10px;
+    font-size: 15px;
+    float: right;
+    margin-right: 20px;
+}

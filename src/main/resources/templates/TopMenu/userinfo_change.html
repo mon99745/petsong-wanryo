@@ -1,0 +1,131 @@
+<!--주석 필수-->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+    <title>펫송완료</title>
+    <!--    <link rel="stylesheet" href="/static/css/index.css">-->
+    <link rel="stylesheet" href="/src/main/resources/static/css/TopMenu/userinfo_change.css">
+    <link rel="stylesheet" href="/src/main/resources/staticcss//Main/header.scss">
+    <!-- 네비게이션 관련 js 링크 -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+    <script src="https://use.typekit.net/hoy3lrg.js"></script>
+    <script>try { Typekit.load({ async: true }); } catch (e) { }</script>
+
+    <!-- 주소찾기 -->
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+
+    <!-- 폰트어썸 이미지 불러오기 링크 -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#headers").load("/src/main/resources/templates/Header_Footer/header.html");
+            $("#footers").load("/src/main/resources/templates/Header_Footer/footer.html");
+        }
+        );
+    </script>
+
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- -----------------------------------------------------최고 상단 메뉴 바 + 검색창---------------------------------------------------------------------       -->
+
+        <div id="headers"></div>
+
+        <!-- --------------------------------------------------------------------------메인 왼쪽 ------------------------------------------------------------------------ -->
+        <main>
+                <div id="empty-top"></div>
+                <div id="main-top-1">
+                    <i class="fas fa-user-circle fa-5x"></i></div>
+                <div id="main-top-2">
+                    <li id="i1">홍길동</li>
+                    <li id="i2">vip 회원</li> 
+                </div>
+
+                <div id="main-middle">
+                    <table class="info" border="0">
+                        <tr>
+                        <td class="t1">아이디</td>
+                        <td><input type="text" class="input" placeholder="hanseo17">(영문소문자/숫자, 4 ~ 16자)</td>
+                        </tr>
+                        <tr>
+                        <td class="t1">비밀번호</td>
+                        <td><input type="password" value="qwe123" class="input"><i class="fas fa-eye" style="margin-left:5px; margin-right: 5px;"></i>(영문 대소문자/숫자/특수문자 중 2가지 이상, 8~16자</td>
+                        </tr>
+                        <tr>
+                            <td class="t1">비밀번호 확인</td>
+                            <td><input type="password" value="qwe123"  class="input"><i class="fas fa-eye" style="margin-left:5px;"></i></td>
+                        </tr>
+                        <tr>
+                        <td class="t1">이름</td>
+                        <td><input type="text" class="input"></td>
+                        </tr>
+                            <td  class="t1">주소</td>                               
+                            <td style="height: 200px;">
+                                <input type="text" id="sample4_postcode" placeholder="우편번호">
+                                <input type="button" id="sample4_Btn" onclick="sample4_execDaumPostcode()" value="우편번호 찾기"><br>
+                                <input type="text" id="sample4_roadAddress" placeholder="도로명주소"><br>
+                                <input type="text" id="sample4_jibunAddress" placeholder="지번주소"><br>
+                                <span id="guide" style="color:#999;display:none"></span>
+                                <input type="text" id="sample4_detailAddress" placeholder="상세주소">
+                            </td>
+                          
+                        <tr>
+                            <td class="t1" >일반전화</td>
+                            <td><input type="text" class="input" placeholder="031-1234-5677"></td>
+                        </tr>
+                        <tr>
+                            <td class="t1" >휴대전화</td>
+                            <td><input type="text" class="input" placeholder="010-2543-3439"></td>
+                        </tr>
+                        <tr>
+                            <td class="t1">SMS 수신여부</td>
+                            <td><input type="radio" style="margin-left: 15px;">수신함 <input type="radio" style="margin-left: 10px;">수신안함<br><br>
+                                &nbsp; &nbsp; 쇼핑몰에서 제공하는 유익한 이벤트 소식을 SMS로 받으실 수 있습니다.
+                            </td>
+                       
+                        <tr>
+                            <td class="t1" >이메일</td>
+                            <td><input type="text" class="input" placeholder="031-1234-5677"></td>
+                        </tr>
+                        <tr>
+                            <td class="t1">이메일 수신여부</td>
+                            <td><input type="radio" style="margin-left: 15px;">수신함 <input type="radio" style="margin-left: 10px;">수신안함<br><br>
+                                &nbsp; &nbsp; 쇼핑몰에서 제공하는 유익한 이벤트 소식을 이메일로 받으실 수 있습니다.
+                            </td>
+                      
+                    </table>
+                </div>
+                <div id="main-bottom">
+                    <div id="main-bottom-1">
+                        <li>회원탈퇴</li>
+                        <a href="/src/main/resources/templates/TopMenu/mypage.html"><li>취소</li></a>
+                        <li>회원정보수정</li>
+                       
+                    </div>
+                 
+                </div>
+
+
+        </main>
+
+        <!-- --------------------------------------------메인 bottom---------------------------------- -->
+
+        <!-- ------------------------------------------------------------------------------------푸터------------------------------------------------------------------------------ -->
+        <div id="footers"></div>
+
+
+    </div>
+    <!-- js 링크 -->
+    <script src="/src/main/resources/static/js/unserinfo_change.js"></script>
+        <script src="/src/main/resources/static/js/address.js"></script>
+
+</body>
+
+</html>
