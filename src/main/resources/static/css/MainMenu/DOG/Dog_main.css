@@ -12,6 +12,10 @@ body {
 /* !!!! 화면 비율 일정하게 조절 !!!!
   ex> 화면 줄어들면 그에 맞는 비율로 줄고, 늘면 그에 맞는 비율로 늠
   가까이 확대되면 스크롤 이용 */
+.all {
+  width: 1480px;
+  margin: 0 auto;
+}
 .container {
   width: 100%;
   padding-right: var(1rem);
@@ -35,9 +39,65 @@ a {
 
 ul {
   list-style: none;
+  display: block;
 }
 
 li {
   display: inline-block;
 }
 /* -------------------------------------------------변경되는 메인-------------------------------- */
+
+#top-main {
+  margin: 50px 25px 0;
+}
+#season {
+  margin: 30px 25px 30px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #aaa8a8;
+}
+
+#season li {
+  margin-right: 20px;
+  font-size: 18px;
+}
+.dog-photo {
+  width: 320px;
+  height: 340px;
+}
+.product {
+  margin: 0 25px;
+}
+#product-list ul {
+  font-size: 0;
+}
+#product-list li {
+  font-size: 16px;
+}
+.product-name {
+  margin-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ececec;
+}
+.price {
+  margin-top: 10px;
+}
+
+.icon {
+  float: right;
+  margin: 10px 0;
+  width: 100%;
+}
+
+.empty-heart,
+.red-heart {
+  width: 50px;
+  height: 50px;
+  float: right;
+}
+.empty-cart,
+.full-cart {
+  margin-top: 13px;
+  width: 25px;
+  height: 25px;
+  float: right;
+}
