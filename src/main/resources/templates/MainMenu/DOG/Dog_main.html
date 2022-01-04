@@ -13,7 +13,7 @@
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
     <script src="https://use.typekit.net/hoy3lrg.js"></script>
     <script>try { Typekit.load({ async: true }); } catch (e) { }</script>
-
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <!-- 폰트어썸 이미지 불러오기 링크 -->
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
@@ -29,6 +29,7 @@
 </head>
 
 <body>
+    <div class="all">
     <div class="container">
 
         <!-- -----------------------------------------------------최고 상단 메뉴 바 + 검색창---------------------------------------------------------------------       -->
@@ -36,7 +37,255 @@
         <div id="headers"></div>
 
         <!-- --------------------------------------------------------------------------메인 왼쪽 ------------------------------------------------------------------------ -->
+<main>
+    <div id="top-main">
+    <h1>DOG</h1>
+</div>
 
+
+<div id="season">
+    <ul>
+ <li><a href="Dog_SS.html">S/S</a></li>        
+ <li><a href="Dog_FW.html">F/W</a></li>    
+</ul>
+</div>
+
+    <div id="product-list">
+        <ul>
+            <li class="product">
+                <img class="dog-photo" src="/src/main/resources/static/image/Dog_FW/product1.jpeg">
+                <h4 class=product-name>몽블랑리버시블패딩SET(Mint)</h4>
+                <div class="price">
+                    <span>54,000원</span>
+                    <div class="icon">
+                        <img class="empty-heart" src="/src/main/resources/static/image/empty-heart.png">
+                        <img class="red-heart" src="/src/main/resources/static/image/red-heart.png">
+                        <img class="empty-cart" src="/src/main/resources/static/image/empty-cart.png">
+                        <img class="full-cart" src="/src/main/resources/static/image/full-cart.png">
+                    </div>
+
+                </div>
+            </li>
+            <li class="product">
+                <img class="dog-photo" src="/src/main/resources/static/image/Dog_FW/product2.jpeg">
+                <h4 class=product-name>몽블랑리버시블패딩SET(Pink)</h4>
+                <div class="price">
+                    <span>54,000원</span>
+                    <div class="icon">
+                        <img class="empty-heart" src="/src/main/resources/static/image/empty-heart.png">
+                        <img class="red-heart" src="/src/main/resources/static/image/red-heart.png">
+                        <img class="empty-cart" src="/src/main/resources/static/image/empty-cart.png">
+                        <img class="full-cart" src="/src/main/resources/static/image/full-cart.png">
+                    </div>
+
+                </div>
+            </li>
+            <li class="product">
+                <img class="dog-photo" src="/src/main/resources/static/image/Dog_FW/product3.jpeg">
+                <h4 class=product-name>몽블랑리버시블패딩SET(Ivory)</h4>
+                <div class="price">
+                    <span>54,000원</span>
+                    <div class="icon">
+                        <img class="empty-heart" src="/src/main/resources/static/image/empty-heart.png">
+                        <img class="red-heart" src="/src/main/resources/static/image/red-heart.png">
+                        <img class="empty-cart" src="/src/main/resources/static/image/empty-cart.png">
+                        <img class="full-cart" src="/src/main/resources/static/image/full-cart.png">
+                    </div>
+
+                </div>
+            </li>
+            <li class="product">
+                <img class="dog-photo" src="/src/main/resources/static/image/Dog_FW/product6.jpeg">
+                <h4 class=product-name>누빔패딩조끼(Grey)</h4>
+                <div class="price">
+                    <span>38,000원</span>
+                    <div class="icon">
+                        <img class="empty-heart" src="/src/main/resources/static/image/empty-heart.png">
+                        <img class="red-heart" src="/src/main/resources/static/image/red-heart.png">
+                        <img class="empty-cart" src="/src/main/resources/static/image/empty-cart.png">
+                        <img class="full-cart" src="/src/main/resources/static/image/full-cart.png">
+                    </div>
+
+                </div>
+            </li>
+            <li class="product">
+                <img class="dog-photo" src="/src/main/resources/static/image/Dog_FW/product10.jpeg">
+                <h4 class=product-name>누빔패딩조끼(Navy)</h4>
+                <div class="price">
+                    <span>38,000원</span>
+                    <div class="icon">
+                        <img class="empty-heart" src="/src/main/resources/static/image/empty-heart.png">
+                        <img class="red-heart" src="/src/main/resources/static/image/red-heart.png">
+                        <img class="empty-cart" src="/src/main/resources/static/image/empty-cart.png">
+                        <img class="full-cart" src="/src/main/resources/static/image/full-cart.png">
+                    </div>
+
+                </div>
+            </li>
+
+            <li class="product">
+                <img class="dog-photo" src="/src/main/resources/static/image/Dog_FW/product11.jpeg">
+                <h4 class=product-name>누빔패딩조끼(White)</h4>
+                <div class="price">
+                    <span>38,000원</span>
+                    <div class="icon">
+                        <img class="empty-heart" src="/src/main/resources/static/image/empty-heart.png">
+                        <img class="red-heart" src="/src/main/resources/static/image/red-heart.png">
+                        <img class="empty-cart" src="/src/main/resources/static/image/empty-cart.png">
+                        <img class="full-cart" src="/src/main/resources/static/image/full-cart.png">
+                    </div>
+
+                </div>
+            </li>
+            <li class="product">
+                <img class="dog-photo" src="/src/main/resources/static/image/Dog_FW/product12.jpeg">
+                <h4 class=product-name>베이직S/T(Beige)</h4>
+                <div class="price">
+                    <span>24,000원</span>
+                    <div class="icon">
+                        <img class="empty-heart" src="/src/main/resources/static/image/empty-heart.png">
+                        <img class="red-heart" src="/src/main/resources/static/image/red-heart.png">
+                        <img class="empty-cart" src="/src/main/resources/static/image/empty-cart.png">
+                        <img class="full-cart" src="/src/main/resources/static/image/full-cart.png">
+                    </div>
+
+                </div>
+            </li>
+
+            <li class="product">
+                <img class="dog-photo" src="/src/main/resources/static/image/Dog_FW/product13.jpeg">
+                <h4 class=product-name>베이직S/T(Burgundy)</h4>
+                <div class="price">
+                    <span>24,000원</span>
+                    <div class="icon">
+                        <img class="empty-heart" src="/src/main/resources/static/image/empty-heart.png">
+                        <img class="red-heart" src="/src/main/resources/static/image/red-heart.png">
+                        <img class="empty-cart" src="/src/main/resources/static/image/empty-cart.png">
+                        <img class="full-cart" src="/src/main/resources/static/image/full-cart.png">
+                    </div>
+
+                </div>
+            </li>
+
+            <li class="product">
+                <img class="dog-photo" src="/src/main/resources/static/image/Dog_FW/product17.jpeg">
+                <h4 class=product-name>덤블베스트(Charcoal)</h4>
+                <div class="price">
+                    <span>22,000원</span>
+                    <div class="icon">
+                        <img class="empty-heart" src="/src/main/resources/static/image/empty-heart.png">
+                        <img class="red-heart" src="/src/main/resources/static/image/red-heart.png">
+                        <img class="empty-cart" src="/src/main/resources/static/image/empty-cart.png">
+                        <img class="full-cart" src="/src/main/resources/static/image/full-cart.png">
+                    </div>
+
+                </div>
+            </li>
+            <li class="product">
+                <img class="dog-photo" src="/src/main/resources/static/image/Dog_FW/product18.jpeg">
+                <h4 class=product-name>덤블베스트(Beige)</h4>
+                <div class="price">
+                    <span>22,000원</span>
+                    <div class="icon">
+                        <img class="empty-heart" src="/src/main/resources/static/image/empty-heart.png">
+                        <img class="red-heart" src="/src/main/resources/static/image/red-heart.png">
+                        <img class="empty-cart" src="/src/main/resources/static/image/empty-cart.png">
+                        <img class="full-cart" src="/src/main/resources/static/image/full-cart.png">
+                    </div>
+
+                </div>
+            </li>
+            <li class="product">
+                <img class="dog-photo" src="/src/main/resources/static/image/Dog_SS/product7.jpeg">
+                <h4 class=product-name>쉐이크롭티(Beige)</h4>
+                <div class="price">
+                    <span>11,000원</span>
+                    <div class="icon">
+                        <img class="empty-heart" src="/src/main/resources/static/image/empty-heart.png">
+                        <img class="red-heart" src="/src/main/resources/static/image/red-heart.png">
+                        <img class="empty-cart" src="/src/main/resources/static/image/empty-cart.png">
+                        <img class="full-cart" src="/src/main/resources/static/image/full-cart.png">
+                    </div>
+
+                </div>
+            </li>
+            <li class="product">
+                <img class="dog-photo" src="/src/main/resources/static/image/Dog_SS/product8.jpeg">
+                <h4 class=product-name>쉐이크롭티(White)</h4>
+                <div class="price">
+                    <span>11,000원</span>
+                    <div class="icon">
+                        <img class="empty-heart" src="/src/main/resources/static/image/empty-heart.png">
+                        <img class="red-heart" src="/src/main/resources/static/image/red-heart.png">
+                        <img class="empty-cart" src="/src/main/resources/static/image/empty-cart.png">
+                        <img class="full-cart" src="/src/main/resources/static/image/full-cart.png">
+                    </div>
+
+                </div>
+            </li>
+
+            <li class="product">
+                <img class="dog-photo" src="/src/main/resources/static/image/Dog_SS/product7.jpeg">
+                <h4 class=product-name>쉐이크롭티(Black)</h4>
+                <div class="price">
+                    <span>11,000원</span>
+                    <div class="icon">
+                        <img class="empty-heart" src="/src/main/resources/static/image/empty-heart.png">
+                        <img class="red-heart" src="/src/main/resources/static/image/red-heart.png">
+                        <img class="empty-cart" src="/src/main/resources/static/image/empty-cart.png">
+                        <img class="full-cart" src="/src/main/resources/static/image/full-cart.png">
+                    </div>
+
+                </div>
+            </li>
+            <li class="product">
+                <img class="dog-photo" src="/src/main/resources/static/image/Dog_SS/product14.jpeg">
+                <h4 class=product-name>아쮸크롭티(Lime)</h4>
+                <div class="price">
+                    <span>11,000원</span>
+                    <div class="icon">
+                        <img class="empty-heart" src="/src/main/resources/static/image/empty-heart.png">
+                        <img class="red-heart" src="/src/main/resources/static/image/red-heart.png">
+                        <img class="empty-cart" src="/src/main/resources/static/image/empty-cart.png">
+                        <img class="full-cart" src="/src/main/resources/static/image/full-cart.png">
+                    </div>
+
+                </div>
+            </li>
+
+            <li class="product">
+                <img class="dog-photo" src="/src/main/resources/static/image/Dog_SS/product15.jpeg">
+                <h4 class=product-name>아쮸크롭티(Pink)</h4>
+                <div class="price">
+                    <span>11,000원</span>
+                    <div class="icon">
+                        <img class="empty-heart" src="/src/main/resources/static/image/empty-heart.png">
+                        <img class="red-heart" src="/src/main/resources/static/image/red-heart.png">
+                        <img class="empty-cart" src="/src/main/resources/static/image/empty-cart.png">
+                        <img class="full-cart" src="/src/main/resources/static/image/full-cart.png">
+                    </div>
+
+                </div>
+            </li>
+
+            <li class="product">
+                <img class="dog-photo" src="/src/main/resources/static/image/Dog_SS/product16.jpeg">
+                <h4 class=product-name>아쮸크롭티(Blue)</h4>
+                <div class="price">
+                    <span>11,000원</span>
+                    <div class="icon">
+                        <img class="empty-heart" src="/src/main/resources/static/image/empty-heart.png">
+                        <img class="red-heart" src="/src/main/resources/static/image/red-heart.png">
+                        <img class="empty-cart" src="/src/main/resources/static/image/empty-cart.png">
+                        <img class="full-cart" src="/src/main/resources/static/image/full-cart.png">
+                    </div>
+
+                </div>
+            </li>
+        </ul>
+
+    </div>
+</main>
     
         <!-- --------------------------------------------메인 bottom---------------------------------- -->
 
@@ -45,8 +294,9 @@
 
 
     </div>
+</div>
     <!-- js 링크 -->
-    <script src="/src/main/resources/static/js/Dog_SS.js"></script>
+    <script src="/src/main/resources/static/js/Cart.js"></script>
 
 </body>
 

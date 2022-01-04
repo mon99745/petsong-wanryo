@@ -1,9 +1,7 @@
-
-  /* --------------------------------css 기본틀--------------------------------------------- */
+/* --------------------------------css 기본틀--------------------------------------------- */
 * {
   margin: 0; /* 마진 리셋 */
   padding: 0; /* 패딩 리셋 */
-  
 }
 
 body {
@@ -14,6 +12,10 @@ body {
 /* !!!! 화면 비율 일정하게 조절 !!!!
   ex> 화면 줄어들면 그에 맞는 비율로 줄고, 늘면 그에 맞는 비율로 늠
   가까이 확대되면 스크롤 이용 */
+.all {
+  width: 1480px;
+  margin: 0 auto;
+}
 .container {
   width: 100%;
   padding-right: var(1rem);
@@ -44,28 +46,28 @@ li {
 }
 /* -------------------------------------------------변경되는 메인-------------------------------- */
 
-main{
+main {
   width: 100%;
   height: 3500px;
 }
 
-#main-top{
+#main-top {
   width: 100%;
   height: 20%;
 }
-#main-top-top{
+#main-top-top {
   width: 100%;
   height: 40%;
   display: flex;
   align-items: flex-end;
   border-bottom: 3px solid gray;
 }
-#main-top-top h1{
+#main-top-top h1 {
   margin-left: 30px;
   margin-bottom: 20px;
 }
 
-#main-top-middle{
+#main-top-middle {
   width: 90%;
   height: 40%;
   margin: 0 auto;
@@ -75,28 +77,29 @@ main{
   margin-top: 50px;
   margin-left: 100px;
 }
-#main-top-middle-2{
+#main-top-middle-2 {
   width: 100%;
   height: 50px;
   margin-top: 20px;
   border-bottom: 3px solid gray;
 }
-#i1{
+#i1 {
   font-size: 30px;
   font-weight: bold;
   margin-left: 95px;
 }
-#i2{
+#i2 {
   font-size: 20px;
   margin-left: 20px;
   color: gold;
 }
-#i3{
+#i3 {
   font-size: 15px;
   color: blue;
   border-bottom: 1px solid blue;
 }
-#i4, #i5{
+#i4,
+#i5 {
   font-size: 25px;
   font-weight: bold;
   float: right;
@@ -104,42 +107,40 @@ main{
   margin-top: 10px;
 }
 
-#main-top-bottom{
-  
+#main-top-bottom {
   width: 90%;
   height: 20%;
   margin: 0 auto;
 }
 
-#main-top-bottom li{
+#main-top-bottom li {
   font-size: 25px;
   font-weight: bold;
   border-right: 1px solid gray;
   margin-right: 5px;
   padding: 0 20px;
   text-align: center;
-
 }
 
-#main-middle{
+#main-middle {
   width: 90%;
   height: 1850px;
   margin: 0 auto;
 }
 
-#info1{
+#info1 {
   width: 100%;
   height: 20%;
   border: 4px solid gray;
   margin-bottom: 30px;
 }
-#info1-top1{
+#info1-top1 {
   width: 90%;
   height: 30%;
   margin: 0 auto;
   border-bottom: 2px solid gray;
 }
-#info1-top1 li{
+#info1-top1 li {
   border-radius: 0.5em;
   background-color: rgb(61, 59, 59);
   color: white;
@@ -150,7 +151,7 @@ main{
   margin-top: 40px;
 }
 
-#info1-top2{
+#info1-top2 {
   width: 90%;
   height: 70%;
   margin: 0 auto;
@@ -159,27 +160,27 @@ main{
   align-items: center;
   text-align: cente;
 }
-#info1-top2 li{
+#info1-top2 li {
   font-size: 35px;
   text-align: center;
   font-weight: bold;
   margin: 0 30px;
 }
 
-#info2{
+#info2 {
   width: 100%;
   height: 35%;
   border: 4px solid gray;
 }
 
-#info2-top1{
+#info2-top1 {
   width: 90%;
   height: 20%;
-  border-bottom: 2px solid gray ;
+  border-bottom: 2px solid gray;
   margin: 0 auto;
 }
-#info2-top1 li{
-   border-radius: 0.5em;
+#info2-top1 li {
+  border-radius: 0.5em;
   background-color: rgb(61, 59, 59);
   color: white;
   font-size: 25px;
@@ -189,8 +190,7 @@ main{
   margin-top: 50px;
 }
 
-
-#info2-top2{
+#info2-top2 {
   width: 90%;
   height: 70%;
   display: flex;
@@ -199,28 +199,27 @@ main{
   margin: 0 auto;
 }
 
-#info2-top2 table{
+#info2-top2 table {
   width: 90%;
-  border-collapse:collapse;
-font-size: 25px;
-
+  border-collapse: collapse;
+  font-size: 25px;
 }
-#info2-top2 td{
+#info2-top2 td {
   height: 130px;
   text-align: center;
   border-bottom: 1px solid gray;
 }
-#info2-top2 img{
+#info2-top2 img {
   margin-right: 20px;
 }
-#info2-top2 span{
+#info2-top2 span {
   margin-bottom: 20px;
 }
-#info2-top3{
+#info2-top3 {
   display: flex;
   justify-content: center;
 }
-#info2-top3 li{
+#info2-top3 li {
   border: 1px solid gray;
   font-size: 25px;
   font-weight: bold;
@@ -232,24 +231,21 @@ font-size: 25px;
   color: white;
 }
 
-
-
-
-#info3{
+#info3 {
   width: 100%;
   height: 35%;
   border: 4px solid gray;
   margin-top: 20px;
 }
 
-#info3-top1{
+#info3-top1 {
   width: 90%;
   height: 20%;
-  border-bottom: 2px solid gray ;
+  border-bottom: 2px solid gray;
   margin: 0 auto;
 }
-#info3-top1 li{
-   border-radius: 0.5em;
+#info3-top1 li {
+  border-radius: 0.5em;
   background-color: rgb(61, 59, 59);
   color: white;
   font-size: 25px;
@@ -259,8 +255,7 @@ font-size: 25px;
   margin-top: 50px;
 }
 
-
-#info3-top2{
+#info3-top2 {
   width: 90%;
   height: 70%;
   display: flex;
@@ -269,43 +264,39 @@ font-size: 25px;
   margin: 0 auto;
 }
 
-#info3-top2 table{
+#info3-top2 table {
   width: 90%;
-  border-collapse:collapse;
-font-size: 20px;
-
+  border-collapse: collapse;
+  font-size: 20px;
 }
-#info3-top2 td{
+#info3-top2 td {
   height: 120px;
   text-align: center;
   border-bottom: 1px solid gray;
 }
-#info3-top2 img{
+#info3-top2 img {
   margin-right: 20px;
 }
-#info3-top2 span{
+#info3-top2 span {
   margin-bottom: 20px;
 }
 
-
-
-#info4{
+#info4 {
   width: 100%;
   height: 30%;
-
 }
 
-.order-head2{
+.order-head2 {
   font-size: 25px;
   font-weight: bold;
 }
 
-#info3-top3{
+#info3-top3 {
   display: flex;
   justify-content: center;
 }
 
-#info3-top3 li{
+#info3-top3 li {
   border: 1px solid gray;
   font-size: 25px;
   font-weight: bold;
@@ -317,22 +308,21 @@ font-size: 20px;
   color: white;
 }
 
-
-#info4{
-   width: 100%;
+#info4 {
+  width: 100%;
   height: 35%;
   border: 4px solid gray;
   margin-top: 20px;
 }
 
-#info4-top1{
+#info4-top1 {
   width: 90%;
   height: 20%;
-  border-bottom: 2px solid gray ;
+  border-bottom: 2px solid gray;
   margin: 0 auto;
 }
-#info4-top1 li{
-   border-radius: 0.5em;
+#info4-top1 li {
+  border-radius: 0.5em;
   background-color: rgb(61, 59, 59);
   color: white;
   font-size: 25px;
