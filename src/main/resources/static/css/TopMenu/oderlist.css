@@ -2,7 +2,6 @@
 * {
   margin: 0; /* 마진 리셋 */
   padding: 0; /* 패딩 리셋 */
-  
 }
 
 body {
@@ -13,6 +12,11 @@ body {
 /* !!!! 화면 비율 일정하게 조절 !!!!
   ex> 화면 줄어들면 그에 맞는 비율로 줄고, 늘면 그에 맞는 비율로 늠
   가까이 확대되면 스크롤 이용 */
+.all {
+  width: 1480px;
+  margin: 0 auto;
+}
+
 .container {
   width: 100%;
   padding-right: var(1rem);
@@ -43,42 +47,43 @@ li {
 }
 /* -------------------------------------------------변경되는 메인-------------------------------- */
 
-main{
+main {
   width: 100%;
   height: 1200px;
-  
 }
 
-#main-top{
+#main-top {
   height: 20%;
   display: flex;
   align-items: flex-end;
-  border-bottom: 4px solid gray ;
+  border-bottom: 4px solid gray;
 }
-#main-top span{
+#main-top span {
   margin-left: 50px;
   margin-bottom: 20px;
   font-size: 40px;
   font-weight: bold;
 }
 
-#main-bottom{
+#main-bottom {
   width: 90%;
   height: 80%;
   margin: 0 auto;
 }
 
-#main-bottom-top{
+#main-bottom-top {
   width: 100%;
   height: 10%;
 }
 
-#main-bottom-bottom{
+#main-bottom-bottom {
   width: 100%;
   height: 80%;
 }
 
-.li1, .li2, .li3{
+.li1,
+.li2,
+.li3 {
   margin-top: 40px;
   margin-right: 20px;
 }
@@ -86,40 +91,36 @@ main{
   margin-left: 60px;
 }
 
-.li3{
-  float: right; 
+.li3 {
+  float: right;
   margin-right: 60px;
 }
 
-
-#day-search{
+#day-search {
   width: 150px;
   height: 40px;
   text-align: center;
   font-size: 20px;
   margin: 0 5px;
- 
 }
 
-#calendar{
+#calendar {
   width: 200px;
   height: 40px;
   text-align: center;
   font-size: 20px;
   margin: 0 5px;
- 
 }
 
-#option{
+#option {
   width: 150px;
   height: 40px;
   text-align: center;
   font-size: 20px;
   margin: 0 5px;
- 
 }
 
-#main-bottom-bottom{
+#main-bottom-bottom {
   width: 100%;
   height: 60%;
   display: flex;
@@ -128,40 +129,37 @@ main{
   border-top: 3px sold gray;
 }
 
-#main-bottom-bottom table{
+#main-bottom-bottom table {
   width: 90%;
-  border-collapse:collapse;
-font-size: 20px;
-
+  border-collapse: collapse;
+  font-size: 20px;
 }
-#main-bottom-bottom td{
+#main-bottom-bottom td {
   height: 60px;
   text-align: center;
   border-bottom: 1px solid gray;
 }
 
-.order-head{
+.order-head {
   font-weight: bold;
   font-size: 20px;
   border-top: 1px solid gray;
 }
 
 #bottom-search {
-  width:  90%;
+  width: 90%;
   margin: 0 auto;
   margin-top: 10px;
-
 }
 
-
-#bottom-search li{
+#bottom-search li {
   cursor: pointer;
   border: 1px solid gray;
   border-radius: 0.5em;
   padding: 5px 10px;
 }
 
-#search-menu{
+#search-menu {
   margin: 0 auto;
   width: 250px;
   height: 30px;

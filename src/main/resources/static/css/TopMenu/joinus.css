@@ -11,6 +11,10 @@ body {
 /* !!!! 화면 비율 일정하게 조절 !!!!
     ex> 화면 줄어들면 그에 맞는 비율로 줄고, 늘면 그에 맞는 비율로 늠
     가까이 확대되면 스크롤 이용 */
+.all {
+  width: 1480px;
+  margin: 0 auto;
+}
 .container {
   width: 100%;
   padding-right: var(1rem);
