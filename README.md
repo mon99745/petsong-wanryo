@@ -1,4 +1,4 @@
-# demoproject
+# petsong_complete
 shopping mall
 
 Detail : 애완용품의 관한 쇼핑몰 개설
