@@ -34,5 +34,5 @@ public String index_ex(Model model,
     model.addAttribute("endPage", endPage);
     model.addAttribute("boards", boards);
     return "index_ex";
-}
+    }
 }
