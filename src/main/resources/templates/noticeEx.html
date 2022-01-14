@@ -1,5 +1,5 @@
 <!--예시가 완성되면 카톡으로 공지할겡-->
-
+<!-- 예시 페이지 -->
 <!--주석 필수-->
 <!DOCTYPE html>
 <html lang="en" class="h-100"
@@ -50,8 +50,10 @@
 
         <div id="main-middle">
             <div id="main-middle top">
-                <li class="t1">배송관련</li>
-                <li class="t2">상품관련</li>
+
+<!--                보류사항 -->
+<!--                <li class="t1">배송관련</li>-->
+<!--                <li class="t2">상품관련</li>-->
 
 
                 <li class="page-wrapper t3" id="write">
@@ -102,49 +104,27 @@
                 </div>
 
 
-
-
-
-
-
             </div>
             <div id="main-middle-center">
                 <table id="quiz-table" border="0">
                     <tr>
                         <th class="th1"> 번호</th>
-                        <th id="th2" > 제목</th>
-                        <th id="th3"> 작성자</th>
+                        <th id="th2"> 작성자 </th>
+                        <th id="th3"> 제목 </th>
+                        <th id="th4"> 내용 </th> <!--글의 내용은 클릭시 볼 수 있게 할까?-->
                         <th> 작성일</th>
-                        <th> 조회</th>
+                        <th> 조회수</th>
                     </tr>
+                    <div th:each="board : ${boards}" >
                     <tr>
-                        <td>1</td>
-                        <td>가입 이벤트 안내</td>
-                        <td>문XX</td>
-                        <td>2021.12.14</td>
-                        <td>3</td>
+                        <td></td> <!-- 번호 일단 보류-->
+                        <td th:href="@{/board/{id}(id=${board.id})}" ></td> <!-- 작성자 -->
+                        <td th:text="${board.title}" ></td> <!-- 제목 -->
+                        <td th:text="${board.content}" ></td> <!-- 내용 -->
+                        <td th:text="${#temporals.format(board.createdDate, 'yyyy-MM-dd')}" ></td> <!-- 작성일 -->
+                        <td></td> <!-- 조회수 일단 보류 -->
                     </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>12월 정기 행사</td>
-                        <td>임XX</td>
-                        <td>2021.12.14</td>
-                        <td>2</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>배송지연 안내</td>
-                        <td>박XX</td>
-                        <td>2021.12.14</td>
-                        <td>4</td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>12월 15일 2:00~4:00 서버점검</td>
-                        <td>이XX</td>
-                        <td>2021.12.14</td>
-                        <td>3</td>
-                    </tr>
+                    </div>
 
                 </table>
 
@@ -210,7 +190,11 @@
 </div>
 <!-- js 링크 -->
 <script src="/src/main/resources/static/js/QandA.js"></script>
-
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<!--Ajax 선언과 Bootstrap 선언 -->
+<!-- Ajax 선언은 데이터를 따로 비동기식으로 넘기기 위해 -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="../static/js/bootstrap/bootstrap.min.js"></script>
 </body>
 
 </html>
