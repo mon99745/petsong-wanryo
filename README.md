@@ -1,5 +1,5 @@
 # Title : Shopping Mall
-  Detail : 애완용품의 관한 쇼핑몰 개설
+Detail : 애완용품의 관한 쇼핑몰 개설
   기능 구현 : 쇼핑몰, 게시판(공지사항, QnA)
   
 - Tools : 
