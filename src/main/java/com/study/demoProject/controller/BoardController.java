@@ -14,6 +14,9 @@ public class BoardController {
 
     private final BoardService boardService;
 
+    /**
+     * 글작성 페이지
+     */
     @GetMapping("/board/save")
     public String save() {
         return "layout/board/board-save";
