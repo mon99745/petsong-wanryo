@@ -25,6 +25,7 @@
 
 <!-- 검색기능 -->
 <div class="d-flex" style="position: absolute; left: 20px; top: 70px;"><h2 style="margin-right: 40px;">총 건수:</h2><h2 th:text="${boards.totalElements}"></h2></div>
+
 <form class="d-flex" style="position: relative; top: 40px;" method="get" th:action="@{/}">
     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
            id="search" name="search" th:value="${param.search}">

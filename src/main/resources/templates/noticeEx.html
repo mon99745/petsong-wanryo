@@ -155,10 +155,12 @@
                     <option value="product">상품정보</option>
 
                 </select>
-
+                <!--검색창-->
                 <div id="search-menu">
-                    <input type="text" class="search-text">
-                    <button class="search-btn"><i class="fas fa-search"></i></button>
+                    <form style="position: relative; top: 40px;" method="get" th:action="@{/}">
+                    <input type="search" name="search" th:value="${param.search}"  placeholder="Search">
+                    <button class="search-btn" type="submit"><i class="fas fa-search"></i></button>
+                    </form>
                 </div>
             </div>
 
