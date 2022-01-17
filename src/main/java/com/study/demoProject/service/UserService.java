@@ -23,7 +23,7 @@ public class UserService {
     public Long save(User user) {
         String hashPw = bCryptPasswordEncoder.encode(user.getPassword());
         user.setPassword(hashPw);
-        return userRepository.save(user).getId();
+        return userRepository.save(user).getCode();
     }
 
     /**
@@ -35,10 +35,10 @@ public class UserService {
     // 받아서 update된 유저 정보를 principalDetail에 집어넣는다.
     public Long update(User user,
                        @AuthenticationPrincipal PrincipalDetail principalDetail) {
-        User userEntity = userRepository.findById(user.getId()).orElseThrow(() -> new IllegalArgumentException("해당 회원이 없습니다. id=" + user.getId()));
+        User userEntity = userRepository.findById(user.getCode()).orElseThrow(() -> new IllegalArgumentException("해당 회원이 없습니다. Code=" + user.getCode()));
         userEntity.update(bCryptPasswordEncoder.encode(user.getPassword()), user.getNickname());
         principalDetail.setUser(userEntity); //추가
-        return userEntity.getId();
+        return userEntity.getCode();
     }
 
 }

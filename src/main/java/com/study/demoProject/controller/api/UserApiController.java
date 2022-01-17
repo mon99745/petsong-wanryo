@@ -32,7 +32,7 @@ public class UserApiController {
     // @AuthenticationPrincipal에 PrincipalDetail타입으로 파라미터를 받으면 유저 정보를 얻을 수 있다.
     public Long update(@RequestBody User user, @AuthenticationPrincipal PrincipalDetail principalDetail) {
         userService.update(user, principalDetail);
-        return user.getId();
+        return user.getCode();
     }
 
 }

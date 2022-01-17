@@ -153,10 +153,10 @@
                     <option value="ID">아이디</option>
                     <option value="nickname">별명</option>
                     <option value="product">상품정보</option>
-
                 </select>
                 <!--검색창-->
-                <div id="search-menu">
+                <!--검색창 범위지정 다시 부탁-->
+                <div id="search-menu"> <!--기존의 id-->
                     <form style="position: relative; top: 40px;" method="get" th:action="@{/}">
                     <input type="search" name="search" th:value="${param.search}"  placeholder="Search">
                     <button class="search-btn" type="submit"><i class="fas fa-search"></i></button>
