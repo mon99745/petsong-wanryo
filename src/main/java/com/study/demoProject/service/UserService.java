@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 @RequiredArgsConstructor //생성자 주입을 받기 위해
+// 스프링이 컴포넌트 스캔을 통해서 Bean에 등록을 해줌. IoC를 해준다.
 @Service
 public class UserService {
 
@@ -21,8 +22,8 @@ public class UserService {
      */
     @Transactional
     public Long save(User user) {
-        String hashPw = bCryptPasswordEncoder.encode(user.getPassword());
-        user.setPassword(hashPw);
+        String hashPw = bCryptPasswordEncoder.encode(user.getUser_pw());
+        user.setUser_pw(hashPw);
         return userRepository.save(user).getCode();
     }
 
@@ -35,8 +36,8 @@ public class UserService {
     // 받아서 update된 유저 정보를 principalDetail에 집어넣는다.
     public Long update(User user,
                        @AuthenticationPrincipal PrincipalDetail principalDetail) {
-        User userEntity = userRepository.findById(user.getCode()).orElseThrow(() -> new IllegalArgumentException("해당 회원이 없습니다. Code=" + user.getCode()));
-        userEntity.update(bCryptPasswordEncoder.encode(user.getPassword()), user.getNickname());
+        User userEntity = userRepository.findByUser_id(user.getUser_id()).orElseThrow(() -> new IllegalArgumentException("해당 회원이 없습니다. Code=" + user.getUser_id()));
+        userEntity.update(bCryptPasswordEncoder.encode(user.getUser_pw()), user.getUser_nickname());
         principalDetail.setUser(userEntity); //추가
         return userEntity.getCode();
     }

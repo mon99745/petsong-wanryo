@@ -19,17 +19,36 @@ public class User extends BaseTimeEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long code; //sequence, auto_increment
 
+//    @Override
     @Column(nullable = false, length = 20, unique = true)
-    private String username; //아이디
+    private String user_id; //아이디
 
+//    @Override
     @Column(nullable = false, length = 100)
-    private String password;
+    private String user_pw; // 비밀번호
 
-    @Column(nullable = false, length = 50)
-    private String email;
+    @Column(nullable = false, length = 30)
+    private String user_name; // 이름
 
     @Column(nullable = false, length = 20)
-    private String nickname; //닉네임
+    private String user_nickname; //닉네임
+
+    @Column(nullable = false, length = 100)
+    private String user_birth; //생년월일
+
+    @Column(nullable = false, length = 100)
+    private String user_phone; // 휴대폰 번호
+
+    @Column(nullable = false, length = 50)
+    private String user_email; // 이메일
+
+    @Column(nullable = false, length = 100)
+    private String user_adress; //주소
+
+//    이미 존재
+//    @Column(nullable = false, length = 100)
+//    private String user_date; //회원가입일자
+
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
@@ -38,8 +57,8 @@ public class User extends BaseTimeEntity {
     /**
      * 비밀번호 암호화 메소드
      */
-    public void setPassword(String password) {
-        this.password = password;
+    public void setUser_pw(String User_pw) {
+        this.user_pw = User_pw;
     }
 
     /**
@@ -52,8 +71,8 @@ public class User extends BaseTimeEntity {
     /**
      * 회원수정 메소드
      */
-    public void update(String password, String nickname) {
-        this.password = password;
-        this.nickname = nickname;
+    public void update(String user_pw, String user_nickname) {
+        this.user_pw = user_pw;
+        this.user_nickname = user_nickname;
     }
 }

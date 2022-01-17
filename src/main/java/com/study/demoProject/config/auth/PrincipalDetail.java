@@ -17,6 +17,7 @@ import java.util.Collection;
 @RequiredArgsConstructor
 @Getter
 // UserDatails 객체 상속시 시큐리티의 고유한 세션저장소에 저장을 할 수 있게 된다.
+// principal (접근 주체) = 세션처럼 사용 = Spring Security Context 에 보관됨
 public class PrincipalDetail implements UserDetails {
 
     private User user; // 콤포지션 : 객체를 품고 있는 것
@@ -26,37 +27,62 @@ public class PrincipalDetail implements UserDetails {
         this.user = user;
     }
 
-    public void setUser(User userEntity) {
-    }
-
-    //사용자 패스워드
-    @Override
-    public String getPassword() {
-        return user.getPassword();
-    }
-
-    //사용자 아이디
-    @Override
-    public String getUsername() {
-        return user.getUsername();
-    }
-
-    //사용자 이메일
-
-    //사용자 이메일
-    public String getEmail() {
-        return user.getEmail();
-    }
-
-    //사용자 닉네임
-    public String getNickname() {
-        return user.getNickname();
+    public void setUser(User user) {
+        this.user = user;
     }
 
     //사용자 pk
     public Long getCode() {
         return user.getCode();
     }
+
+    //사용자 아이디
+    //UserDetails 인터페이스를 사용하기위해 id를 Username으로 설정 (Security)
+    @Override
+    public String getUsername() {
+        return user.getUser_id();
+    }
+
+    //사용자 패스워드
+    @Override
+    public String getPassword() {
+        return user.getUser_pw();
+    }
+
+    // 사용자 이름
+    public String getName() {
+        return user.getUser_name();
+    }
+
+    // 사용자 휴대폰 번호
+    public String getPhone() {
+        return user.getUser_phone();
+    }
+
+    //사용자 닉네임
+//    public String getNickname() {
+//        return user.getUser_nickname();
+//    }
+
+    //사용자 생년월일
+    public String getDate() {
+        return user.getUser_birth();
+    }
+
+    //사용자 이메일
+    public String getEmail() {
+        return user.getUser_email();
+    }
+
+    //사용자 주소
+    public String getAdress() {
+        return user.getUser_adress();
+    }
+
+
+
+
+
 
     //계정이 만료되었는지 (true: 만료되지 않음)
     @Override
