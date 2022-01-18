@@ -1,5 +1,6 @@
 # petsong wanryo
-shopping mall
+Project name : petsong wanryo
+title : shopping mall & Board(Notice, QnA)
 
 Detail : 애완용품의 관한 쇼핑몰 개설
 ![image](https://user-images.githubusercontent.com/84507123/149527325-042881f6-adee-4bfc-837f-89e02af24bd6.png)
