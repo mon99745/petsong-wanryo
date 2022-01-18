@@ -1,8 +1,9 @@
 plugins {
-	id 'org.springframework.boot' version '2.6.1'
+	id 'org.springframework.boot' version '2.6.2'
 	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 	id 'java'
 }
+
 
 group = 'com.study'
 version = '0.0.1-SNAPSHOT'
@@ -21,11 +22,13 @@ repositories {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	
     implementation 'junit:junit:4.13.1'
     implementation 'org.junit.jupiter:junit-jupiter:5.7.0'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	//lombok 의존성 추가
 	compileOnly 'org.projectlombok:lombok'
+	
 	// sql 의존성 추가
 	annotationProcessor 'org.projectlombok:lombok'
 	runtimeOnly 'mysql:mysql-connector-java'
