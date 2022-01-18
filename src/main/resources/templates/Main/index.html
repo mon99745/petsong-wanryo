@@ -1,17 +1,30 @@
 <!--주석 필수-->
+<!--경로가 각각 2개씩 지정되어야 된다. -->
+<!--기존경로 1개 Thymeleaf 경로-->
+<!--기존의 경로에서 변경사항이 생기면 카톡으로 알려줘-->
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+    <script th:src="@{https://use.fontawesome.com/releases/v5.2.0/js/all.js}"></script>
+
     <title>펫송완료</title>
     <!--    <link rel="stylesheet" href="/static/css/index.css">-->
+
+    <!--    Thymeleaf 경로-->
+    <link rel="stylesheet" th:href="@{../css/Main/index.css}"/>
+    <link rel="stylesheet" th:href="@{../css//Main/header.scss}" />
     <link rel="stylesheet" href="/src/main/resources/static/css/Main/index.css">
-    <link rel="stylesheet" href="/src/main/resources/staticcss//Main/header.scss">
+    <link rel="stylesheet" href="/src/main/resources/static/css//Main/header.scss">
+
+
     <!-- 네비게이션 관련 js 링크 -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
     <script src="https://use.typekit.net/hoy3lrg.js"></script>
+
+
     <script>try { Typekit.load({ async: true }); } catch (e) { }</script>
 
     <!-- 폰트어썸 이미지 불러오기 링크 -->

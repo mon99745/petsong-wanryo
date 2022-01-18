@@ -21,7 +21,7 @@ public class IndexController {
 @GetMapping("/")
 // @PageableDefault를 설정하면 페이지의 size, 정렬순을 정할 수 있다.
 // 한 페이지당 5 Size, 최신글을 제일 맨위로 볼 수 있게 해둠.
-public String noticeData(Model model,
+public String index(Model model,
                     @PageableDefault(size = 5, sort = "id", direction = Sort.Direction.DESC) Pageable pageable,
                     @RequestParam(required = false, defaultValue = "") String search) {
     Page<Board> boards = boardService.findByTitleContainingOrContentContaining(search, search, pageable);
@@ -33,6 +33,6 @@ public String noticeData(Model model,
     model.addAttribute("startPage", startPage);
     model.addAttribute("endPage", endPage);
     model.addAttribute("boards", boards);
-    return "noticeData";
+    return "index";
     }
 }

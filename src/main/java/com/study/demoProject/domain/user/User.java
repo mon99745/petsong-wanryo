@@ -21,14 +21,19 @@ public class User extends BaseTimeEntity {
 
     //@Override
     @Column(nullable = false, length = 20, unique = true, name = "user_id")
-    private String username; //아이디
+    // 아이디
+    // user_id 라고 명명하면 read 불가 DB에 들어가는 컬럼명만 user_id로 설정
+    //
+    private String username;
 
     //@Override
     @Column(nullable = false, length = 100)
     private String user_pw; // 비밀번호
 
     @Column(nullable = false, length = 30, name = "user_name")
-    private String name; // 이름
+    // 이름
+    // 컬럼명은 user_name으로 설정
+    private String name;
 
     @Column(nullable = false, length = 20)
     private String user_nickname; //닉네임

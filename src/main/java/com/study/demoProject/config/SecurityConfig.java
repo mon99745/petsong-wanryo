@@ -34,7 +34,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http
                 .csrf().disable() //csrf 토큰 해제
                 .authorizeRequests() // URL별 권한 관리를 설정하는 옵션
-                .antMatchers("/", "/auth/**", "/js/**", "/css/**","/bootstrapCss/**","/bootstrapJs/**", "/image/**").permitAll() //권한 관리 대상을 지정하는 옵션
+                .antMatchers("/", "/auth/**", "/js/**", "/css/**","/image/**", "/index").permitAll() //권한 관리 대상을 지정하는 옵션
                 .anyRequest().authenticated()
                 .and()
                 .formLogin() //권한이 없는 사람이 페이지를 이동하려고 하면 로그인 페이지로 이동
