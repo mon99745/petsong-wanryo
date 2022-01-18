@@ -15,7 +15,7 @@ import javax.persistence.Column;
 @NoArgsConstructor
 public class UserSaveRequestDto {
 
-    private String user_id;
+    private String username;
     private String user_pw;
     private String user_name;
     private String user_nickname;
@@ -29,9 +29,9 @@ public class UserSaveRequestDto {
 
     public User toEntity() {
         return User.builder()
-                .user_id(user_id)
+                .username(username)
                 .user_pw(user_pw)
-                .user_name(user_name)
+                .name(user_name)
                 .user_nickname(user_nickname)
                 .user_birth(user_birth)
                 .user_phone(user_phone)

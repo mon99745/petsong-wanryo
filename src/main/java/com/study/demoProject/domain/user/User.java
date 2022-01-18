@@ -19,16 +19,16 @@ public class User extends BaseTimeEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long code; //sequence, auto_increment
 
-//    @Override
-    @Column(nullable = false, length = 20, unique = true)
-    private String user_id; //아이디
+    //@Override
+    @Column(nullable = false, length = 20, unique = true, name = "user_id")
+    private String username; //아이디
 
-//    @Override
+    //@Override
     @Column(nullable = false, length = 100)
     private String user_pw; // 비밀번호
 
-    @Column(nullable = false, length = 30)
-    private String user_name; // 이름
+    @Column(nullable = false, length = 30, name = "user_name")
+    private String name; // 이름
 
     @Column(nullable = false, length = 20)
     private String user_nickname; //닉네임

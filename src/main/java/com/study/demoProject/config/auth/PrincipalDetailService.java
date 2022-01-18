@@ -4,9 +4,11 @@ import com.study.demoProject.domain.user.User;
 import com.study.demoProject.domain.user.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
@@ -18,15 +20,18 @@ import org.springframework.stereotype.Service;
 */
 public class PrincipalDetailService implements UserDetailsService {
 
-    @Autowired
-    private final UserRepository userRepository;
+    private UserRepository userRepository;
 
     // LoginForm에서 action="/login" 되면
     // 스프링 필터 체인이 낚아채서 loadUserByUsername함수를 호출한다.
+    void FormLoginAuthenticationProvider(@Lazy UserRepository userRepository)
+    {
+        this.userRepository = userRepository;
+    }
 
     @Override
     public UserDetails loadUserByUsername(String user_id) throws UsernameNotFoundException {
-        User principal =  userRepository.findByUser_id(user_id).orElseThrow(() -> new UsernameNotFoundException("해당 사용자를 찾을 수 없습니다. " + user_id));
+        User principal =  userRepository.findByUsername(user_id).orElseThrow(() -> new UsernameNotFoundException("해당 사용자를 찾을 수 없습니다. " + user_id));
         return new PrincipalDetail(principal);
     }
 }

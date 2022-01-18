@@ -40,7 +40,7 @@ public class PrincipalDetail implements UserDetails {
     //UserDetails 인터페이스를 사용하기위해 id를 Username으로 설정 (Security)
     @Override
     public String getUsername() {
-        return user.getUser_id();
+        return user.getUsername();
     }
 
     //사용자 패스워드
@@ -51,7 +51,7 @@ public class PrincipalDetail implements UserDetails {
 
     // 사용자 이름
     public String getName() {
-        return user.getUser_name();
+        return user.getName();
     }
 
     // 사용자 휴대폰 번호
