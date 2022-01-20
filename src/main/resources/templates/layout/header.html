@@ -17,16 +17,16 @@
 
     // 메뉴바 와 드롭박스에 마우스 커서 올라갈 경우 드롭박스 유지 , 마우스 커서 없을 시 자동 닫힘
     $(" #Main_drop ").mouseover(function () {
-        $(" #drop1 ").addClass('show1');
+        $(" #drop ").addClass('show');
     })
     $(" #drop ").mouseover(function () {
-        $(" #drop1 ").addClass('show1');
+        $(" #drop ").addClass('show');
     })
     $("#Main_drop").mouseleave(function () {
-        $(" #drop1").removeClass('show1');
+        $(" #drop").removeClass('show');
     })
     $("#drop").mouseleave(function () {
-        $(" #drop1").removeClass('show1');
+        $(" #drop").removeClass('show');
     })
 
 
@@ -185,6 +185,11 @@
         margin-top: 5px;
         margin-left: 10px;
     }
+    #bottom :hover{
+        transform: scale(1.1);
+        transition: 0.5s;
+
+    }
 
 
 
@@ -239,8 +244,8 @@
         line-height: 60px;
         margin-left: 50px;
         margin-right: 40px;
-        padding-left: 40px;
-        padding-right: 40px;
+        padding-left: 45px;
+        padding-right: 45px;
         font-size: 30px;
         font-weight: bold;
     }
@@ -499,9 +504,9 @@
 <!-- ------------------------------------------------------------------바텀바------------------------------------------------------------------------------------ -->
 <div id="bottom">
     <!-- 페이스북 인스타 트위터 로고 넣기 -->
-    <i class="fab fa-facebook fa-2x"></i>
-    <i class="fab fa-instagram fa-2x"></i>
-    <i class="fab fa-twitter-square fa-2x"></i>
+    <a href="https://ko-kr.facebook.com/" target="_blank"><i class="fab fa-facebook fa-2x"></i></a>
+    <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+    <a href="https://twitter.com/?lang=ko" target="_blank"><i class="fab fa-twitter-square fa-2x"></i></a>
     <!-- notice Q&A 넣기 -->
     <ul class="bottom-bar">
         <a href="/src/main/resources/templates/Main/QandA.html">

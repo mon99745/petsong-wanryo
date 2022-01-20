@@ -12,6 +12,9 @@ body {
 /* !!!! 화면 비율 일정하게 조절 !!!!
   ex> 화면 줄어들면 그에 맞는 비율로 줄고, 늘면 그에 맞는 비율로 늠
   가까이 확대되면 스크롤 이용 */
+
+  *{
+font-family: 'Exo 2', sans-serif; }
 .all {
   width: 1480px;
   margin: 0 auto;
@@ -26,6 +29,7 @@ body {
   position: relative;
   max-width: 1480px;
 }
+
 
 /* 링크 걸린거 색깔 없애기 */
 a:visited {
@@ -194,3 +198,47 @@ main {
 }
 
 /* ---------------------------------------------footer -------------------------------------*/
+#intro1{
+  text-align: center;
+  height: 20%;
+  margin-top: 20px;
+  
+}
+
+
+#intro2{
+  text-align: center;
+  height: 70%;
+  margin-top: 50px;
+}
+#pr-1,#pr-2,#pr-3,#pr-4, #pr-5{
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+#intro3{
+   text-align: center;
+   height: 30%;
+   display: flex;
+   align-content: center;
+   justify-content: center;
+}
+
+#about{
+  width: 1000px;
+  height: 500px;
+   border-collapse: collapse;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
+#about td{
+ 
+  border-bottom: 1px solid gray;
+}
+
+#about a:hover{
+  color: gray;
+}
