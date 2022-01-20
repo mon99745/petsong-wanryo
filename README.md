@@ -14,5 +14,6 @@ Detail : 애완용품의 관한 쇼핑몰 개설
   - Back : Spring, SpringBoot, Jpa, MySQL 
   - SSR : Thymeleaf
   - Hosting : AWS
-  
+  - Collaboration : Discode, Github
+    
 - IDE : Visual Studio Code, IntelliJ 
