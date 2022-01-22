@@ -111,10 +111,21 @@
         color: #cacaca;
     }
 
+    #right
+    {
+        float:right;
+    }
+
+    #welcome
+    {
+        float:left;
+        margin-top:10px;
+        margin-left:85px;
+    }
     #search {
         float: right;
         margin-top: 5px;
-        margin-right: 10px;
+        margin-right: 5px;
         width: 180px;
         height: 26px;
         border: 1px solid #cacaca;
@@ -367,17 +378,25 @@ p i {
             <li>MY PAGE</li>
         </a>
     </ul>
+
+<!------------------------------------------ 환영합니다 부분 넣은거 여깄어용 ---------------------------------->
+    <div id="right">
+        <div id="welcome">
+            <span>XXX님 환영합니다!</span>
+        </div>
     <!-- 우측 상단 검색창 -->
     <div id="search">
         <input type="text" class="search-text">
         <button class="search-btn"><i class="fas fa-search"></i></button>
     </div>
 </div>
+</div>
 <!-- --------------------------------------------------------------   로고 -------------------------------------------------------------------------------------- -->
 <div id="logo">
     <a href="/src/main/resources/templates/Main/index.html">
         <img class="logo-img" src="/src/main/resources/static/image/logo.png" alt="My Image">
     </a>
+
 </div>
 
 <!-- ------------------------------------------------------------------바텀바------------------------------------------------------------------------------------ -->
