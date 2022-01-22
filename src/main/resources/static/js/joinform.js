@@ -8,145 +8,205 @@ function joinform_check() {
   var ubirth = document.getElementById("ubirth");
   var uphone = document.getElementById("uphone");
   var email_id = document.getElementById("email_id");
-
-if (uid.value == "") {
-  Swal.fire({
-    icon:'error',
-    title:'아이디를 입력해주세요',
-    confirmButtonColor:'#000',
-
-    onAfterClose:() =>{
-      uid.focus();
-    }
-  })
-  return false;
-};
-
-if (uname.value == "") {
-  Swal.fire({
-    icon:'error',
-    title:'이름을 입력해주세요',
-    confirmButtonColor:'#000',
-
-    onAfterClose:() =>{
-      uname.focus();
-    }
-  })
-  return false;
-};
-
-if (pwd.value == "") {
-  Swal.fire({
-    icon:'error',
-    title:'비밀번호를 입력해주세요',
-    confirmButtonColor:'#000',
-
-    onAfterClose:() =>{
-      pwd.focus();
-    }
-  })
-  return false;
-};
-var pwdCheck = /^(?=.*[a-zA-Z])(?=.*[!@#$%^*+=-])(?=.*[0-9]).{8,25}$/;
-
-if (!pwdCheck.test(pwd.value)) {
-  Swal.fire({
-    icon:'error',
-    text:'영문자+숫자+특수문자 조합으로 8~25자리 입력해주세요.',
-    confirmButtonColor:'#000',
-
-    onAfterClose:() =>{
-      pwd.focus();
-    }
-  })
-  return false;
-};
+  var sample4_postcode = document.getElementById("sample4_postcode");
+  var sample4_Btn = document.getElementById("sample4_Btn");
+  var sample4_roadAddress = document.getElementById("sample4_roadAddress");
+  var sample4_jibunAddress = document.getElementById("sample4_jibunAddress");
+  var sample4_detailAddress = document.getElementById("sample4_detailAddress");
 
 
-if (repwd.value !== pwd.value) {
-  Swal.fire({
-    icon:'error',
-    title:'비밀번호가 일치하지 않습니다..',
-    confirmButtonColor:'#000',
 
-    onAfterClose:() =>{
-      repwd.focus();
-    }
-  })
-  return false;
-};
+// if (uid.value == "") {
+//   Swal.fire({
+//     icon:'error',
+//     title:'아이디를 입력해주세요',
+//     confirmButtonColor:'#000',
+
+//     onAfterClose:() =>{
+//       uid.focus();
+//     }
+//   })
+//   return false;
+// };
+
+// if (pwd.value == "") {
+//   Swal.fire({
+//     icon:'error',
+//     title:'비밀번호를 입력해주세요',
+//     confirmButtonColor:'#000',
+
+//     onAfterClose:() =>{
+//       pwd.focus();
+//     }
+//   })
+//   return false;
+// };
+// var pwdCheck = /^(?=.*[a-zA-Z])(?=.*[!@#$%^*+=-])(?=.*[0-9]).{8,25}$/;
+
+// if (!pwdCheck.test(pwd.value)) {
+//   Swal.fire({
+//     icon:'error',
+//     text:'영문자+숫자+특수문자 조합으로 8~25자리 입력해주세요.',
+//     confirmButtonColor:'#000',
+
+//     onAfterClose:() =>{
+//       pwd.focus();
+//     }
+//   })
+//   return false;
+// };
 
 
-if (unickname.value == "") {
-  Swal.fire({
-    icon:'error',
-    title:'닉네임을 입력하세요.',
-    confirmButtonColor:'#000',
+// if (repwd.value !== pwd.value) {
+//   Swal.fire({
+//     icon:'error',
+//     title:'비밀번호가 일치하지 않습니다..',
+//     confirmButtonColor:'#000',
 
-    onAfterClose:() =>{
-      unickname.focus();
-    }
-  })
-  return false;
-};
+//     onAfterClose:() =>{
+//       repwd.focus();
+//     }
+//   })
+//   return false;
+// };
+
+
+// if (uname.value == "") {
+//   Swal.fire({
+//     icon:'error',
+//     title:'이름을 입력해주세요',
+//     confirmButtonColor:'#000',
+
+//     onAfterClose:() =>{
+//       uname.focus();
+//     }
+//   })
+//   return false;
+// };
+
+
+// if (unickname.value == "") {
+//   Swal.fire({
+//     icon:'error',
+//     title:'닉네임을 입력하세요.',
+//     confirmButtonColor:'#000',
+
+//     onAfterClose:() =>{
+//       unickname.focus();
+//     }
+//   })
+//   return false;
+// };
 
   
-if (ubirth.value == "") {
-  Swal.fire({
-    icon:'error',
-    title:'생년월일을 입력하세요.',
-    confirmButtonColor:'#000',
+// if (ubirth.value == "") {
+//   Swal.fire({
+//     icon:'error',
+//     title:'생년월일을 입력하세요.',
+//     confirmButtonColor:'#000',
 
-    onAfterClose:() =>{
-      ubirth.focus();
-    }
-  })
-  return false;
-};
+//     onAfterClose:() =>{
+//       ubirth.focus();
+//     }
+//   })
+//   return false;
+// };
+// var reg = /^[0-9]+/g; //숫자만 입력하는 정규식
 
-if (email_id.value== "") {
-  Swal.fire({
-    icon:'error',
-    title:'이메일 주소를 입력하세요.',
-    confirmButtonColor:'#000',
+// if (!reg.test(uphone.value)) {
+//   Swal.fire({
+//     icon:'error',
+//     text:'전화번호는 숫자만 입력할 수 있습니다.',
+//     confirmButtonColor:'#000',
 
-    onAfterClose:() =>{
-      email_id.focus();
-    }
-  })
-  return false;
-};
- 
-if (uphone.value== "") {
-  Swal.fire({
-    icon:'error',
-    title:'전화번호를 입력하세요.',
-    confirmButtonColor:'#000',
+//     onAfterClose:() =>{
+//       uphone.focus();
+//     }
+//   })
+//   return false;
+// };
 
-    onAfterClose:() =>{
-      uphone.focus();
-    }
-  })
-  return false;
-};
-  var reg = /^[0-9]+/g; //숫자만 입력하는 정규식
 
-  if (!reg.test(uphone.value)) {
+// if (email_id.value== "") {
+//   Swal.fire({
+//     icon:'error',
+//     title:'이메일 주소를 입력하세요.',
+//     confirmButtonColor:'#000',
+
+//     onAfterClose:() =>{
+//       email_id.focus();
+//     }
+//   })
+//   return false;
+// };
+
+  if (sample4_postcode.value== "") {
     Swal.fire({
       icon:'error',
-      text:'전화번호는 숫자만 입력할 수 있습니다.',
+      title:'주소를 입력하세요.',
       confirmButtonColor:'#000',
   
       onAfterClose:() =>{
-        uphone.focus();
+        sample4_postcode.focus();
+      }
+    })
+    return false;
+  };
+
+  if (sample4_Btn.value== "") {
+    Swal.fire({
+      icon:'error',
+      title:'주소를 입력하세요.',
+      confirmButtonColor:'#000',
+  
+      onAfterClose:() =>{
+        sample4_Btn.focus();
+      }
+    })
+    return false;
+  };
+
+  if (sample4_roadAddress.value== "") {
+    Swal.fire({
+      icon:'error',
+      title:'주소를 입력하세요.',
+      confirmButtonColor:'#000',
+  
+      onAfterClose:() =>{
+        sample4_roadAddress.focus();
+      }
+    })
+    return false;
+  };
+
+  if (sample4_jibunAddress.value== "") {
+    Swal.fire({
+      icon:'error',
+      title:'주소를 입력하세요.',
+      confirmButtonColor:'#000',
+  
+      onAfterClose:() =>{
+        sample4_jibunAddress.focus();
+      }
+    })
+    return false;
+  };
+
+  if (sample4_detailAddress.value== "") {
+    Swal.fire({
+      icon:'error',
+      title:'주소를 입력하세요.',
+      confirmButtonColor:'#000',
+  
+      onAfterClose:() =>{
+        sample4_detailAddress.focus();
       }
     })
     return false;
   };
 
 
- 
-
+      
 
   //입력 값 전송
   document.join_form.submit(); //유효성 검사의 포인트   
