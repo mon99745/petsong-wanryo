@@ -83,11 +83,14 @@ function updateDisplay2(val) {
     } 
    
     cell1.innerHTML = '<span style="margin-left:85px">S</span>';
-    cell2.innerHTML = '  <span id="quantity">\
-                        <li id="spinbox" style=" border: 1px solid gray; margin-top: 10px; width: 30px; height: 20px; text-align: center; color: transparent; text-shadow: 0 0 0 black;">1</li>\
-                        <input type="button"; onclick="count1("plus"; count2("plus");" value="+"; style="width: 20px; height: 20px;"/>\
-                        <input type="button"; onclick="count1("minus"); count2("minus");" value="-"; style="width: 20px; height: 20px;"/>\
-                        </span>';
+    cell2.innerHTML = ' <span id="quantity" style="margin-left: 50px;">\
+    <li id="spinbox" style=" border: 1px solid gray; margin-top: 10px;\
+    width: 30px; height: 20px; text-align: center; color: transparent; text-shadow: 0 0 0 black;">1</li>\
+    <div type="button"; onclick="incrementClick1(); incrementClick2();"; style="width: 20px; height: 20px; display:inline-block;\
+    border: 1px solid gray; border-radius: 1em; padding-bottom: 3px;  text-align:center; cursor: context-menu;">+</div>\
+    <div type="button"; onclick="decrementClick1(); decrementClick2();"; style="width: 20px; height: 20px; display:inline-block;\
+     border: 1px solid gray; border-radius: 1em; padding-bottom: 3px;  text-align:center; cursor: context-menu;">-</div>\
+    </span>  ';
     cell3.innerHTML = '<span style="margin-left:80px">Price</span> <button onclick="delete_row()">행 삭제하기</button>';
  
   }

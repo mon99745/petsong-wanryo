@@ -8,6 +8,13 @@ function joinform_check() {
   var ubirth = document.getElementById("ubirth");
   var uphone = document.getElementById("uphone");
   var email_id = document.getElementById("email_id");
+  var sample4_postcode = document.getElementById("sample4_postcode");
+  var sample4_Btn = document.getElementById("sample4_Btn");
+  var sample4_roadAddress = document.getElementById("sample4_roadAddress");
+  var sample4_jibunAddress = document.getElementById("sample4_jibunAddress");
+  var sample4_detailAddress = document.getElementById("sample4_detailAddress");
+
+
 
 if (uid.value == "") {
   Swal.fire({
@@ -17,19 +24,6 @@ if (uid.value == "") {
 
     onAfterClose:() =>{
       uid.focus();
-    }
-  })
-  return false;
-};
-
-if (uname.value == "") {
-  Swal.fire({
-    icon:'error',
-    title:'이름을 입력해주세요',
-    confirmButtonColor:'#000',
-
-    onAfterClose:() =>{
-      uname.focus();
     }
   })
   return false;
@@ -77,6 +71,20 @@ if (repwd.value !== pwd.value) {
 };
 
 
+if (uname.value == "") {
+  Swal.fire({
+    icon:'error',
+    title:'이름을 입력해주세요',
+    confirmButtonColor:'#000',
+
+    onAfterClose:() =>{
+      uname.focus();
+    }
+  })
+  return false;
+};
+
+
 if (unickname.value == "") {
   Swal.fire({
     icon:'error',
@@ -103,6 +111,21 @@ if (ubirth.value == "") {
   })
   return false;
 };
+var reg = /^[0-9]+/g; //숫자만 입력하는 정규식
+
+if (!reg.test(uphone.value)) {
+  Swal.fire({
+    icon:'error',
+    text:'전화번호는 숫자만 입력할 수 있습니다.',
+    confirmButtonColor:'#000',
+
+    onAfterClose:() =>{
+      uphone.focus();
+    }
+  })
+  return false;
+};
+
 
 if (email_id.value== "") {
   Swal.fire({
@@ -116,37 +139,74 @@ if (email_id.value== "") {
   })
   return false;
 };
- 
-if (uphone.value== "") {
-  Swal.fire({
-    icon:'error',
-    title:'전화번호를 입력하세요.',
-    confirmButtonColor:'#000',
 
-    onAfterClose:() =>{
-      uphone.focus();
-    }
-  })
-  return false;
-};
-  var reg = /^[0-9]+/g; //숫자만 입력하는 정규식
-
-  if (!reg.test(uphone.value)) {
+  if (sample4_postcode.value== "") {
     Swal.fire({
       icon:'error',
-      text:'전화번호는 숫자만 입력할 수 있습니다.',
+      title:'주소를 입력하세요.',
       confirmButtonColor:'#000',
   
       onAfterClose:() =>{
-        uphone.focus();
+        sample4_postcode.focus();
+      }
+    })
+    return false;
+  };
+
+  if (sample4_Btn.value== "") {
+    Swal.fire({
+      icon:'error',
+      title:'주소를 입력하세요.',
+      confirmButtonColor:'#000',
+  
+      onAfterClose:() =>{
+        sample4_Btn.focus();
+      }
+    })
+    return false;
+  };
+
+  if (sample4_roadAddress.value== "") {
+    Swal.fire({
+      icon:'error',
+      title:'주소를 입력하세요.',
+      confirmButtonColor:'#000',
+  
+      onAfterClose:() =>{
+        sample4_roadAddress.focus();
+      }
+    })
+    return false;
+  };
+
+  if (sample4_jibunAddress.value== "") {
+    Swal.fire({
+      icon:'error',
+      title:'주소를 입력하세요.',
+      confirmButtonColor:'#000',
+  
+      onAfterClose:() =>{
+        sample4_jibunAddress.focus();
+      }
+    })
+    return false;
+  };
+
+  if (sample4_detailAddress.value== "") {
+    Swal.fire({
+      icon:'error',
+      title:'주소를 입력하세요.',
+      confirmButtonColor:'#000',
+  
+      onAfterClose:() =>{
+        sample4_detailAddress.focus();
       }
     })
     return false;
   };
 
 
- 
-
+      
 
   //입력 값 전송
   document.join_form.submit(); //유효성 검사의 포인트   
