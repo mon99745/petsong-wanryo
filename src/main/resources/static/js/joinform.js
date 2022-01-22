@@ -16,129 +16,129 @@ function joinform_check() {
 
 
 
-// if (uid.value == "") {
-//   Swal.fire({
-//     icon:'error',
-//     title:'아이디를 입력해주세요',
-//     confirmButtonColor:'#000',
+if (uid.value == "") {
+  Swal.fire({
+    icon:'error',
+    title:'아이디를 입력해주세요',
+    confirmButtonColor:'#000',
 
-//     onAfterClose:() =>{
-//       uid.focus();
-//     }
-//   })
-//   return false;
-// };
+    onAfterClose:() =>{
+      uid.focus();
+    }
+  })
+  return false;
+};
 
-// if (pwd.value == "") {
-//   Swal.fire({
-//     icon:'error',
-//     title:'비밀번호를 입력해주세요',
-//     confirmButtonColor:'#000',
+if (pwd.value == "") {
+  Swal.fire({
+    icon:'error',
+    title:'비밀번호를 입력해주세요',
+    confirmButtonColor:'#000',
 
-//     onAfterClose:() =>{
-//       pwd.focus();
-//     }
-//   })
-//   return false;
-// };
-// var pwdCheck = /^(?=.*[a-zA-Z])(?=.*[!@#$%^*+=-])(?=.*[0-9]).{8,25}$/;
+    onAfterClose:() =>{
+      pwd.focus();
+    }
+  })
+  return false;
+};
+var pwdCheck = /^(?=.*[a-zA-Z])(?=.*[!@#$%^*+=-])(?=.*[0-9]).{8,25}$/;
 
-// if (!pwdCheck.test(pwd.value)) {
-//   Swal.fire({
-//     icon:'error',
-//     text:'영문자+숫자+특수문자 조합으로 8~25자리 입력해주세요.',
-//     confirmButtonColor:'#000',
+if (!pwdCheck.test(pwd.value)) {
+  Swal.fire({
+    icon:'error',
+    text:'영문자+숫자+특수문자 조합으로 8~25자리 입력해주세요.',
+    confirmButtonColor:'#000',
 
-//     onAfterClose:() =>{
-//       pwd.focus();
-//     }
-//   })
-//   return false;
-// };
-
-
-// if (repwd.value !== pwd.value) {
-//   Swal.fire({
-//     icon:'error',
-//     title:'비밀번호가 일치하지 않습니다..',
-//     confirmButtonColor:'#000',
-
-//     onAfterClose:() =>{
-//       repwd.focus();
-//     }
-//   })
-//   return false;
-// };
+    onAfterClose:() =>{
+      pwd.focus();
+    }
+  })
+  return false;
+};
 
 
-// if (uname.value == "") {
-//   Swal.fire({
-//     icon:'error',
-//     title:'이름을 입력해주세요',
-//     confirmButtonColor:'#000',
+if (repwd.value !== pwd.value) {
+  Swal.fire({
+    icon:'error',
+    title:'비밀번호가 일치하지 않습니다..',
+    confirmButtonColor:'#000',
 
-//     onAfterClose:() =>{
-//       uname.focus();
-//     }
-//   })
-//   return false;
-// };
+    onAfterClose:() =>{
+      repwd.focus();
+    }
+  })
+  return false;
+};
 
 
-// if (unickname.value == "") {
-//   Swal.fire({
-//     icon:'error',
-//     title:'닉네임을 입력하세요.',
-//     confirmButtonColor:'#000',
+if (uname.value == "") {
+  Swal.fire({
+    icon:'error',
+    title:'이름을 입력해주세요',
+    confirmButtonColor:'#000',
 
-//     onAfterClose:() =>{
-//       unickname.focus();
-//     }
-//   })
-//   return false;
-// };
+    onAfterClose:() =>{
+      uname.focus();
+    }
+  })
+  return false;
+};
+
+
+if (unickname.value == "") {
+  Swal.fire({
+    icon:'error',
+    title:'닉네임을 입력하세요.',
+    confirmButtonColor:'#000',
+
+    onAfterClose:() =>{
+      unickname.focus();
+    }
+  })
+  return false;
+};
 
   
-// if (ubirth.value == "") {
-//   Swal.fire({
-//     icon:'error',
-//     title:'생년월일을 입력하세요.',
-//     confirmButtonColor:'#000',
+if (ubirth.value == "") {
+  Swal.fire({
+    icon:'error',
+    title:'생년월일을 입력하세요.',
+    confirmButtonColor:'#000',
 
-//     onAfterClose:() =>{
-//       ubirth.focus();
-//     }
-//   })
-//   return false;
-// };
-// var reg = /^[0-9]+/g; //숫자만 입력하는 정규식
+    onAfterClose:() =>{
+      ubirth.focus();
+    }
+  })
+  return false;
+};
+var reg = /^[0-9]+/g; //숫자만 입력하는 정규식
 
-// if (!reg.test(uphone.value)) {
-//   Swal.fire({
-//     icon:'error',
-//     text:'전화번호는 숫자만 입력할 수 있습니다.',
-//     confirmButtonColor:'#000',
+if (!reg.test(uphone.value)) {
+  Swal.fire({
+    icon:'error',
+    text:'전화번호는 숫자만 입력할 수 있습니다.',
+    confirmButtonColor:'#000',
 
-//     onAfterClose:() =>{
-//       uphone.focus();
-//     }
-//   })
-//   return false;
-// };
+    onAfterClose:() =>{
+      uphone.focus();
+    }
+  })
+  return false;
+};
 
 
-// if (email_id.value== "") {
-//   Swal.fire({
-//     icon:'error',
-//     title:'이메일 주소를 입력하세요.',
-//     confirmButtonColor:'#000',
+if (email_id.value== "") {
+  Swal.fire({
+    icon:'error',
+    title:'이메일 주소를 입력하세요.',
+    confirmButtonColor:'#000',
 
-//     onAfterClose:() =>{
-//       email_id.focus();
-//     }
-//   })
-//   return false;
-// };
+    onAfterClose:() =>{
+      email_id.focus();
+    }
+  })
+  return false;
+};
 
   if (sample4_postcode.value== "") {
     Swal.fire({
