@@ -477,25 +477,34 @@
 </style>
 
 <!-- ----------------------------------------------헤더 HTML------------------------------------- -->
-<div id="top">
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.w3.org/1999/xhtml">
+<head th:fragment="head (title)">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+    <header th:fragment="header">
+    <div id="top">
     <!-- 좌측 상단 네비게이션-->
+<!--        th:src="@{../}"-->
     <ul class="top-bar">
-        <a href="/src/main/resources/templates/TopMenu/login.html">
+        <a th:href="@{../templates/TopMenu/login.html}" href="/src/main/resources/templates/TopMenu/login.html">
             <li>LOGIN</li>
         </a>
-        <a href="/src/main/resources/templates/TopMenu/joinus.html">
+        <a th:href="@{../templates/TopMenu/joinus.html}" href="/src/main/resources/templates/TopMenu/joinus.html">
             <li>JOIN US</li>
         </a>
-        <a href="/src/main/resources/templates/TopMenu/wish.html">
+        <a th:href="@{../templates/TopMenu/wish.html}" href="/src/main/resources/templates/TopMenu/wish.html">
             <li>WISH</li>
         </a>
-        <a href="/src/main/resources/templates/TopMenu/cart.html">
+        <a th:href="@{../templates/TopMenu/cart.html}" href="/src/main/resources/templates/TopMenu/cart.html">
             <li>CART</li>
         </a>
-        <a href="/src/main/resources/templates/TopMenu/orderlist.html">
+        <a th:href="@{../templates/TopMenu/orderlist.html}" href="/src/main/resources/templates/TopMenu/orderlist.html">
             <li>ORDER LIST</li>
         </a>
-        <a href="/src/main/resources/templates/TopMenu/mypage.html">
+        <a th:href="@{../templates/TopMenu/mypage.html}" href="/src/main/resources/templates/TopMenu/mypage.html">
             <li>MY PAGE</li>
         </a>
     </ul>
@@ -514,23 +523,23 @@
 </div>
 <!-- --------------------------------------------------------------   로고 -------------------------------------------------------------------------------------- -->
 <div id="logo">
-    <a href="/src/main/resources/templates/Main/index.html">
-        <img class="logo-img" src="/src/main/resources/static/image/logo.png" alt="My Image">
+    <a th:href="@{../templates/Main/index.html}" href="/src/main/resources/templates/Main/index.html">
+        <img class="logo-img" th:src="@{../image/logo.png}" src="/src/main/resources/static/image/logo.png" alt="My Image">
     </a>
 </div>
 
 <!-- ------------------------------------------------------------------바텀바------------------------------------------------------------------------------------ -->
 <div id="bottom">
     <!-- 페이스북 인스타 트위터 로고 넣기 -->
-    <a href="https://ko-kr.facebook.com/" target="_blank"><i class="fab fa-facebook fa-2x"></i></a>
-    <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
-    <a href="https://twitter.com/?lang=ko" target="_blank"><i class="fab fa-twitter-square fa-2x"></i></a>
+    <a th:href="@{https://ko-kr.facebook.com/}" href="https://ko-kr.facebook.com/" target="_blank"><i class="fab fa-facebook fa-2x"></i></a>
+    <a th:href="@{https://www.instagram.com/}" href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+    <a th:href="@{https://twitter.com/?lang=ko}" href="https://twitter.com/?lang=ko" target="_blank"><i class="fab fa-twitter-square fa-2x"></i></a>
     <!-- notice Q&A 넣기 -->
     <ul class="bottom-bar">
-        <a href="/src/main/resources/templates/Main/QandA.html">
+        <a th:href="@{templates/Main/QandA.html}" href="/src/main/resources/templates/Main/QandA.html">
             <li>Q&A</li>
         </a>
-        <a href="/src/main/resources/templates/Main/Notice.html">
+        <a th:href="@{../templates/Main/Notice.html}" href="/src/main/resources/templates/Main/Notice.html">
             <li>Notice</li>
         </a>
 
@@ -665,3 +674,5 @@
 
     </nav>
 </div>
+    </header>
+</html>

@@ -33,6 +33,6 @@ public String index(Model model,
     model.addAttribute("startPage", startPage);
     model.addAttribute("endPage", endPage);
     model.addAttribute("boards", boards);
-    return "noticeEx";
+    return "index";
     }
 }
