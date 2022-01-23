@@ -1,0 +1,369 @@
+
+    #top {
+        width: 1480px;
+        height: 40px;
+        position: fixed;
+        top: 0;
+        background-color: rgba(255, 255, 255, 0.849);
+    }
+
+    .top-bar {
+        float: left;
+    }
+
+    .top-bar li {
+        margin: 0 10px;
+        padding: 10px 5px;
+        display: inline-block;
+    }
+
+    .top-bar a:hover {
+        color: #cacaca;
+    }
+    #right
+    {
+        float:right;
+    }
+
+    #welcome
+    {
+        float:left;
+        margin-top:10px;
+        margin-left:85px;
+    }
+
+    #search {
+        float: right;
+        margin-top: 5px;
+        margin-right: 10px;
+        width: 180px;
+        height: 26px;
+        border: 1px solid #cacaca;
+    }
+
+    .search-text {
+        font-size: 13px;
+        width: 140px;
+        padding-left: 10px;
+        height: 26px;
+        border: 0px;
+        outline: none;
+        color: #cacaca;
+    }
+
+    .search-btn {
+        float: right;
+        width: 30px;
+        height: 100%;
+        border: 0px;
+        outline: none;
+        background-color: #fff;
+        color: #cacaca;
+    }
+
+    #search:hover {
+        border: 1px solid rgb(167, 164, 164);
+    }
+
+    #logo {
+        width: 100%;
+        height: 160px;
+        text-align: center;
+        border-top: 1px solid black;
+    }
+
+    .logo-img {
+        margin-top: 5px;
+        width: 150px;
+        height: 150px;
+    }
+
+    #bottom {
+        width: 100%;
+        height: 40px;
+        background-color: white;
+    }
+
+    /* 페이스북, 인스타 마크에 대한 위치  */
+    #bottom i {
+        margin-top: 5px;
+        margin-left: 10px;
+    }
+    #bottom :hover{
+        transform: scale(1.1);
+        transition: 0.5s;
+
+    }
+
+
+
+    /* notice, Q&A 오른쪽 정렬 */
+    .bottom-bar {
+        float: right;
+    }
+
+    /* notice, Q&A에 대한 위치와 속성 */
+    .bottom-bar li {
+        float: right;
+        font-weight: bold;
+        font-size: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    /* 메뉴와 노티스, 큐앤애이 마우스 터치효과  */
+    .bottom-bar li,
+    .menu-bar p {
+        cursor: pointer;
+        transition: transform 300ms ease;
+    }
+
+
+    .bottom-bar li:hover,
+    .menu-bar p:hover {
+        transform: scale(1.1);
+    }
+
+    #menu {
+        border-top: 1px solid black;
+    }
+
+    /* -----------------------!!!! 메뉴바 고정 속성--------------------------- */
+    .sticky {
+        position: fixed;
+        top: 40px;
+        width: 1480px;
+    }
+
+    /* 메뉴에 대한 위치 */
+    .menu-bar {
+        width: 100%;
+        height: 60px;
+        background-color: rgba(230, 238, 241, 0.849);
+    }
+
+    /* 메뉴에 대한 속성 */
+    .menu-bar p {
+        display: inline-block;
+        line-height: 60px;
+        margin-left: 50px;
+        margin-right: 40px;
+        padding-left: 40px;
+        padding-right: 45px;
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    /* 메뉴바 아이콘에 대한 위치와 속성 */
+    .fas fa-bars fa-2x {
+        line-height: 60px;
+        margin: 10px 10px;
+    }
+
+
+    /* ---------------------------네비게이션 속성------------------------------------- */
+
+    /* ---------------------------------햄버거 클릭시 네비---------------------------- */
+    #Main_drop {
+        display: inline-block;
+        padding-bottom: 13px;
+        width: 100px;
+
+    }
+
+    .maindropdown {
+        opacity: 0;
+        visibility: hidden;
+        margin-top: -20px;
+        position: absolute;
+        background: white;
+        width: 100%;
+        height: 200px;
+        z-index: 4;
+
+    }
+
+    #drop {
+        left: calc(0% + 0px);
+    }
+
+    .maindropdown::before {
+        content: "";
+        position: absolute;
+        top: -6px;
+        left: calc(50% - 5px);
+        width: 0;
+        height: 0;
+        z-index: 3;
+    }
+
+    .maindropdown.show {
+        display: block;
+        visibility: visible;
+        opacity: 0.9;
+        margin-top: 0;
+        background-color: rgb(250, 250, 250);
+
+    }
+
+    /* -------------------------------------햄버거 네비 속 속성---------------------- */
+    #empty {
+        float: left;
+        width: 10%;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    #part1 li,
+    #part2 li,
+    #part3 li,
+    #part4 li,
+    #part5 li {
+        padding: 10px 0;
+    }
+
+    #part1 li:hover {
+        transform: scale(1.1);
+    }
+
+    #part2 li:hover {
+        transform: scale(1.1);
+    }
+
+    #part3 li:hover {
+        transform: scale(1.1);
+    }
+
+    #part4 li:hover {
+        transform: scale(1.1);
+    }
+
+    #part5 li:hover {
+        transform: scale(1.1);
+    }
+
+    #part1 {
+        float: left;
+        width: 11%;
+        margin-top: 20px;
+        text-align: center;
+
+    }
+
+    #part2 {
+        float: left;
+        width: 21%;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    #part3 {
+        float: left;
+        width: 13%;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    #part4 {
+        float: left;
+        width: 23%;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    #part5 {
+        float: left;
+        width: 20%;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+
+
+    /*------------------------------------------- 네비 박스 형태 속성------------ */
+    .dropdown {
+        opacity: 0;
+        visibility: hidden;
+        margin-top: -20px;
+        position: absolute;
+        background: white;
+        width: 210px;
+        height: 150px;
+        z-index: 4;
+        border-radius: 4px;
+        -webkit-box-shadow: 0px 3px 15px -1px rgba(0, 0, 0, 0.2);
+        -moz-box-shadow: 0px 3px 15px -1px rgba(0, 0, 0, 0.2);
+        box-shadow: 0px 3px 15px -1px rgba(0, 0, 0, 0.2);
+    }
+
+    /* 드롭다운 메뉴에 대한 속성 */
+    .menu-bar li {
+        display: block;
+        text-align: center;
+        font-size: 20px;
+        font-weight: bolder;
+    }
+
+    /* 드롭다운 위치 설정 */
+    #drop1 {
+        left: calc(0% + 120px);
+    }
+
+    #drop2 {
+        left: calc(20% + 60px);
+    }
+
+    #drop3 {
+        left: calc(35% + 95px);
+    }
+
+    #drop4 {
+        right: calc(30% + -50px);
+    }
+
+    #drop5 {
+        right: calc(10% + -60px);
+    }
+
+    /* 드롭다운 여백 설정 */
+    #drop1 li,
+    #drop2 li,
+    #drop4 li,
+    #drop5 li {
+        margin-top: 30px;
+    }
+
+    #drop3 li {
+        margin-top: 15px;
+    }
+
+    /* 메뉴와 노티스, 큐앤애이 마우스 터치효과  */
+    .dropdown li {
+        cursor: pointer;
+        transition: transform 300ms ease;
+    }
+
+    .dropdown::before {
+        content: "";
+        position: absolute;
+        top: -6px;
+        left: calc(50% - 5px);
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 10px solid white;
+        z-index: 3;
+    }
+
+    .dropdown.show1,
+    .dropdown.show2,
+    .dropdown.show3,
+    .dropdown.show4,
+    .dropdown.show5 {
+        display: block;
+        visibility: visible;
+        opacity: 0.9;
+        margin-top: 0;
+
+    }
