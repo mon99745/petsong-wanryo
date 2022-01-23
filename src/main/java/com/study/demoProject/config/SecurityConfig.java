@@ -33,12 +33,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .csrf().disable() //csrf 토큰 해제
+
                 .authorizeRequests() // URL별 권한 관리를 설정하는 옵션
-                .antMatchers("/", "/auth/**", "/js/**", "/css/**","/image/**", "/index").permitAll() //권한 관리 대상을 지정하는 옵션
+                .antMatchers("/js/**", "/css/**","/image/**" ).permitAll() //권한 관리 대상을 지정하는 옵션
+                .antMatchers("/","/index").permitAll() //권한 관리 대상을 지정하는 옵션
                 .anyRequest().authenticated()
                 .and()
                 .formLogin() //권한이 없는 사람이 페이지를 이동하려고 하면 로그인 페이지로 이동
-                .loginPage("/auth/user/login") //해당하는 로그인 페이지 URL로 이동
+                .loginPage("/login") //해당하는 로그인 페이지 URL로 이동
 
                 //loginProcessingUrl에 form의 action url을 여기다 적어줍니다.
                 ///auth/user/login이 URL의 API Controller를 작성하지 않는 이유는 스프링 시큐리티가 얘를 가로채서 대신 작업을 수행해줍니다.

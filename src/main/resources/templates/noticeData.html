@@ -15,13 +15,12 @@
     <link rel="stylesheet" th:href="@{../css/bootstrap/bootstrap.min.css}"/>
     <link rel="stylesheet" th:href="@{../css/sticky-footer-navbar.css}" /> 
     <link rel="stylesheet" th:href="@{../css/style.css}" />
+    
     <!--header section 분리-->
     <header th:replace="layout/header :: header"></header>
 </head>
 
 <body class="d-flex flex-column h-100">
-
-
 
 <!-- 검색기능 -->
 <div class="d-flex" style="position: absolute; left: 20px; top: 70px;"><h2 style="margin-right: 40px;">총 건수:</h2><h2 th:text="${boards.totalElements}"></h2></div>
