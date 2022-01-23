@@ -1,52 +1,15 @@
 
-<!-- -----------------------------------------------푸터에 대한 스타일------------------------------- -->
-<style>
-    
-    footer {
-        border-top: solid 3px;
-        width: 100%;
-        height: 200px;
-        background-color: white;
-    }
-
-    .Topleft {
-        display: inline-block;
-    }
-
-    .Topright {
-        display: inline-block;
-        float: right;
-    }
-
-    .MainName {
-        text-align: center;
-        font-size: 25px;
-    }
-
-    .left {
-        display: inline-block;
-    }
-
-    .right {
-        float: right;
-        margin-top: 40px;
-    }
-
-    .center {
-        display: inline-block;
-        margin-left: 500px;
-    }
-
-    .center :hover{
-        transform: scale(1.1);
-        transition: 0.5s;
-    }
-</style>
 
 <!-- -----------------------------------------------푸터 HTML------------------------------------ -->
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<meta charset="UTF-8">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" href="/src/main/resources/static/css/layout_CSS/footer.css">
+    </head>
 <footer th:fragment="footer">
     <div class="Topleft">
         <li>펫송완료</li><br>

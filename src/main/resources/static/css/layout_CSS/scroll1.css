@@ -1,0 +1,27 @@
+
+    #sidebox1 { 
+        background-color:#f3fbfd; 
+        position:absolute;
+        width:120px;
+        height: 400px;
+        top:200px;
+        right: -170px;
+        padding: 3px 10px;
+        opacity: 0.9;
+    }
+
+    .box1{
+        width: 120px;
+        height: 80px;
+       
+    }
+    .box img{
+        width: 90%;
+        height: 90%;
+       
+    }
+    .box:hover{
+   transform: scale(1.2);
+   transition: .5s;
+    }
+
