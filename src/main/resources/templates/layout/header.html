@@ -489,34 +489,38 @@
     <!-- 좌측 상단 네비게이션-->
 <!--        th:src="@{../}"-->
     <ul class="top-bar">
-        <a th:href="@{../templates/TopMenu/login.html}" href="/src/main/resources/templates/TopMenu/login.html">
+        <a sec:authorize="isAnonymous()" th:href="@{/auth/user/login}" href="/src/main/resources/templates/TopMenu/login.html">
             <li>LOGIN</li>
         </a>
-        <a th:href="@{../templates/TopMenu/joinus.html}" href="/src/main/resources/templates/TopMenu/joinus.html">
+<!--        <a sec:authorize="isAuthenticated()" class="nav-link" href="/logout">로그아웃</a>-->
+<!--            <li>LOGOUT</li>-->
+<!--        </a>-->
+        <a sec:authorize="isAnonymous()" th:href="@{/auth/user/save}" href="/src/main/resources/templates/TopMenu/joinus.html">
             <li>JOIN US</li>
         </a>
-        <a th:href="@{../templates/TopMenu/wish.html}" href="/src/main/resources/templates/TopMenu/wish.html">
+        <a th:href="@{#}" href="/src/main/resources/templates/TopMenu/wish.html">
             <li>WISH</li>
         </a>
-        <a th:href="@{../templates/TopMenu/cart.html}" href="/src/main/resources/templates/TopMenu/cart.html">
+        <a th:href="@{#}" href="/src/main/resources/templates/TopMenu/cart.html">
             <li>CART</li>
         </a>
-        <a th:href="@{../templates/TopMenu/orderlist.html}" href="/src/main/resources/templates/TopMenu/orderlist.html">
+        <a th:href="@{#}" href="/src/main/resources/templates/TopMenu/orderlist.html">
             <li>ORDER LIST</li>
         </a>
         <a th:href="@{../templates/TopMenu/mypage.html}" href="/src/main/resources/templates/TopMenu/mypage.html">
             <li>MY PAGE</li>
         </a>
     </ul>
-    <!-- 우측 상단 검색창 -->
-    <div id="right">
-        <div id="welcome">
+    <!-- 회원 정보 출력 -->
+        <div id="right">
+            <div id="welcome">
             <span>XXX님 환영합니다!</span>
         </div>
+
     <!-- 우측 상단 검색창 -->
     <div id="search">
-        <input type="text" class="search-text">
-        <button class="search-btn"><i class="fas fa-search"></i></button>
+        <input type="text" class="search-text" placeholder="Search" aria-label="Search">
+        <button class="search-btn"><i class="fas fa-search" type="submit"></i>Search</button>
     </div>
 </div>
 

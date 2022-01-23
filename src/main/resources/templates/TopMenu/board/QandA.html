@@ -1,21 +1,22 @@
 <!--주석 필수-->
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-
+<!--    th:href="@{../}" -->
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+    <script th:src="@{https://use.fontawesome.com/releases/v5.2.0/js/all.js}" src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+
     <title>펫송완료</title>
-    <!--    <link rel="stylesheet" href="/static/css/index.css">-->
-    <link rel="stylesheet" href="/src/main/resources/static/css/Main/QandA.css">
-    <link rel="stylesheet" href="/src/main/resources/static/css/Main/header.scss">
+
+    <link rel="stylesheet" th:href="@{../css/Main/QandA.css}" href="/src/main/resources/static/css/Main/QandA.css">
+    <link rel="stylesheet" th:href="@{../css/Main/header.scss}" href="/src/main/resources/static/css/Main/header.scss">
     <!-- 네비게이션 관련 js 링크 -->
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
-    <script src="https://use.typekit.net/hoy3lrg.js"></script>
+    <script th:src="@{https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js}" src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+    <script th:src="@{https://use.typekit.net/hoy3lrg.js}" src="https://use.typekit.net/hoy3lrg.js"></script>
     <script>try { Typekit.load({ async: true }); } catch (e) { }</script>
 
     <!-- 폰트어썸 이미지 불러오기 링크 -->
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    <link rel="stylesheet" th:href="@{https://pro.fontawesome.com/releases/v5.10.0/css/all.css}" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
     
@@ -23,8 +24,8 @@
 
     <script type="text/javascript">
         $(document).ready(function () {
-            $("#headers").load("/src/main/resources/templates/Header_Footer/header.html");
-            $("#footers").load("/src/main/resources/templates/Header_Footer/footer.html");
+            $("#headers").load("/src/main/resources/templates/layout/header.html");
+            $("#footers").load("/src/main/resources/templates/layout/footer.html");
         }
         );
     </script>
@@ -206,7 +207,7 @@
     </div>
 </div>
     <!-- js 링크 -->
-    <script src="/src/main/resources/static/js/QandA.js"></script>
+    <script th:src="@{../js/QandA.js}" src="/src/main/resources/static/js/QandA.js"></script>
 
 </body>
 
