@@ -1,6 +1,6 @@
 <!-- -----------------헤더에 대한 자바스크립트----------------------------------- -->
 <script>
-// ---------------------------------메뉴바 상단 고정시키기 기능-------------------
+    // ---------------------------------메뉴바 상단 고정시키기 기능-------------------
     window.onscroll = function () { myFunction() };
 
     var header = document.getElementById("menu");
@@ -13,7 +13,25 @@
             header.classList.remove("sticky");
         }
     }
+
+
     // 메뉴바 와 드롭박스에 마우스 커서 올라갈 경우 드롭박스 유지 , 마우스 커서 없을 시 자동 닫힘
+    $(" #Main_drop ").mouseover(function () {
+        $(" #drop ").addClass('show');
+    })
+    $(" #drop ").mouseover(function () {
+        $(" #drop ").addClass('show');
+    })
+    $("#Main_drop").mouseleave(function () {
+        $(" #drop").removeClass('show');
+    })
+    $("#drop").mouseleave(function () {
+        $(" #drop").removeClass('show');
+    })
+
+
+
+
     // ----------------------DOG-------------------------
     $(" #DOG ").mouseover(function () {
         $(" #drop1 ").addClass('show1');
@@ -88,7 +106,6 @@
 
 <!-- -------------------------------------헤더에 대한 스타일-------------------------------- -->
 <style>
-    
     #top {
         width: 1480px;
         height: 40px;
@@ -109,6 +126,17 @@
 
     .top-bar a:hover {
         color: #cacaca;
+    }
+    #right
+    {
+        float:right;
+    }
+
+    #welcome
+    {
+        float:left;
+        margin-top:10px;
+        margin-left:85px;
     }
 
     #search {
@@ -168,6 +196,13 @@
         margin-top: 5px;
         margin-left: 10px;
     }
+    #bottom :hover{
+        transform: scale(1.1);
+        transition: 0.5s;
+
+    }
+
+
 
     /* notice, Q&A 오른쪽 정렬 */
     .bottom-bar {
@@ -196,7 +231,7 @@
         transform: scale(1.1);
     }
 
-      #menu {
+    #menu {
         border-top: 1px solid black;
     }
 
@@ -220,8 +255,8 @@
         line-height: 60px;
         margin-left: 50px;
         margin-right: 40px;
-        padding-left: 40px;
-        padding-right: 40px;
+        padding-left: 45px;
+        padding-right: 45px;
         font-size: 30px;
         font-weight: bold;
     }
@@ -233,122 +268,215 @@
     }
 
 
-/* ---------------------------네비게이션 속성------------------------------------- */
+    /* ---------------------------네비게이션 속성------------------------------------- */
 
-/* 글씨 옆 아이콘 속성 */
-p i {
-  margin-left: 2px;
-  font-size: 0.9em;
-}
-/* 네비 박스 형태 속성 */
-.dropdown {
-  display: hidden;
-  opacity: 0;
-  visibility: hidden;
-  margin-top: -20px;
-  position: absolute;
-  background: white;
-  width: 210px;
-  height: 150px;
-  z-index: 4;
-  border-radius: 4px;
-  -webkit-box-shadow: 0px 3px 15px -1px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 0px 3px 15px -1px rgba(0, 0, 0, 0.2);
-  box-shadow: 0px 3px 15px -1px rgba(0, 0, 0, 0.2);
-}
+    /* ---------------------------------햄버거 클릭시 네비---------------------------- */
+    #Main_drop {
+        display: inline-block;
+        padding-bottom: 13px;
+        width: 100px;
 
-/* 드롭다운 메뉴에 대한 속성 */
-.menu-bar li {
-  display: block;
-  text-align: center;
-  font-size: 20px;
-  font-weight: bolder;
-}
-/* 드롭다운 위치 설정 */
-#drop1 {
-  left: calc(0% + 60px);
-}
-#drop2 {
-  left: calc(20% + 5px);
-}
-#drop3 {
-  left: calc(35% + 30px);
-}
-#drop4 {
-  right: calc(30% + 20px);
-}
-#drop5 {
-  right: calc(10% + 10px);
-}
-/* 드롭다운 여백 설정 */
-#drop1 li,
-#drop2 li,
-#drop4 li,
-#drop5 li {
-  margin-top: 30px;
-}
-#drop3 li {
-  margin-top: 15px;
-}
-/* 메뉴와 노티스, 큐앤애이 마우스 터치효과  */
-.dropdown li {
-  cursor: pointer;
-  transition: transform 300ms ease;
-}
-.dropdown::before {
-  content: "";
-  position: absolute;
-  top: -6px;
-  left: calc(50% - 5px);
-  width: 0;
-  height: 0;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-bottom: 10px solid white;
-  z-index: 3;
-}
-.dropdown.show1,
-.dropdown.show2,
-.dropdown.show3,
-.dropdown.show4,
-.dropdown.show5 {
-  display: block;
-  visibility: visible;
-  opacity: 0.9;
-  margin-top: 0;
-  -webkit-transition: all 0.2s linear;
-  -moz-transition: all 0.2s linear;
-  -ms-transition: all 0.2s linear;
-  -o-transition: all 0.2s linear;
-  transition: all 0.2s linear;
-}
-.dropdown p {
-  color: black;
-  display: block;
-  text-align: left;
-  padding: 0 18px;
-  margin: -4px 0;
-}
-.dropdown p:hover {
-  opacity: 0.8;
-}
-.dropdown p:nth-child(1) {
-  padding-top: 4px;
-}
-.dropdown p:nth-child(5) {
-  padding-bottom: 4px;
-}
+    }
+
+    .maindropdown {
+        opacity: 0;
+        visibility: hidden;
+        margin-top: -20px;
+        position: absolute;
+        background: white;
+        width: 100%;
+        height: 200px;
+        z-index: 4;
+
+    }
+
+    #drop {
+        left: calc(0% + 0px);
+    }
+
+    .maindropdown::before {
+        content: "";
+        position: absolute;
+        top: -6px;
+        left: calc(50% - 5px);
+        width: 0;
+        height: 0;
+        z-index: 3;
+    }
+
+    .maindropdown.show {
+        display: block;
+        visibility: visible;
+        opacity: 0.9;
+        margin-top: 0;
+        background-color: rgb(250, 250, 250);
+
+    }
+
+    /* -------------------------------------햄버거 네비 속 속성---------------------- */
+    #empty {
+        float: left;
+        width: 10%;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    #part1 li,
+    #part2 li,
+    #part3 li,
+    #part4 li,
+    #part5 li {
+        padding: 10px 0;
+    }
+
+    #part1 li:hover {
+        transform: scale(1.1);
+    }
+
+    #part2 li:hover {
+        transform: scale(1.1);
+    }
+
+    #part3 li:hover {
+        transform: scale(1.1);
+    }
+
+    #part4 li:hover {
+        transform: scale(1.1);
+    }
+
+    #part5 li:hover {
+        transform: scale(1.1);
+    }
+
+    #part1 {
+        float: left;
+        width: 11%;
+        margin-top: 20px;
+        text-align: center;
+
+    }
+
+    #part2 {
+        float: left;
+        width: 21%;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    #part3 {
+        float: left;
+        width: 13%;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    #part4 {
+        float: left;
+        width: 23%;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    #part5 {
+        float: left;
+        width: 20%;
+        margin-top: 20px;
+        text-align: center;
+    }
 
 
 
+    /*------------------------------------------- 네비 박스 형태 속성------------ */
+    .dropdown {
+        opacity: 0;
+        visibility: hidden;
+        margin-top: -20px;
+        position: absolute;
+        background: white;
+        width: 210px;
+        height: 150px;
+        z-index: 4;
+        border-radius: 4px;
+        -webkit-box-shadow: 0px 3px 15px -1px rgba(0, 0, 0, 0.2);
+        -moz-box-shadow: 0px 3px 15px -1px rgba(0, 0, 0, 0.2);
+        box-shadow: 0px 3px 15px -1px rgba(0, 0, 0, 0.2);
+    }
 
+    /* 드롭다운 메뉴에 대한 속성 */
+    .menu-bar li {
+        display: block;
+        text-align: center;
+        font-size: 20px;
+        font-weight: bolder;
+    }
+
+    /* 드롭다운 위치 설정 */
+    #drop1 {
+        left: calc(0% + 120px);
+    }
+
+    #drop2 {
+        left: calc(20% + 60px);
+    }
+
+    #drop3 {
+        left: calc(35% + 95px);
+    }
+
+    #drop4 {
+        right: calc(30% + -50px);
+    }
+
+    #drop5 {
+        right: calc(10% + -60px);
+    }
+
+    /* 드롭다운 여백 설정 */
+    #drop1 li,
+    #drop2 li,
+    #drop4 li,
+    #drop5 li {
+        margin-top: 30px;
+    }
+
+    #drop3 li {
+        margin-top: 15px;
+    }
+
+    /* 메뉴와 노티스, 큐앤애이 마우스 터치효과  */
+    .dropdown li {
+        cursor: pointer;
+        transition: transform 300ms ease;
+    }
+
+    .dropdown::before {
+        content: "";
+        position: absolute;
+        top: -6px;
+        left: calc(50% - 5px);
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 10px solid white;
+        z-index: 3;
+    }
+
+    .dropdown.show1,
+    .dropdown.show2,
+    .dropdown.show3,
+    .dropdown.show4,
+    .dropdown.show5 {
+        display: block;
+        visibility: visible;
+        opacity: 0.9;
+        margin-top: 0;
+
+    }
 </style>
 
 <!-- ----------------------------------------------헤더 HTML------------------------------------- -->
-<html lang="en" xmlns:th="http://www.thymeleaf.org"
-      xmlns:sec="http://www.w3.org/1999/xhtml">
-<head th:fragment="header">
-
 <div id="top">
     <!-- 좌측 상단 네비게이션-->
     <ul class="top-bar">
@@ -372,10 +500,17 @@ p i {
         </a>
     </ul>
     <!-- 우측 상단 검색창 -->
+    <div id="right">
+        <div id="welcome">
+            <span>XXX님 환영합니다!</span>
+        </div>
+    <!-- 우측 상단 검색창 -->
     <div id="search">
         <input type="text" class="search-text">
         <button class="search-btn"><i class="fas fa-search"></i></button>
     </div>
+</div>
+
 </div>
 <!-- --------------------------------------------------------------   로고 -------------------------------------------------------------------------------------- -->
 <div id="logo">
@@ -387,9 +522,9 @@ p i {
 <!-- ------------------------------------------------------------------바텀바------------------------------------------------------------------------------------ -->
 <div id="bottom">
     <!-- 페이스북 인스타 트위터 로고 넣기 -->
-    <i class="fab fa-facebook fa-2x"></i>
-    <i class="fab fa-instagram fa-2x"></i>
-    <i class="fab fa-twitter-square fa-2x"></i>
+    <a href="https://ko-kr.facebook.com/" target="_blank"><i class="fab fa-facebook fa-2x"></i></a>
+    <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+    <a href="https://twitter.com/?lang=ko" target="_blank"><i class="fab fa-twitter-square fa-2x"></i></a>
     <!-- notice Q&A 넣기 -->
     <ul class="bottom-bar">
         <a href="/src/main/resources/templates/Main/QandA.html">
@@ -404,17 +539,73 @@ p i {
 <div id="menu">
 
     <ul class="menu-bar">
-        <!-- 메뉴바 로고 넣기 -->
-        <i class="fas fa-bars fa-2x"></i>
+
+        <!-- ------------------------------------햄버거 네비------------------------------- -->
+        <div id="Main_drop">
+            <i class="fas fa-bars fa-2x"></i>
+        </div>
+        <div id="drop" class="maindropdown">
+            <div id="empty">
+
+            </div>
+            <div id="part1">
+                <a href="/src/main/resources/templates/MainMenu/DOG/Dog_SS.html">
+                    <li>S/S</li>
+                </a>
+                <a href="/src/main/resources/templates/MainMenu/DOG/Dog_FW.html">
+                    <li>F/W</li>
+                </a>
+            </div>
+            <div id="part2">
+                <a href="/src/main/resources/templates/MainMenu/CAT/Cat_SS.html">
+                    <li>S/S</li>
+                </a>
+                <a href="/src/main/resources/templates/MainMenu/CAT/Cat_FW.html">
+                    <li>F/W</li>
+                </a>
+            </div>
+            <div id="part3">
+                <a href="/src/main/resources/templates/MainMenu/LIVING/Toy.html">
+                    <li>Toy</li>
+                </a>
+                <a href="/src/main/resources/templates/MainMenu/LIVING/Bag.html">
+                    <li>Bag</li>
+                </a>
+                <a href="/src/main/resources/templates/MainMenu/LIVING/House.html">
+                    <li>House</li>
+                </a>
+            </div>
+            <div id="part4">
+                <a href="/src/main/resources/templates/MainMenu/FOOD/Dog_Feed.html">
+                    <li>DogFeed</li>
+                </a>
+                <a href="/src/main/resources/templates/MainMenu/FOOD/Cat_Feed.html">
+                    <li>CatFeed</li>
+                </a>
+            </div>
+            <div id="part5">
+                <a href="/src/main/resources/templates/MainMenu/COMMUNITY/community1.html">
+                    <li>유기견계시판</li>
+                </a>
+                <a href="/src/main/resources/templates/MainMenu/COMMUNITY/community2.html">
+                    <li>자유계시판</li>
+                </a>
+            </div>
+        </div>
+
+
+
+
+
         <!-- 메뉴 종류 넣기 -->
         <a href="/src/main/resources/templates/MainMenu/DOG/Dog_main.html">
             <p id="DOG">DOG </p>
         </a>
         <div id="drop1" class="dropdown">
-        <a href="/src/main/resources/templates/MainMenu/DOG/Dog_SS.html">
+            <a href="/src/main/resources/templates/MainMenu/DOG/Dog_SS.html">
                 <li>S/S</li>
             </a>
-        <a href="/src/main/resources/templates/MainMenu/DOG/Dog_FW.html">
+            <a href="/src/main/resources/templates/MainMenu/DOG/Dog_FW.html">
                 <li>F/W</li>
             </a>
         </div>
@@ -422,10 +613,10 @@ p i {
             <p id="CAT">CAT </p>
         </a>
         <div id="drop2" class="dropdown">
-        <a href="/src/main/resources/templates/MainMenu/CAT/Cat_SS.html">
+            <a href="/src/main/resources/templates/MainMenu/CAT/Cat_SS.html">
                 <li>S/S</li>
             </a>
-        <a href="/src/main/resources/templates/MainMenu/CAT/Cat_FW.html">
+            <a href="/src/main/resources/templates/MainMenu/CAT/Cat_FW.html">
                 <li>F/W</li>
             </a>
         </div>
@@ -434,29 +625,30 @@ p i {
             <p id="LIVING">LIVING </p>
         </a>
         <div id="drop3" class="dropdown">
-        <a href="/src/main/resources/templates/MainMenu/LIVING/Toy.html">
+            <a href="/src/main/resources/templates/MainMenu/LIVING/Toy.html">
                 <li>Toy</li>
             </a>
-        <a href="/src/main/resources/templates/MainMenu/LIVING/Bag.html">
+            <a href="/src/main/resources/templates/MainMenu/LIVING/Bag.html">
                 <li>Bag</li>
             </a>
-        <a href="/src/main/resources/templates/MainMenu/LIVING/House.html">
-            <li>House</li></a>
+            <a href="/src/main/resources/templates/MainMenu/LIVING/House.html">
+                <li>House</li>
+            </a>
         </div>
 
         <a href="/src/main/resources/templates/MainMenu/FOOD/Food_main.html">
             <p id="FOOD">FOOD</p>
         </a>
         <div id="drop4" class="dropdown">
-        <a href="/src/main/resources/templates/MainMenu/FOOD/Dog_Feed.html">
+            <a href="/src/main/resources/templates/MainMenu/FOOD/Dog_Feed.html">
                 <li>DogFeed</li>
             </a>
-        <a href="/src/main/resources/templates/MainMenu/FOOD/Cat_Feed.html">
+            <a href="/src/main/resources/templates/MainMenu/FOOD/Cat_Feed.html">
                 <li>CatFeed</li>
             </a>
         </div>
 
-            <p id="COMMUNITY">COMMUNITY</p>
+        <p id="COMMUNITY">COMMUNITY</p>
         <div id="drop5" class="dropdown">
             <a href="/src/main/resources/templates/MainMenu/COMMUNITY/community1.html">
                 <li>유기견게시판</li>
