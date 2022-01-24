@@ -1,19 +1,20 @@
 <!--주석 필수-->
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <!--    th:href="@{../}" -->
-<head th:replace="layout/header :: head ('로그인')">
+    <head th:replace="layout/header :: head ('로그인')">
 
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <script th:src="@{https://use.fontawesome.com/releases/v5.2.0/js/all.js}" src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
     <title>펫송완료</title>
-    <!--    <link rel="stylesheet" href="/static/css/index.css">-->
+
     <link rel="stylesheet" th:href="@{../css/TopMenu/login.css}" href="/src/main/resources/static/css/TopMenu/login.css">
-    <link rel="stylesheet" th:href="@{../css/Main/header.scss}" href="/src/main/resources/staticcss/css/Main/header.scss">
+    <link rel="stylesheet" th:href="@{../css/layout_CSS/header.css}" href="/src/main/resources/static/css/layout_CSS/header.css">
+
+    <script th:src="@{https://use.fontawesome.com/releases/v5.2.0/js/all.js}" src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
     <!-- 네비게이션 관련 js 링크 -->
     <script th:src="@{https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js}" src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
     <script th:src="@{https://use.typekit.net/hoy3lrg.js}" src="https://use.typekit.net/hoy3lrg.js"></script>
-    <script>try { Typekit.load({ async: true }); } catch (e) { }</script>
+<!--    <script>try { Typekit.load({ async: true }); } catch (e) { }</script>-->
 
     <!-- 폰트어썸 이미지 불러오기 링크 -->
     <link rel="stylesheet" th:href="@{https://pro.fontawesome.com/releases/v5.10.0/css/all.css}" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
@@ -23,35 +24,46 @@
         $(document).ready(function () {
             $("#headers").load("/src/main/resources/templates/layout/header.html");
             $("#footers").load("/src/main/resources/templates/layout/footer.html");
-        }
+            }
         );
     </script>
 
 </head>
 
 <body>
+<!-- header 삽입 -->
     <header th:replace="layout/header :: header"></header>
+
     <div class="all">
     <div class="container">
-
 
         <div id="headers"></div>
 
 <main>
     <div id="Login">
-        <h1>Member Login</h1>
-        <form method="post" id="authForm" action="/auth/user/login">
+
+        <form method="post" action="/auth/user/login" id="authForm" >
+            <h1>Member Login</h1>
+<!--           예외사항-->
+            <div th:if="${param.error}" class="#" role="alert">
+                아이디 혹은 비밀번호가 잘못 입력되었습니다.
+            </div>
+            <div th:if="${param.logout}" class="#" role="alert">
+                로그아웃이 완료되었습니다.
+            </div>
+
             <div id="Login-top">
                 <input type="text" id="loginId" name="username" placeholder="ID" required="required">
                 <input type="password" id="loginPw" name="password" placeholder="Password" required="required">
             </div>
 
-            <button id="Login-Btn" type="submit" disabled="disabled">로그인</button>
             <!-- 로그인 유지 체크박스 추가-->
             <div class="checkbox mb-3">
                 <input type="checkbox" name="remember-me" id="#">
                 <label for="#" aria-describedby="rememberMeHelp">로그인 유지</label>
             </div>
+            <button id="Login-Btn" disabled="disabled">로그인</button>
+
             <button class="naver-Btn" type="submit" disabled="disabled">네이버 로그인</button>
             <button class="kakao-Btn" type="submit" disabled="disabled">카카오 로그인</button>
 
@@ -61,19 +73,22 @@
                 <li><a href="#">비밀번호찾기</a></li>
             </ul>
             <button id="Login-Btn" type="button" onclick="location.href='joinus.html'">회원가입</button>
-
-
         </form>
-    </div>
-        </main>
+
+        </div>
+</main>
 
         <div id="footers"></div>
 
 
     </div>
 </div>
+    <footer th:replace="layout/footer :: footer"></footer>
     <!-- js 링크 -->
+    <script th:src="@{https://code.jquery.com/jquery-3.6.0.min.js}" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script th:src="@{../js/Dog_SS.js}" src="/src/main/resources/static/js/Dog_SS.js"></script>
+    <!--회원가입의 유효성 -->
+    <script th:src="@{/js/user.js}"></script>
 
 </body>
 

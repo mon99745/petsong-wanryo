@@ -6,20 +6,24 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="/src/main/resources/static/css/layout_CSS/header.css">
+    <link rel="stylesheet" th:href="@{../css/layout_CSS/header.css}" href="/src/main/resources/static/css/layout_CSS/header.css">
 </head>
+<body>
+<!--header 설정 -->
+<header th:fragment="header">
 
-    <header th:fragment="header">
     <div id="top">
     <!-- 좌측 상단 네비게이션-->
 <!--        th:src="@{../}"-->
     <ul class="top-bar">
-        <a sec:authorize="isAnonymous()" th:href="@{/auth/user/login}" href="/src/main/resources/templates/TopMenu/login.html">
-            <li>LOGIN</li>
-        </a>
-<!--        <a sec:authorize="isAuthenticated()" class="nav-link" href="/logout">로그아웃</a>-->
-<!--            <li>LOGOUT</li>-->
-<!--        </a>-->
+<!--        sec:authorize="isAnonymous()"-->
+        <li>
+            <a sec:authorize="isAnonymous()" th:href="@{/auth/user/login}" href="/src/main/resources/templates/TopMenu/login.html">LOGIN</a>
+        <li>
+        <li>
+            <a sec:authorize="isAuthenticated()" th:href="@{/auth/user/logout}" href="/logout">로그아웃</a>LOGOUT</a>
+        </li>
+
         <a sec:authorize="isAnonymous()" th:href="@{/auth/user/save}" href="/src/main/resources/templates/TopMenu/joinus.html">
             <li>JOIN US</li>
         </a>
@@ -36,6 +40,7 @@
             <li>MY PAGE</li>
         </a>
     </ul>
+
     <!-- 회원 정보 출력 -->
         <div id="right">
             <div id="welcome">
@@ -62,7 +67,7 @@
     <!-- 페이스북 인스타 트위터 로고 넣기 -->
     <a th:href="@{https://ko-kr.facebook.com/}" href="https://ko-kr.facebook.com/" target="_blank"><i class="fab fa-facebook fa-2x"></i></a>
     <a th:href="@{https://www.instagram.com/}" href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
-    <a th:href="@{https://twitter.com/?lang=ko}" href="https://twitter.com/?lang=ko" target="_blank"><i class="fab fa-twitter-square fa-2x"></i></a>
+    <a th:href="@{https://twitter.com/}" href="https://twitter.com/?lang=ko" target="_blank"><i class="fab fa-twitter-square fa-2x"></i></a>
     <!-- notice Q&A 넣기 -->
     <ul class="bottom-bar">
         <a th:href="@{templates/Main/QandA.html}" href="/src/main/resources/templates/Main/QandA.html">
@@ -71,7 +76,7 @@
         <a th:href="@{../templates/Main/Notice.html}" href="/src/main/resources/templates/Main/Notice.html">
             <li>Notice</li>
         </a>
-
+    </ul>
 </div>
 <!-- ----------------------------------------------------------------------- 메뉴 네비게이션 바------------------------------------------------------------------------>
 <div id="menu">
@@ -130,10 +135,6 @@
                 </a>
             </div>
         </div>
-
-
-
-
 
         <!-- 메뉴 종류 넣기 -->
         <a href="/src/main/resources/templates/MainMenu/DOG/Dog_main.html">
@@ -195,11 +196,10 @@
                 <li>자유게시판</li>
             </a>
         </div>
-
-
     </ul>
 
 </div>
     </header>
-    <script src="/src/main/resources/static/js/layout_JS/header.js"></script>
+    <script th:src="@{../js/layout_JS/header.js}" src="/src/main/resources/static/js/layout_JS/header.js"></script>
+</body>
 </html>

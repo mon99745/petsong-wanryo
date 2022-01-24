@@ -7,8 +7,8 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        <link rel="stylesheet" href="/src/main/resources/static/css/layout_CSS/footer.css">
+        <!--        th:src="@{../} -->
+        <link rel="stylesheet" th:href="@{../css/layout_CSS/footer.css}"  href="/src/main/resources/static/css/layout_CSS/footer.css">
     </head>
 <footer th:fragment="footer">
     <div class="Topleft">
@@ -26,7 +26,7 @@
     </div>
 
     <div class="MainName">
-       <a href="/src/main/resources/templates/Main/index.html"> <p>Petsong Wanryo</p></a>
+       <a th:href="@{../index.html}" href="/src/main/resources/templates/Main/index.html"> <p>Petsong Wanryo</p></a>
     </div>
     <div class="right">
         <li>Made by HanseoProject</li>
@@ -40,9 +40,9 @@
         </ul>
     </div>
     <div class="center">
-        <a href="https://ko-kr.facebook.com/" target="_blank"><i class="fab fa-facebook fa-2x"></i></a>
-        <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
-        <a href="https://twitter.com/?lang=ko" target="_blank"><i class="fab fa-twitter-square fa-2x"></i></a>
+        <a th:href="@{https://ko-kr.facebook.com}" href="https://ko-kr.facebook.com/" target="_blank"><i class="fab fa-facebook fa-2x"></i></a>
+        <a th:href="@{https://www.instagram.com}" href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+        <a th:href="@{https://twitter.com/?lang=ko}" href="https://twitter.com/?lang=ko" target="_blank"><i class="fab fa-twitter-square fa-2x"></i></a>
 
     </div>
 </footer>
