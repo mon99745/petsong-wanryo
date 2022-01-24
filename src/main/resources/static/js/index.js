@@ -1,11 +1,13 @@
 
 // -----------------------------------뉴스 슬라이드 쇼----------------------------------------
      var myImage = document.getElementById("mainImage");
-            var imageArray = ["/src/main/resources/static/image/News1.png",
-                "/src/main/resources/static/image/News2.png",
-                "/src/main/resources/static/image/News3.png",
-                "/src/main/resources/static/image/News4.png",
-                "/src/main/resources/static/image/News5.png"
+            var imageArray = ["/src/main/resources/static/image/애견지식1.jpg",
+            "/src/main/resources/static/image/애견지식2.jpg",
+            "/src/main/resources/static/image/애견지식3.jpg",
+            "/src/main/resources/static/image/애견지식4.jpg",
+            "/src/main/resources/static/image/애견지식5.jpg",
+            "/src/main/resources/static/image/애견지식6.jpg",
+            "/src/main/resources/static/image/애견지식7.jpg"
 
             ];
             var imageIndex = 0;

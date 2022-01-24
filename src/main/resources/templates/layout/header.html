@@ -106,6 +106,19 @@
 
 <!-- -------------------------------------헤더에 대한 스타일-------------------------------- -->
 <style>
+
+@font-face {
+    font-family: 'ChosunGu';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunGu.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*
+{
+    font-family:   'ChosunGu';
+}
+  
     #top {
         width: 1480px;
         height: 40px;
@@ -122,11 +135,14 @@
         margin: 0 10px;
         padding: 10px 5px;
         display: inline-block;
+        font-weight: 600;
     }
-
+ 
     .top-bar a:hover {
         color: #cacaca;
     }
+
+
     #right
     {
         float:right;
@@ -487,7 +503,7 @@
             <li>JOIN US</li>
         </a>
         <a href="/src/main/resources/templates/TopMenu/wish.html">
-            <li>WISH</li>
+            <li id="wish">WISH</li>
         </a>
         <a href="/src/main/resources/templates/TopMenu/cart.html">
             <li>CART</li>
@@ -585,10 +601,10 @@
             </div>
             <div id="part5">
                 <a href="/src/main/resources/templates/MainMenu/COMMUNITY/community1.html">
-                    <li>유기견계시판</li>
+                    <li>유기견게시판</li>
                 </a>
                 <a href="/src/main/resources/templates/MainMenu/COMMUNITY/community2.html">
-                    <li>자유계시판</li>
+                    <li>자유게시판</li>
                 </a>
             </div>
         </div>
