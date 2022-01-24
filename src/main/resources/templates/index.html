@@ -40,6 +40,8 @@
         $(document).ready(function () {
             $("#headers").load("/src/main/resources/templates/layout/header.html");
             $("#footers").load("/src/main/resources/templates/layout/footer.html");
+            $("#scrolls1").load("/src/main/resources/templates/layout/scroll1.html");
+            $("#scrolls2").load("/src/main/resources/templates/layout/scroll2.html");
         }
         );
     </script>
@@ -58,7 +60,7 @@
 
         <main>
             <div id="left">
-                <img class="cat1-img" th:src="@{../image/cat1.jpeg}"  alt="My Image">
+                <img class="cat1-img" th:src="@{../image/cat1.jpeg}" src="/src/main/resources/static/image/cat1.jpeg" alt="My Image">
                 <img class="dog4-img" th:src="@{../image/dog4.jpeg}" src="/src/main/resources/static/image/dog4.jpeg" alt="My Image">
                 <img class="dog1-img" th:src="@{../image/dog1.jpeg}" src="/src/main/resources/static/image/dog1.jpeg" alt="My Image">
                 <img class="dog2-img" th:src="@{../image/dog2.jpeg}" src="/src/main/resources/static/image/dog2.jpeg" alt="My Image">
@@ -260,7 +262,7 @@
         <footer th:replace="layout/footer :: footer"></footer>
 
     </div>
-</div>
+</div>햣
     <!-- js 링크 -->
     <script th:src="@{../js/index.js}" src="/src/main/resources/static/js/index.js"></script>
 

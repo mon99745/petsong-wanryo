@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class UserApiController {
 
     private final UserService userService;
+
     /**
      * 회원가입 API
      */

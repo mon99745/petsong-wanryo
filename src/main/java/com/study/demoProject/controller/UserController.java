@@ -18,7 +18,7 @@ public class UserController {
      */
     @GetMapping("/auth/user/login")
     public String userLogin() {
-        return "layout/user/user-login";
+        return "example/user/user-login";
     }
 
     /**
