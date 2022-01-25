@@ -45,3 +45,271 @@ li {
   display: inline-block;
 }
 /* -------------------------------------------------변경되는 메인-------------------------------- */
+
+main {
+  width: 100%;
+  background-color: white;
+  text-align: center;
+}
+
+/* ------------------------------------메인 상단---------------------------- */
+#top-main {
+  width: 100%;
+  height: 1000px;
+}
+
+#top-left {
+  float: left;
+  width: 50%;
+  height: 100%;
+}
+.left-content {
+  width: 90%;
+  float: right;
+  margin-top: 50px;
+  margin-left: 50px;
+}
+.left-content h1,
+h2,
+h4 {
+  margin-bottom: 10px;
+  text-align: left;
+}
+.left-content h4 {
+  padding-bottom: 20px;
+  border-bottom: 1px solid gray;
+}
+
+#mainImage {
+  margin-top: 20px;
+  margin-left: 8x;
+}
+
+.n2,
+.n3,
+.n4,
+.n5 {
+  visibility: hidden;
+}
+
+#top-right {
+  float: right;
+  width: 50%;
+  height: 100%;
+}
+
+#right-content {
+  width: 60%;
+  float: left;
+  margin-top: 50px;
+  margin-left: 120px;
+}
+#right-content h2 {
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+#right-content img {
+  float: left;
+  width: 90%;
+  height: 350px;
+  margin-bottom: 30px;
+}
+
+/* -------------------------------------메인 하단------------------------------- */
+
+#bottom-main {
+  width: 100%;
+  height: 2200px;
+}
+/* ---------------------------------------메뉴 와 검색창 부분------------------------------------ */
+#bottom-main-top {
+  width: 100%;
+  height: 8%;
+}
+/* -------------------------------------------메뉴------------------------------------ */
+#top1 {
+  height: 60%;
+  border-bottom: 1px solid gray;
+}
+#top1 li {
+  float: left;
+  margin-top: 50px;
+}
+
+#top1 li {
+  font-size: 30px;
+  font-weight: bold;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+#top1 li.active a {
+  border-bottom: 3px solid #2b210e;
+  color: #2b210e;
+}
+
+/* -------------------------------------검색창--------------------------------------- */
+#search-menu {
+  float: right;
+  margin-top: 50px;
+  margin-right: 10px;
+  width: 250px;
+  height: 30px;
+  border: 1px solid #cacaca;
+}
+
+.search-text {
+  font-size: 20px;
+  width: 140px;
+  padding-left: 10px;
+  height: 26px;
+  border: 0px;
+  outline: none;
+  color: black;
+}
+
+.search-btn {
+  float: right;
+  width: 30px;
+  height: 100%;
+  border: 0px;
+  outline: none;
+  background-color: #fff;
+  color: #cacaca;
+}
+
+#search:hover {
+  border: 1px solid rgb(167, 164, 164);
+}
+/* -----------------------------------------------total 표시------------------------------------- */
+
+#top2 li {
+  float: left;
+  margin-top: 10px;
+  margin-left: 10px;
+  font-size: 30px;
+  font-weight: bold;
+}
+/* -----------------------------------------메인 중간---------------------------------- */
+#bottom-main-middle {
+  width: 100%;
+  height: 80%;
+}
+
+#dog-clothes h2 {
+  margin-top: 10px;
+}
+
+.dog-photo {
+  width: 400px;
+  height: 400px;
+}
+.cloth li {
+  margin: 10px 10px;
+  padding: 10px 10px;
+}
+.cloth h2 {
+  margin-top: 10px;
+}
+
+#price {
+  height: 20%;
+  border-top: 2px solid gray;
+}
+#price span {
+  margin-top: 10px;
+  float: left;
+  font-size: 22px;
+}
+
+.empty-heart,
+.red-heart {
+  width: 50px;
+  height: 50px;
+  float: right;
+}
+.empty-cart,
+.full-cart {
+  margin-top: 13px;
+  width: 25px;
+  height: 25px;
+  float: right;
+}
+
+/*상품 리스트 강조*/
+.cloth > li > a > .img-box {
+  overflow: hidden;
+  position: relative;
+}
+/*상품 리스트 강조-배경*/
+.cloth  > li > a > .img-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: black;
+  opacity: 0;
+  transition: opacity 0.5s;
+  z-index: 1;
+}
+.cloth  > li:hover > a > .img-box::before {
+  opacity: 0.5;
+}
+/*상품 리스트 강조-view*/
+.cloth  > li > a > .img-box::after {
+  content:"VIEW";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  border: 3px solid white;
+  padding: 5px;
+  border-radius: 5px;
+  opacity: 0;
+  transition: opacity 0.5s;
+  z-index: 2;
+}
+.cloth  > li:hover > a > .img-box::after {
+  opacity: 1;
+}
+.cloth  > li > a > .img-box img {
+  transition: transform 0.5s;
+}
+.cloth  > li:hover > a > .img-box img {
+  transform: scale(1.3);
+}
+
+
+/* ---------------------------페이지 순서 버튼----------------------- */
+#bottom-main-bottom {
+  width: 100%;
+  height: 6%;
+
+  /* 중요 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttons li {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  border: 1px solid black;
+  padding-top: 3px;
+}
+
+.buttons li {
+  cursor: pointer;
+  transition: transform 300ms ease;
+}
+.buttons li:hover {
+  transform: scale(1.1);
+}
