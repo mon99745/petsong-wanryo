@@ -4,21 +4,31 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+   
     <title>펫송완료</title>
-    <!--    <link rel="stylesheet" href="/static/css/index.css">-->
-    <link rel="stylesheet" href="/src/main/resources/static/css/MainMenu/CAT/CAT_FW.css">
-    <link rel="stylesheet" href="/src/main/resources/staticcss//Main/header.scss">
+
+    <!---CSS 링크--->
+    <link rel="stylesheet" th:href="@{../css/MainMenu/CAT/CAT_F/W.css}" href="/src/main/resources/static/css/MainMenu/CAT/CAT_FW.css">
+    
     <!-- 네비게이션 관련 js 링크 -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
     <script src="https://use.typekit.net/hoy3lrg.js"></script>
+
+    <!-- header 삽입 -->
+    <header th:replace="layout/header :: header"></header>
+
     <script>try { Typekit.load({ async: true }); } catch (e) { }</script>
 
-    <!-- 폰트어썸 이미지 불러오기 링크 -->
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+     <!-- 폰트어썸 이미지 불러오기 링크 -->
+    <link rel="stylesheet" th:href="@{https://pro.fontawesome.com/releases/v5.10.0/css/all.css}"
+          href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <script th:src = "@{https://use.fontawesome.com/releases/v5.2.0/js/all.js}"
+    src ="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
 
-<script type="text/javascript">
+
+    <!--    header_footer -> layout-->
+    <script type="text/javascript">
     $(document).ready(function () {
             $("#headers").load("/src/main/resources/templates/layout/header.html");
             $("#footers").load("/src/main/resources/templates/layout/footer.html");
@@ -26,7 +36,7 @@
             $("#scrolls2").load("/src/main/resources/templates/layout/scroll2.html");
     }
     );
-</script>
+    </script>
 
 </head>
 
@@ -50,15 +60,11 @@
                         <h1>CAT's F/W</h1>
                         <h4>집사야 춥다, 옷 사주라!~~</h4>
                         <br>
-                        <h2>New F/S Collection</h2>
+                        <h2>New F/W Collection</h2>
         
-                        <img src="/src/main/resources/static/image/Dog_FW1.jpg" id=mainImage class="n1" alt="YsjImage"
+                        <img th:src="@{../image/Cat_FW/catfw_5.jpeg}" src="/src/main/resources/static/image/Cat_FW/catfw_5.jpeg" id=mainImage class="n1" alt="YsjImage"
                             style="width:650px;height:600px;">
-                        <img src="/src/main/resources/static/image/Dog_FW1.jpg" id=mainImage class="n2" alt="YsjImage"
-                            style="width:800px;height:700px;">
-                        <img src="/src/main/resources/static/image/Dog_FW1.jpg" id=mainImage class="n3" alt="YsjImage"
-                            style="width:800px;height:700px;">
-                    
+                      
         
         
                     </div>
@@ -69,10 +75,8 @@
                     <div id="right-content">
         
                         <h2>Best</h2>
-                        <img src="/src/main/resources/static/image/product3.jpeg">
-                        <br>
-                        <h2>Sale</h2>
-                        <img src="/src/main/resources/static/image/product2.jpeg">
+                        <img th:src="@{../../../static/image/Cat_FW/catfw_8.jpeg}" src="../../../static/image/Cat_FW/catfw_8.jpeg">
+                        <img th:src="@{../../../static/image/Cat_FW/catfw_9.jpeg}" src="../../../static/image/Cat_FW/catfw_9.jpeg">
                     </div>
                 </div>
             </div>
@@ -101,11 +105,14 @@
                                     <!-- All 리스트에서 상품검색 기능(best,new,like는 어차피 분류된 리스트니까 검색 x) -->
                                     <input type="text" v-model="itemName"  class="search-bar" placeholder="    상품이름"/>
                                 </nav>
-                               
+                                
+                           
                           
                             <!-- All에 대한 상품리스트 -->
                             <div>
-                                <ul style="list-style:none;"> 
+                                <!-- All 배열의 길이를 출력 = 그 안의 상품 갯수를 출력 -->
+                                <div class="total">total {{items.length}}</div>
+                                <ul style="list-style:none;" id="list"> 
                                     <!-- v-for을 통해 items의 리스트 내용을 반복하여 출력        -->
                                     <template v-for="item in items"  v-if="item.title.includes(itemName)" :key="item.id">                                  
                                         <li class="cloth-layout">                
@@ -118,6 +125,7 @@
                             </div>
                              <!-- New 에 대한 상품리스트 -->
                             <div>
+                                <div class="total">total {{News.length}}</div>
                                 <ul style="list-style:none;">
                                     <template v-for="New in News" :key="New.id">                                   
                                         <li class="cloth-layout">                
@@ -130,6 +138,7 @@
                             </div> 
                              <!-- BEST에 대한 상품리스트 -->
                             <div>
+                                <div class="total">total {{bests.length}}</div>
                                 <ul style="list-style:none;">
                                     <template v-for="best in bests" :key="best.id">                                   
                                         <li class="cloth-layout">                
@@ -142,6 +151,7 @@
                             </div> 
                             <!-- LIKE에 대한 상품리스트 -->
                             <div>
+                                <div class="total">total {{likes.length}}</div>
                                 <ul style="list-style:none;">
                                     <template v-for="like in likes"  :key="like.id">                                  
                                         <li class="cloth-layout">                
@@ -195,9 +205,12 @@
     </div>
     <!-- js 링크 -->
 
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-<script src="/src/main/resources/static/js/Cat_FW.js"></script>
+<script th:src="@{https://cdn.jsdelivr.net/npm/vue/dist/vue.js}" src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script th:src="@{../../../static/js/MainMenu/Cat/Cat_FW.js}" src="../../../static/js/MainMenu/Cat/Cat_FW.js"></script>
 
 </body>
 
 </html>
+
+/Users/houya/petsong-wanryo/src/main/resources/templates/MainMenu/CAT/Cat_FW.html
+src/main/resources/templates/MainMenu/CAT/Cat_info.html

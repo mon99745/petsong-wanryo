@@ -6,7 +6,7 @@ const cloth = new Vue({
         items:[ //ALL 상품에 대한 상품리스트 
             {
                 id:1,
-                image: "https://thumbnail7.coupangcdn.com/thumbnails/remote/230x230ex/image/rs_quotation_api/wrnffnlh/0a89058795dc49efae2071fa3149f04d.jpg",
+                image: "../../../static/image/Cat_FW/catfw_1.jpeg",
                 title:'코코테일 고양이 티셔츠',
                 price: 19000,
                 menu: 'best'
@@ -14,13 +14,13 @@ const cloth = new Vue({
             },
             {
                 id:2,
-                image:"https://thumbnail8.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/2020/08/18/10/6/dd790e2d-983e-4201-8d44-cc9e1c20ac3c.jpg",
+                image: "../../../static/image/Cat_FW/catfw_2.jpeg",
                 title:'파스텔펫  마카롱 맨투맨, 옐로',
                 price: 10800,
             },
             {
                 id:3,
-                image:"https://thumbnail9.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/2020/08/19/10/8/c778aa85-99c8-4fa2-8238-34c7ee489fc6.jpg",
+                image: "../../../static/image/Cat_FW/catfw_3.jpeg",
                 title:'파스텔펫  마카롱 맨투맨, 핑크',
                 price: 10800,
                 best: 'https://picsum.photos/210/118/?image=160'
@@ -28,14 +28,14 @@ const cloth = new Vue({
             },
             {
                 id:4,
-                image:"https://thumbnail6.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/7ded/9a442df16971649b5319d5548216e9685f1adb7f50a59207202cce5d03ab.jpg",
+                image: "../../../static/image/Cat_FW/catfw_4.jpeg",
                 title:'겨울옷 모직코트 머플러 세트',
                 price: 9900
 
             },
             {
                 id:5,
-                image:"https://thumbnail6.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/2cae/2646f85028fb3604c2ba6fbe4773d4455cabeb5c0edf0ca2c6e5f57db8eb.jpg",
+                image: "../../../static/image/Cat_FW/catfw_5.jpeg",
                 title:'코코스튜디오 테디 명품 가디건',
                 price: 14900
                 
@@ -43,28 +43,28 @@ const cloth = new Vue({
             },
             {
                 id:6,
-                image: "https://thumbnail10.coupangcdn.com/thumbnails/remote/292x292ex/image/rs_quotation_api/ukdqzrfh/eaa2a6b369b34c4f8d94d4f84980f0c5.jpg",
+                image: "../../../static/image/Cat_FW/catfw_6.jpeg",
                 title:'파스텔펫 소프트 고양이 환묘복',
                 price: 12000
 
             },
             {
                 id:7,
-                image:"https://thumbnail7.coupangcdn.com/thumbnails/remote/292x292q65ex/image/rs_quotation_api/5y7flht1/aa97444737f44d88947dd195c73e2235.jpg",
+                image: "../../../static/image/Cat_FW/catfw_7.jpeg",
                 title:'휴실내복 스낵 하네스 티셔츠',
                 price: 25000
 
             },
             {
                 id:8,
-                image:"https://thumbnail10.coupangcdn.com/thumbnails/remote/292x292q65ex/image/rs_quotation_api/wszh4yxi/09d51860772749939949a46ecdb7c30a.jpg",
+                image: "../../../static/image/Cat_FW/catfw_8.jpeg",
                 title:'실내복 스낵 하네스 티셔츠,네이비',
                 price: 26000
 
             },
             {
                 id:9,
-                image:"https://thumbnail7.coupangcdn.com/thumbnails/remote/292x292q65ex/image/rs_quotation_api/mkwrjrjx/e5fb290cfb9c42e694704aff97087202.jpg",
+                image: "../../../static/image/Cat_FW/catfw_9.jpeg",
                 title:'실내복 스낵 하네스 티셔츠,블랙',
                 price: 26000
 
@@ -73,7 +73,7 @@ const cloth = new Vue({
         News:[ // New 상품에 대한 상품리스트 
             {
                 id:1,
-                image: "https://thumbnail7.coupangcdn.com/thumbnails/remote/230x230ex/image/rs_quotation_api/wrnffnlh/0a89058795dc49efae2071fa3149f04d.jpg",
+                image: "../../../static/image/Cat_FW/catfw_1.jpeg",
                 title:'코코테일 고양이 티셔츠',
                 price: 19000,
                 menu: 'best'
@@ -81,13 +81,13 @@ const cloth = new Vue({
             },
             {
                 id:2,
-                image:"https://thumbnail8.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/2020/08/18/10/6/dd790e2d-983e-4201-8d44-cc9e1c20ac3c.jpg",
+                image: "../../../static/image/Cat_FW/catfw_2.jpeg",
                 title:'파스텔펫  마카롱 맨투맨, 옐로',
                 price: 10800,
             },
             {
                 id:3,
-                image:"https://thumbnail9.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/2020/08/19/10/8/c778aa85-99c8-4fa2-8238-34c7ee489fc6.jpg",
+                image: "../../../static/image/Cat_FW/catfw_3.jpeg",
                 title:'파스텔펫  마카롱 맨투맨, 핑크',
                 price: 10800,
                 best: 'https://picsum.photos/210/118/?image=160'
@@ -122,31 +122,35 @@ const cloth = new Vue({
            
         likes:[ // Like 상품에 대한 상품리스트
             {
+                id:6,
+                image: "../../../static/image/Cat_FW/catfw_6.jpeg",
+                title:'파스텔펫 소프트 고양이 환묘복',
+                price: 12000
+
+            },
+            {
                 id:7,
-                image:"https://thumbnail7.coupangcdn.com/thumbnails/remote/292x292q65ex/image/rs_quotation_api/5y7flht1/aa97444737f44d88947dd195c73e2235.jpg",
+                image: "../../../static/image/Cat_FW/catfw_7.jpeg",
                 title:'휴실내복 스낵 하네스 티셔츠',
                 price: 25000
 
             },
             {
                 id:8,
-                image:"https://thumbnail10.coupangcdn.com/thumbnails/remote/292x292q65ex/image/rs_quotation_api/wszh4yxi/09d51860772749939949a46ecdb7c30a.jpg",
+                image: "../../../static/image/Cat_FW/catfw_8.jpeg",
                 title:'실내복 스낵 하네스 티셔츠,네이비',
                 price: 26000
 
             },
             {
                 id:9,
-                image:"https://thumbnail7.coupangcdn.com/thumbnails/remote/292x292q65ex/image/rs_quotation_api/mkwrjrjx/e5fb290cfb9c42e694704aff97087202.jpg",
+                image: "../../../static/image/Cat_FW/catfw_9.jpeg",
                 title:'실내복 스낵 하네스 티셔츠,블랙',
                 price: 26000
 
             }
         ],
-        
-   
-    
-            
+         
         // All 리스트 상태에서 상품 검색기능
         item: {
             title: '',
@@ -162,10 +166,9 @@ const cloth = new Vue({
             this.item = {};
         }
         }
-    
+     
+       
         
-        
-
     });
 
         // main-bar 의 상품 메뉴 클릭시 상품메뉴에 따라 상품 리스트 정렬 제이쿼리
@@ -191,11 +194,11 @@ const cloth = new Vue({
             return false;
         });
 
-
+        //상단 이미지 슬라이드 쇼
         var myImage = document.getElementById("mainImage");
-        var imageArray = ["/src/main/resources/static/image/Dog_FW1.jpg",
-            "/src/main/resources/static/image/Dog_FW2.jpg",
-            "/src/main/resources/static/image/Dog_FW3.jpg",
+        var imageArray = ["/src/main/resources/static/image/Cat_FW/catfw_5.jpeg",
+            "/src/main/resources/static/image/Cat_FW/catfw_2.jpeg",
+            "/src/main/resources/static/image/Cat_FW/catfw_3.jpeg",
 
         ];
         var imageIndex = 0;
@@ -207,4 +210,4 @@ const cloth = new Vue({
                 imageIndex = 0;
             }
         }
-        setInterval(changeImage, 2000);
+        setInterval(changeImage, 1500);

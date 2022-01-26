@@ -45,3 +45,192 @@ li {
   display: inline-block;
 }
 /* -------------------------------------------------변경되는 메인-------------------------------- */
+
+main {
+  width: 100%;
+  background-color: white;
+  text-align: center;
+}
+
+/* ------------------------------------메인 상단---------------------------- */
+#top-main {
+  width: 100%;
+  height: 1000px;
+}
+
+#top-left {
+  float: left;
+  width: 50%;
+  height: 100%;
+}
+.left-content {
+  width: 90%;
+  height: 95%;
+  float: right;
+  margin-top: 50px;
+  margin-left: 50px;
+}
+.left-content h1,
+h2,
+h4 {
+  margin-bottom: 10px;
+  text-align: left;
+}
+.left-content h4 {
+  padding-bottom: 20px;
+  border-bottom: 1px solid gray;
+}
+
+#mainImage {
+  margin-top: 20px;
+  margin-left: 8x;
+}
+
+.n2,
+.n3,
+.n4,
+.n5 {
+  visibility: hidden;
+}
+
+#top-right {
+  float: right;
+  width: 50%;
+  height: 100%;
+}
+
+#right-content {
+  width: 60%;
+  float: left;
+  margin-top: 50px;
+  margin-left: 120px;
+}
+#right-content h2 {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+#right-content img {
+  float: left;
+  width: 90%;
+  height: 350px;
+  margin-bottom: 30px;
+}
+
+/* -------------------------------------메인 하단------------------------------- */
+
+#bottom-main {
+  width: 100%;
+  height: 2200px;
+}
+/* ---------------------------------------메뉴 와 검색창 부분------------------------------------ */
+#bottom-main-top {
+  width: 100%;
+  height: 8%;
+}
+/* -------------------------------------------메뉴------------------------------------ */
+
+
+/* -----------------------------------------메인 중간---------------------------------- */
+#bottom-main-middle {
+  width: 100%;
+  height: 80%;
+  margin: 0 auto;
+}
+
+
+/*------------------------------필터, 검색 바------------------------------------- */
+
+#main-bar{
+  width: 100%;
+  height: 70px;
+  border-bottom: 1px solid gray;
+  margin-bottom: 30px;
+}
+#main-bar ul{
+  float: left;
+}
+
+#main-bar li{
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+#main-bar li.active a {
+  border-bottom: 3px solid #2b210e;
+  color: #2b210e;
+}
+/* -------------------------------------------------------------------- */
+.search-bar{
+  width: 210px;
+  height: 40px;
+  float: right;
+  margin-right: 80px;
+}
+
+#cloth{
+  margin-top: 50px;
+}
+
+.cloth-layout{
+  width: 420px;
+  height: 500px;
+  margin: 10px 10px;
+  padding: 10px 10px;
+}
+.cloth-image{
+  width: 400px;
+  height: 400px;
+}
+.cloth-title{
+  width: 95%;
+  height: 40px;
+  text-align: left;
+  margin-top: 10px;
+  margin-left: 10px;
+  border-bottom: 1px solid gray;
+  font-size: 25px;
+  font-weight: bold;
+
+}
+.cloth-price{
+  width: 100%;
+  height: 50px;
+  text-align: left;
+  margin-top: 10px;
+  margin-left: 10px;
+  font-size: 20px;
+}
+
+
+/* ---------------------------페이지 순서 버튼----------------------- */
+#bottom-main-bottom {
+  width: 100%;
+  height: 6%;
+
+  /* 중요 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttons li {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  border: 1px solid black;
+  padding-top: 3px;
+}
+
+.buttons li {
+  cursor: pointer;
+  transition: transform 300ms ease;
+}
+.buttons li:hover {
+  transform: scale(1.1);
+}
