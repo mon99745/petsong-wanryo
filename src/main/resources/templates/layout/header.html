@@ -18,25 +18,25 @@
     <ul class="top-bar">
 <!--        sec:authorize="isAnonymous()"-->
         <li>
-            <a sec:authorize="isAnonymous()" th:href="@{/auth/user/login}" href="/src/main/resources/templates/TopMenu/login.html">LOGIN</a>
+            <a sec:authorize="isAnonymous()" th:href="@{/auth/user/login}" href="/src/main/resources/templates/TopMenu/user/login.html">LOGIN</a>
         <li>
         <li>
             <a sec:authorize="isAuthenticated()" th:href="@{/auth/user/logout}" href="/logout">로그아웃</a>LOGOUT</a>
         </li>
 
-        <a sec:authorize="isAnonymous()" th:href="@{/auth/user/save}" href="/src/main/resources/templates/TopMenu/joinus.html">
+        <a sec:authorize="isAnonymous()" th:href="@{/auth/user/save}" href="/src/main/resources/templates/TopMenu/user/joinus.html">
             <li>JOIN US</li>
         </a>
-        <a th:href="@{#}" href="/src/main/resources/templates/TopMenu/wish.html">
+        <a th:href="@{#}" href="/src/main/resources/templates/TopMenu/order/wish.html">
             <li>WISH</li>
         </a>
-        <a th:href="@{#}" href="/src/main/resources/templates/TopMenu/cart.html">
+        <a th:href="@{#}" href="/src/main/resources/templates/TopMenu/order/cart.html">
             <li>CART</li>
         </a>
-        <a th:href="@{#}" href="/src/main/resources/templates/TopMenu/orderlist.html">
+        <a th:href="@{#}" href="/src/main/resources/templates/TopMenu/order/orderlist.html">
             <li>ORDER LIST</li>
         </a>
-        <a th:href="@{../templates/TopMenu/mypage.html}" href="/src/main/resources/templates/TopMenu/mypage.html">
+        <a th:href="@{../templates/TopMenu/user/mypage.html}" href="/src/main/resources/templates/TopMenu/user/mypage.html">
             <li>MY PAGE</li>
         </a>
     </ul>
@@ -57,8 +57,8 @@
 </div>
 <!-- --------------------------------------------------------------   로고 -------------------------------------------------------------------------------------- -->
 <div id="logo">
-    <a th:href="@{../templates/Main/index.html}" href="/src/main/resources/templates/Main/index.html">
-        <img class="logo-img" th:src="@{../image/logo.png}" src="/src/main/resources/static/image/logo.png" alt="My Image">
+    <a th:href="@{../templates/Main/index.html}" href="/src/main/resources/templates/index.html">
+        <img class="logo-img" th:src="@{../../static/image/mainpage/logo.png}" src="/src/main/resources/static/image/mainpage/logo.png" alt="My Image">
     </a>
 </div>
 
@@ -70,10 +70,10 @@
     <a th:href="@{https://twitter.com/}" href="https://twitter.com/?lang=ko" target="_blank"><i class="fab fa-twitter-square fa-2x"></i></a>
     <!-- notice Q&A 넣기 -->
     <ul class="bottom-bar">
-        <a th:href="@{templates/Main/QandA.html}" href="/src/main/resources/templates/Main/QandA.html">
+        <a th:href="@{../templates/TopMenu/board/QandA.html}" href="/src/main/resources/templates/TopMenu/board/QandA.html">
             <li>Q&A</li>
         </a>
-        <a th:href="@{../templates/Main/Notice.html}" href="/src/main/resources/templates/Main/Notice.html">
+        <a th:href="@{../templates/TopMenu/board/Notice.html}" href="/src/main/resources/templates/TopMenu/board/Notice.html">
             <li>Notice</li>
         </a>
     </ul>

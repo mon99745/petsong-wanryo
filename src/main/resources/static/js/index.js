@@ -1,11 +1,11 @@
 
 // -----------------------------------뉴스 슬라이드 쇼----------------------------------------
      var myImage = document.getElementById("mainImage");
-            var imageArray = ["/src/main/resources/static/image/News1.png",
-                "/src/main/resources/static/image/News2.png",
-                "/src/main/resources/static/image/News3.png",
-                "/src/main/resources/static/image/News4.png",
-                "/src/main/resources/static/image/News5.png"
+            var imageArray = ["../static/image/mainpage/News1.png",
+                "../static/image/mainpage/News2.png",
+                "../static/image/mainpage/News3.png",
+                "../static/image/mainpage/News4.png",
+                "../static/image/mainpage/News5.png"
 
             ];
             var imageIndex = 0;

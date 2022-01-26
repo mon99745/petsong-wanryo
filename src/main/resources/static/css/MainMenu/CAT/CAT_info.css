@@ -45,3 +45,284 @@ li {
   display: inline-block;
 }
 /* -------------------------------------------------변경되는 메인-------------------------------- */
+
+main {
+  width: 100%;
+  height: 4000px;
+}
+
+#main-top {
+  width: 100%;
+  height: 25%;
+  border-bottom: 1px solid gray;
+}
+/* ----------------------------상품이미지--------------------------- */
+#top-left {
+  width: 50%;
+  height: 80%;
+  float: left;
+}
+#top-left img {
+  width: 80%;
+  height: 80%;
+  float: right;
+  margin-right: 50px;
+  margin-top: 150px;
+  /* ----------------------------------상품 주문 칸--------------------- */
+}
+#top-right {
+  width: 40%;
+  height: 100%;
+  float: left;
+}
+/* --------------------------상품명------------------------ */
+.box1 {
+  margin-top: 150px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid gray;
+}
+/* -------------------------------가격-------------------- */
+.box2 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid gray;
+}
+/* ------------------------- 사이즈-------------------------- */
+.box3 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-top: 50px;
+  padding-bottom: 55px;
+  border-bottom: 1px solid gray;
+  display: flex;
+  align-items: center;
+}
+
+.size-box {
+  width: 40px;
+  height: 40px;
+  border: 1px solid gray;
+  border-radius: 0.5em;
+  text-align: center;
+  padding-top: 5px;
+  margin-left: 40px;
+  font-size: 20px;
+  font-weight: bold;
+}
+/* ----------------------상품 목록--------------------- */
+.box4 {
+  height: 300px;
+  border-bottom: 1px solid gray;
+}
+
+.box4 th {
+  border: 1px solid black;
+  width: 200px;
+  height: 30px;
+}
+
+#total li {
+  float: right;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* ---------------------------버튼---------------------- */
+
+.btn {
+  margin-top: 20px;
+  margin-left: 10px;
+}
+/* ---------------------------버튼 효과----------------- */
+.draw-border {
+  box-shadow: inset 0 0 0 4px rgb(100, 87, 87);
+  color: rgb(100, 87, 87);
+  transition: color 0.25s 0.0833333333s;
+  position: relative;
+}
+.draw-border::before,
+.draw-border::after {
+  border: 0 solid transparent;
+  box-sizing: border-box;
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  width: 0;
+  height: 0;
+  bottom: 0;
+  right: 0;
+}
+.draw-border::before {
+  border-bottom-width: 4px;
+  border-left-width: 4px;
+}
+.draw-border::after {
+  border-top-width: 4px;
+  border-right-width: 4px;
+}
+.draw-border:hover {
+  color: black;
+}
+.draw-border:hover::before,
+.draw-border:hover::after {
+  border-color: black;
+  transition: border-color 0s, width 0.25s, height 0.25s;
+  width: 100%;
+  height: 100%;
+}
+.draw-border:hover::before {
+  transition-delay: 0s, 0s, 0.25s;
+}
+.draw-border:hover::after {
+  transition-delay: 0s, 0.25s, 0s;
+}
+
+.btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  line-height: 1.5;
+  font: 700 1.2rem "Roboto Slab", sans-serif;
+  padding: 1em 2em;
+  letter-spacing: 0.05rem;
+}
+.btn:focus {
+  outline: 2px dotted black;
+}
+
+/* --------------------------------------------main-middle----------------------------- */
+
+#main-middle {
+  width: 100%;
+  height: 50%;
+}
+
+/* ----------------------------------------------------가이드 메뉴-------------------------- */
+
+.guide-menu {
+  width: 100%;
+  height: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.guide-menu li {
+  font-size: 25px;
+  font-weight: bold;
+  color: gray;
+  margin-left: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+}
+
+.guide-menu .g1,
+.guide-menu .g2,
+.guide-menu .g3,
+.guide-menu .g4 {
+  cursor: pointer;
+  transition: transform 300ms ease;
+}
+
+.guide-menu .g1:hover,
+.guide-menu .g2:hover,
+.guide-menu .g3:hover,
+.guide-menu .g4:hover {
+  transform: scale(1.1);
+}
+
+/* ------------------------------------------------상품 이미지-------------------------- */
+#main-image {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#main-image img {
+  width: 50%;
+  height: 80%;
+}
+/* ------------------------------------------------상품 사이즈 표--------------------------------------- */
+#size-info {
+  width: 100%;
+  height: 30%;
+}
+
+.head {
+  height: 40px;
+  border-bottom: 1px solid gray;
+}
+
+.head1 {
+  background-color: rgb(53, 50, 50);
+  color: white;
+  padding-left: 50px;
+  padding-right: 50px;
+  font-size: 30px;
+  box-shadow: 1px gray;
+}
+.head2 {
+  padding-left: 30px;
+  font-size: 20px;
+  font-weight: bold;
+}
+#cm {
+  height: 60px;
+}
+#cm li {
+  float: right;
+  margin-right: 150px;
+  margin-top: 30px;
+  font-weight: bold;
+  color: gray;
+}
+
+#size-info table {
+  border: 1px solid white;
+  text-align: center;
+  height: 300px;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0 auto;
+}
+#size-info th {
+  background: #e8e6e8;
+}
+#size-info tr,
+td {
+  background: #f7f5f7;
+}
+#size-info td {
+  width: 200px;
+}
+/* -----------------------------------------------상품 디테일----------------------------------- */
+#detail {
+  width: 100%;
+  height: 25%;
+}
+
+#table2 {
+  height: 300px;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+#table2 tr td {
+  width: 350px;
+  border-bottom: 1px solid gray;
+  background: white;
+}
+
+#table2 .t1 {
+  width: 200px;
+  border-right: 2px solid gray;
+  box-shadow: 1px 1px 1px 1px gray;
+  background: #f7f5f7;
+  text-align: center;
+}
