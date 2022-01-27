@@ -24,7 +24,7 @@
 <!--            <a sec:authorize="isAuthenticated()" th:href="@{/auth/user/logout}" href="/logout">로그아웃</a>LOGOUT</a>-->
 <!--        </li>-->
         <li>
-        <a sec:authorize="isAnonymous()" th:href="@{/auth/user/save}" href="/src/main/resources/templates/TopMenu/user/joinus.html"> JOIN US </a>
+            <a sec:authorize="isAnonymous()" th:href="@{/auth/user/save}" href="/src/main/resources/templates/TopMenu/user/joinus.html"> JOIN US </a>
         </li>
 
         <a th:href="@{#}" href="/src/main/resources/templates/TopMenu/order/wish.html">

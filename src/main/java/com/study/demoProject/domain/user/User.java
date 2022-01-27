@@ -48,7 +48,7 @@ public class User extends BaseTimeEntity {
     private String user_email; // 이메일
 
     @Column(nullable = false, length = 100)
-    private String user_adress; //주소
+    private String user_address; //주소
 
 //    이미 존재
 //    @Column(nullable = false, length = 100)

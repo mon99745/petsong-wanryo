@@ -22,7 +22,7 @@ public class UserSaveRequestDto {
     private String user_birth;
     private String user_phone;
     private String user_email;
-    private String user_adress;
+    private String user_address;
 
 
     private Role role;
@@ -36,7 +36,7 @@ public class UserSaveRequestDto {
                 .user_birth(user_birth)
                 .user_phone(user_phone)
                 .user_email(user_email)
-                .user_adress(user_adress)
+                .user_address(user_address)
                 .role(Role.USER)
                 .build();
     }

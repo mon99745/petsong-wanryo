@@ -30,10 +30,19 @@ let index = {
     //회원가입
     save: function() {
         let data = { //JavaScript Object
-            username: $("#username").val(),
-            password: $("#password").val(),
-            email: $("#email").val(),
-            nickname: $("#nickname").val()
+//            username: $("#username").val(),
+//            password: $("#password").val(),
+//            email: $("#email").val(),
+//            nickname: $("#nickname").val()
+
+             username: $("username").val(),
+             user_pw: $("user_pw").val(),
+             name: $("user_name").val(),
+             user_nickname: $("user_nickname").val(),
+             user_birth: $("user_birth").val(),
+             user_phone: $("user_phone").val(),
+             user_email: $("user_email").val(),
+             user_address:$("user_address").val()
         }
 
         $.ajax({
@@ -41,7 +50,7 @@ let index = {
             url: "/auth/api/v1/user", //추가 /auth
             data: JSON.stringify(data), //JSON으로 변환
             contentType: "application/json; charset=utf-8", //MIME 타입
-            dataType: "json" //응답 데이터
+            dataType: "text" //응답 데이터
         }).done(function(res) {
             alert("회원가입이 완료되었습니다.");
             location.href = "/";

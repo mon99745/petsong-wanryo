@@ -2,19 +2,20 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <!--    th:href="@{../}" -->
-<head>
+<!--<head th:replace="layout/header :: head ('회원가입')">-->
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <script th:src="@{https://use.fontawesome.com/releases/v5.2.0/js/all.js}" src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
     <title>펫송완료</title>
 
-    <link rel="stylesheet" th:href="@{../css/TopMenu/joinus.css}" href="/src/main/resources/static/css/TopMenu/joinus.css">
-    <link rel="stylesheet" th:href="@{../css/Main/header.scss}" href="/src/main/resources/staticcss/css/Main/header.scss">
+    <link rel="stylesheet" th:href="@{/css/TopMenu/joinus.css}" href="/src/main/resources/static/css/TopMenu/joinus.css">
+    <link rel="stylesheet" th:href="@{/css/Main/header.scss}" href="/src/main/resources/staticcss/css/Main/header.scss">
 
     <!-- 네비게이션 관련 js 링크 -->
     <script th:src="@{https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js}" src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
     <script th:src="@{https://use.typekit.net/hoy3lrg.js}" src="https://use.typekit.net/hoy3lrg.js"></script>
-
+    <!-- 폰트 지정-->
     <script>try { Typekit.load({ async: true }); } catch (e) { }</script>
+
     <script th:src="@{//cdn.jsdelivr.net/npm/sweetalert2@10}" src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
  <!-- 주소찾기 -->
@@ -35,7 +36,7 @@
 </head>
 
 <body>
-<header th:replace="layout/header :: header"></header>
+<!--<header th:replace="layout/header :: header"></header>-->
   <div class="all">
     <div class="container">
 
@@ -43,10 +44,12 @@
 
         
         <main>
-            <form id="needs-validation" novalidate>
+<!--            유효성 검사 :: id="needs-validation" novalidate -->
+<!--            자동완성 off : autocomplete="off"-->
 <!--            <form name=join_form method="post">-->
            <div class="join_form">
-           <div class="joinus"><h2>회원가입</h2></div>
+               <form id="needs-validation" novalidate>
+               <div class="joinus"><h2>회원가입</h2></div>
                <table>
                    <colgroup>
                      <col width="30%"/>
@@ -55,84 +58,100 @@
                    <tbody>
                      <tr>
                        <th><span>아이디</span></th>
-                       <td><input type="text" id="uid" placeholder="ID 를 입력하세요."></td>
+                       <td><input type="text"  id="username" placeholder="ID 를 입력하세요." ></td>
                      </tr>
+
                      <tr>
                       <th><span>비밀번호</span></th>
-                      <td><input type="password" id="pwd" placeholder="영문자+숫자+특수문자 조합"></td>
+                      <td><input type="password" id="user_pw" placeholder="영문자+숫자+특수문자 조합" ></td>
                     </tr>
+
                     <tr>
                       <th><span>비밀번호 확인</span></th>
-                      <td><input type="password" id="repwd" placeholder="비밀번호를 확인하세요"></td>
+                      <td><input type="password"  placeholder="비밀번호를 확인하세요" ></td>
                     </tr>
+
                      <tr>
                        <th><span>이름</span></th>
-                       <td><input type="text" id="uname" placeholder=""></td>
+                       <td><input type="text" id="user_name" placeholder="" ></td>
                      </tr>
                 
                      <tr>
                        <th><span>닉네임</span></th>
-                       <td><input type="text" id="unickname" placeholder=""></td>
+                       <td><input type="text" id="user_nickname" placeholder="" ></td>
                      </tr>
+
                      <tr>
                        <th><span>생년월일</span></th>
-                       <td><input type='date' id="ubirth"/></td>
-                       
+                       <td><input type="date" id="user_birth" ></td>
                      </tr>
+
                      <tr>
                       <th><span>휴대폰 번호</span></th>
-                      <td> <input type="text" id="uphone" class="phone" placeholder=""><span class="mar10">-</span>
-                          <input type="text"  id="uphone" class="phone2" placeholder=""><span class="mar10">-</span>
-                          <input type="text"  id="uphone" class="phone2" placeholder=""></td>
+                        <!-- class phone 삭제 후 placeholder 부여-->
+                      <td> <input type="text" id="user_phone" placeholder = "(-) 생략 후 입력해주세요">
                     </tr>
-                     <tr class="email">
-                       <th><span>이메일</span></th>
-                       <td>
-                         <input type="text" id="email_id" name="email_id" class="email" ><span class="mar10">@</span>
-                         <input type="text" name="email_add" id="email_add" class="email2">
-                         <select name="email_sel" id="email_sel" onchange="change_email();">
-           
-                           <option value="">직접입력</option>
-                           <option value="naver.com">naver</option>
-                           <option value="daum.net">daum</option>
-                           <option value="gmail.com">gmail</option>
-                           <option value="nate.com">nate</option>
-                       </td>
+
+<!--                     이메일은 일단 보류-->
+                     <tr>
+                         <th><span>Email</span></th>
+                         <td><input type="text" id="user_email" ></td>
                      </tr>
-                   <tr>
-                       <th class="address"><span>주소</span></th>
-                       <td>
-           
-               <input type="text" id="sample4_postcode" placeholder="우편번호">
-               <input type="button" id="sample4_Btn" onclick="sample4_execDaumPostcode()" value="우편번호 찾기"><br>
-               <input type="text" id="sample4_roadAddress" placeholder="도로명주소">
-               <input type="text" id="sample4_jibunAddress" placeholder="지번주소">
-               <span id="guide" style="color:#999;display:none"></span>
-               <input type="text" id="sample4_detailAddress" placeholder="상세주소">
-           </td>
-                   </tr>
-                 
+<!--                     <tr class="email">-->
+<!--                       <th><span>이메일</span></th>-->
+<!--                       <td>-->
+<!--                         <input type="text" id="email_id" name="email_id" class="email" ><span class="mar10">@</span>-->
+<!--                         <input type="text" name="email_add" id="email_add" class="email2">-->
+<!--                         <select name="email_sel" id="email_sel" onchange="change_email();">-->
+<!--           -->
+<!--                           <option value="">직접입력</option>-->
+<!--                           <option value="naver.com">naver</option>-->
+<!--                           <option value="daum.net">daum</option>-->
+<!--                           <option value="gmail.com">gmail</option>-->
+<!--                           <option value="nate.com">nate</option>-->
+<!--                       </td>-->
+<!--                     </tr>-->
+
+                     <!--주소 또한 보류-->
+                     <tr>
+                         <th><span>주소</span></th>
+                         <td><input type="text" id="user_address" ></td>
+                     </tr>
+<!--                     <tr>-->
+<!--                       <th class="address"><span>주소</span></th>-->
+<!--                         -->
+<!--                       <td>-->
+<!--               <input type="text" id="sample4_postcode" placeholder="우편번호">-->
+<!--               <input type="button" id="sample4_Btn" onclick="sample4_execDaumPostcode()" value="우편번호 찾기"><br>-->
+<!--               <input type="text" id="sample4_roadAddress" placeholder="도로명주소">-->
+<!--               <input type="text" id="sample4_jibunAddress" placeholder="지번주소">-->
+<!--               <span id="guide" style="color:#999;display:none"></span>-->
+<!--               <input type="text" id="sample4_detailAddress" placeholder="상세주소">-->
+<!--                       </td>-->
+<!--                   </tr>-->
+
                        </tbody>
                </table>
-           
+
            <div class="exform_txt"><span></span> 표시는 필수적으로 입력해주셔야 가입이 가능합니다.</div>
-           <div class="signbtn"><button id="signup-Btn" onclick="joinform_check()" type="button">회원가입</button></div>
+
+<!--                   onclick="joinform_check()"-->
+               </form>
+               <div class="signbtn"><button id="btn-save" >회원가입</button></div>
            </div>
-           </form>
-               </main>
-                 
+        </main>
 
         <div id="footers"></div>
-        <footer th:replace="layout/footer :: footer"></footer>
+<!--        <footer th:replace="layout/footer :: footer"></footer>-->
 
     </div>
     </div>
     <!-- js 링크 -->
-    <script th:src="@{../js/Dog_SS.js}" src="/src/main/resources/static/js/Dog_SS.js"></script>
-    <script th:src="@{../js/address.js}" src="/src/main/resources/static/js/address.js"></script>
-    <script th:src="@{../js/joinform.js}" src="/src/main/resources/static/js/joinform.js"></script>
-    <script th:src="@{/js/user.js}"></script>
-    <script th:src="@{/js/validation.js}"></script>
+    <script th:src="@{/js/mainmenu/Dog/Dog_SS.js}" src="/src/main/resources/static/js/Dog_SS.js"></script>
+    <script th:src="@{/js/address.js}" src="/src/main/resources/static/js/address.js"></script>
+    <script th:src="@{/js/topmenu/user/joinform.js}" src="/src/main/resources/static/js/joinform.js"></script>
+    <script th:src="@{/js/topmenu/user/user.js}"></script>
+    <script th:src="@{/js/topmenu/user/validation.js}"></script>
 
 </body>
 

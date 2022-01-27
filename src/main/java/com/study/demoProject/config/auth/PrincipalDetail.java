@@ -76,7 +76,7 @@ public class PrincipalDetail implements UserDetails {
 
     //사용자 주소
     public String getAdress() {
-        return user.getUser_adress();
+        return user.getUser_address();
     }
 
 

@@ -18,7 +18,7 @@ public class UserController {
      */
     @GetMapping("/auth/user/save")
     public String userSave() {
-        return "layout/user/user-save";
+        return "TopMenu/user/joinus";
     }
 
     /**
