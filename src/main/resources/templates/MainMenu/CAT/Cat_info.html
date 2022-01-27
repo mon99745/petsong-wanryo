@@ -4,26 +4,38 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+   
     <title>펫송완료</title>
-    <!--    <link rel="stylesheet" href="/static/css/index.css">-->
-    <link rel="stylesheet" href="/src/main/resources/static/css/MainMenu/DOG/DogInfo1.css">
-    <link rel="stylesheet" href="/src/main/resources/staticcss//Main/header.scss">
+
+    <!---CSS 링크--->
+    <link rel="stylesheet" th:href="@{../../../static/css/MainMenu/CAT/CAT_info.css}" href="../../../static/css/MainMenu/CAT/CAT_info.css">
+    
     <!-- 네비게이션 관련 js 링크 -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
     <script src="https://use.typekit.net/hoy3lrg.js"></script>
+
+    <!-- header 삽입 -->
+    <header th:replace="layout/header :: header"></header>
+
     <script>try { Typekit.load({ async: true }); } catch (e) { }</script>
 
-    <!-- 폰트어썸 이미지 불러오기 링크 -->
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+     <!-- 폰트어썸 이미지 불러오기 링크 -->
+    <link rel="stylesheet" th:href="@{https://pro.fontawesome.com/releases/v5.10.0/css/all.css}"
+          href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <script th:src = "@{https://use.fontawesome.com/releases/v5.2.0/js/all.js}"
+    src ="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
 
+
+    <!--    header_footer -> layout-->
     <script type="text/javascript">
-        $(document).ready(function () {
-            $("#headers").load("/src/main/resources/templates/Header_Footer/header.html");
-            $("#footers").load("/src/main/resources/templates/Header_Footer/footer.html");
-        }
-        );
+    $(document).ready(function () {
+            $("#headers").load("/src/main/resources/templates/layout/header.html");
+            $("#footers").load("/src/main/resources/templates/layout/footer.html");
+            $("#scrolls1").load("/src/main/resources/templates/layout/scroll1.html");
+            $("#scrolls2").load("/src/main/resources/templates/layout/scroll2.html");
+    }
+    );
     </script>
 
 </head>
@@ -33,8 +45,11 @@
     <div class="container">
 
         <!-- -----------------------------------------------------최고 상단 메뉴 바 + 검색창---------------------------------------------------------------------       -->
-
+      
         <div id="headers"></div>
+        <div id="scrolls1"></div>
+        <div id="scrolls2"></div>
+        <!-- --------------------------------------------------------------------------메인 왼쪽 ------------------------------------------------------------------------ -->
 
         <!-- --------------------------------------------------------------------------메인 왼쪽 ------------------------------------------------------------------------ -->
 
@@ -43,7 +58,7 @@
             <div id="main-top">
 
                 <div id="top-left">
-                    <img src="/src/main/resources/static/image/Dog_FW/product1.jpeg">
+                    <img :src="item.image">
                 </div>
 
 
@@ -258,7 +273,10 @@
     </div>
     </div>
     <!-- js 링크 -->
-    <script src="/src/main/resources/static/js/MainMenu/Dog/Dog_info1.js"></script>
+
+<script th:src="@{https://cdn.jsdelivr.net/npm/vue/dist/vue.js}" src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script th:src="@{../js/MainMenu/Cat/Cat_info.js}" src="/src/main/resources/static/js/MainMenu/Cat/Cat_info.js"></script>
+<script th:src="@{../js/MainMenu/Cat/Cat_info.js}" src="/src/main/resources/static/js/MainMenu/Cat/Cat_FW.js"></script>
 
 </body>
 
