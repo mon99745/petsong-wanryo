@@ -1,29 +1,53 @@
 var heartcount=0;
 var bagunicount=0;
 
+// function jjim(num)
+// {
+//     heartcount++;
+//     console.log(heartcount);
+
+//     if(heartcount%2==0)
+//     {
+//         document.getElementById("empty-heart"+num).src = "/src/main/resources/static/image/icon_logo/empty-heart.png";
+//     }
+
+//     else if(heartcount%2==1)
+//     {
+//         Swal.fire({
+
+
+//             icon : 'success' ,
+//             title: '찜 완료!',
+
+     
+//           })     
+//         document.getElementById("empty-heart"+num).src = "/src/main/resources/static/image/icon_logo/red-heart.png";
+//     }
+
+
+// }
+
 function jjim(num)
 {
-    heartcount++;
-    console.log(heartcount);
-
-    if(heartcount%2==0)
-    {
-        document.getElementById("empty-heart"+num).src = "/src/main/resources/static/image/icon_logo/empty-heart.png";
-    }
-
-    else if(heartcount%2==1)
-    {
-        Swal.fire({
 
 
-            icon : 'success' ,
-            title: '찜 완료!'
-          })     
-        document.getElementById("empty-heart"+num).src = "/src/main/resources/static/image/icon_logo/red-heart.png";
-    }
+    document.getElementById("empty-heart"+num ).setAttribute( 'id', "red-heart"+num );
+    document.getElementById("red-heart"+num).src = "/src/main/resources/static/image/icon_logo/red-heart.png";
+
+
+    var redheart = document.getElementById("red-heart"+num);
+
+
+redheart.onclick = function()
+{
+   redheart.src = "/src/main/resources/static/image/icon_logo/empty-heart.png";
+   document.getElementById("red-heart"+num ).setAttribute( 'id', "empty-heart"+num );
+}
 
 
 }
+
+
 
 
 function baguni(num)
@@ -50,5 +74,24 @@ function baguni(num)
 
 
 
+const heartBtns = document.querySelectorAll('.empty-heart');
 
+heartBtns.forEach(function(btns){ 
+
+    btns.addEventListener ("click", function() { 
+        btns.classList.toggle('full-heart');
+    });
+})
+
+
+const cartBtns = document.querySelectorAll('.empty-cart');
+
+cartBtns.forEach(function(btns){ 
+
+    btns.addEventListener ("click", function() { 
+        btns.classList.toggle('oncart');
+       
+     
+    });
+})
 

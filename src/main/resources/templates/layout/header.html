@@ -5,8 +5,9 @@
 <head th:fragment="head (title)">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="stylesheet" th:href="@{../css/layout_CSS/header.css}" href="/src/main/resources/static/css/layout_CSS/header.css">
+    <link rel="stylesheet" th:href="@{/css/TopMenu/joinus.css}" href="/src/main/resources/static/css/TopMenu/joinus.css">
+    <link rel="stylesheet" th:href="@{/css/TopMenu/login.css}" href="/src/main/resources/static/css/TopMenu/login.css">
+    <link rel="stylesheet" th:href="@{/css/layout_CSS/header.css}" href="/src/main/resources/static/css/layout_CSS/header.css">
 </head>
 <body>
 <!--header 설정 -->
@@ -21,7 +22,11 @@
             <a sec:authorize="isAnonymous()" th:href="@{/auth/user/login}" href="/src/main/resources/templates/TopMenu/user/login.html">LOGIN</a>
         <li>
         <li>
+<<<<<<< HEAD
             <a sec:authorize="isAuthenticated()" th:href="@{/auth/user/logout}" href="/logout">로그아웃</a>LOGOUT</a>
+=======
+            <a sec:authorize="isAnonymous()" th:href="@{/auth/user/save}" href="/src/main/resources/templates/TopMenu/user/joinus.html"> JOIN US </a>
+>>>>>>> 6545baf (joinus err -Editing)
         </li>
 
         <a sec:authorize="isAnonymous()" th:href="@{/auth/user/save}" href="/src/main/resources/templates/TopMenu/user/joinus.html">
@@ -41,24 +46,29 @@
         </a>
     </ul>
 
-    <!-- 회원 정보 출력 -->
-        <div id="right">
-            <div id="welcome">
-            <span>XXX님 환영합니다!</span>
+    <!-- 로그인 시 회원 정보 출력 -->
+        <div id="right" >
+            <div id="welcome" sec:authorize="isAuthenticated()">
+            <span th:text="${user.user_nickname}" >user_nickname</span>님 환영합니다!
         </div>
 
     <!-- 우측 상단 검색창 -->
     <div id="search">
-        <input type="text" class="search-text" placeholder="Search" aria-label="Search">
-        <button class="search-btn"><i class="fas fa-search" type="submit"></i>Search</button>
+        <input type="text" class="search-text" placeholder="Search">
+        <button class="search-btn" type="submit"></button>
     </div>
 </div>
 
 </div>
 <!-- --------------------------------------------------------------   로고 -------------------------------------------------------------------------------------- -->
 <div id="logo">
+<<<<<<< HEAD
     <a th:href="@{../templates/Main/index.html}" href="/src/main/resources/templates/index.html">
         <img class="logo-img" th:src="@{../../static/image/mainpage/logo.png}" src="/src/main/resources/static/image/mainpage/logo.png" alt="My Image">
+=======
+    <a th:href="@{/index}" href="/src/main/resources/templates/index.html">
+        <img class="logo-img" th:src="@{/image/mainpage/logo.png}" src="/src/main/resources/static/image/mainpage/logo.png" alt="My Image">
+>>>>>>> 1ee3874 (thyleaf header -update)
     </a>
 </div>
 
@@ -138,7 +148,7 @@
 
         <!-- 메뉴 종류 넣기 -->
         <a href="/src/main/resources/templates/MainMenu/DOG/Dog_main.html">
-            <p id="DOG">DOG </p>
+            <p id="DOG">DOG</p>
         </a>
         <div id="drop1" class="dropdown">
             <a href="/src/main/resources/templates/MainMenu/DOG/Dog_SS.html">

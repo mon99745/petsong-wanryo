@@ -46,12 +46,12 @@ public class PrincipalDetail implements UserDetails {
     //사용자 패스워드
     @Override
     public String getPassword() {
-        return user.getUser_pw();
+        return user.getPassword();
     }
 
     // 사용자 이름
     public String getName() {
-        return user.getName();
+        return user.getUser_name();
     }
 
     // 사용자 휴대폰 번호
@@ -76,7 +76,7 @@ public class PrincipalDetail implements UserDetails {
 
     //사용자 주소
     public String getAdress() {
-        return user.getUser_adress();
+        return user.getUser_address();
     }
 
 

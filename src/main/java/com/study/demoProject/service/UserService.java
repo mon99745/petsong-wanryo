@@ -15,14 +15,8 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 public class UserService {
 
-    private UserRepository userRepository;
-    private BCryptPasswordEncoder bCryptPasswordEncoder;
-
-    //@Lazy는 임시방편 사용
-    void FormLoginAuthenticationProvider(@Lazy BCryptPasswordEncoder bCryptPasswordEncoder)
-    {
-        this.bCryptPasswordEncoder = bCryptPasswordEncoder;
-    }
+    private final UserRepository userRepository;
+    private final BCryptPasswordEncoder bCryptPasswordEncoder;
 
 
     /**
@@ -30,8 +24,8 @@ public class UserService {
      */
     @Transactional
     public Long save(User user) {
-        String hashPw = bCryptPasswordEncoder.encode(user.getUser_pw());
-        user.setUser_pw(hashPw);
+        String hashPw = bCryptPasswordEncoder.encode(user.getPassword());
+        user.setPassword(hashPw);
         return userRepository.save(user).getCode();
     }
 
@@ -45,7 +39,7 @@ public class UserService {
     public Long update(User user,
                        @AuthenticationPrincipal PrincipalDetail principalDetail) {
         User userEntity = userRepository.findByUsername(user.getUsername()).orElseThrow(() -> new IllegalArgumentException("해당 회원이 없습니다. Code=" + user.getUsername()));
-        userEntity.update(bCryptPasswordEncoder.encode(user.getUser_pw()), user.getUser_nickname());
+        userEntity.update(bCryptPasswordEncoder.encode(user.getPassword()), user.getUser_nickname());
         principalDetail.setUser(userEntity); //추가
         return userEntity.getCode();
     }

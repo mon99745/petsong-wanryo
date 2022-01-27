@@ -11,6 +11,6 @@ import java.util.Optional;
 @Repository // 생략 가능
 public interface UserRepository extends JpaRepository<User, Long> {
 
-    Optional<User> findByUsername(@Param("user_id") String user_id);
+    Optional<User> findByUsername(@Param("username") String username);
 
 }

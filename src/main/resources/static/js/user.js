@@ -30,13 +30,23 @@ let index = {
     //회원가입
     save: function() {
         let data = { //JavaScript Object
-            username: $("#username").val(),
-            password: $("#password").val(),
-            email: $("#email").val(),
-            nickname: $("#nickname").val()
+//            username: $("#username").val(),
+//            password: $("#password").val(),
+//            email: $("#email").val(),
+//            nickname: $("#nickname").val()
+
+             username: $("#username").val(),
+             password: $("#password").val(),
+             user_name: $("#user_name").val(),
+             user_nickname: $("#user_nickname").val(),
+             user_birth: $("#user_birth").val(),
+             user_phone: $("#user_phone").val(),
+             user_email: $("#user_email").val(),
+             user_address:$("#user_address").val()
         }
 
         $.ajax({
+            async : true, // true면 비동기방식을 사용하겠다는 의미.
             type: "POST", //Http method
             url: "/auth/api/v1/user", //추가 /auth
             data: JSON.stringify(data), //JSON으로 변환

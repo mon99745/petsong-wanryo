@@ -19,10 +19,7 @@
             src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
     <script th:href="@{https://use.typekit.net/hoy3lrg.js}"
             src="https://use.typekit.net/hoy3lrg.js"></script>
-
-    <!-- header 삽입 -->
-    <header th:replace="layout/header :: header"></header>
-
+    <!--  -->
     <script>try { Typekit.load({ async: true }); } catch (e) { }</script>
 
     <script th:src = "@{https://use.fontawesome.com/releases/v5.2.0/js/all.js}"
@@ -47,13 +44,15 @@
 </head>
 
 <body>
+
     <div class="all">
     <div class="container">
 
         <!-- -----------------------------------------------------최고 상단 메뉴 바 + 검색창---------------------------------------------------------------------       -->
 
-<!--        <div id="headers"></div>-->
-
+        <div id="headers"></div>
+        <!-- header 삽입 -->
+        <header th:replace="layout/header :: header"></header>
     <!-- ----------------------------------------------사이드 퀵메뉴---------------------------메인 왼쪽 ------------------------------------------------------------------------ -->
 
              <div id="scrolls1"></div>
@@ -395,6 +394,7 @@
     </div>
     </div>
     <!-- js 링크 -->
+
     <script th:src="@{../js/index.js}" src="/src/main/resources/static/js/index.js"></script>
 
 </body>
