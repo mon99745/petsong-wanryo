@@ -42,16 +42,16 @@
         </a>
     </ul>
 
-    <!-- 회원 정보 출력 -->
-        <div id="right">
-            <div id="welcome">
-            <span>XXX님 환영합니다!</span>
+    <!-- 로그인 시 회원 정보 출력 -->
+        <div id="right" >
+            <div id="welcome" sec:authorize="isAuthenticated()">
+            <span th:text="${user.user_nickname}" >user_nickname</span>님 환영합니다!
         </div>
 
     <!-- 우측 상단 검색창 -->
     <div id="search">
-        <input type="text" class="search-text" placeholder="Search" aria-label="Search">
-        <button class="search-btn"><i class="fas fa-search" type="submit"></i>Search</button>
+        <input type="text" class="search-text" placeholder="Search">
+        <button class="search-btn" type="submit"></button>
     </div>
 </div>
 

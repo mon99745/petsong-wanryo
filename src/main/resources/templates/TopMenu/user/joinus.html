@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <!--    th:href="@{../}" -->
+<!--    th:replace="layout/header :: head  : head의 작업을 header.html 파일에서 대체하겠다는 선언-->
     <head th:replace="layout/header :: head ('회원가입')">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <script th:src="@{https://use.fontawesome.com/releases/v5.2.0/js/all.js}" src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
