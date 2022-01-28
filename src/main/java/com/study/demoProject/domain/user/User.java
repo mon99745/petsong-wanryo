@@ -30,10 +30,10 @@ public class User extends BaseTimeEntity {
     @Column(nullable = false, length = 100)
     private String password; // 비밀번호
 
-    @Column(nullable = false, length = 30, name = "user_name")
+    @Column(nullable = false, length = 30)
     // 이름
     // 컬럼명은 user_name으로 설정
-    private String name;
+    private String user_name;
 
     @Column(nullable = false, length = 20)
     private String user_nickname; //닉네임

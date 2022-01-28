@@ -51,7 +51,7 @@ public class PrincipalDetail implements UserDetails {
 
     // 사용자 이름
     public String getName() {
-        return user.getName();
+        return user.getUser_name();
     }
 
     // 사용자 휴대폰 번호

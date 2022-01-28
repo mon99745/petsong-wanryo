@@ -37,7 +37,7 @@ let index = {
 
              username: $("#username").val(),
              password: $("#password").val(),
-             name: $("#name").val(),
+             user_name: $("#user_name").val(),
              user_nickname: $("#user_nickname").val(),
              user_birth: $("#user_birth").val(),
              user_phone: $("#user_phone").val(),

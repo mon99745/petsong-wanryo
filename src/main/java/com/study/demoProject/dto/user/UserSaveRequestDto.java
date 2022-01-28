@@ -17,7 +17,7 @@ public class UserSaveRequestDto {
 
     private String username;
     private String password;
-    private String name;
+    private String user_name;
     private String user_nickname;
     private String user_birth;
     private String user_phone;
@@ -31,7 +31,7 @@ public class UserSaveRequestDto {
         return User.builder()
                 .username(username)
                 .password(password)
-                .name(name)
+                .user_name(user_name)
                 .user_nickname(user_nickname)
                 .user_birth(user_birth)
                 .user_phone(user_phone)

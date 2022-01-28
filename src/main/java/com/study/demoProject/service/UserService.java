@@ -4,6 +4,7 @@ import com.study.demoProject.config.auth.PrincipalDetail;
 import com.study.demoProject.domain.user.User;
 import com.study.demoProject.domain.user.UserRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -17,9 +18,7 @@ public class UserService {
     private final UserRepository userRepository;
     private final BCryptPasswordEncoder bCryptPasswordEncoder;
 
-    /**
-     * 회원가입 로직 이게 문제다 시벌
-     */
+
     /**
      * 회원가입 로직
      */
