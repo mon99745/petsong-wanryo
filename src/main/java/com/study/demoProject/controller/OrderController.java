@@ -1,31 +1,30 @@
 package com.study.demoProject.controller;
 
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
-@Controller
 public class OrderController {
-        /**
-         * CatMain
-         */
-        @GetMapping("/auth/MainMenu/CAT/CatMain")
-        public String CatMain() {
-            return "MainMenu/CAT/Cat_main.html";
-        }
-
-        /**
-        * CatSS
-        */
-        @GetMapping("/auth/MainMenu/CAT/CatSS")
-        public String CatSS() {
-        return "MainMenu/CAT/Cat_SS.html";
+    // Top Menu 컨트롤러
+    /**
+     * cart.html
+     */
+    @GetMapping("/auth/TopMenu/order/cart")
+    public String cart() {
+        return "TopMenu/order/cart.html";
     }
 
-        /**
-        * CatFW
-        */
-        @GetMapping("/auth/MainMenu/CAT/CatFW")
-        public String CatFW() {
-        return "MainMenu/CAT/Cat_FW.html";
+    /**
+     * orderlist.html
+     */
+    @GetMapping("/auth/TopMenu/order/orderlist")
+    public String orderlist() {
+        return "TopMenu/order/orderlist.html";
+    }
+
+    /**
+     * wish.html
+     */
+    @GetMapping("/auth/TopMenu/order/wish")
+    public String wish() {
+        return "TopMenu/order/wish.html";
     }
 }
