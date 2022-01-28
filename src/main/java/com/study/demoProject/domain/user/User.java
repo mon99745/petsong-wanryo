@@ -28,7 +28,7 @@ public class User extends BaseTimeEntity {
 
     //@Override
     @Column(nullable = false, length = 100)
-    private String user_pw; // 비밀번호
+    private String password; // 비밀번호
 
     @Column(nullable = false, length = 30, name = "user_name")
     // 이름
@@ -62,8 +62,8 @@ public class User extends BaseTimeEntity {
     /**
      * 비밀번호 암호화 메소드
      */
-    public void setUser_pw(String User_pw) {
-        this.user_pw = User_pw;
+    public void setPassword(String Password) {
+        this.password = Password;
     }
 
     /**
@@ -77,7 +77,7 @@ public class User extends BaseTimeEntity {
      * 회원수정 메소드
      */
     public void update(String user_pw, String user_nickname) {
-        this.user_pw = user_pw;
+        this.password = password;
         this.user_nickname = user_nickname;
     }
 }

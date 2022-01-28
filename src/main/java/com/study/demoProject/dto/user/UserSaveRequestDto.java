@@ -16,8 +16,8 @@ import javax.persistence.Column;
 public class UserSaveRequestDto {
 
     private String username;
-    private String user_pw;
-    private String user_name;
+    private String password;
+    private String name;
     private String user_nickname;
     private String user_birth;
     private String user_phone;
@@ -30,8 +30,8 @@ public class UserSaveRequestDto {
     public User toEntity() {
         return User.builder()
                 .username(username)
-                .user_pw(user_pw)
-                .name(user_name)
+                .password(password)
+                .name(name)
                 .user_nickname(user_nickname)
                 .user_birth(user_birth)
                 .user_phone(user_phone)

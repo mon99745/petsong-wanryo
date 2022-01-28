@@ -46,7 +46,7 @@ public class PrincipalDetail implements UserDetails {
     //사용자 패스워드
     @Override
     public String getPassword() {
-        return user.getUser_pw();
+        return user.getPassword();
     }
 
     // 사용자 이름

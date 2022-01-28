@@ -58,44 +58,44 @@
                    <tbody>
                      <tr>
                        <th><span>아이디</span></th>
-                       <td><input type="text"  id="username" placeholder="ID 를 입력하세요." ></td>
+                       <td><input type="text"  name ="username" id="username" placeholder="ID 를 입력하세요." ></td>
                      </tr>
 
                      <tr>
                       <th><span>비밀번호</span></th>
-                      <td><input type="password" id="user_pw" placeholder="영문자+숫자+특수문자 조합" ></td>
+                      <td><input type="password" name ="password" id="password" placeholder="영문자+숫자+특수문자 조합" ></td>
                     </tr>
 
-                    <tr>
-                      <th><span>비밀번호 확인</span></th>
-                      <td><input type="password"  placeholder="비밀번호를 확인하세요" ></td>
-                    </tr>
+<!--                    <tr>-->
+<!--                      <th><span>비밀번호 확인</span></th>-->
+<!--                      <td><input type="password"  placeholder="비밀번호를 확인하세요" ></td>-->
+<!--                    </tr>-->
 
                      <tr>
                        <th><span>이름</span></th>
-                       <td><input type="text" id="user_name" placeholder="" ></td>
+                       <td><input type="text" name ="name" id="name" placeholder="" ></td>
                      </tr>
                 
                      <tr>
                        <th><span>닉네임</span></th>
-                       <td><input type="text" id="user_nickname" placeholder="" ></td>
+                       <td><input type="text" name ="user_nickname" id="user_nickname" placeholder="" ></td>
                      </tr>
 
                      <tr>
                        <th><span>생년월일</span></th>
-                       <td><input type="date" id="user_birth" ></td>
+                       <td><input type="date" name ="user_birth" id="user_birth" ></td>
                      </tr>
 
                      <tr>
                       <th><span>휴대폰 번호</span></th>
                         <!-- class phone 삭제 후 placeholder 부여-->
-                      <td> <input type="text" id="user_phone" placeholder = "(-) 생략 후 입력해주세요">
+                      <td> <input type="text" name ="user_phone" id="user_phone" placeholder = "(-) 생략 후 입력해주세요">
                     </tr>
 
 <!--                     이메일은 일단 보류-->
                      <tr>
                          <th><span>Email</span></th>
-                         <td><input type="text" id="user_email" ></td>
+                         <td><input type="text" name ="user_email" id="user_email" ></td>
                      </tr>
 <!--                     <tr class="email">-->
 <!--                       <th><span>이메일</span></th>-->
@@ -115,7 +115,7 @@
                      <!--주소 또한 보류-->
                      <tr>
                          <th><span>주소</span></th>
-                         <td><input type="text" id="user_address" ></td>
+                         <td><input type="text" name ="user_address" id="user_address" ></td>
                      </tr>
 <!--                     <tr>-->
 <!--                       <th class="address"><span>주소</span></th>-->
@@ -148,10 +148,18 @@
     </div>
     <!-- js 링크 -->
     <script th:src="@{/js/mainmenu/Dog/Dog_SS.js}" src="/src/main/resources/static/js/Dog_SS.js"></script>
-    <script th:src="@{/js/address.js}" src="/src/main/resources/static/js/address.js"></script>
+<!--    <script th:src="@{/js/address.js}" src="/src/main/resources/static/js/address.js"></script>-->
     <script th:src="@{/js/topmenu/user/joinform.js}" src="/src/main/resources/static/js/joinform.js"></script>
     <script th:src="@{/js/topmenu/user/user.js}"></script>
     <script th:src="@{/js/topmenu/user/validation.js}"></script>
+    <script th:src="@{https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js}" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
+
+</body>
+
+</html>
+
 
 </body>
 
