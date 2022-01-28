@@ -101,10 +101,10 @@
                 </a>
             </div>
             <div id="part2">
-                <a href="/src/main/resources/templates/MainMenu/CAT/Cat_SS.html">
+                <a th:href="@{/auth/MainMenu/CAT/CatSS}" href="/src/main/resources/templates/MainMenu/CAT/Cat_SS.html">
                     <li>S/S</li>
                 </a>
-                <a href="/src/main/resources/templates/MainMenu/CAT/Cat_FW.html">
+                <a th:href="@{/auth/MainMenu/CAT/CatFW}" href="/src/main/resources/templates/MainMenu/CAT/Cat_FW.html">
                     <li>F/W</li>
                 </a>
             </div>
@@ -149,14 +149,14 @@
                 <li>F/W</li>
             </a>
         </div>
-        <a href="/src/main/resources/templates/MainMenu/CAT/Cat_main.html">
+        <a th:href="@{/auth/MainMenu/CAT/CatMain}" href="/src/main/resources/templates/MainMenu/CAT/Cat_main.html">
             <p id="CAT">CAT </p>
         </a>
         <div id="drop2" class="dropdown">
-            <a href="/src/main/resources/templates/MainMenu/CAT/Cat_SS.html">
+            <a th:href="@{/auth/MainMenu/CAT/CatSS}" href="/src/main/resources/templates/MainMenu/CAT/Cat_SS.html">
                 <li>S/S</li>
             </a>
-            <a href="/src/main/resources/templates/MainMenu/CAT/Cat_FW.html">
+            <a th:href="@{/auth/MainMenu/CAT/CatFW}" href="/src/main/resources/templates/MainMenu/CAT/Cat_FW.html">
                 <li>F/W</li>
             </a>
         </div>
@@ -200,7 +200,8 @@
     </ul>
 
 </div>
-    </header>
-    <script th:src="@{../js/layout_JS/header.js}" src="/src/main/resources/static/js/layout_JS/header.js"></script>
+    <script th:src="@{/js/layout_JS/header.js}" src="/src/main/resources/static/js/layout_JS/header.js"></script>
+</header>
+
 </body>
 </html>
