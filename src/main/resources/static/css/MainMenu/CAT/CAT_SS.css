@@ -1,7 +1,17 @@
 /* --------------------------------css 기본틀--------------------------------------------- */
+@font-face {
+  font-family: 'ChosunGu';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunGu.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 * {
   margin: 0; /* 마진 리셋 */
   padding: 0; /* 패딩 리셋 */
+  font-family:   'ChosunGu';
+
 }
 
 body {
@@ -50,6 +60,42 @@ main {
   width: 100%;
   background-color: white;
   text-align: center;
+}
+
+
+/* ---------------------아이콘-------------------------- */
+.icon {
+  float: right;
+  margin: 10px 0;
+  width: 100%;
+}
+
+
+.empty-cart
+{
+  float: right;
+	width:20px;
+}
+.oncart
+{
+	background-image: url("/bin/main/static/image/icon_logo/full-cart.png");
+	height: 20px;
+	width: 20px;
+	background-size: 100% 100%;
+}
+
+.empty-heart
+{
+  float: right;
+  margin-left: 10px;
+  width:20px;
+}
+.full-heart
+{
+	background-image: url("/bin/main/static/image/icon_logo/full-heart.png");
+	height: 20px;
+	width: 20px;
+	background-size: 100% 100%;
 }
 
 /* ------------------------------------메인 상단---------------------------- */
@@ -134,9 +180,10 @@ h4 {
 /* -----------------------------------------메인 중간---------------------------------- */
 #bottom-main-middle {
   width: 100%;
-  height: 80%;
+  height: 90%;
   margin: 0 auto;
 }
+
 
 
 /*------------------------------필터, 검색 바------------------------------------- */
@@ -163,18 +210,31 @@ h4 {
   border-bottom: 3px solid #2b210e;
   color: #2b210e;
 }
+
+.total{
+  text-align: left ;
+  font-size: 25px;
+  font-weight: bold;
+  margin-left: 20px;
+  width: 100%;
+}
 /* -------------------------------------------------------------------- */
 .search-bar{
   width: 210px;
   height: 40px;
   float: right;
   margin-right: 80px;
+  font-size: 20px;
 }
 
-#cloth{
-  margin-top: 50px;
+#list{
+  margin-top: 30px;
+
 }
 
+#list li{
+  margin: 20px 0;
+}
 .cloth-layout{
   width: 420px;
   height: 500px;
@@ -185,6 +245,14 @@ h4 {
   width: 400px;
   height: 400px;
 }
+
+.cloth-image:hover /*이미지 마우스 오버시 불투명 */
+{
+  opacity: 0.4;
+  filter: alpha(opacity=40);
+
+}
+
 .cloth-title{
   width: 95%;
   height: 40px;
@@ -198,11 +266,12 @@ h4 {
 }
 .cloth-price{
   width: 100%;
-  height: 50px;
+  height: 20px;
   text-align: left;
   margin-top: 10px;
   margin-left: 10px;
   font-size: 20px;
+  color: #ff4800;
 }
 
 

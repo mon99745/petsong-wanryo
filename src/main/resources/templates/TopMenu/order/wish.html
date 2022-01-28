@@ -1,30 +1,41 @@
 <!--주석 필수-->
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<!--    th:href="@{../}" -->
+
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+   
     <title>펫송완료</title>
 
+    <!---CSS 링크--->
     <link rel="stylesheet" th:href="@{../css/TopMenu/wish.css}" href="/src/main/resources/static/css/TopMenu/wish.css">
-    <link rel="stylesheet" th:href="@{../css/Main/header.scss}" href="/src/main/resources/staticcss/css/Main/header.scss">
-
+    
     <!-- 네비게이션 관련 js 링크 -->
-    <script th:src="@{https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js}" src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
-    <script th:src="@{https://use.typekit.net/hoy3lrg.js}" src="https://use.typekit.net/hoy3lrg.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+    <script src="https://use.typekit.net/hoy3lrg.js"></script>
+
+    <!-- header 삽입 -->
+    <header th:replace="layout/header :: header"></header>
+
     <script>try { Typekit.load({ async: true }); } catch (e) { }</script>
 
-    <!-- 폰트어썸 이미지 불러오기 링크 -->
-    <link rel="stylesheet" th:href="@{https://pro.fontawesome.com/releases/v5.10.0/css/all.css}" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+     <!-- 폰트어썸 이미지 불러오기 링크 -->
+    <link rel="stylesheet" th:href="@{https://pro.fontawesome.com/releases/v5.10.0/css/all.css}"
+          href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <script th:src = "@{https://use.fontawesome.com/releases/v5.2.0/js/all.js}"
+    src ="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
 
+
+    <!--    layout -> layout-->
     <script type="text/javascript">
-        $(document).ready(function () {
+    $(document).ready(function () {
             $("#headers").load("/src/main/resources/templates/layout/header.html");
             $("#footers").load("/src/main/resources/templates/layout/footer.html");
-        }
-        );
+            $("#scrolls1").load("/src/main/resources/templates/layout/scroll1.html");
+            $("#scrolls2").load("/src/main/resources/templates/layout/scroll2.html");
+    }
+    );
     </script>
 
 </head>
@@ -36,21 +47,123 @@
         <!-- -----------------------------------------------------최고 상단 메뉴 바 + 검색창---------------------------------------------------------------------       -->
 
         <div id="headers"></div>
+        <div id="scrolls1"></div>
+        <div id="scrolls2"></div>
 
-        <!-- --------------------------------------------------------------------------메인 왼쪽 ------------------------------------------------------------------------ -->
+        <!-- ------------------------------------------------------------메인---------------------------------------------------- -->
+        <main>
+                <div id="main-top">
+                    <div id="Wish">Wish</div>
+                </div>
+
+                    <div id="main-middle">
+                            <table id="wish-table" border="0">
+                                <tr>
+                                    <th><input type="checkbox" class="check"> </th>
+                                    <th class="th0"></th>
+                                    <th class="th1"> 상품정보</th>
+                                    <th id="th2"> 주문금액</th>
+                                    <th id="th3"> 수량</th>
+                                    <th> 합계</th>
+                                  
+                                </tr>
+                                <tr>
+                                    <th><input type="checkbox" class="check"> </th>
+                                    <td><img src="../../../static/image/Dog_FW/Dog_FW1.jpg"></td>
+                                    <td>누빌패딩강아지</td>
+                                    <td>31,200원</td>
+                                    <td>3</td>
+                                    <td>31,200원</td>
+                                   
+                                </tr>
+                                <tr>
+                                    <th><input type="checkbox" class="check"> </th>
+                                    <td><img src="../../../static/image/Cat_FW/catfw_2.jpeg"></td>
+                                    <td>고양이</td>
+                                    <td>40,000원</td>
+                                    <td>2</td>
+                                    <td>80,000원</td>
+
+                                   
+                                </tr>
+                                
+
+                            </table>
+                    </div>
+                   
 
 
-        <!-- --------------------------------------------메인 bottom---------------------------------- -->
+
+
+
+
+
+                    <div id="main-bottom">
+                        <div id="bottom1">
+                            <button class="delete-btn">선택상품삭제</button>
+                            <li class="coupon">보유쿠폰</li>
+                            <select class="sale">
+                                <option >선택안함</option>                               
+                                <option >1,000원(신규가입) ~10/31</option>                              
+                                <option >3,000원(정기월말쿠폰) ~(매월 말)</option>
+                                <option >5,000원()</option>
+
+                            </select>
+                            <button class="use-btn">사용</button>
+                            <button class="use-btn">사용취소</button>
+                        </div>
+                        <div id="bottom2">
+                            <table id="cost-table" border="1">
+                                <tr class="cost-title">
+                                    <td>총 주문금액</td>
+                                    <td>총 배송비</td>
+                                    <td>총 할인 금액</td>
+                                    <td>총 결제금액</td>
+                                </tr>
+                                <tr>
+                                    <td>111,200원</td>
+                                    <td>+ 3,000원</td>
+                                    <td>- 4,000원</td>
+                                    <td>= 101,200원</td>
+
+                                </tr>
+                            </table>
+                        </div>
+
+
+                        <div id="bottom3">
+                            <button class="bottom-btn"> 주문하기 </button>
+                            <button class="bottom-btn"> 쇼핑 게속하기 </button>
+
+                        </div>
+
+
+                    </div>
+
+             
+
+        
+
+        </main>
+
+
+
+
+
+
 
         <!-- ------------------------------------------------------------------------------------푸터------------------------------------------------------------------------------ -->
         <div id="footers"></div>
 
 
+
+
+
     </div>
     </div>
     <!-- js 링크 -->
-    <script th:src="@{../js/Dog_SS.js}" src="/src/main/resources/static/js/Dog_SS.js"></script>
+    <script th:src="@{https://cdn.jsdelivr.net/npm/vue/dist/vue.js}" src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script th:src="@{../js/topmenu/order/cart.js}" src="../../../static/js/topmenu/order/wish.js"></script>
 
 </body>
-
 </html>
