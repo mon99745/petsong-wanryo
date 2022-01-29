@@ -30,20 +30,21 @@
           href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
-<!--    header_footer -> layout-->
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $("#headers").load("/src/main/resources/templates/layout/header.html");
-            $("#footers").load("/src/main/resources/templates/layout/footer.html");
-            $("#scrolls1").load("/src/main/resources/templates/layout/scroll1.html");
-            $("#scrolls2").load("/src/main/resources/templates/layout/scroll2.html");
-        }
-        );
-    </script>
+<!--    <script type="text/javascript">-->
+<!--        $(document).ready(function () {-->
+<!--            $("#headers").load("/src/main/resources/templates/layout/header.html");-->
+<!--            $("#footers").load("/src/main/resources/templates/layout/footer.html");-->
+<!--            $("#scrolls1").load("/src/main/resources/templates/layout/scroll1.html");-->
+<!--            $("#scrolls2").load("/src/main/resources/templates/layout/scroll2.html");-->
+<!--        }-->
+<!--        );-->
+<!--    </script>-->
 
 </head>
 
 <body>
+<!-- header 삽입 -->
+        <header th:replace="/layout/header :: header"></header>
 
     <div class="all">
     <div class="container">
@@ -51,8 +52,7 @@
         <!-- -----------------------------------------------------최고 상단 메뉴 바 + 검색창---------------------------------------------------------------------       -->
 
         <div id="headers"></div>
-        <!-- header 삽입 -->
-        <header th:replace="layout/header :: header"></header>
+
     <!-- ----------------------------------------------사이드 퀵메뉴---------------------------메인 왼쪽 ------------------------------------------------------------------------ -->
 
              <div id="scrolls1"></div>
@@ -255,7 +255,7 @@
         <div id="footers"></div>
 
         <!-- footer 삽입 -->
-        <footer th:replace="layout/footer :: footer"></footer>
+<!--        <footer th:replace="layout/footer :: footer"></footer>-->
 
 
 <!--<div style=" width: 100%; height: 1300px;">-->
@@ -382,18 +382,15 @@
 <!--            <tr>-->
 <!--                <td>PE</td>-->
 <!--                <td>Park Jeong-Ho</td>-->
-<!--                <td><a href="https://github.com/pjh1011409"><i class="fab fa-github fa-2x"></i></a></td>-->
-<!—                <td><i class="fas fa-envelope "></i>  pjh31208@naver.com</td>—>
-<!—                <td><i class="fab fa-blogger"></i><a href="https://velog.io/@pjh1011409" target="_blank">  https://velog.io/@pjh1011409</a> </td>—>
-<!—            </tr>—>
-
-<!—        </table>—>
+<!--&lt;!&ndash;                <td><a href="https://github.com/pjh1011409"><i class="fab fa-github fa-2x"></i></a></td>&ndash;&gt;-->
+<!--               <td><i class="fas fa-envelope "></i>  pjh31208@naver.com</td>         <td><i class="fab fa-blogger"></i><a href="https://velog.io/@pjh1011409" target="_blank">  https://velog.io/@pjh1011409</a> </td>-->
+<!--          </tr>-->
+<!--        </table>-->
 
 
-<!—    </div>—>
-
-<!—    </div>—>
-<!—</div>—>
+<!--  </div>-->
+    </div>
+</div>
 
 
     <!— js 링크 —>
