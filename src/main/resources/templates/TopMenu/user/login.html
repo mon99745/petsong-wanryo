@@ -59,8 +59,10 @@
 
             <!-- 로그인 유지 체크박스 추가-->
             <div class="checkbox mb-3">
-                <input type="checkbox" name="remember-me" id="#">
-                <label for="#" aria-describedby="rememberMeHelp">로그인 유지</label>
+                <ul>
+                    <input type="checkbox" name="remember-me" id="#">
+                    <li><a label for="#" aria-describedby="rememberMeHelp">로그인 유지</a></label></li>
+                </ul>
             </div>
             <button id="Login-Btn" >로그인</button>
 
@@ -73,10 +75,11 @@
                 <li><a href="#">비밀번호찾기</a></li>
             </ul>
 
-        </form>
+            <!--회원가입 안내-->
+            <button id="Login-Btn" type="button" th:onclick="'location.href=\''+ @{/auth/user/save} + '\''"
+                    onclick="location.href='joinus.html' ">회원가입</button>
 
-        <!--회원가입 안내-->
-            <button id="Login-Btn" type= "submit" th:href="@{/auth/user/save}" href="/src/main/resources/templates/TopMenu/user/joinus.html">회원가입</button>
+        </form>
 
         </div>
 </main>
