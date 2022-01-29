@@ -14,6 +14,7 @@
     <!-- 네비게이션 관련 js 링크 -->
     <script th:src="@{https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js}" src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
     <script th:src="@{https://use.typekit.net/hoy3lrg.js}" src="https://use.typekit.net/hoy3lrg.js"></script>
+
         <!-- 폰트 지정-->
         <script>try { Typekit.load({ async: true }); } catch (e) { }</script>
 
@@ -39,7 +40,6 @@
 <body>
 <!-- header 삽입 -->
 <header th:replace="layout/header :: header"></header>
-
   <div class="all">
     <div class="container">
 
@@ -47,10 +47,12 @@
 
         
         <main>
+
 <!--            유효성 검사 :: id="needs-validation" novalidate -->
 <!--            자동완성 off : autocomplete="off"-->
 <!--            <form name=join_form method="post">-->
-           <div class="join_form">
+            <form name=join_form method="post">
+             <div class="join_form">
                <form id="needs-validation" novalidate>
                <div class="joinus"><h2>회원가입</h2></div>
                <table>
@@ -141,31 +143,24 @@
 <!--                   onclick="joinform_check()"-->
                </form>
                <div class="signbtn"><button id="btn-save" >회원가입</button></div>
-           </div>
+             </div>
         </main>
 
         <div id="footers"></div>
 
-
     </div>
-    </div>
+  </div>
 <footer th:replace="layout/footer :: footer"></footer>
 
     <!-- js 링크 -->
+
     <script th:src="@{/js/mainmenu/Dog/Dog_SS.js}" src="/src/main/resources/static/js/Dog_SS.js"></script>
 <!--    <script th:src="@{/js/address.js}" src="/src/main/resources/static/js/address.js"></script>-->
     <script th:src="@{/js/topmenu/user/joinform.js}" src="/src/main/resources/static/js/joinform.js"></script>
     <script th:src="@{/js/topmenu/user/user.js}"></script>
     <script th:src="@{/js/topmenu/user/validation.js}"></script>
+
     <script th:src="@{https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js}" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
-
-
-</body>
-
-</html>
-
-
-</body>
-
+    </body>
 </html>

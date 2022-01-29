@@ -1,6 +1,8 @@
 <!--주석 필수-->
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <!--    th:href="@{../}" -->
 <!--    th:replace="layout/header :: head  : head의 작업을 header.html 파일에서 대체하겠다는 선언-->
 <!--    <head th:replace="layout/header :: head ('로그인')">-->
@@ -73,10 +75,12 @@
                 <li><a href="#">아이디찾기</a></li>
                 <li><a href="#">비밀번호찾기</a></li>
             </ul>
+
         </form>
 
         <!--회원가입 안내-->
             <button id="Login-Btn" type= "submit" th:href="@{/auth/user/save}" href="/src/main/resources/templates/TopMenu/user/joinus.html">회원가입</button>
+
         </div>
 </main>
 
@@ -90,6 +94,8 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script
     <script th:src="@{../js/Dog_SS.js}" src="/src/main/resources/static/js/Dog_SS.js"></script>
 
+    <!--회원가입의 유효성 -->
+    <script th:src="@{/js/user.js}"></script>
 
 </body>
 
