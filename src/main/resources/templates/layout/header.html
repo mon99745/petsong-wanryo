@@ -17,15 +17,15 @@
     <!-- 좌측 상단 네비게이션-->
 <!--        th:src="@{../}"-->
     <ul class="top-bar">
-<!--        sec:authorize="isAnonymous()"-->
-        <li>
-            <a sec:authorize="isAnonymous()" th:href="@{/auth/user/login}" href="/src/main/resources/templates/TopMenu/user/login.html"> LOGIN </a>
-        <li>
-<!--        <li>-->
-<!--            <a sec:authorize="isAuthenticated()" th:href="@{/auth/user/logout}" href="/logout">로그아웃</a>LOGOUT</a>-->
-<!--        </li>-->
-        <li>
-            <a sec:authorize="isAnonymous()" th:href="@{/auth/user/save}" href="/src/main/resources/templates/TopMenu/user/joinus.html"> JOIN US </a>
+
+        <li sec:authorize="isAnonymous()">
+            <a th:href="@{/auth/user/login}" href="/src/main/resources/templates/TopMenu/user/login.html">LOGIN</a>
+        </li>
+        <li sec:authorize="isAuthenticated()">
+            <a th:href="@{/user/logout}" href="/src/main/resources/templates/index.html">LOGOUT</a>
+        </li>
+        <li sec:authorize="isAnonymous()">
+            <a th:href="@{/auth/user/save}" href="/src/main/resources/templates/TopMenu/user/joinus.html">JOIN US</a>
         </li>
 
         <a th:href="@{#}" href="/src/main/resources/templates/TopMenu/order/wish.html">
@@ -37,7 +37,7 @@
         <a th:href="@{#}" href="/src/main/resources/templates/TopMenu/order/orderlist.html">
             <li>ORDER LIST</li>
         </a>
-        <a th:href="@{../templates/TopMenu/user/mypage.html}" href="/src/main/resources/templates/TopMenu/user/mypage.html">
+        <a th:href="@{/user/mypage}" href="/src/main/resources/templates/TopMenu/user/mypage.html">
             <li>MY PAGE</li>
         </a>
     </ul>

@@ -22,6 +22,14 @@ public class UserController {
     }
 
     /**
+     * 회원페이지
+     */
+    @GetMapping("/user/page")
+    public String userPage() {
+        return "TopMenu/user/mypage";
+    }
+
+    /**
      * 회원수정 페이지
      */
     @GetMapping("/user/update")
