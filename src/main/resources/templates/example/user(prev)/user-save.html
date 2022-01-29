@@ -1,76 +1,75 @@
-<!--회원가입 페이지-->
-<!doctype html>
-<html lang="en" class="h-100" xmlns:th="http://www.thymeleaf.org">
-<head th:replace="layout/header :: head ('로그인')"></head>
+<!--&lt;!&ndash;회원가입 페이지&ndash;&gt;-->
+<!--<!doctype html>-->
+<!--<html lang="en" class="h-100" xmlns:th="http://www.thymeleaf.org">-->
+<!--<head th:replace="layout/header :: head ('로그인')"></head>-->
 
-<body class="text-center d-flex flex-column h-100">
-<header th:replace="layout/header :: header"></header>
+<!--<body class="text-center d-flex flex-column h-100">-->
+<!--<header th:replace="layout/header :: header"></header>-->
 
-<main class="form-signin">
-  <div class="container border rounded flex-md-row mb-4 shadow-sm h-md-250">
-    <form id="needs-validation" novalidate>
-      <h1 class="h3 m-3 fw-normal">회원가입</h1>
+<!--<main class="form-signin">-->
+<!--  <div class="container border rounded flex-md-row mb-4 shadow-sm h-md-250">-->
+<!--    <form id="needs-validation" novalidate>-->
+<!--      <h1 class="h3 m-3 fw-normal">회원가입</h1>-->
 
-      <div class="form-floating m-3">
-        <input type="text" class="form-control" id="username" placeholder="아이디를 입력하세요." required
-               minlength="4" size="20">
-        <label for="username">아이디</label>
-        <div class="valid-feedback">
-          good!
-        </div>
-        <div class="invalid-feedback">
-          아이디는 4자 이상 입력해야 합니다.
-        </div>
-      </div>
+<!--      <div class="form-floating m-3">-->
+<!--        <input type="text" class="form-control" id="username" placeholder="아이디를 입력하세요." required-->
+<!--               minlength="4" size="20">-->
+<!--        <label for="username">아이디</label>-->
+<!--        <div class="valid-feedback">-->
+<!--          good!-->
+<!--        </div>-->
+<!--        <div class="invalid-feedback">-->
+<!--          아이디는 4자 이상 입력해야 합니다.-->
+<!--        </div>-->
+<!--      </div>-->
 
-      <div class="form-floating m-3">
-        <input type="password" class="form-control" id="password" placeholder="패스워드를 입력하세요." required
-               minlength="8" size="20">
-        <label for="password">패스워드</label>
-        <div class="valid-feedback">
-          very good!
-        </div>
-        <div class="invalid-feedback">
-          패스워드는 8자 이상 입력해야 합니다.
-        </div>
-      </div>
-      <div class="form-floating m-3">
-        <input type="email" class="form-control" id="email" placeholder="이메일을 입력하세요." required>
-        <label for="email">이메일</label>
-        <div class="valid-feedback">
-          nice!
-        </div>
-        <div class="invalid-feedback">
-          이메일 형식으로 입력해야 합니다.
-        </div>
-      </div>
-      <div class="form-floating m-3">
-        <input type="text" class="form-control" id="nickname" placeholder="닉네임을 입력하세요." required
-               minlength="4" size="20">
-        <label for="nickname">닉네임</label>
-        <div class="valid-feedback">
-          very nice!
-        </div>
-        <div class="invalid-feedback">
-          닉네임은 4자 이상 입력해야 합니다.
-        </div>
-      </div>
-    </form>
-    <button class="w-100 btn btn-lg btn-primary" id="btn-save">회원가입</button>
-  </div>
-</main>
+<!--      <div class="form-floating m-3">-->
+<!--        <input type="password" class="form-control" id="password" placeholder="패스워드를 입력하세요." required-->
+<!--               minlength="8" size="20">-->
+<!--        <label for="password">패스워드</label>-->
+<!--        <div class="valid-feedback">-->
+<!--          very good!-->
+<!--        </div>-->
+<!--        <div class="invalid-feedback">-->
+<!--          패스워드는 8자 이상 입력해야 합니다.-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="form-floating m-3">-->
+<!--        <input type="email" class="form-control" id="email" placeholder="이메일을 입력하세요." required>-->
+<!--        <label for="email">이메일</label>-->
+<!--        <div class="valid-feedback">-->
+<!--          nice!-->
+<!--        </div>-->
+<!--        <div class="invalid-feedback">-->
+<!--          이메일 형식으로 입력해야 합니다.-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="form-floating m-3">-->
+<!--        <input type="text" class="form-control" id="nickname" placeholder="닉네임을 입력하세요." required-->
+<!--               minlength="4" size="20">-->
+<!--        <label for="nickname">닉네임</label>-->
+<!--        <div class="valid-feedback">-->
+<!--          very nice!-->
+<!--        </div>-->
+<!--        <div class="invalid-feedback">-->
+<!--          닉네임은 4자 이상 입력해야 합니다.-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </form>-->
+<!--    <button class="w-100 btn btn-lg btn-primary" id="btn-save">회원가입</button>-->
+<!--  </div>-->
+<!--</main>-->
+<!--<footer th:replace="layout/footer :: footer"></footer>-->
 
-<footer th:replace="layout/footer :: footer"></footer>
-
-<!--경로 변경 절대 금지 -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-<script th:src="@{/js/user.js}"></script>
-<script th:src="@{/js/validation.js}"></script>
-
+<!--&lt;!&ndash;경로 변경 절대 금지 &ndash;&gt;-->
+<!--<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>-->
+<!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>-->
+<!--<script th:src="@{/js/user.js}"></script>-->
+<!--<script th:src="@{/js/validation.js}"></script>-->
 
 
 
-</body>
 
-</html>
+<!--</body>-->
+
+<!--</html>-->

@@ -165,7 +165,8 @@ const cloth = new Vue({
             this.items.push(this.item);
             this.item = {};
         }
-        },
+        }
+     
        
         
     });

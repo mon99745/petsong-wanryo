@@ -30,7 +30,7 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav me-auto mb-2 mb-md-0">
                     <li class="nav-item">
-                        <a sec:authorize="isAnonymous()" class="nav-link" href="/auth/user/login">로그인</a>
+                        <a sec:authorize access="isAnonymous()" class="nav-link" href='<c:url value="/auth/user/login"/>'></a>
                     </li>
                     <li class="nav-item">
                         <a sec:authorize="isAnonymous()" class="nav-link" href="/auth/user/save">회원가입</a>

@@ -4,29 +4,42 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+   
     <title>펫송완료</title>
-    <!--    <link rel="stylesheet" href="/static/css/index.css">-->
-<link rel="stylesheet" href="/src/main/resources/static/css/MainMenu/CAT/CAT_main.css">
-    <link rel="stylesheet" href="/src/main/resources/staticcss//Main/header.scss">
+
+    <!---CSS 링크--->
+    <link rel="stylesheet" th:href="@{../css/MainMenu/CAT/CAT_F/W.css}" href="/src/main/resources/static/css/MainMenu/CAT/CAT_main.css">
+    
     <!-- 네비게이션 관련 js 링크 -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
     <script src="https://use.typekit.net/hoy3lrg.js"></script>
+
+    <!-- header 삽입 -->
+    <header th:replace="layout/header :: header"></header>
+
     <script>try { Typekit.load({ async: true }); } catch (e) { }</script>
 
-    <!-- 폰트어썸 이미지 불러오기 링크 -->
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+     <!-- 폰트어썸 이미지 불러오기 링크 -->
+    <link rel="stylesheet" th:href="@{https://pro.fontawesome.com/releases/v5.10.0/css/all.css}"
+          href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <script th:src = "@{https://use.fontawesome.com/releases/v5.2.0/js/all.js}"
+    src ="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
 
+
+    <!--    layout -> layout-->
     <script type="text/javascript">
-        $(document).ready(function () {
+    $(document).ready(function () {
             $("#headers").load("/src/main/resources/templates/layout/header.html");
             $("#footers").load("/src/main/resources/templates/layout/footer.html");
-        }
-        );
+            $("#scrolls1").load("/src/main/resources/templates/layout/scroll1.html");
+            $("#scrolls2").load("/src/main/resources/templates/layout/scroll2.html");
+    }
+    );
     </script>
 
 </head>
+
 
 <body>
     <div class="all">
@@ -37,7 +50,69 @@
         <div id="headers"></div>
 
         <!-- --------------------------------------------------------------------------메인 왼쪽 ------------------------------------------------------------------------ -->
+<main>
 
+        <!-- ------------------------------------------상품리스트------------------------------------ -->
+        <div id="top-main">
+            <h1>CAT</h1>
+        </div>
+        <div id="cloth">
+            <nav id="main-bar">
+                <ul>
+                    <li ><a href="../CAT/Cat_SS.html">CAT S/S</a></li>
+                    <li ><a href="../CAT/Cat_SS.html">CAT F/W</a></li>
+                   
+
+                </ul>
+                <!-- All 리스트에서 상품검색 기능(best,new,like는 어차피 분류된 리스트니까 검색 x) -->
+                <input type="text" v-model="itemName"  class="search-bar" placeholder="  Search"/>
+
+            </nav>
+            
+       
+      
+        <!-- All에 대한 상품리스트 -->
+        <div>
+            <!-- All 배열의 길이를 출력 = 그 안의 상품 갯수를 출력 -->
+            <div class="total">Total <span class="bold"> {{items.length}}</span></div>
+            <ul style="list-style:none;" id="list"> 
+                <!-- v-for을 통해 items의 리스트 내용을 반복하여 출력        -->
+                <template v-for="item in items"  v-if="item.title.includes(itemName)" :key="item.id">                                  
+                    <li class="cloth-layout">                
+                        <img :src="item.image" class="cloth-image"/> <!--배열item의 이미지를 출력-->
+                        <div class="cloth-title">{{item.title}}</div>   <!--배열item의 상품명를 출력-->                                  
+                        <div class="cloth-price">{{item.price}}원</div><!--배열item의 상품가격를 출력-->
+                        <div class="icon">
+                            <img src="/src/main/resources/static/image/icon_logo/empty-heart.png" class="empty-heart">
+                            <img src="/src/main/resources/static/image/icon_logo/empty-cart.png" class="empty-cart">
+                        </div>
+                    </li>
+                </template>
+            </ul>
+        </div>
+        
+    </div>
+
+    <!-- ---------------------------------------페이지 표시 버튼------------------------------- -->
+
+    <div id="bottom-main-bottom">
+
+        <div class="buttons">
+            <ul>
+                <li><i class="fas fa-angle-double-left"></i></li>
+                <li><i class="fas fa-angle-left"></i></li>
+                <li>1</li>
+                <li>2</li>
+                <li><i class="fas fa-angle-right"></i></li>
+                <li><i class="fas fa-angle-double-right"></i></li>
+
+            </ul>
+        </div>
+
+
+
+    </div>
+</main>
 
         <!-- --------------------------------------------메인 bottom---------------------------------- -->
 
@@ -46,10 +121,11 @@
 
 
     </div>
-</div>
+    </div>
     <!-- js 링크 -->
-    <script src="/src/main/resources/static/js/Dog_SS.js"></script>
-
+    <script th:src="@{https://cdn.jsdelivr.net/npm/vue/dist/vue.js}" src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script th:src="@{../../../static/js/MainMenu/Cat/Cat_FW.js}" src="../../../static/js/MainMenu/Cat/Cat_Main.js"></script>
 </body>
+<script src="/src/main/resources/static/js/mainmenu/jjim.js"></script>
 
 </html>
