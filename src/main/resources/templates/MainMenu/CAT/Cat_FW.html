@@ -23,9 +23,7 @@
     <link rel="stylesheet" th:href="@{https://pro.fontawesome.com/releases/v5.10.0/css/all.css}"
           href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-    <script th:src = "@{https://use.fontawesome.com/releases/v5.2.0/js/all.js}"
-    src ="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
-
+  
 
     <!--    layout -> layout-->
     <script type="text/javascript">
@@ -119,6 +117,10 @@
                                             <img :src="item.image" class="cloth-image"/> <!--배열item의 이미지를 출력-->
                                             <div class="cloth-title">{{item.title}}</div>   <!--배열item의 상품명를 출력-->                                  
                                             <div class="cloth-price">{{item.price}}원</div><!--배열item의 상품가격를 출력-->
+                                            <div class="icon">
+                                                <img src="/src/main/resources/static/image/icon_logo/empty-heart.png" class="empty-heart">
+                                                <img src="/src/main/resources/static/image/icon_logo/empty-cart.png" class="empty-cart">
+                                            </div>
                                         </li>
                                     </template>
                                 </ul>
@@ -132,6 +134,10 @@
                                             <img :src="New.image" class="cloth-image"/>
                                             <div class="cloth-title">{{New.title}}</div>                                        
                                             <div class="cloth-price">{{New.price}}원<div>
+                                                <div class="icon">
+                                                    <img src="/src/main/resources/static/image/icon_logo/empty-heart.png" class="empty-heart">
+                                                    <img src="/src/main/resources/static/image/icon_logo/empty-cart.png" class="empty-cart">
+                                                </div>
                                         </li>
                                     </template>
                                 <ul>
@@ -145,6 +151,10 @@
                                             <img :src="best.image" class="cloth-image"/>
                                             <div class="cloth-title">{{best.title}}</div>                                        
                                             <div class="cloth-price">{{best.price}}원<div>
+                                                <div class="icon">
+                                                    <img src="/src/main/resources/static/image/icon_logo/empty-heart.png" class="empty-heart">
+                                                    <img src="/src/main/resources/static/image/icon_logo/empty-cart.png" class="empty-cart">
+                                                </div>
                                         </li>
                                     </template>
                                 <ul>
@@ -158,6 +168,10 @@
                                             <img :src="like.image" class="cloth-image"/>
                                             <div class="cloth-title">{{like.title}}</div>                                     
                                             <div class="cloth-price">{{like.price}}원</div>
+                                            <div class="icon">
+                                                <img src="/src/main/resources/static/image/icon_logo/empty-heart.png" class="empty-heart">
+                                                <img src="/src/main/resources/static/image/icon_logo/empty-cart.png" class="empty-cart">
+                                            </div>
                                         </li>
                                     </template>
                                 </ul>
@@ -201,7 +215,7 @@
 
 <script th:src="@{https://cdn.jsdelivr.net/npm/vue/dist/vue.js}" src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script th:src="@{../../../static/js/MainMenu/Cat/Cat_FW.js}" src="../../../static/js/MainMenu/Cat/Cat_FW.js"></script>
-
 </body>
+<script src="/src/main/resources/static/js/mainmenu/jjim.js"></script>
 
 </html>

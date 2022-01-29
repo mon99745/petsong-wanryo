@@ -73,7 +73,7 @@ main {
 /* --------------------------------------------------------------- */
 #main-middle {
   width: 90%;
-  height: 40%;
+  height: 15%;
   margin: 0 auto;
 }
 
@@ -107,7 +107,7 @@ main {
 
 #bottom1{
   width: 100%;
-  height: 30%;
+  height: 15%;
 }
 
 .delete-btn{
@@ -151,20 +151,20 @@ main {
 /* --------------------------------------------------------------------- */
 #bottom2{
   width: 100%;
-  height: 80%;
+  height: 20%;
   display: flex;
   justify-content: center;
 }
 
 #cost-table{
   width: 500px;
-  height: 5%;
+  height: 50px;
   border-collapse: collapse;
+  text-align: center;
 
  
 }
 .cost-title{
-  height: 50px;
   background-color: black;
   color: white;
 }

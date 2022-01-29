@@ -1,4 +1,13 @@
 /* --------------------------------css 기본틀--------------------------------------------- */
+/* --------------------------------css 기본틀--------------------------------------------- */
+@font-face {
+  font-family: 'ChosunGu';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunGu.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 * {
   margin: 0; /* 마진 리셋 */
   padding: 0; /* 패딩 리셋 */
@@ -194,7 +203,7 @@ main {
   height: 100%;
 }
 /* --------------------------------------뉴스-------------------------------- */
-#mainImage {
+.mainImage {
   margin-top: 20px;
   margin-left: 8x;
 }
