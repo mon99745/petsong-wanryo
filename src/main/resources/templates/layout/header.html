@@ -21,15 +21,13 @@
         <li>
             <a sec:authorize="isAnonymous()" th:href="@{/auth/user/login}" href="/src/main/resources/templates/TopMenu/user/login.html"> LOGIN </a>
         <li>
-<!--        <li>-->
-<!--            <a sec:authorize="isAuthenticated()" th:href="@{/auth/user/logout}" href="/logout">로그아웃</a>LOGOUT</a>-->
-<!--        </li>-->
+
         <li>
-
             <a sec:authorize="isAuthenticated()" th:href="@{/auth/user/logout}" href="/logout">로그아웃</a>LOGOUT</a>
+    </li>
 
+        <li>
             <a sec:authorize="isAnonymous()" th:href="@{/auth/user/save}" href="/src/main/resources/templates/TopMenu/user/joinus.html"> JOIN US </a>
-
         </li>
 
         <a th:href="@{#}" href="/src/main/resources/templates/TopMenu/order/wish.html">
@@ -62,10 +60,8 @@
 </div>
 <!-- --------------------------------------------------------------   로고 -------------------------------------------------------------------------------------- -->
 <div id="logo">
-
     <a th:href="@{/index}" href="/src/main/resources/templates/index.html">
         <img class="logo-img" th:src="@{/image/mainpage/logo.png}" src="/src/main/resources/static/image/mainpage/logo.png" alt="My Image">
-
     </a>
 </div>
 
