@@ -11,7 +11,7 @@ public class MenuController {
      */
     @GetMapping("/auth/MainMenu/DOG/DogMain")
     public String DogMain() {
-        return "MainMenu/DOG/Dog_Main.html";
+        return "MainMenu/DOG/Dog_main.html";
     }
 
     /**
@@ -75,7 +75,7 @@ public class MenuController {
     /**
      * Living_main
      */
-    @GetMapping("/auth/MainMenu/LIVING/Living_main")
+    @GetMapping("/auth/MainMenu/LIVING/LivingMain")
     public String Living_main() {
         return "MainMenu/LIVING/Living_main.html";
     }
@@ -91,7 +91,7 @@ public class MenuController {
     /**
      * Food_main
      */
-    @GetMapping("/auth/MainMenu/FOOD/Food_main")
+    @GetMapping("/auth/MainMenu/FOOD/FoodMain")
     public String Food_main() {
         return "MainMenu/FOOD/Food_main.html";
     }

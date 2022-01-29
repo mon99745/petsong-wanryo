@@ -5,8 +5,6 @@
 <head th:fragment="head (title)">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <link rel="stylesheet" th:href="@{/css/TopMenu/joinus.css}" href="/src/main/resources/static/css/TopMenu/joinus.css">
-    <link rel="stylesheet" th:href="@{/css/TopMenu/login.css}" href="/src/main/resources/static/css/TopMenu/login.css"> -->
     <link rel="stylesheet" th:href="@{/css/layout_CSS/header.css}" href="/src/main/resources/static/css/layout_CSS/header.css">
 </head>
 <body>
@@ -73,10 +71,10 @@
     <a th:href="@{https://twitter.com/}" href="https://twitter.com/?lang=ko" target="_blank"><i class="fab fa-twitter-square fa-2x"></i></a>
     <!-- notice Q&A 넣기 -->
     <ul class="bottom-bar">
-        <a th:href="@{../templates/TopMenu/board/QandA.html}" href="/src/main/resources/templates/TopMenu/board/QandA.html">
+        <a th:href="@{../board/QandA.html}" href="/src/main/resources/templates/TopMenu/board/QandA.html">
             <li>Q&A</li>
         </a>
-        <a th:href="@{../templates/TopMenu/board/Notice.html}" href="/src/main/resources/templates/TopMenu/board/Notice.html">
+        <a th:href="@{../board/Notice.html}" href="/src/main/resources/templates/TopMenu/board/Notice.html">
             <li>Notice</li>
         </a>
     </ul>
@@ -95,10 +93,10 @@
 
             </div>
             <div id="part1">
-                <a href="/src/main/resources/templates/MainMenu/DOG/Dog_SS.html">
+                <a th:href="@{/auth/MainMenu/DOG/DogSS}" href="/src/main/resources/templates/MainMenu/DOG/Dog_SS.html">
                     <li>S/S</li>
                 </a>
-                <a href="/src/main/resources/templates/MainMenu/DOG/Dog_FW.html">
+                <a th:href="@{/auth/MainMenu/DOG/DogFW}" href="/src/main/resources/templates/MainMenu/DOG/Dog_FW.html">
                     <li>F/W</li>
                 </a>
             </div>
@@ -130,29 +128,30 @@
                 </a>
             </div> -->
             <div id="part5">
-                <a href="/src/main/resources/templates/MainMenu/COMMUNITY/community1.html">
+                <a th:href="@{/MainMenu/COMMUNITY/community1.html}" href="/src/main/resources/templates/MainMenu/COMMUNITY/community1.html">
                     <li>유기견게시판</li>
                 </a>
-                <a href="/src/main/resources/templates/MainMenu/COMMUNITY/community2.html">
+                <a th:href="@{/MainMenu/COMMUNITY/community2.html}" href="/src/main/resources/templates/MainMenu/COMMUNITY/community2.html">
                     <li>자유게시판</li>
                 </a>
             </div>
         </div>
 
         <!-- 메뉴 종류 넣기 -->
-        <a href="/src/main/resources/templates/MainMenu/DOG/Dog_main.html">
+        <a th:href="@{/auth/MainMenu/DOG/DogMain}" href="/src/main/resources/templates/MainMenu/DOG/Dog_main.html">
             <p id="DOG">DOG</p>
         </a>
         <div id="drop1" class="dropdown">
-            <a href="/src/main/resources/templates/MainMenu/DOG/Dog_SS.html">
+            <a th:href="@{/auth/MainMenu/DOG/DogSS}" href="/src/main/resources/templates/MainMenu/DOG/Dog_SS.html">
                 <li>S/S</li>
             </a>
-            <a href="/src/main/resources/templates/MainMenu/DOG/Dog_FW.html">
+            <a th:href="@{/auth/MainMenu/DOG/DogFW}" href="/src/main/resources/templates/MainMenu/DOG/Dog_FW.html">
                 <li>F/W</li>
             </a>
         </div>
+
         <a th:href="@{/auth/MainMenu/CAT/CatMain}" href="/src/main/resources/templates/MainMenu/CAT/Cat_main.html">
-            <p id="CAT">CAT </p>
+            <p id="CAT">CAT</p>
         </a>
         <div id="drop2" class="dropdown">
             <a th:href="@{/auth/MainMenu/CAT/CatSS}" href="/src/main/resources/templates/MainMenu/CAT/Cat_SS.html">
@@ -163,7 +162,7 @@
             </a>
         </div>
 
-        <a href="/src/main/resources/templates/MainMenu/LIVING/Living_main.html">
+        <a th:href="@{/auth/MainMenu/LIVING/LivingMain}" href="/src/main/resources/templates/MainMenu/LIVING/Living_main.html">
             <p id="LIVING">LIVING </p>
         </a>
         <!-- <div id="drop3" class="dropdown">
@@ -178,7 +177,7 @@
             </a>
         </div> -->
 
-        <a href="/src/main/resources/templates/MainMenu/FOOD/Food_main.html">
+        <a th:href="@{/auth/MainMenuFOOD/FoodMain}" href="/src/main/resources/templates/MainMenu/FOOD/Food_main.html">
             <p id="FOOD">FOOD</p>
         </a>
         <!-- <div id="drop4" class="dropdown">
@@ -192,10 +191,10 @@
 
         <p id="COMMUNITY">COMMUNITY</p>
         <div id="drop5" class="dropdown">
-            <a href="/src/main/resources/templates/MainMenu/COMMUNITY/community1.html">
+            <a th:href="@{/MainMenu/COMMUNITY/community1.html}" href="/src/main/resources/templates/MainMenu/COMMUNITY/community1.html">
                 <li>유기견게시판</li>
             </a>
-            <a href="/src/main/resources/templates/MainMenu/COMMUNITY/community2.html">
+            <a th:href="@{/MainMenu/COMMUNITY/community2.html}" href="/src/main/resources/templates/MainMenu/COMMUNITY/community2.html">
                 <li>자유게시판</li>
             </a>
         </div>

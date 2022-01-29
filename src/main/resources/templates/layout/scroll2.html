@@ -1,29 +1,27 @@
 
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script defer src="/src/main/resources/static/js/layout_JS/scroll2.js"></script>
-
-    <link rel="stylesheet" href="/src/main/resources/static/css/layout_CSS/scroll2.css">
 </head>
+
 <body>
-    
+<nav th:fragment="side2">
+    <link rel="stylesheet" th:href="@{/css/layout_CSS/scroll2.css}" href="/src/main/resources/static/css/layout_CSS/scroll2.css">
+    <script defer th:src="@{/js/layout_JS/scroll2.js}" src="/src/main/resources/static/js/layout_JS/scroll2.js"></script>
+
 <div id="sidebox2">
     <div style="padding-bottom: 10px; font-size: 22px; font-weight: bold;">EVENT</div>
-    <img src="/src/main/resources/static/image/mainpage/Event_side.jpg">
-    <div id="side-cart"><a href="/src/main/resources/templates/TopMenu/cart.html"><i class="fas fa-shopping-cart fa-2x"></i></a></div>
+    <img th:src="@{/image/mainpage/Event_side.jpg}" src="/src/main/resources/static/image/mainpage/Event_side.jpg">
+    <div id="side-cart"><a th:href="@{/TopMenu/cart.html}" href="/src/main/resources/templates/TopMenu/cart.html"><i class="fas fa-shopping-cart fa-2x"></i></a></div>
     <div style="text-align: center; font-size: 15px; font-weight: bold; padding-bottom: 20px; ">장바구니</div>
-    <div id="side-like"><a href="/src/main/resources/templates/TopMenu/wish.html"><i class="fas fa-heart fa-2x"></i></a></div>
+    <div id="side-like"><a th:href="@{/TopMenu/wish.html}" href="/src/main/resources/templates/TopMenu/wish.html"><i class="fas fa-heart fa-2x"></i></a></div>
     <div style="text-align: center; font-size: 15px; font-weight: bold; ">찜</div>
-    
-    
-    
-    
-    
+
     </div>
+</nav>
 </body>
+
 </html>

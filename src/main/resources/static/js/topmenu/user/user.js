@@ -30,11 +30,6 @@ let index = {
     //회원가입
     save: function() {
         let data = { //JavaScript Object
-//            username: $("#username").val(),
-//            password: $("#password").val(),
-//            email: $("#email").val(),
-//            nickname: $("#nickname").val()
-
              username: $("#username").val(),
              password: $("#password").val(),
              user_name: $("#user_name").val(),

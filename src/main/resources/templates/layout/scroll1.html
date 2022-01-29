@@ -1,32 +1,25 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/src/main/resources/static/css/layout_CSS/scroll1.css">
-
-    
-
-    <script defer src="/src/main/resources/static/js/layout_JS/scroll1.js"></script>
-
 </head>
 
 <body>
-  
-   
-    
-<div id="sidebox1"> 
-    <div style="padding-bottom: 10px;"><b style="font-size: 22px;">TOP 3</b></div>  
-    <div class="box"><img src="/src/main/resources/static/image/Dog_FW/product10.jpeg" alt=""></div>
-    <div class="box"><img src="/src/main/resources/static/image/Dog_FW/product11.jpeg" alt=""></div>
-    <div class="box"><img src="/src/main/resources/static/image/Dog_FW/product12.jpeg" alt=""></div>
-    
-    
-    
-    
-    </div>
+<nav th:fragment="side1">
+    <link rel="stylesheet" th:href="@{/css/layout_CSS/scroll1.css}"href="/src/main/resources/static/css/layout_CSS/scroll1.css">
+    <script defer th:src="@{/js/layout_JS/scroll1.js}" src="/src/main/resources/static/js/layout_JS/scroll1.js"></script>
 
+    <div id="sidebox1">
+    <div style="padding-bottom: 10px;"><b style="font-size: 22px;">TOP 3</b></div>  
+    <div class="box"><img th:src="@{/image/Dog_FW/product10.jpeg}" src="/src/main/resources/static/image/Dog_FW/product10.jpeg" alt=""></div>
+    <div class="box"><img th:src="@{/image/Dog_FW/product11.jpeg}" src="/src/main/resources/static/image/Dog_FW/product11.jpeg" alt=""></div>
+    <div class="box"><img th:src="@{/image/Dog_FW/product12.jpeg}" src="/src/main/resources/static/image/Dog_FW/product12.jpeg" alt=""></div>
+
+    </div>
+</nav>
 
 </body>
 </html>

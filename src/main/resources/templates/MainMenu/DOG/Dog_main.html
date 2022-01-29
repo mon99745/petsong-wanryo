@@ -6,20 +6,22 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
     <title>펫송완료</title>
-    <!--    <link rel="stylesheet" href="/static/css/index.css">-->
-    <link rel="stylesheet" href="/src/main/resources/static/css/MainMenu/DOG/Dog_main.css">
-    <link rel="stylesheet" href="/src/main/resources/staticcss//Main/header.scss">
+
+    <!---CSS 링크--->
+    <link rel="stylesheet" th:href="@{/css/MainMenu/DOG/Dog_main.css}" href="/src/main/resources/static/css/MainMenu/DOG/Dog_main.css">
+    <link rel="stylesheet" th:href="@{/css/layout_CSS/header.css}" href="/src/main/resources/static/css/layout_CSS/header.css">
+
     <!-- 네비게이션 관련 js 링크 -->
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
-    <script src="https://use.typekit.net/hoy3lrg.js"></script>
-    <script>try { Typekit.load({ async: true }); } catch (e) { }</script>
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script th:src="@{https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js}" src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+    <script th:src="@{https://use.typekit.net/hoy3lrg.js}" src="https://use.typekit.net/hoy3lrg.js"></script>
+    <script th:src="@{//cdn.jsdelivr.net/npm/sweetalert2@10}" src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
     <!-- 폰트어썸 이미지 불러오기 링크 -->
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    <link rel="stylesheet" th:href="@{https://pro.fontawesome.com/releases/v5.10.0/css/all.css}" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
     <!--    header_footer_scroll -> layout-->
-<script src="../../../static/js/layout_JS/call_layout.js"type="text/javascript"> </script>
+    <script src="../../../static/js/layout_JS/call_layout.js"type="text/javascript"> </script>
 
 
 </head>
@@ -31,7 +33,10 @@
         <!-- -----------------------------------------------------최고 상단 메뉴 바 + 검색창---------------------------------------------------------------------       -->
 
         <div id="headers"></div>
-
+        <!-- header 삽입 -->
+        <header th:replace="layout/header :: header"></header>
+        <div id="scrolls1"></div>
+        <div id="scrolls2"></div>
         <!-- --------------------------------------------------------------------------메인 왼쪽 ------------------------------------------------------------------------ -->
 <main>
     <div id="top-main">
@@ -49,37 +54,37 @@
     <div id="product-list">
         <ul>
             <li class="product">
-                <img class="dog-photo" src="/src/main/resources/static/image/Dog_FW/product1.jpeg">
+                <img class="dog-photo" th:src="@{/image/Dog_FW/product1.jpeg}" src="/src/main/resources/static/image/Dog_FW/product1.jpeg">
                 <h4 class=product-name>몽블랑리버시블패딩SET(Mint)</h4>
                 <div class="price">
                     <span>54,000원</span>
                     <div class="icon">
-                        <img src="/src/main/resources/static/image/icon_logo/empty-heart.png" class="empty-heart">
-                        <img src="/src/main/resources/static/image/icon_logo/empty-cart.png" class="empty-cart">
+                        <img th:src="@{#}" src="/src/main/resources/static/image/icon_logo/empty-heart.png" class="empty-heart">
+                        <img th:src="@{#}" src="/src/main/resources/static/image/icon_logo/empty-cart.png" class="empty-cart">
                     </div>
 
                 </div>
             </li>
             <li class="product">
-                <img class="dog-photo" src="/src/main/resources/static/image/Dog_FW/product2.jpeg">
+                <img class="dog-photo" th:src="@{#}" src="/src/main/resources/static/image/Dog_FW/product2.jpeg">
                 <h4 class=product-name>몽블랑리버시블패딩SET(Pink)</h4>
                 <div class="price">
                     <span>54,000원</span>
                     <div class="icon">
-                        <img src="/src/main/resources/static/image/icon_logo/empty-heart.png" class="empty-heart">
-                        <img src="/src/main/resources/static/image/icon_logo/empty-cart.png" class="empty-cart">
+                        <img th:src="@{#}" src="/src/main/resources/static/image/icon_logo/empty-heart.png" class="empty-heart">
+                        <img th:src="@{#}" src="/src/main/resources/static/image/icon_logo/empty-cart.png" class="empty-cart">
                     </div>
 
                 </div>
             </li>
             <li class="product">
-                <img class="dog-photo" src="/src/main/resources/static/image/Dog_FW/product3.jpeg">
+                <img class="dog-photo" th:src="@{#}" src="/src/main/resources/static/image/Dog_FW/product3.jpeg">
                 <h4 class=product-name>몽블랑리버시블패딩SET(Ivory)</h4>
                 <div class="price">
                     <span>54,000원</span>
                     <div class="icon">
-                        <img src="/src/main/resources/static/image/icon_logo/empty-heart.png" class="empty-heart">
-                        <img src="/src/main/resources/static/image/icon_logo/empty-cart.png" class="empty-cart">
+                        <img th:src="@{#}" src="/src/main/resources/static/image/icon_logo/empty-heart.png" class="empty-heart">
+                        <img th:src="@{#}" src="/src/main/resources/static/image/icon_logo/empty-cart.png" class="empty-cart">
                     </div>
 
                 </div>
@@ -90,8 +95,8 @@
                 <div class="price">
                     <span>38,000원</span>
                     <div class="icon">
-                        <img src="/src/main/resources/static/image/icon_logo/empty-heart.png" class="empty-heart">
-                        <img src="/src/main/resources/static/image/icon_logo/empty-cart.png" class="empty-cart">
+                        <img th:src="@{#}" src="/src/main/resources/static/image/icon_logo/empty-heart.png" class="empty-heart">
+                        <img th:src="@{#}" src="/src/main/resources/static/image/icon_logo/empty-cart.png" class="empty-cart">
                     </div>
 
                 </div>
@@ -102,8 +107,8 @@
                 <div class="price">
                     <span>38,000원</span>
                     <div class="icon">
-                        <img src="/src/main/resources/static/image/icon_logo/empty-heart.png" class="empty-heart">
-                        <img src="/src/main/resources/static/image/icon_logo/empty-cart.png" class="empty-cart">
+                        <img th:src="@{#}" src="/src/main/resources/static/image/icon_logo/empty-heart.png" class="empty-heart">
+                        <img th:src="@{#}" src="/src/main/resources/static/image/icon_logo/empty-cart.png" class="empty-cart">
                     </div>
 
                 </div>
@@ -115,8 +120,8 @@
                 <div class="price">
                     <span>38,000원</span>
                     <div class="icon">
-                        <img src="/src/main/resources/static/image/icon_logo/empty-heart.png" class="empty-heart">
-                        <img src="/src/main/resources/static/image/icon_logo/empty-cart.png" class="empty-cart">
+                        <img th:src="@{#}" src="/src/main/resources/static/image/icon_logo/empty-heart.png" class="empty-heart">
+                        <img th:src="@{#}" src="/src/main/resources/static/image/icon_logo/empty-cart.png" class="empty-cart">
                     </div>
 
                 </div>
@@ -127,8 +132,8 @@
                 <div class="price">
                     <span>24,000원</span>
                     <div class="icon">
-                        <img src="/src/main/resources/static/image/icon_logo/empty-heart.png" class="empty-heart">
-                        <img src="/src/main/resources/static/image/icon_logo/empty-cart.png" class="empty-cart">
+                        <img th:src="@{#}" src="/src/main/resources/static/image/icon_logo/empty-heart.png" class="empty-heart">
+                        <img th:src="@{#}" src="/src/main/resources/static/image/icon_logo/empty-cart.png" class="empty-cart">
                     </div>
 
                 </div>
@@ -140,8 +145,8 @@
                 <div class="price">
                     <span>24,000원</span>
                     <div class="icon">
-                        <img src="/src/main/resources/static/image/icon_logo/empty-heart.png" class="empty-heart">
-                        <img src="/src/main/resources/static/image/icon_logo/empty-cart.png" class="empty-cart">
+                        <img th:src="@{#}" src="/src/main/resources/static/image/icon_logo/empty-heart.png" class="empty-heart">
+                        <img th:src="@{#}" src="/src/main/resources/static/image/icon_logo/empty-cart.png" class="empty-cart">
                     </div>
 
                 </div>
@@ -153,8 +158,8 @@
                 <div class="price">
                     <span>22,000원</span>
                     <div class="icon">
-                        <img src="/src/main/resources/static/image/icon_logo/empty-heart.png" class="empty-heart">
-                        <img src="/src/main/resources/static/image/icon_logo/empty-cart.png" class="empty-cart">
+                        <img th:src="@{#}" src="/src/main/resources/static/image/icon_logo/empty-heart.png" class="empty-heart">
+                        <img th:src="@{#}" src="/src/main/resources/static/image/icon_logo/empty-cart.png" class="empty-cart">
                     </div>
 
                 </div>
@@ -165,8 +170,8 @@
                 <div class="price">
                     <span>22,000원</span>
                     <div class="icon">
-                        <img src="/src/main/resources/static/image/icon_logo/empty-heart.png" class="empty-heart">
-                        <img src="/src/main/resources/static/image/icon_logo/empty-cart.png" class="empty-cart">
+                        <img th:src="@{#}" src="/src/main/resources/static/image/icon_logo/empty-heart.png" class="empty-heart">
+                        <img th:src="@{#}" src="/src/main/resources/static/image/icon_logo/empty-cart.png" class="empty-cart">
                     </div>
 
                 </div>
@@ -177,8 +182,8 @@
                 <div class="price">
                     <span>11,000원</span>
                     <div class="icon">
-                        <img src="/src/main/resources/static/image/icon_logo/empty-heart.png" class="empty-heart">
-                        <img src="/src/main/resources/static/image/icon_logo/empty-cart.png" class="empty-cart">
+                        <img th:src="@{#}" src="/src/main/resources/static/image/icon_logo/empty-heart.png" class="empty-heart">
+                        <img th:src="@{#}" src="/src/main/resources/static/image/icon_logo/empty-cart.png" class="empty-cart">
                     </div>
 
                 </div>
@@ -189,8 +194,8 @@
                 <div class="price">
                     <span>11,000원</span>
                     <div class="icon">
-                        <img src="/src/main/resources/static/image/icon_logo/empty-heart.png" class="empty-heart">
-                        <img src="/src/main/resources/static/image/icon_logo/empty-cart.png" class="empty-cart">
+                        <img th:src="@{#}" src="/src/main/resources/static/image/icon_logo/empty-heart.png" class="empty-heart">
+                        <img th:src="@{#}" src="/src/main/resources/static/image/icon_logo/empty-cart.png" class="empty-cart">
                     </div>
 
                 </div>
@@ -202,8 +207,8 @@
                 <div class="price">
                     <span>11,000원</span>
                     <div class="icon">
-                        <img src="/src/main/resources/static/image/icon_logo/empty-heart.png" class="empty-heart">
-                        <img src="/src/main/resources/static/image/icon_logo/empty-cart.png" class="empty-cart">
+                        <img th:src="@{#}" src="/src/main/resources/static/image/icon_logo/empty-heart.png" class="empty-heart">
+                        <img th:src="@{#}" src="/src/main/resources/static/image/icon_logo/empty-cart.png" class="empty-cart">
                     </div>
 
                 </div>
@@ -214,8 +219,8 @@
                 <div class="price">
                     <span>11,000원</span>
                     <div class="icon">
-                        <img src="/src/main/resources/static/image/icon_logo/empty-heart.png" class="empty-heart">
-                        <img src="/src/main/resources/static/image/icon_logo/empty-cart.png" class="empty-cart">
+                        <img th:src="@{#}" src="/src/main/resources/static/image/icon_logo/empty-heart.png" class="empty-heart">
+                        <img th:src="@{#}" src="/src/main/resources/static/image/icon_logo/empty-cart.png" class="empty-cart">
                     </div>
 
                 </div>
@@ -227,8 +232,8 @@
                 <div class="price">
                     <span>11,000원</span>
                     <div class="icon">
-                        <img src="/src/main/resources/static/image/icon_logo/empty-heart.png" class="empty-heart">
-                        <img src="/src/main/resources/static/image/icon_logo/empty-cart.png" class="empty-cart">
+                        <img th:src="@{#}" src="/src/main/resources/static/image/icon_logo/empty-heart.png" class="empty-heart">
+                        <img th:src="@{#}" src="/src/main/resources/static/image/icon_logo/empty-cart.png" class="empty-cart">
                     </div>
 
                 </div>
@@ -240,8 +245,8 @@
                 <div class="price">
                     <span>11,000원</span>
                     <div class="icon">
-                        <img src="/src/main/resources/static/image/icon_logo/empty-heart.png" class="empty-heart">
-                        <img src="/src/main/resources/static/image/icon_logo/empty-cart.png" class="empty-cart">
+                        <img th:src="@{#}" src="/src/main/resources/static/image/icon_logo/empty-heart.png" class="empty-heart">
+                        <img th:src="@{#}" src="/src/main/resources/static/image/icon_logo/empty-cart.png" class="empty-cart">
                     </div>
 
                 </div>
@@ -255,7 +260,8 @@
 
         <!-- ------------------------------------------------------------------------------------푸터------------------------------------------------------------------------------ -->
         <div id="footers"></div>
-
+        <!-- footer 삽입 -->
+        <footer th:replace="layout/footer :: footer"></footer>
 
     </div>
 </div>
@@ -263,5 +269,5 @@
  
 
 </body>
-<script src="/src/main/resources/static/js/mainmenu/jjim.js"></script>
+<script th:src="@{#}" src="/src/main/resources/static/js/mainmenu/jjim.js"></script>
 </html>

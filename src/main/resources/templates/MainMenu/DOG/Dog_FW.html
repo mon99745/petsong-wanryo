@@ -7,12 +7,11 @@
     <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
     <title>펫송완료</title>
     <!--    <link rel="stylesheet" href="/static/css/index.css">-->
-    <link rel="stylesheet" href="/src/main/resources/static/css/MainMenu/DOG/Dog_FW.css">
-    <link rel="stylesheet" href="/src/main/resources/staticcss//Main/header.scss">
+    <link rel="stylesheet" th:href="@{/css/MainMenu/DOG/Dog_FW.css}" href="/src/main/resources/static/css/MainMenu/DOG/Dog_FW.css">
+    <link rel="stylesheet" th:href="@{/css/layout_CSS/header.css}" href="/src/main/resources/static/css/layout_CSS/header.css">
     <!-- 네비게이션 관련 js 링크 -->
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
-    <script src="https://use.typekit.net/hoy3lrg.js"></script>
-    <script>try { Typekit.load({ async: true }); } catch (e) { }</script>
+    <script th:src="@{https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js}" src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+    <script th:href="@{https://use.typekit.net/hoy3lrg.js}" src="https://use.typekit.net/hoy3lrg.js"></script>
 
     <!-- 폰트어썸 이미지 불러오기 링크 -->
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
@@ -538,7 +537,8 @@
 
         <!-- ------------------------------------------------------------------------------------푸터------------------------------------------------------------------------------ -->
     <div id="footers"></div>
-
+        <!-- footer 삽입 -->
+        <footer th:replace="layout/footer :: footer"></footer>
 
     </div>
     </div>

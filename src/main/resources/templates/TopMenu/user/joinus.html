@@ -39,16 +39,10 @@
 <header th:replace="layout/header :: header"></header>
   <div class="all">
     <div class="container">
-
         <div id="headers"></div>
-
-        
-        <main>
-
 <!--            유효성 검사 :: id="needs-validation" novalidate -->
 <!--            자동완성 off : autocomplete="off"-->
-<!--            <form name=join_form method="post">-->
-            <form name=join_form method="post">
+            <main>
              <div class="join_form">
                <form id="needs-validation" novalidate>
                <div class="joinus"><h2>회원가입</h2></div>
@@ -139,7 +133,7 @@
 
 <!--                   onclick="joinform_check()"-->
                </form>
-               <div class="signbtn"><button id="btn-save" >회원가입</button></div>
+               <button class="signbtn" id="btn-save" >회원가입</button>
              </div>
         </main>
 
