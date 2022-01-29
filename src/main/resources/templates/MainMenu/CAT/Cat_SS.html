@@ -24,16 +24,8 @@
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
   
 
-    <!--    layout -> layout-->
-    <script type="text/javascript">
-    $(document).ready(function () {
-            $("#headers").load("/src/main/resources/templates/layout/header.html");
-            $("#footers").load("/src/main/resources/templates/layout/footer.html");
-            $("#scrolls1").load("/src/main/resources/templates/layout/scroll1.html");
-            $("#scrolls2").load("/src/main/resources/templates/layout/scroll2.html");
-    }
-    );
-    </script>
+  <!--    header_footer_scroll -> layout-->
+<script src="../../../static/js/layout_JS/call_layout.js"type="text/javascript"> </script>
 
 </head>
 
@@ -116,7 +108,7 @@
                                     <!-- v-for을 통해 items의 리스트 내용을 반복하여 출력        -->
                                     <template v-for="item in items"  v-if="item.title.includes(itemName)" :key="item.id">                                  
                                         <li class="cloth-layout">                
-                                            <img th:text="item.image" :src="item.image" class="cloth-image"/> <!--배열item의 이미지를 출력-->
+                                            <img th:src="@{item.image}" :src="item.image" class="cloth-image"/> <!--배열item의 이미지를 출력-->
                                             <div class="cloth-title">{{item.title}}</div>   <!--배열item의 상품명를 출력-->                                  
                                             <div class="cloth-price">{{item.price}}원</div><!--배열item의 상품가격를 출력-->
                                             <div class="icon">

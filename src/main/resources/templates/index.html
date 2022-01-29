@@ -30,16 +30,8 @@
           href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
-<!--    header_footer -> layout-->
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $("#headers").load("/src/main/resources/templates/layout/header.html");
-            $("#footers").load("/src/main/resources/templates/layout/footer.html");
-            $("#scrolls1").load("/src/main/resources/templates/layout/scroll1.html");
-            $("#scrolls2").load("/src/main/resources/templates/layout/scroll2.html");
-        }
-        );
-    </script>
+<!--    header_footer_scroll -> layout-->
+    <script src="../static/js/layout_JS/call_layout.js"type="text/javascript"> </script>
 
 </head>
 
@@ -237,14 +229,7 @@
 
                 <img th:src="@{../image/mainpage/애견지식1.jpg}" src="../static/image/mainpage/애견지식1.jpg" id=mainImage class="n1" alt="YsjImage"
                     style="width:750px;height:500px;">
-                <img th:src="@{../image/mainpage/애견지식2.jpg}" src="../static/image/mainpage/애견지식2.jpg" id=mainImage class="n2" alt="YsjImage"
-                    style="width:800px;height:500px;">
-                <img th:src="@{../image/mainpage/애견지식3.jpg}" src="../static/image/mainpage/애견지식3.jpg" id=mainImage class="n3" alt="YsjImage"
-                    style="width:800px;height:500px;">
-                <img th:src="@{../image/mainpage/애견지식4.jpg}" src="../static/image/mainpage/애견지식4.jpg" id=mainImage class="n4" alt="YsjImage"
-                    style="width:8:ㅈㅂ00px;height:500px;">
-                <img th:src="@{../image/mainpage/애견지식5.jpg}" src="../static/image/mainpage/애견지식5.jpg" id=mainImage class="n5" alt="YsjImage"
-                    style="width:800px;height:500px;">
+               
 
             </div>
         </div>
