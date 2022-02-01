@@ -33,14 +33,17 @@
     <div class="all">
     <div class="container">
 
-        <!-- -----------------------------------------------------최고 상단 메뉴 바 + 검색창---------------------------------------------------------------------       -->
-      
-        <div id="headers"></div>
-        <!-- header 삽입 -->
-        <header th:replace="layout/header :: header"></header>
+          <!-- -----------------------------------------------------최고 상단 메뉴 바 + 검색창---------------------------------------------------------------------       -->
 
-        <div id="scrolls1"></div>
-        <div id="scrolls2"></div>
+          <div id="headers"></div>
+          <!-- header 삽입 -->
+          <header th:replace="/layout/header :: header"></header>
+      <!-- ----------------------------------------------사이드 퀵메뉴---------------------------메인 왼쪽 ------------------------------------------------------------------------ -->
+  
+               <div id="scrolls1"></div>
+          <div th:replace="/layout/scroll1 :: side1"></div>
+               <div id="scrolls2"></div>
+          <div th:replace="/layout/scroll2 :: side2"></div>
         <!-- --------------------------------------------------------------------------메인 왼쪽 ------------------------------------------------------------------------ -->
 
         <main>
@@ -215,11 +218,8 @@
     <!-- js 링크 -->
 
 <script th:src="@{https://cdn.jsdelivr.net/npm/vue/dist/vue.js}" src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-<script th:src="@{/js/MainMenu/Cat/Cat_FW.js}" src="../../../static/js/MainMenu/Cat/Cat_SS.js"></script>
+<script th:src="@{/js/MainMenu/Cat/Cat_SS.js}" src="../../../static/js/MainMenu/Cat/Cat_SS.js"></script>
 </body>
 <script th:src="@{/js/mainmenu/jjim.js}" src="../../../static/js/mainmenu/jjim.js"></script>
 
 </html>
-
-/Users/houya/petsong-wanryo/src/main/resources/templates/MainMenu/CAT/Cat_FW.html
-src/main/resources/templates/MainMenu/CAT/Cat_info.html

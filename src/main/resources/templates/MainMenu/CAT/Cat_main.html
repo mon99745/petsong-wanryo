@@ -8,28 +8,24 @@
     <title>펫송완료</title>
 
     <!---CSS 링크--->
-    <link rel="stylesheet" th:href="@{../css/MainMenu/CAT/CAT_F/W.css}" href="/src/main/resources/static/css/MainMenu/CAT/CAT_main.css">
-    
-    <!-- 네비게이션 관련 js 링크 -->
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
-    <script src="https://use.typekit.net/hoy3lrg.js"></script>
-
-    <!-- header 삽입 -->
-    <header th:replace="layout/header :: header"></header>
-
-    <script>try { Typekit.load({ async: true }); } catch (e) { }</script>
+    <link rel="stylesheet" th:href="@{/css/MainMenu/CAT/CAT_main.css}" href="/src/main/resources/static/css/MainMenu/CAT/CAT_main.css">
+    <link rel="stylesheet" th:href="@{/css/layout_CSS/header.css}" href="/src/main/resources/static/css/layout_CSS/header.css">
+        
+   <!-- 네비게이션 관련 js 링크 -->
+   <script th:src="@{https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js}"
+   src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+<script th:href="@{https://use.typekit.net/hoy3lrg.js}"
+   src="https://use.typekit.net/hoy3lrg.js"></script>
+  
 
      <!-- 폰트어썸 이미지 불러오기 링크 -->
     <link rel="stylesheet" th:href="@{https://pro.fontawesome.com/releases/v5.10.0/css/all.css}"
           href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-    <script th:src = "@{https://use.fontawesome.com/releases/v5.2.0/js/all.js}"
-    src ="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+  
 
-
-   <!--    header_footer_scroll -> layout-->
+  <!--    header_footer_scroll -> layout-->
 <script src="../../../static/js/layout_JS/call_layout.js"type="text/javascript"> </script>
-
 
 </head>
 
@@ -41,8 +37,14 @@
         <!-- -----------------------------------------------------최고 상단 메뉴 바 + 검색창---------------------------------------------------------------------       -->
 
         <div id="headers"></div>
+        <!-- header 삽입 -->
+        <header th:replace="/layout/header :: header"></header>
+    <!-- ----------------------------------------------사이드 퀵메뉴---------------------------메인 왼쪽 ------------------------------------------------------------------------ -->
 
-        <!-- --------------------------------------------------------------------------메인 왼쪽 ------------------------------------------------------------------------ -->
+             <div id="scrolls1"></div>
+        <div th:replace="/layout/scroll1 :: side1"></div>
+             <div id="scrolls2"></div>
+        <div th:replace="/layout/scroll2 :: side2"></div>
 <main>
 
         <!-- ------------------------------------------상품리스트------------------------------------ -->
@@ -52,8 +54,8 @@
         <div id="cloth">
             <nav id="main-bar">
                 <ul>
-                    <li ><a href="../CAT/Cat_SS.html">CAT S/S</a></li>
-                    <li ><a href="../CAT/Cat_SS.html">CAT F/W</a></li>
+                    <li ><a th:href="@{/auth/MainMenu/CAT/CatSS}" href="../CAT/Cat_SS.html">CAT S/S</a></li>
+                    <li ><a th:href="@{/auth/MainMenu/CAT/CatFW}" href="../CAT/Cat_FW.html">CAT F/W</a></li>
                    
 
                 </ul>
@@ -76,8 +78,8 @@
                         <div class="cloth-title">{{item.title}}</div>   <!--배열item의 상품명를 출력-->                                  
                         <div class="cloth-price">{{item.price}}원</div><!--배열item의 상품가격를 출력-->
                         <div class="icon">
-                            <img src="/src/main/resources/static/image/icon_logo/empty-heart.png" class="empty-heart">
-                            <img src="/src/main/resources/static/image/icon_logo/empty-cart.png" class="empty-cart">
+                            <img th:src="@{/image/icon_logo/empty-heart.png}" src="/src/main/resources/static/image/icon_logo/empty-heart.png" class="empty-heart">
+                            <img th:src="@{/image/icon_logo/empty-cart.png}" src="/src/main/resources/static/image/icon_logo/empty-cart.png" class="empty-cart">
                         </div>
                     </li>
                 </template>
@@ -111,13 +113,14 @@
 
         <!-- ------------------------------------------------------------------------------------푸터------------------------------------------------------------------------------ -->
         <div id="footers"></div>
-
+        <!-- footer 삽입 -->
+        <footer th:replace="layout/footer :: footer"></footer>
 
     </div>
     </div>
     <!-- js 링크 -->
     <script th:src="@{https://cdn.jsdelivr.net/npm/vue/dist/vue.js}" src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script th:src="@{../../../static/js/MainMenu/Cat/Cat_FW.js}" src="../../../static/js/MainMenu/Cat/Cat_Main.js"></script>
+    <script th:src="@{/js/MainMenu/Cat/Cat_Main.js}" src="../../../static/js/MainMenu/Cat/Cat_Main.js"></script>
 </body>
 <script src="/src/main/resources/static/js/mainmenu/jjim.js"></script>
 
