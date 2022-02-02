@@ -4,35 +4,45 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+   
     <title>펫송완료</title>
-    <!--    <link rel="stylesheet" href="/static/css/index.css">-->
-    <link rel="stylesheet" href="/src/main/resources/static/css/MainMenu/FOOD/Feed.css">
-    <link rel="stylesheet" href="/src/main/resources/staticcss//Main/header.scss">
-    <!-- 네비게이션 관련 js 링크 -->
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
-    <script src="https://use.typekit.net/hoy3lrg.js"></script>
-    <script>try { Typekit.load({ async: true }); } catch (e) { }</script>
 
-    <!-- 폰트어썸 이미지 불러오기 링크 -->
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    <!---CSS 링크--->
+    <link rel="stylesheet" th:href="@{/css/MainMenu/FOOD/Feed.css}" href="/src/main/resources/static/css/MainMenu/FOOD/Feed.css">
+    <link rel="stylesheet" th:href="@{/css/layout_CSS/header.css}" href="/src/main/resources/static/css/layout_CSS/header.css">
+        
+   <!-- 네비게이션 관련 js 링크 -->
+   <script th:src="@{https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js}"
+   src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+<script th:href="@{https://use.typekit.net/hoy3lrg.js}"
+   src="https://use.typekit.net/hoy3lrg.js"></script>
+  
+
+     <!-- 폰트어썸 이미지 불러오기 링크 -->
+    <link rel="stylesheet" th:href="@{https://pro.fontawesome.com/releases/v5.10.0/css/all.css}"
+          href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  
 
-<!--    header_footer_scroll -> layout-->
+  <!--    header_footer_scroll -> layout-->
 <script src="../../../static/js/layout_JS/call_layout.js"type="text/javascript"> </script>
-
 
 </head>
 
 <body>
     <div class="all">
     <div class="container">
+   <!-- -----------------------------------------------------최고 상단 메뉴 바 + 검색창---------------------------------------------------------------------       -->
 
-        <!-- -----------------------------------------------------최고 상단 메뉴 바 + 검색창---------------------------------------------------------------------       -->
+   <div id="headers"></div>
+   <!-- header 삽입 -->
+   <header th:replace="/layout/header :: header"></header>
+<!-- ----------------------------------------------사이드 퀵메뉴---------------------------메인 왼쪽 ------------------------------------------------------------------------ -->
 
-        <div id="headers"></div>
-
-        <!-- --------------------------------------------------------------------------메인 왼쪽 ------------------------------------------------------------------------ -->
+        <div id="scrolls1"></div>
+   <div th:replace="/layout/scroll1 :: side1"></div>
+        <div id="scrolls2"></div>
+   <div th:replace="/layout/scroll2 :: side2"></div>
 <main>
 
         <!-- ------------------------------------------상품리스트------------------------------------ -->
@@ -146,14 +156,14 @@
 
         <!-- ------------------------------------------------------------------------------------푸터------------------------------------------------------------------------------ -->
         <div id="footers"></div>
-
+        <!-- footer 삽입 -->
+        <footer th:replace="layout/footer :: footer"></footer>
 
     </div>
     </div>
     <!-- js 링크 -->
-    <script src="/src/main/resources/static/js/Dog_SS.js"></script>
     <script th:src="@{https://cdn.jsdelivr.net/npm/vue/dist/vue.js}" src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script th:src="@{../../../static/js/MainMenu/Cat/Cat_FW.js}" src="../../../static/js/MainMenu/Feed/Feed.js"></script>
+    <script th:src="@{/js/MainMenu/Feed/Feed.js}" src="../../../static/js/MainMenu/Feed/Feed.js"></script>
 </body>
 <script src="/src/main/resources/static/js/mainmenu/jjim.js"></script>
 
