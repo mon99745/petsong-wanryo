@@ -49,11 +49,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 //로그인에 관한 권한 설정
                 .formLogin() //권한이 없는 사람이 페이지를 이동하려고 하면 로그인 페이지로 이동
                     .loginPage("/auth/user/login") //해당하는 로그인 페이지 URL로 이동
-                    .defaultSuccessUrl("/") //로그인이 성공하면 해당 URL로 이동
                     //loginProcessingUrl에 form의 action url을 여기다 적어줍니다.
                     ///auth/user/login이 URL의 API Controller를 작성하지 않는 이유는 스프링 시큐리티가 얘를 가로채서 대신 작업을 수행해줍니다.
                     .loginProcessingUrl("/auth/user/login") //시큐리티가 해당 주소로 요청오는 로그인을 가로채서 대신 로그인
-                    .and()
+                    .defaultSuccessUrl("/") //로그인이 성공하면 해당 URL로 이동
+                .and()
                 .logout()
                     .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
                     .logoutSuccessUrl("/auth/user/login");

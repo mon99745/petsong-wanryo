@@ -21,7 +21,7 @@
         <li>
 
         <li sec:authorize="isAuthenticated()">
-            <a th:href="@{/auth/user/logout}" href="/src/main/resources/templates/TopMenu/user/login.html">LOGOUT</a>
+            <a th:href="@{/logout}" href="/src/main/resources/templates/TopMenu/user/login.html">LOGOUT</a>
         </li>
 
         <li sec:authorize="isAnonymous()">
@@ -45,7 +45,8 @@
     <!-- 로그인 시 회원 정보 출력 -->
         <div id="right" >
             <div id="welcome" sec:authorize="isAuthenticated()">
-<!--            <span th:text="${user.user_nickname}" >user_nickname</span>님 환영합니다!-->
+                <span sec:authentication="principal.username"></span>님 환영합니다!
+        </div>
         </div>
 
     <!-- 우측 상단 검색창 -->
