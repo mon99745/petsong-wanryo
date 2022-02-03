@@ -80,13 +80,21 @@ form {
   outline: none;
   border: 2px solid #cacaca;
 }
-#loginId:focus {
+#username:focus {
   border: 2px solid black;
 }
-#loginPw:focus {
+#password:focus {
   border: 2px solid;
 }
 #Login-Btn {
+  margin-top: 30px;
+  width: 370px;
+  height: 50px;
+  background-color: rgb(34, 34, 34);
+  color: #fff;
+}
+
+#Signup-Btn {
   margin-top: 30px;
   width: 370px;
   height: 50px;
@@ -98,6 +106,12 @@ form {
   background-color: #fff;
   color: #000;
 }
+
+#Signup-Btn:hover {
+  background-color: #fff;
+  color: #000;
+}
+
 .naver-Btn {
   margin-top: 10px;
   width: 182px;
