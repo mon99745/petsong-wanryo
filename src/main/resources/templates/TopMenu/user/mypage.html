@@ -12,7 +12,7 @@
     <!-- 네비게이션 관련 js 링크 -->
     <script th:src="@{https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js}" src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
     <script th:src="@{https://use.typekit.net/hoy3lrg.js}" src="https://use.typekit.net/hoy3lrg.js"></script>
-    <script>try { Typekit.load({ async: true }); } catch (e) { }</script>
+<!--    <script>try { Typekit.load({ async: true }); } catch (e) { }</script>-->
 
     <!-- 폰트어썸 이미지 불러오기 링크 -->
     <link rel="stylesheet" th:href="@{https://pro.fontawesome.com/releases/v5.10.0/css/all.css}" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
@@ -46,8 +46,8 @@
                                 </div>
                             <div id="main-top-middle-2">
                                 <li id="i1">홍길동</li>
-                                <li id="i2">vip 회원</li>
-                                <a href="/src/main/resources/templates/TopMenu/userinfo_change.html"><li id="i3">회원정보수정</li></a>
+<!--                                <li id="i2">vip 회원</li>-->
+                                <a th:href="@{../TopMenu/userinfo_change.html}" href="/src/main/resources/templates/TopMenu/userinfo_change.html"><li id="i3">회원정보수정</li></a>
                                 <li id="i4">Wish</li>
                                 <li id="i5">Cart</li>
 
@@ -80,11 +80,11 @@
                             <div id="info1-top2">
                                 <li>입금전<br> 0</li>
                                 <i class="fas fa-chevron-right fa-3x"></i>
-                                <li>배송준비중<br> 1</li>
+                                <li>배송준비중<br> 0</li>
                                 <i class="fas fa-chevron-right fa-3x"></i>
                                 <li>배송중<br> 0</li>
                                 <i class="fas fa-chevron-right fa-3x"></i>
-                                <li>배송완료<br> 1</li>
+                                <li>배송완료<br> 0</li>
                             </div>
 
                         </div>
@@ -98,25 +98,25 @@
                                 <table border="0">
                                     <tr class="order-head">
                                         <td style="width: 100px;"></td>
-                                        <td>쿠폰이름</td>
-                                        <td>사용가능상품</td>
-                                        <td>사용</td>
-                                        <td>Cart</td>
+                                        <td>상품이름</td>
+                                        <td>가격</td>
+                                        <td>구매</td>
+                                        <td>추가</td>
                                     </tr>
-                                    <tr> 
-                                        <td><img src="/src/main/resources/static/image/dog1.jpeg" style="width: 80px; height: 80px;"></td>
-                                        <td>누빌패딩강아지(Red)-s</td>
-                                        <td>31,200원</td>
-                                        <td><i class="fas fa-plus-square"></i></td>
-                                        <td><i class="fas fa-plus-square"></i></td>
-                                    </tr>
-                                    <tr>
-                                        <td><img src="/src/main/resources/static/image/dog1.jpeg" style="width: 80px; height: 80px;"></td>
-                                        <td>누빌패딩강아지(Red)-s</td>
-                                        <td>40,000원</td>
-                                        <td><i class="fas fa-plus-square"></i></td>
-                                        <td><i class="fas fa-plus-square"></i></td>
-                                    </tr>
+<!--                                    <tr>-->
+<!--                                        <td><img src="/src/main/resources/static/image/dog1.jpeg" style="width: 80px; height: 80px;"></td>-->
+<!--                                        <td>누빌패딩강아지(Red)-s</td>-->
+<!--                                        <td>31,200원</td>-->
+<!--                                        <td><i class="fas fa-plus-square"></i></td>-->
+<!--                                        <td><i class="fas fa-plus-square"></i></td>-->
+<!--                                    </tr>-->
+<!--                                    <tr>-->
+<!--                                        <td><img src="/src/main/resources/static/image/dog1.jpeg" style="width: 80px; height: 80px;"></td>-->
+<!--                                        <td>누빌패딩강아지(Red)-s</td>-->
+<!--                                        <td>40,000원</td>-->
+<!--                                        <td><i class="fas fa-plus-square"></i></td>-->
+<!--                                        <td><i class="fas fa-plus-square"></i></td>-->
+<!--                                    </tr>-->
                                 
                                 </table>
                             </div>
@@ -141,7 +141,7 @@
                                         <td>사용</td>
                                     </tr>
                                     <tr>
-                                        <td>십만원이상 구매 회원께 드리는 10% 쿠폰</td>
+                                        <td>10만원이상 구매 회원께 드리는 10% 쿠폰</td>
                                         <td>사용가능</td>
                                     </tr>
                                     <tr>

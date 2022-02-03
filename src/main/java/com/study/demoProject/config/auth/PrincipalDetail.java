@@ -59,10 +59,10 @@ public class PrincipalDetail implements UserDetails {
         return user.getUser_phone();
     }
 
-    //사용자 닉네임
-//    public String getNickname() {
-//        return user.getUser_nickname();
-//    }
+    //  사용자 닉네임
+    public String getNickname() {
+        return user.getUser_nickname();
+    }
 
     //사용자 생년월일
     public String getDate() {
