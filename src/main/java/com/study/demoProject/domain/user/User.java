@@ -20,7 +20,7 @@ public class User extends BaseTimeEntity {
     private Long code; //sequence, auto_increment
 
     //@Override
-    @Column(nullable = false, length = 20, unique = true, name = "user_id")
+    @Column(nullable = false, length = 20, name = "user_id")
     // 아이디
     // user_id 라고 명명하면 read 불가 DB에 들어가는 컬럼명만 user_id로 설정
     //
@@ -62,8 +62,8 @@ public class User extends BaseTimeEntity {
     /**
      * 비밀번호 암호화 메소드
      */
-    public void setPassword(String Password) {
-        this.password = Password;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     /**

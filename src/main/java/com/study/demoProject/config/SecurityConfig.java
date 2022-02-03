@@ -32,14 +32,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         auth.userDetailsService(principalDetailService).passwordEncoder(bCryptPasswordEncoder());
     }
 
-//    @Override
-//    public void configure(WebSecurity web) {
-//        web
-//                .ignoring()
-//                .antMatchers("/css/**", "/js/**", "/img/**")
-//                .antMatchers("/","/index");
-//    }
-// 위 대신 permitAll()사용
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http

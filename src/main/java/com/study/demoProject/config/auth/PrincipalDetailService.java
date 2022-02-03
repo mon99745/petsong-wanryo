@@ -20,18 +20,14 @@ import org.springframework.stereotype.Service;
 */
 public class PrincipalDetailService implements UserDetailsService {
 
-    private UserRepository userRepository;
+    private final UserRepository userRepository;
 
     // LoginForm에서 action="/login" 되면
     // 스프링 필터 체인이 낚아채서 loadUserByUsername함수를 호출한다.
-    void FormLoginAuthenticationProvider(@Lazy UserRepository userRepository)
-    {
-        this.userRepository = userRepository;
-    }
 
     @Override
-    public UserDetails loadUserByUsername(String user_id) throws UsernameNotFoundException {
-        User principal =  userRepository.findByUsername(user_id).orElseThrow(() -> new UsernameNotFoundException("해당 사용자를 찾을 수 없습니다. " + user_id));
+    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+        User principal =  userRepository.findByUsername(username).orElseThrow(() -> new UsernameNotFoundException("해당 사용자를 찾을 수 없습니다. " + username));
         return new PrincipalDetail(principal);
     }
 }

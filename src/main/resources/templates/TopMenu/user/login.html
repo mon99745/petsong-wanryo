@@ -44,17 +44,17 @@
 
         <form method="post" th:action="@{/auth/user/login}" id="authForm" >
             <h1>Member Login</h1>
-<!--           예외사항-->
-<!--            <div th:if="${param.error}" class="#" role="alert">-->
-<!--                아이디 혹은 비밀번호가 잘못 입력되었습니다.-->
-<!--            </div>-->
-<!--            <div th:if="${param.logout}" class="#" role="alert">-->
-<!--                로그아웃이 완료되었습니다.-->
-<!--            </div>-->
+            <!--예외사항-->
+            <div th:if="${param.error}" class="alert alert-danger" role="alert">
+                아이디 혹은 비밀번호가 잘못 입력되었습니다.
+            </div>
+            <div th:if="${param.logout}" class="alert alert-primary" role="alert">
+                로그아웃이 완료되었습니다.
+            </div>
 
             <div id="Login-top">
-                <input type="text" id="loginId" name="username" placeholder="ID" required="required">
-                <input type="password" id="loginPw" name="password" placeholder="Password" required="required">
+                <input type="text" id="username" name="username" placeholder="ID" required="required">
+                <input type="password" id="password" name="password" placeholder="Password" required="required">
             </div>
 
             <!-- 로그인 유지 체크박스 추가-->
@@ -76,7 +76,7 @@
             </ul>
 
             <!--회원가입 안내-->
-            <button id="Login-Btn" type="button" th:onclick="'location.href=\''+ @{/auth/user/save} + '\''"
+            <button id="Signup-Btn" type="button" th:onclick="'location.href=\''+ @{/auth/user/save} + '\''"
                     onclick="location.href='joinus.html' ">회원가입</button>
 
         </form>
