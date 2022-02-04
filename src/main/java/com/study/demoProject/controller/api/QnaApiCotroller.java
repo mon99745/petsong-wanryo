@@ -17,7 +17,7 @@ public class QnaApiCotroller {
     /**
      * 글작성 API
      */
-    @PostMapping("/api/v1/board")
+    @PostMapping("/api/v1/qna")
     // @PostMapping이므로 @RequestBody를 꼭붙여주어야 한다.
     // 어떤 사용자가 게시글을 작성하는지 알기 위해 @AuthenticationPrincipal 정보를 파라미터로 받는다.
     public Long save(@RequestBody BoardSaveRequestDto boardSaveRequestDto,
@@ -28,7 +28,7 @@ public class QnaApiCotroller {
     /**
      * 글삭제 API
      */
-    @DeleteMapping("/api/v1/board/{id}")
+    @DeleteMapping("/api/v1/qna/{id}")
     // id값을 주소에 받기 위해 @PathVariable
     public Long deleteById(@PathVariable Long id) {
         boardService.deleteById(id);
@@ -45,7 +45,7 @@ public class QnaApiCotroller {
     /**
      * 글수정 API
      */
-    @PutMapping("/api/v1/board/{id}")
+    @PutMapping("/api/v1/qna/{id}")
     public Long update(@PathVariable Long id, @RequestBody BoardUpdateRequestDto boardUpdateRequestDto) {
         return boardService.update(id, boardUpdateRequestDto);
     }

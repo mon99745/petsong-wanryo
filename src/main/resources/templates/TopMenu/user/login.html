@@ -1,7 +1,7 @@
 <!--주석 필수-->
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-
+<head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <!--    th:href="@{../}" -->
 <!--    th:replace="layout/header :: head  : head의 작업을 header.html 파일에서 대체하겠다는 선언-->
@@ -16,8 +16,6 @@
     <!-- 네비게이션 관련 js 링크 -->
     <script th:src="@{https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js}" src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
     <script th:src="@{https://use.typekit.net/hoy3lrg.js}" src="https://use.typekit.net/hoy3lrg.js"></script>
-        <!-- 폰트 지정-->
-        <script>try { Typekit.load({ async: true }); } catch (e) { }</script>
 
     <!-- 폰트어썸 이미지 불러오기 링크 -->
     <link rel="stylesheet" th:href="@{https://pro.fontawesome.com/releases/v5.10.0/css/all.css}" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
@@ -31,13 +29,11 @@
 </head>
 
 <body>
-<!-- header 삽입 -->
-<header th:replace="layout/header :: header"></header>
-
     <div class="all">
     <div class="container">
-
-        <div id="headers"></div>
+       <div id="headers"></div>
+        <!-- header 삽입 -->
+        <header th:replace="/layout/header :: header"></header>
 
 <main>
     <div id="Login">
@@ -85,15 +81,13 @@
 </main>
 
         <div id="footers"></div>
-
+        <!--footer 삽입 -->
+        <footer th:replace="layout/footer :: footer"></footer>
 
     </div>
 </div>
-    <footer th:replace="layout/footer :: footer"></footer>
     <!— js 링크 —>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script
-    <script th:src="@{../js/Dog_SS.js}" src="/src/main/resources/static/js/Dog_SS.js"></script>
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <!—회원가입의 유효성 —>
     <script th:src="@{/js/user.js}"></script>
 

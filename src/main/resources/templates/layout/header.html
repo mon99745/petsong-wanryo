@@ -12,88 +12,136 @@
 <header th:fragment="header">
 
     <div id="top">
-    <!-- 좌측 상단 네비게이션-->
-<!--        th:src="@{../}"-->
-    <ul class="top-bar">
-<!--        sec:authorize="isAnonymous()"-->
-        <li sec:authorize="isAnonymous()">
-            <a th:href="@{/auth/user/login}" href="/src/main/resources/templates/TopMenu/user/login.html">LOGIN</a>
-        <li>
+        <!-- 좌측 상단 네비게이션-->
+        <!--        th:src="@{../}"-->
+        <ul class="top-bar">
+            <!--        sec:authorize="isAnonymous()"-->
+            <li sec:authorize="isAnonymous()">
+                <a th:href="@{/auth/user/login}" href="/src/main/resources/templates/TopMenu/user/login.html">LOGIN</a>
+            <li>
 
-        <li sec:authorize="isAuthenticated()">
-            <a th:href="@{/logout}" href="/src/main/resources/templates/TopMenu/user/login.html">LOGOUT</a>
-        </li>
+            <li sec:authorize="isAuthenticated()">
+                <a th:href="@{/auth/user/logout}" href="/src/main/resources/templates/TopMenu/user/login.html">LOGOUT</a>
+            </li>
 
-        <li sec:authorize="isAnonymous()">
-            <a th:href="@{/auth/user/save}" href="/src/main/resources/templates/TopMenu/user/joinus.html">JOIN US</a>
-        </li>
+            <li sec:authorize="isAnonymous()">
+                <a th:href="@{/auth/user/save}" href="/src/main/resources/templates/TopMenu/user/joinus.html">JOIN US</a>
+            </li>
 
-        <a th:href="@{#}" href="/src/main/resources/templates/TopMenu/order/wish.html">
-            <li>WISH</li>
-        </a>
-        <a th:href="@{#}" href="/src/main/resources/templates/TopMenu/order/cart.html">
-            <li>CART</li>
-        </a>
-        <a th:href="@{#}" href="/src/main/resources/templates/TopMenu/order/orderlist.html">
-            <li>ORDER LIST</li>
-        </a>
-        <a th:href="@{/user/page}" href="/src/main/resources/templates/TopMenu/user/mypage.html">
-            <li>MY PAGE</li>
-        </a>
-    </ul>
+            <a th:href="@{#}" href="/src/main/resources/templates/TopMenu/order/wish.html">
+                <li>WISH</li>
+            </a>
+            <a th:href="@{#}" href="/src/main/resources/templates/TopMenu/order/cart.html">
+                <li>CART</li>
+            </a>
+            <a th:href="@{#}" href="/src/main/resources/templates/TopMenu/order/orderlist.html">
+                <li>ORDER LIST</li>
+            </a>
+            <a th:href="@{/user/page}" href="/src/main/resources/templates/TopMenu/user/mypage.html">
+                <li>MY PAGE</li>
+            </a>
+        </ul>
 
-    <!-- 로그인 시 회원 정보 출력 -->
+        <!-- 로그인 시 회원 정보 출력 -->
         <div id="right" >
             <div id="welcome" sec:authorize="isAuthenticated()">
-                <span sec:authentication="principal.username"></span>님 환영합니다!
-        </div>
-        </div>
-
-    <!-- 우측 상단 검색창 -->
-    <div id="search">
-        <input type="text" class="search-text" placeholder="Search">
-        <button class="search-btn" type="submit"></button>
-    </div>
-</div>
-
-</div>
-<!-- --------------------------------------------------------------   로고 -------------------------------------------------------------------------------------- -->
-<div id="logo">
-    <a th:href="@{/}" href="/src/main/resources/templates/index.html">
-        <img class="logo-img" th:src="@{/image/mainpage/logo.png}" src="/src/main/resources/static/image/mainpage/logo.png" alt="My Image">
-    </a>
-</div>
-
-<!-- ------------------------------------------------------------------바텀바------------------------------------------------------------------------------------ -->
-<div id="bottom">
-    <!-- 페이스북 인스타 트위터 로고 넣기 -->
-    <a th:href="@{https://ko-kr.facebook.com/}" href="https://ko-kr.facebook.com/" target="_blank"><i class="fab fa-facebook fa-2x"></i></a>
-    <a th:href="@{https://www.instagram.com/}" href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
-    <a th:href="@{https://twitter.com/}" href="https://twitter.com/?lang=ko" target="_blank"><i class="fab fa-twitter-square fa-2x"></i></a>
-    <!-- notice Q&A 넣기 -->
-    <ul class="bottom-bar">
-        <a th:href="@{../board/QandA.html}" href="/src/main/resources/templates/TopMenu/board/QandA.html">
-            <li>Q&A</li>
-        </a>
-        <a th:href="@{../board/Notice.html}" href="/src/main/resources/templates/TopMenu/board/Notice.html">
-            <li>Notice</li>
-        </a>
-    </ul>
-</div>
-<!-- ----------------------------------------------------------------------- 메뉴 네비게이션 바------------------------------------------------------------------------>
-<div id="menu">
-
-    <ul class="menu-bar">
-
-        <!-- ------------------------------------햄버거 네비------------------------------- -->
-        <div id="Main_drop">
-            <i class="fas fa-bars fa-2x"></i>
-        </div>
-        <div id="drop" class="maindropdown">
-            <div id="empty">
-
+                <span th:text="${user.user_nickname}" >user_nickname</span>님 환영합니다!
             </div>
-            <div id="part1">
+
+            <!-- 우측 상단 검색창 -->
+            <div id="search">
+                <input type="text" class="search-text" placeholder="Search">
+                <button class="search-btn" type="submit"></button>
+            </div>
+        </div>
+
+    </div>
+    <!-- --------------------------------------------------------------   로고 -------------------------------------------------------------------------------------- -->
+    <div id="logo">
+        <a th:href="@{/}" href="/src/main/resources/templates/index.html">
+            <img class="logo-img" th:src="@{/image/mainpage/logo.png}" src="/src/main/resources/static/image/mainpage/logo.png" alt="My Image">
+        </a>
+    </div>
+
+    <!-- ------------------------------------------------------------------바텀바------------------------------------------------------------------------------------ -->
+    <div id="bottom">
+        <!-- 페이스북 인스타 트위터 로고 넣기 -->
+        <a th:href="@{https://ko-kr.facebook.com/}" href="https://ko-kr.facebook.com/" target="_blank"><i class="fab fa-facebook fa-2x"></i></a>
+        <a th:href="@{https://www.instagram.com/}" href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+        <a th:href="@{https://twitter.com/}" href="https://twitter.com/?lang=ko" target="_blank"><i class="fab fa-twitter-square fa-2x"></i></a>
+        <!-- notice Q&A 넣기 -->
+        <ul class="bottom-bar">
+            <a th:href="@{/auth/board/qna}" href="/src/main/resources/templates/TopMenu/board/QnA.html">
+                <li>Q&A</li>
+            </a>
+            <a th:href="@{/auth/board/notice}" href="/src/main/resources/templates/TopMenu/board/Notice.html">
+                <li>Notice</li>
+            </a>
+        </ul>
+    </div>
+    <!-- ----------------------------------------------------------------------- 메뉴 네비게이션 바------------------------------------------------------------------------>
+    <div id="menu">
+
+        <ul class="menu-bar">
+
+            <!-- ------------------------------------햄버거 네비------------------------------- -->
+            <div id="Main_drop">
+                <i class="fas fa-bars fa-2x"></i>
+            </div>
+            <div id="drop" class="maindropdown">
+                <div id="empty">
+
+                </div>
+                <div id="part1">
+                    <a th:href="@{/auth/MainMenu/DOG/DogSS}" href="/src/main/resources/templates/MainMenu/DOG/Dog_SS.html">
+                        <li>S/S</li>
+                    </a>
+                    <a th:href="@{/auth/MainMenu/DOG/DogFW}" href="/src/main/resources/templates/MainMenu/DOG/Dog_FW.html">
+                        <li>F/W</li>
+                    </a>
+                </div>
+                <div id="part2">
+                    <a th:href="@{/auth/MainMenu/CAT/CatSS}" href="/src/main/resources/templates/MainMenu/CAT/Cat_SS.html">
+                        <li>S/S</li>
+                    </a>
+                    <a th:href="@{/auth/MainMenu/CAT/CatFW}" href="/src/main/resources/templates/MainMenu/CAT/Cat_FW.html">
+                        <li>F/W</li>
+                    </a>
+                </div>
+                <!-- <div id="part3">
+                    <a href="/src/main/resources/templates/MainMenu/LIVING/Toy.html">
+                        <li>Toy</li>
+                    </a>
+                    <a href="/src/main/resources/templates/MainMenu/LIVING/Bag.html">
+                        <li>Bag</li>
+                    </a>
+                    <a href="/src/main/resources/templates/MainMenu/LIVING/House.html">
+                        <li>House</li>
+                    </a>
+                </div> -->
+                <!-- <div id="part4">
+                    <a href="/src/main/resources/templates/MainMenu/FOOD/Dog_Feed.html">
+                        <li>DogFeed</li>
+                    </a>
+                    <a href="/src/main/resources/templates/MainMenu/FOOD/Cat_Feed.html">
+                        <li>CatFeed</li>
+                    </a>
+                </div> -->
+                <div id="part5">
+                    <a th:href="@{/MainMenu/COMMUNITY/community1.html}" href="/src/main/resources/templates/MainMenu/COMMUNITY/community1.html">
+                        <li>유기견게시판</li>
+                    </a>
+                    <a th:href="@{/MainMenu/COMMUNITY/community2.html}" href="/src/main/resources/templates/MainMenu/COMMUNITY/community2.html">
+                        <li>자유게시판</li>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 메뉴 종류 넣기 -->
+            <a th:href="@{/auth/MainMenu/DOG/DogMain}" href="/src/main/resources/templates/MainMenu/DOG/Dog_main.html">
+                <p id="DOG">DOG</p>
+            </a>
+            <div id="drop1" class="dropdown">
                 <a th:href="@{/auth/MainMenu/DOG/DogSS}" href="/src/main/resources/templates/MainMenu/DOG/Dog_SS.html">
                     <li>S/S</li>
                 </a>
@@ -101,7 +149,11 @@
                     <li>F/W</li>
                 </a>
             </div>
-            <div id="part2">
+
+            <a th:href="@{/auth/MainMenu/CAT/CatMain}" href="/src/main/resources/templates/MainMenu/CAT/Cat_main.html">
+                <p id="CAT">CAT</p>
+            </a>
+            <div id="drop2" class="dropdown">
                 <a th:href="@{/auth/MainMenu/CAT/CatSS}" href="/src/main/resources/templates/MainMenu/CAT/Cat_SS.html">
                     <li>S/S</li>
                 </a>
@@ -109,7 +161,11 @@
                     <li>F/W</li>
                 </a>
             </div>
-            <!-- <div id="part3">
+
+            <a th:href="@{/auth/MainMenu/LIVING/LivingMain}" href="/src/main/resources/templates/MainMenu/LIVING/Living_main.html">
+                <p id="LIVING">LIVING </p>
+            </a>
+            <!-- <div id="drop3" class="dropdown">
                 <a href="/src/main/resources/templates/MainMenu/LIVING/Toy.html">
                     <li>Toy</li>
                 </a>
@@ -120,7 +176,11 @@
                     <li>House</li>
                 </a>
             </div> -->
-            <!-- <div id="part4">
+
+            <a th:href="@{/auth/MainMenu/FOOD/FoodMain}" href="/src/main/resources/templates/MainMenu/FOOD/Food_main.html">
+                <p id="FOOD">FOOD</p>
+            </a>
+            <!-- <div id="drop4" class="dropdown">
                 <a href="/src/main/resources/templates/MainMenu/FOOD/Dog_Feed.html">
                     <li>DogFeed</li>
                 </a>
@@ -128,80 +188,20 @@
                     <li>CatFeed</li>
                 </a>
             </div> -->
-            <div id="part5">
-                <a th:href="@{/MainMenu/COMMUNITY/community1.html}" href="/src/main/resources/templates/MainMenu/COMMUNITY/community1.html">
-                    <li>유기견게시판</li>
-                </a>
-                <a th:href="@{/MainMenu/COMMUNITY/community2.html}" href="/src/main/resources/templates/MainMenu/COMMUNITY/community2.html">
+            <a th:href="@{/auth/MainMenu/COMMUNITY/community1}" href="/src/main/resources/templates/MainMenu/COMMUNITY/community1.html">
+                <p id="COMMUNITY">COMMUNITY</p>
+            </a>
+            <div id="drop5" class="dropdown">
+                <a th:href="@{/auth/MainMenu/COMMUNITY/community1}" href="/src/main/resources/templates/MainMenu/COMMUNITY/community1.html">
                     <li>자유게시판</li>
                 </a>
+                <a th:href="@{/auth/MainMenu/COMMUNITY/community2}" href="/src/main/resources/templates/MainMenu/COMMUNITY/community2.html">
+                    <li>유기견게시판</li>
+                </a>
             </div>
-        </div>
+        </ul>
 
-        <!-- 메뉴 종류 넣기 -->
-        <a th:href="@{/auth/MainMenu/DOG/DogMain}" href="/src/main/resources/templates/MainMenu/DOG/Dog_main.html">
-            <p id="DOG">DOG</p>
-        </a>
-        <div id="drop1" class="dropdown">
-            <a th:href="@{/auth/MainMenu/DOG/DogSS}" href="/src/main/resources/templates/MainMenu/DOG/Dog_SS.html">
-                <li>S/S</li>
-            </a>
-            <a th:href="@{/auth/MainMenu/DOG/DogFW}" href="/src/main/resources/templates/MainMenu/DOG/Dog_FW.html">
-                <li>F/W</li>
-            </a>
-        </div>
-
-        <a th:href="@{/auth/MainMenu/CAT/CatMain}" href="/src/main/resources/templates/MainMenu/CAT/Cat_main.html">
-            <p id="CAT">CAT</p>
-        </a>
-        <div id="drop2" class="dropdown">
-            <a th:href="@{/auth/MainMenu/CAT/CatSS}" href="/src/main/resources/templates/MainMenu/CAT/Cat_SS.html">
-                <li>S/S</li>
-            </a>
-            <a th:href="@{/auth/MainMenu/CAT/CatFW}" href="/src/main/resources/templates/MainMenu/CAT/Cat_FW.html">
-                <li>F/W</li>
-            </a>
-        </div>
-
-        <a th:href="@{/auth/MainMenu/LIVING/LivingMain}" href="/src/main/resources/templates/MainMenu/LIVING/Living_main.html">
-            <p id="LIVING">LIVING </p>
-        </a>
-        <!-- <div id="drop3" class="dropdown">
-            <a href="/src/main/resources/templates/MainMenu/LIVING/Toy.html">
-                <li>Toy</li>
-            </a>
-            <a href="/src/main/resources/templates/MainMenu/LIVING/Bag.html">
-                <li>Bag</li>
-            </a>
-            <a href="/src/main/resources/templates/MainMenu/LIVING/House.html">
-                <li>House</li>
-            </a>
-        </div> -->
-
-        <a th:href="@{/auth/MainMenu/FOOD/FoodMain}" href="/src/main/resources/templates/MainMenu/FOOD/Food_main.html">
-            <p id="FOOD">FOOD</p>
-        </a>
-        <!-- <div id="drop4" class="dropdown">
-            <a href="/src/main/resources/templates/MainMenu/FOOD/Dog_Feed.html">
-                <li>DogFeed</li>
-            </a>
-            <a href="/src/main/resources/templates/MainMenu/FOOD/Cat_Feed.html">
-                <li>CatFeed</li>
-            </a>
-        </div> -->
-
-        <p id="COMMUNITY">COMMUNITY</p>
-        <div id="drop5" class="dropdown">
-            <a th:href="@{/MainMenu/COMMUNITY/community1.html}" href="/src/main/resources/templates/MainMenu/COMMUNITY/community1.html">
-                <li>유기견게시판</li>
-            </a>
-            <a th:href="@{/MainMenu/COMMUNITY/community2.html}" href="/src/main/resources/templates/MainMenu/COMMUNITY/community2.html">
-                <li>자유게시판</li>
-            </a>
-        </div>
-    </ul>
-
-</div>
+    </div>
     <script th:src="@{/js/layout_JS/header.js}" src="/src/main/resources/static/js/layout_JS/header.js"></script>
 </header>
 
