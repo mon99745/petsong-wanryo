@@ -1,6 +1,6 @@
 <!--주석 필수-->
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
 <!--    th:href="@{../}" -->
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -8,7 +8,7 @@
     <title>펫송완료</title>
     <!--    <link rel="stylesheet" href="/static/css/index.css">-->
     <link rel="stylesheet" th:href="@{../css/TopMenu/mypage.css?ver=1}" href="/src/main/resources/static/css/TopMenu/mypage.css?ver=1">
-    <link rel="stylesheet" th:href="@{../css/Main/header.scss}" href="/src/main/resources/staticcss/css/Main/header.scss">
+    <link rel="stylesheet" th:href="@{/css/layout_CSS/header.css}" href="/src/main/resources/static/css/layout_CSS/header.css">
     <!-- 네비게이션 관련 js 링크 -->
     <script th:src="@{https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js}" src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
     <script th:src="@{https://use.typekit.net/hoy3lrg.js}" src="https://use.typekit.net/hoy3lrg.js"></script>
@@ -32,7 +32,8 @@
         <!-- -----------------------------------------------------최고 상단 메뉴 바 + 검색창---------------------------------------------------------------------       -->
 
         <div id="headers"></div>
-
+        <!-- header 삽입 -->
+        <header th:replace="/layout/header :: header"></header>
         <!-- --------------------------------------------------------------------------메인 왼쪽 ------------------------------------------------------------------------ -->
         <main>
                 
@@ -45,9 +46,11 @@
                                     <i class="fas fa-user-circle fa-5x"></i>
                                 </div>
                             <div id="main-top-middle-2">
-                                <li id="i1">홍길동</li>
+                                <li id="i1" sec:authentication="principal.username" ></li> 님
 <!--                                <li id="i2">vip 회원</li>-->
-                                <a th:href="@{../TopMenu/userinfo_change.html}" href="/src/main/resources/templates/TopMenu/userinfo_change.html"><li id="i3">회원정보수정</li></a>
+                                <a th:href="@{/user/update}" href="/src/main/resources/templates/TopMenu/user-update">
+                                <li id="i3">회원정보수정</li>
+                                </a>
                                 <li id="i4">Wish</li>
                                 <li id="i5">Cart</li>
 
@@ -175,7 +178,8 @@
 
         <!-- ------------------------------------------------------------------------------------푸터------------------------------------------------------------------------------ -->
         <div id="footers"></div>
-
+        <!-- footer 삽입 -->
+        <footer th:replace="layout/footer :: footer"></footer>
 
     </div>
 </div>
