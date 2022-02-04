@@ -41,8 +41,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .authorizeRequests() // URL별 권한 관리를 설정하는 옵션
                     .antMatchers("/","/index","/auth/**","/js/**", "/css/**","/image/**").permitAll()
                     .antMatchers("/layout/**","/MainMenu/**").permitAll()
-                    .antMatchers("/index/admin").hasAuthority(Role.ADMIN.getKey()) //"/index/admin" 경로는 "ADMIN" 권한을 가진 사용자만 접근 가능
-                    .antMatchers("/index/user").hasAuthority(Role.USER.getKey()) //"/index/user" 경로는 "USER" 권한을 가진 사용자만 접근 가능
+//                    .antMatchers("/index/admin").hasAuthority(Role.ADMIN.getKey()) //"/index/admin" 경로는 "ADMIN" 권한을 가진 사용자만 접근 가능
+//                    .antMatchers("/index/user").hasAuthority(Role.USER.getKey()) //"/index/user" 경로는 "USER" 권한을 가진 사용자만 접근 가능
                     .anyRequest().authenticated()
                     .and()
 
@@ -53,10 +53,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                     ///auth/user/login이 URL의 API Controller를 작성하지 않는 이유는 스프링 시큐리티가 얘를 가로채서 대신 작업을 수행해줍니다.
                     .loginProcessingUrl("/auth/user/login") //시큐리티가 해당 주소로 요청오는 로그인을 가로채서 대신 로그인
                     .defaultSuccessUrl("/") //로그인이 성공하면 해당 URL로 이동
+//                    .successForwardUrl("/")
                 .and()
                 .logout()
                     .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
-                    .logoutSuccessUrl("/auth/user/login");
+                    .logoutSuccessUrl("/auth/user/login")
+                    .invalidateHttpSession(true); //세션 날리기
 
 
         // 보류 remember.me

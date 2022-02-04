@@ -16,7 +16,7 @@
     <!-- 네비게이션 관련 js 링크 -->
     <script th:src="@{https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js}"
             src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
-    <script th:href="@{https://use.typekit.net/hoy3lrg.js}"
+    <script th:src="@{https://use.typekit.net/hoy3lrg.js}"
             src="https://use.typekit.net/hoy3lrg.js"></script>
 
     <!-- 폰트어썸 이미지 불러오기 링크 -->
@@ -26,7 +26,7 @@
 
     <!--일부러 타임리프 안건거-->
     <!--화면단에 header, footer 출력하기 위함-->
-    <script src="../static/js/layout_JS/call_layout.js"type="text/javascript"> </script>
+    <script th:src="@{js/layout_JS/call_layout.js}" src="../static/js/layout_JS/call_layout.js"type="text/javascript"> </script>
 </head>
 
 <body>
@@ -221,8 +221,9 @@
             <div class="bottomright">
                 <h1>DailyPetNews</h1>
                 <hr align="left" style="border: solid 3px black; width: 40%; background-color: black;">
-
-                <img th:src="@{../image/mainpage/애견지식1.jpg}" src="../static/image/mainpage/애견지식1.jpg"  id=mainImage class="n1" alt="YsjImage"
+                <!-- 애견지식 슬라이드 쇼-->
+                <!-- 화면단에 출력은 아직 불가능 -->
+                <img id=mainImage class="n1" alt="YsjImage - 슬라이드 쇼"
                     style="width:750px;height:500px;">
                
 
