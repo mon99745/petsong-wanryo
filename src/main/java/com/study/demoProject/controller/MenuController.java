@@ -112,4 +112,20 @@ public class MenuController {
         return "MainMenu/FOOD/Cat_Feed.html";
     }
 
+    /**
+     * community1
+     */
+    @GetMapping("/auth/MainMenu/COMMUNITY/community1")
+    public String community1() {
+        return "MainMenu/COMMUNITY/community1.html";
+    }
+
+    /**
+     * community2
+     */
+    @GetMapping("/auth/MainMenu/COMMUNITY/community2")
+    public String community2() {
+        return "MainMenu/COMMUNITY/community2.html";
+    }
+
 }

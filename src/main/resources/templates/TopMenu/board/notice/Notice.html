@@ -8,18 +8,17 @@
             src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
     <title>펫송완료</title>
 
-    <link rel="stylesheet" th:href="@{../css/Main/Notice.css}" href="/src/main/resources/static/css/Main/Notice.css">
-    <link rel="stylesheet" th:href="@{../css/Main/header.scss}" href="/src/main/resources/static/css/Main/header.scss">
+    <link rel="stylesheet" th:href="@{/css/Main/Notice.css}" href="/src/main/resources/static/css/Main/Notice.css">
+    <link rel="stylesheet" th:href="@{/css/layout_CSS/header.css}" href="/src/main/resources/static/css/layout_CSS/header.css">
     <!-- 네비게이션 관련 js 링크 -->
     <script th:src="@{https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js}"
             src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
     <script th:src="@{https://use.typekit.net/hoy3lrg.js}"
             src="https://use.typekit.net/hoy3lrg.js"></script>
-    <script>try { Typekit.load({ async: true }); } catch (e) { }</script>
 
     <!-- 폰트어썸 이미지 불러오기 링크 -->
     <link rel="stylesheet" th:href="@{https://pro.fontawesome.com/releases/v5.10.0/css/all.css}" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
     <!--    일부러 타임리프 안건거-->
     <!--    화면단에 header, footer 출력하기 위함-->
@@ -27,17 +26,18 @@
 </head>
 
 <body>
-    <div class="all">
+<div class="all">
     <div class="container">
 
         <!-- -----------------------------------------------------최고 상단 메뉴 바 + 검색창---------------------------------------------------------------------       -->
 
         <div id="headers"></div>
-
+        <!-- header 삽입 -->
+        <header th:replace="/layout/header :: header"></header>
         <!-- --------------------------------------------------------------------------메인 왼쪽 ------------------------------------------------------------------------ -->
         <main>
             <div id="main-top">
-                <div id="QandA">Notice</div>
+                <div id="QnA">Notice</div>
             </div>
 
             <div id="main-middle">
@@ -81,7 +81,7 @@
                             </div>
                             <div id="m3">
                                 <input type="text" id="modal-text" value="문의 내용을 적어주세요. (200글자)"
-                                    style="color: gray; text-align: left; ">
+                                       style="color: gray; text-align: left; ">
 
                             </div>
                             <div id="m4">
@@ -112,29 +112,29 @@
                         <tr>
                             <td>1</td>
                             <td>가입 이벤트 안내</td>
-                            <td>문XX</td>
+                            <td>관리자</td>
                             <td>2021.12.14</td>
                             <td>3</td>
                         </tr>
                         <tr>
                             <td>2</td>
                             <td>12월 정기 행사</td>
-                            <td>임XX</td>
+                            <td>관리자</td>
                             <td>2021.12.14</td>
                             <td>2</td>
                         </tr>
                         <tr>
                             <td>3</td>
                             <td>배송지연 안내</td>
-                            <td>박XX</td>
+                            <td>관리자</td>
                             <td>2021.12.14</td>
                             <td>4</td>
                         </tr>
                         <tr>
                             <td>4</td>
-                            <td>12월 15일 2:00~4:00 서버점검</td>
-                            <td>이XX</td>
-                            <td>2021.12.14</td>
+                            <td>서버 점검 2월 5일~ </td>
+                            <td>관리자</td>
+                            <td>2022.02.05</td>
                             <td>3</td>
                         </tr>
 
@@ -197,12 +197,13 @@
 
         <!-- ------------------------------------------------------------------------------------푸터------------------------------------------------------------------------------ -->
         <div id="footers"></div>
-
+        <!--footer 삽입 -->
+        <footer th:replace="layout/footer :: footer"></footer>
 
     </div>
 </div>
-    <!-- js 링크 -->
-    <script th:src="@{../../../static/js/topmenu/board/Notice.js}" src="../../../static/js/topmenu/board/Notice.js"></script>
+<!-- js 링크 -->
+<script th:src="@{../../../static/js/topmenu/board/Notice.js}" src="../../../static/js/topmenu/board/Notice.js"></script>
 
 </body>
 
