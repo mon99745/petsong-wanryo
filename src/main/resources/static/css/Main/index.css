@@ -1,5 +1,4 @@
 /* --------------------------------css 기본틀--------------------------------------------- */
-/* --------------------------------css 기본틀--------------------------------------------- */
 @font-face {
   font-family: 'ChosunGu';
   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunGu.woff') format('woff');
@@ -7,10 +6,10 @@
   font-style: normal;
 }
 
-
 * {
   margin: 0; /* 마진 리셋 */
   padding: 0; /* 패딩 리셋 */
+  font-family:   'ChosunGu';
 }
 
 body {
@@ -21,9 +20,6 @@ body {
 /* !!!! 화면 비율 일정하게 조절 !!!!
   ex> 화면 줄어들면 그에 맞는 비율로 줄고, 늘면 그에 맞는 비율로 늠
   가까이 확대되면 스크롤 이용 */
-
-  *{
-font-family: 'Exo 2', sans-serif; }
 
 
 .all {
