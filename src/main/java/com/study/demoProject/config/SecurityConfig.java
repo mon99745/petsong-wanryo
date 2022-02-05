@@ -41,8 +41,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .authorizeRequests() // URL별 권한 관리를 설정하는 옵션
                     .antMatchers("/","/index","/auth/**","/js/**", "/css/**","/image/**").permitAll()
                     .antMatchers("/layout/**","/MainMenu/**").permitAll()
-//                    .antMatchers("/index/admin").hasAuthority(Role.ADMIN.getKey()) //"/index/admin" 경로는 "ADMIN" 권한을 가진 사용자만 접근 가능
-//                    .antMatchers("/index/user").hasAuthority(Role.USER.getKey()) //"/index/user" 경로는 "USER" 권한을 가진 사용자만 접근 가능
+//                  .antMatchers("/").hasRole("USER") // USER, ADMIN만 접근 가능
+//                  .antMatchers("/admin/**").hasRole("ADMIN") // ADMIN만 접근 가능
+//                  .antMatchers("/index/admin").hasAuthority(Role.ADMIN.getKey()) //"/index/admin" 경로는 "ADMIN" 권한을 가진 사용자만 접근 가능
+//                  .antMatchers("/index/user").hasAuthority(Role.USER.getKey()) //"/index/user" 경로는 "USER" 권한을 가진 사용자만 접근 가능
                     .anyRequest().authenticated()
                     .and()
 

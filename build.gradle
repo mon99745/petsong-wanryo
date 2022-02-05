@@ -21,7 +21,6 @@ repositories {
 }
 
 dependencies {
-	//compile group: 'oracle', name: 'ojdbc6', version: '11.2.0.3'
 
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
@@ -42,6 +41,7 @@ dependencies {
 
 	implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity5'
 
+	implementation 'org.springframework.boot:spring-boot-starter-validation:2.4.0'
 }
 
 test {

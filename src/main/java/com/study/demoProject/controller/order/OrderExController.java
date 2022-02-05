@@ -1,8 +1,8 @@
-package com.study.demoProject.controller;
+package com.study.demoProject.controller.order;
 
 import org.springframework.web.bind.annotation.GetMapping;
 
-public class OrderController {
+public class OrderExController {
     // Top Menu 컨트롤러
     /**
      * cart.html
