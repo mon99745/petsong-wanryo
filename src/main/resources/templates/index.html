@@ -10,8 +10,8 @@
     <title>펫송완료</title>
     <!--    Thymeleaf 경로-->
     <!--    th:href="@{../}"-->
-    <link rel="stylesheet" th:href="@{/css/Main/index.css}" href="/src/main/resources/static/css/Main/index.css">
-    <link rel="stylesheet" th:href="@{/css/layout_CSS/header.css}" href="/src/main/resources/static/css/layout_CSS/header.css">
+    <link rel="stylesheet" th:href="@{css/Main/index.css}" href="/src/main/resources/static/css/Main/index.css">
+    <link rel="stylesheet" th:href="@{css/layout_CSS/header.css}" href="/src/main/resources/static/css/layout_CSS/header.css">
 
     <!-- 네비게이션 관련 js 링크 -->
     <script th:src="@{https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js}"
@@ -37,13 +37,13 @@
 
         <div id="headers"></div>
         <!-- header 삽입 -->
-        <header th:replace="/layout/header :: header"></header>
+        <header th:replace="layout/header :: header"></header>
         <!-- ----------------------------------------------사이드 퀵메뉴---------------------------메인 왼쪽 ------------------------------------------------------------------------ -->
 
         <div id="scrolls1"></div>
-        <div th:replace="/layout/scroll1 :: side1"></div>
+        <div th:replace="layout/scroll1 :: side1"></div>
         <div id="scrolls2"></div>
-        <div th:replace="/layout/scroll2 :: side2"></div>
+        <div th:replace="layout/scroll2 :: side2"></div>
 
         <!-- --------------------------------------------------------------------------메인 왼쪽 ------------------------------------------------------------------------ -->
 
@@ -239,7 +239,7 @@
     </div>
 </div>
 <!--js 링크-->
-<script th:src="@{/js/index.js}" src="/src/main/resources/static/js/index.js"></script>
+<script th:src="@{js/index.js}" src="/src/main/resources/static/js/index.js"></script>
 
 </body>
 
