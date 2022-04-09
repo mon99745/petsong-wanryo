@@ -37,13 +37,6 @@ public class BoardApiController {
         return id;
     }
 
-//    /**
-//     * 글수정 API
-//     */
-//    @PutMapping("/api/v1/board/{id}")
-//    public Long update(@PathVariable Long id, @RequestBody BoardUpdateRequestDto boardUpdateRequestDto) {
-//        return boardService.update(id, boardService);
-//    }
     /**
      * 글수정 API
      */

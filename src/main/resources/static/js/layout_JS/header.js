@@ -87,13 +87,13 @@
     })
     //----------------------COMMUNITY---------------------------
 
-    $(" #COMMUNITY ").mouseover(function () {
+    $(" #community ").mouseover(function () {
         $(" #drop5 ").addClass('show5');
     })
     $(" #drop5 ").mouseover(function () {
         $(" #drop5 ").addClass('show5');
     })
-    $("#COMMUNITY").mouseleave(function () {
+    $("#community").mouseleave(function () {
         $(" #drop5").removeClass('show5');
     })
     $("#drop5").mouseleave(function () {

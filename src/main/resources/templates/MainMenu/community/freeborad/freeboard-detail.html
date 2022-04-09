@@ -1,0 +1,80 @@
+<!--&lt;!&ndash;게시판 상세 보기&ndash;&gt;-->
+<!--<!doctype html>-->
+<!--<html lang="en" class="h-100" xmlns:th="http://www.thymeleaf.org">-->
+
+<!--<head th:replace="layout/header :: head ('글상세')"></head>-->
+
+<!--<body class="text-center d-flex flex-column h-100">-->
+<!--<header th:replace="layout/header :: header"></header>-->
+
+<!--<div class="d-flex" style="position: absolute; left: 20px; top: 100px;"><h4 style="margin-right: 10px;">글 번호:</h4><h4 th:text="${board.id}" id="id"></h4></div>-->
+<!--<div class="d-flex" style="position: absolute; left: 20px; top: 130px;"><h4 style="margin-right: 10px;">작성자:</h4><h4 th:text="${board.user.username}"></h4></div>-->
+<!--<div class="d-flex" style="position: absolute; left: 20px; top: 160px;"><h4 style="margin-right: 10px;">조회수:</h4><h4 th:text="${board.count}"></h4></div>-->
+
+<!--<main class="form-signin" style="max-width: 100%;">-->
+<!--    <div class="container border rounded flex-md-row mb-4 shadow-sm h-md-250">-->
+<!--        <h1 class="h3 m-3 fw-normal">게시판 상세페이지</h1>-->
+<!--        <hr/>-->
+<!--        <div class="form-floating m-3">-->
+<!--            <h3 th:text="${board.title}" style="margin-bottom: 50px;"></h3>-->
+<!--        </div>-->
+<!--        <div class="form-floating m-3">-->
+<!--            <p th:text="${board.content}"></p>-->
+<!--        </div>-->
+
+
+<!--    </div>-->
+<!--    &lt;!&ndash;        삭제 버튼과 수정 버튼은 글쓴이만 볼 수 있게&ndash;&gt;-->
+<!--    <div th:if="${board.user.id == #authentication.principal}">-->
+<!--        <a th:href="@{/board/{id}/update(id=${board.id})}" class="btn btn-warning" id="btn-update">수정</a>-->
+<!--        <button class="btn btn-danger" id="btn-delete">삭제</button>-->
+<!--    </div>-->
+
+<!--    <button class="btn btn-secondary" onclick="history.back()" style="position: absolute; top:556px; left:82px;">뒤로</button>-->
+<!--    &lt;!&ndash;댓글 파트&ndash;&gt;-->
+<!--    <div class="card mb-2 mt-5">-->
+<!--        <div class="card-header bg-light">-->
+<!--            <i class="fa fa-comment fa"></i> 댓글 작성 </div>-->
+<!--        <form>-->
+<!--            <div class="card-body">-->
+<!--                <input type="hidden" id="boardId" th:value="${board.id}">-->
+<!--                <ul class="list-group list-group-flush">-->
+<!--                    <li class="list-group-item">-->
+<!--                        <textarea class="form-control" id="reply-content" rows="1"></textarea>-->
+<!--                        <button id="reply-btn-save" type="button" class="btn btn-dark mt-3">등록</button>-->
+<!--                    </li>-->
+<!--                </ul>-->
+<!--            </div>-->
+<!--        </form>-->
+<!--    </div>-->
+<!--    <br/>-->
+<!--    <div class="card">-->
+<!--        <div class="card-header">댓글</div>-->
+<!--        <ul id="reply&#45;&#45;box" class="list-group" th:each="reply : ${board.replyList}">-->
+<!--            <li th:id="'reply&#45;&#45;' + ${reply.id}" class="list-group-item d-flex justify-content-between">-->
+<!--                <div th:text="${reply.content}"></div>-->
+<!--                <div class="d-flex" >-->
+<!--                    <span class="text-monospace">작성자: &nbsp;</span><div class="text-monospace" th:text="${reply.user.username}"></div>-->
+<!--                    <span th:if="${reply.user.id == #authentication.principal}">-->
+<!--                        <button th:onclick="|replyIndex.replyDelete('${board.id}', '${reply.id}')|" class="badge btn-danger" style="margin-left: 10px;">삭제</button>-->
+<!--                    </span>-->
+<!--                </div>-->
+
+<!--            </li>-->
+<!--        </ul>-->
+<!--    </div>-->
+<!--</main>-->
+
+<!--<footer th:replace="layout/footer :: footer"></footer>-->
+
+<!--&lt;!&ndash;경로 변경 절대 금지 &ndash;&gt;-->
+<!--<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>-->
+<!--<script th:src="@{/js/bootstrap.min.js}"></script>-->
+<!--<script th:src="@{/js/reply.js}"></script>-->
+<!--<script th:src="@{/js/board.js}"></script>-->
+
+
+
+<!--</body>-->
+
+<!--</html>-->
