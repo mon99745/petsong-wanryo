@@ -15,12 +15,14 @@ public class FreeBoardController {
 
     private final FreeBoardService freeBoardService;
 
+
+
     /**
-     * 글메인 페이지
+     * freeboard 메인페이지
      */
-    @GetMapping("/freeBoard")
+    @GetMapping("/auth/freeboard-main")
     public String freeBoard() {
-        return "MainMenu/community/freeboard/freeBoard";
+        return "MainMenu/community/freeboard/freeboard-main";
     }
 
     /**

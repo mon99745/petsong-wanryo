@@ -23,7 +23,7 @@ public class FreeBoardApiController {
     private final FreeBoardService freeBoardService;
 
     /**
-     * 메인페이지 API
+     * 메인페이지 API (페이징 처리)
      */
     @GetMapping("/api/v1/freeBoard")
 // @PageableDefault를 설정하면 페이지의 size, 정렬순을 정할 수 있다.

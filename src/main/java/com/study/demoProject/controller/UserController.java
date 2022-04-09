@@ -26,7 +26,7 @@ public class UserController {
      */
     @GetMapping("/user/page")
     public String userPage() {
-        return "TopMenu/user/mypage.html";
+        return "TopMenu/user/mypage";
     }
 
     /**

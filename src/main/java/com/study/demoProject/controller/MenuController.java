@@ -4,6 +4,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
+// return .html 생략가능
+// 맵핑url 요약가능
 public class MenuController {
     // DOG
     /**
@@ -115,9 +117,9 @@ public class MenuController {
 //    /**
 //     * freeboard
 //     */
-//    @GetMapping("/auth/MainMenu/community/freeboard")
-//    public String freeboard() {
-//        return "MainMenu/community/freeboard.html";
+//    @GetMapping("/auth/freeboard-main")
+//    public String freeBoard() {
+//        return "MainMenu/community/freeboard/freeboard-main.html";
 //    }
 
     /**
