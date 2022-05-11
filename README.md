@@ -9,8 +9,8 @@ Detail : 애완용품 판매 쇼핑몰 개설
   
 - Tools : 
   
-  - Front : Html, CSS, JS, JQuery, Bootstrap
-  - Back : Spring, SpringBoot, Jpa, MySQL 
+  - FE : Html, CSS, JS, JQuery, Bootstrap
+  - BE : Spring, SpringBoot, JPA, MySQL 
   - SSR : Thymeleaf
   - Hosting : AWS
   - Collaboration : Discode, Github
