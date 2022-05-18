@@ -3,6 +3,7 @@
 - Title : shopping mall & Board(Notice, QnA)
 
 ## V2(버전) 업데이트 중
+https://github.com/mon99745/petsong-wanryo-v2
 
 Detail : 애완용품 판매 쇼핑몰 개설
 ![image](https://user-images.githubusercontent.com/84507123/149527325-042881f6-adee-4bfc-837f-89e02af24bd6.png)
