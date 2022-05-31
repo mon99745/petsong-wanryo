@@ -32,7 +32,7 @@ Detail : 애완용품 판매 쇼핑몰 개설
 - IDE : Visual Studio Code, IntelliJ 
 
 
-ERD 
+- ERD 
 <img width="836" alt="스크린샷 2022-05-12 오전 5 40 51" src="https://user-images.githubusercontent.com/84507123/167944162-0eb84325-5a62-4384-bc60-8c301f445461.png">
 
 
