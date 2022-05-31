@@ -18,8 +18,8 @@ Detail : 애완용품 판매 쇼핑몰 개설
 - 주요기능 :
 
   - Spring Security 를 이용한 유저서비스
-  - JPA와 MySQL 을 이용한 RDBMS와 결제서비스
-  - JPA와 MySQL 을 이용한 RDBMS와 게시판서비스
+  - JPA와 MySQL 을 이용한 RDBMS의 결제서비스
+  - JPA와 MySQL 을 이용한 RDBMS의 게시판서비스
   
 - Tools : 
   
